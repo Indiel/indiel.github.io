@@ -10,7 +10,7 @@
 ---
 
 Другие проекты:
-* [Barbershop](https://indiel.github.io/barbershop)
-* [Gllacy](https://indiel.github.io/gllacy)
+* [Barbershop](https://indiel.github.io/Barbershop)
+* [Gllacy](https://indiel.github.io/Gllacy)
 
 ---

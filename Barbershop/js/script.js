@@ -7,7 +7,7 @@
     var login = modalLogin.querySelector("[name=login]");
     var password = modalLogin.querySelector("[name=password]");
 
-    var buttonMap = document.querySelector(".button-map");
+    var buttonsMap = document.querySelectorAll(".button-map");
     var modalMap = document.querySelector(".modal-map");
 
     var storageLogin = "";
@@ -54,10 +54,13 @@
         }
     });
 
-    buttonMap.addEventListener("click", function (evt) {
-        openPopup(evt, modalMap);
+    Array.from(buttonsMap).forEach(element => {
+        element.addEventListener("click", function (evt) {
+            evt.preventDefault();
+            openPopup(evt, modalMap);
+        });
     });
-
+    
     var modalClose = document.querySelectorAll(".modal-close");
 
     [].map.call(modalClose, function (it) {

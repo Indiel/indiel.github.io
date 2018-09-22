@@ -1,4 +1,4 @@
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .container {
         min-width: 320px;
     }
@@ -230,7 +230,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .slider-item img {
         width: 800px;
         height: auto;
@@ -329,7 +329,7 @@
     }
 }
 
-@media (max-width: 550px) {
+@media screen and (max-width: 550px) {
     .container {
         min-width: 320px;
     }
@@ -646,7 +646,7 @@
     }
 }
 
-@media (max-width: 430px) {
+@media screen and (max-width: 430px) {
     .inner-page .product-item,
     .product-item {
         width: 100%;

@@ -2,9 +2,12 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <link href="css/media.css" rel="stylesheet">
         <title>Магазин мороженого «GllacyShop»</title>
     </head>
     
@@ -19,12 +22,13 @@
                     <a class="logo">
                         <img src="img/Logo.svg" width="154" height="64" alt="Логотип магазина мороженого «GllacyShop»">
                     </a>
+                    <button class="small-nav-button small-site-nav"><span></span>Меню</button>
                     <ul class="site-nav">
                         <li>
-                            <a href="catalog.html">Каталог</a>
+                            <a>Каталог</a>
                             <ul class="site-nav-catalog modal">
                                 <li><a href="#"><b>Новинки</b></a><hr></li>
-                                <li><a href="#">Сливочное</a></li>
+                                <li><a href="catalog.html">Сливочное</a></li>
                                 <li><a href="#">Щербеты</a></li>
                                 <li><a href="#">Фруктовый лед</a></li>
                                 <li><a href="#">Мелорин</a></li>
@@ -33,7 +37,9 @@
                         <li><a href="payment.html">Доставка и оплата</a></li>
                         <li><a href="info.html">О Компании</a></li>
                     </ul>
-                    <ul class="user-nav">
+
+                    <button class="small-nav-button small-user-nav"><span></span></button>
+                    <ul class="user-nav"> 
                         <li class="search">
                             <a href="#"><span class="visually-hidden">Поиск</span>
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -82,6 +88,7 @@
                             </a>
                         </li>
                     </ul>
+                    <!-- </div> -->
                 </nav>
                 <p class="header-inform">
                     С 10 до 20, ежедневно<br>
@@ -99,17 +106,17 @@
                         <ul class="slider-list">
                             <li class="slider-item slide-1">
                                 <h2 class="slider-offer">Крем-брюле и пломбир с малиновым джемом</h2>
-                                <img src="img/ice-cream-group1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="881">
+                                <img src="img/ice-cream-group1.png" alt="Крем-брюле и пломбир с малиновым джемом">
                                 <a class="button slider-button" href="#">Давайте оба!</a>
                             </li>
                             <li class="slider-item slide-2">
                                 <h2 class="slider-offer">Шоколадный пломбир и лимонный сорбет</h2>
-                                <img src="img/ice-cream-group2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1045" height="881">
+                                <img src="img/ice-cream-group2.png" alt="Шоколадный пломбир и лимонный сорбет">
                                 <a class="button slider-button" href="#">Давайте оба!</a>
                             </li>
                             <li class="slider-item slide-3">
                                 <h2 class="slider-offer">Пломбир с помадкой и клубничный щербет</h2>
-                                <img src="img/ice-cream-group3.png" alt="Пломбир с помадкой и клубничный щербет" width="1045" height="881">
+                                <img src="img/ice-cream-group3.png" alt="Пломбир с помадкой и клубничный щербет">
                                 <a class="button slider-button" href="#">Давайте оба!</a>
                             </li>
                         </ul>
@@ -279,5 +286,6 @@
         </div>
 
         <script src="js/modalFeedback.js"></script>
+        <script src="js/media.js"></script>
     </body>
 </html>

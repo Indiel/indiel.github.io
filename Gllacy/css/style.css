@@ -71,6 +71,10 @@ nav {
     margin-right: 25px;
 }
 
+.small-nav-button {
+display: none;
+}
+
 .site-nav {
     display: flex;
     align-items: center;
@@ -124,7 +128,7 @@ nav {
     border-radius: 5px;
 }
 
-nav .modal {
+.modal {
     position: absolute;
     z-index: 1;
     
@@ -207,6 +211,10 @@ nav .modal {
     background-color: #d07058;
     box-shadow: none;
     border-radius: 30px;
+}
+
+.small-user-nav {
+    display: none;
 }
 
 .user-nav {
@@ -505,6 +513,9 @@ nav .modal {
 }
 
 .slider-item img {
+    width: 1045px;
+    height: 881px;
+
     position: absolute;
     left: 50%;
     margin-left: -522px;
@@ -577,20 +588,10 @@ nav .modal {
     background-color: #9d8b84;
 }
 
-/*
-#slide-btn-1:checked ~ .site-wrapper .slide-1 img, 
-#slide-btn-2:checked ~ .site-wrapper .slide-2 img, 
-#slide-btn-3:checked ~ .site-wrapper .slide-3 img {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 1s;
-}
-*/
-
 .gifts {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 1%;
 }
 
 .gift-chocolate {
@@ -602,10 +603,12 @@ nav .modal {
 }
 
 .gifts div {
+    display: flex;
+    flex-direction: column;
+
     box-sizing: border-box;
     padding: 20px;
     width: 48.8%;
-    height: 230px;
     border-radius: 20px;
 }
 
@@ -626,6 +629,7 @@ nav .modal {
     display: table;
     box-sizing: border-box;
     margin-left: auto;
+    margin-top: auto;
     padding: 10px 20px;
     
     font-size: 18px;
@@ -784,7 +788,7 @@ nav .modal {
 }
 
 .advantages {
-    margin: 40px 0;
+    margin: 1% 0 40px 0;
     padding: 25px 20px 1px 20px;
     
     color: #323232;
@@ -931,22 +935,20 @@ nav .modal {
     margin: 0 auto;
     margin-bottom: 20px;
     
-    min-width: 900px;
     max-width: 1200px;
     height: 430px;
 }
 .map img {
-    min-width: 900px;
-    max-width: 1200px;
+    width: 1200px;
     
     position: absolute;
     z-index: 1;
 }
 
 .map iframe {
-    min-width: 900px;
-    max-width: 1200px;
+    text-align: center;
     width: 100%;
+    max-width: 1200px;
 
     position: absolute;
     z-index: 2;
@@ -1106,7 +1108,6 @@ footer a:hover {
     display: none;
 
     position: fixed;
-    /* top: 250px; */
     left: 50%;
     margin-left: -240px;
 

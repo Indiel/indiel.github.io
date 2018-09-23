@@ -1222,6 +1222,13 @@ footer a:hover {
     margin: 8px 0 25px;
 }
 
+.button-filters {
+    width: 220px;
+    margin-bottom: 20px;
+
+    display: none;
+}
+
 .filters-form {
     display: flex;
     flex-wrap: wrap;

@@ -31,6 +31,8 @@
         background-color: rgba(255, 255, 255, 0.2);
         border: none;
         cursor: pointer;
+
+        transition: 1s;
     }
 
     .small-site-nav {
@@ -45,6 +47,8 @@
         width: 20px;
         height: 2px;
         background-color: #fff;
+
+        transition: 1s;
     }
 
     .small-site-nav span::before,
@@ -57,6 +61,8 @@
         width: 20px;
         height: 2px;
         background-color: #fff;
+
+        transition: 1s;
     }
 
     .small-site-nav span::before {
@@ -219,9 +225,18 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
     }
 
+    .button-filters {
+        display: block;
+    }
+
     .filters-form {
         width: auto;
-        justify-content: center;
+        /* justify-content: center; */
+
+        transition: 1s;
+        /* display: none; */
+        position: absolute;
+        opacity: 0;
     }
 
     .filters .filter-button {
@@ -318,6 +333,7 @@
     }
 
     .fillers ul {
+        margin: 0;
         width: 400px;
         height: auto;
         padding: 10px;
@@ -361,10 +377,8 @@
         order: 2;
     }
 
-    .small-user-nav span::before,
-    .small-user-nav span::after {
-        content: "";
-
+    .before,
+    .after {
         position: absolute;
         top: 15px;
         left: 8px;
@@ -372,20 +386,22 @@
         width: 8px;
         height: 2px;
         background-color: #fff;
+
+        transition: 1s;
     }
 
-    .small-user-nav span::before {
+    .before {
         left: 10px;
         transform: rotate(45deg);
     }
 
-    .small-user-nav span::after {
+    .after {
         left: 15px;
         transform: rotate(-45deg);
     }
 
-    .small-user-nav:hover span::after,
-    .small-user-nav:hover span::before {
+    .small-user-nav:hover .after,
+    .small-user-nav:hover .before {
         background-color: #000;
     }
 
@@ -677,4 +693,18 @@
 
 .show-small-nav {
     display: block;
+}
+
+.show-button {
+    position: relative;
+    opacity: 1;
+}
+
+
+.rotate-after {
+    transform: rotate(45deg);
+}
+
+.rotate-before {
+    transform: rotate(-45deg);
 }

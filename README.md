@@ -12,5 +12,6 @@
 Другие проекты:
 * [Barbershop](https://indiel.github.io/Barbershop)
 * [Gllacy](https://indiel.github.io/Gllacy)
+* [CreditGarant](https://indiel.github.io/CreditGarant)
 
 ---

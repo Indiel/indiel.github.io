@@ -299,7 +299,7 @@ ul {
 .container__main-page {
     position: relative;
 
-    background-image: url(/img/background1.png);
+    background-image: url(img/background1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #555555;

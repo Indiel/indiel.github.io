@@ -13,13 +13,17 @@
     <title>Viral</title>
 </head>
 <body>
-    <div class="container">
-        <header class="header page">
-            <a href="#" class="header__logo">
-                <h1 class="logo__main">Viral</h1>
-                <p class="logo__description">Digital agency</p>
-            </a>
-        </header>
+    <div id="parallax-bg">
+        <div data-depth="0.2" class="layer layer-1"></div>
+        <div data-depth="0.3" class="layer layer-2"></div>
+        <div data-depth="0.4" class="layer layer-3"></div>
+        <div data-depth="0.5" class="layer layer-4"></div>
+    </div>
+    <div id="preloader">
+        <a href="#" class="header__logo">
+            <h1 class="logo__main">Viral</h1>
+            <p class="logo__description">Digital agency</p>
+        </a>
     </div>
 
     <nav class="main-nav">
@@ -34,7 +38,7 @@
             </a>
         </div>
 
-        <button class="menu-button open-menu-button" type="button">Меню</button>
+        <button class="menu-button open-menu-button" type="button"><span class="menu-button__text-open">Меню</span><span class="menu-button__text-close visually-hidden">Скрыть</span></button>
 
         <div class="main-nav__wrapper visually-hidden">
             <ul class="main-nav__list nav-list">
@@ -44,21 +48,19 @@
                 <li class="nav-list__item"><a href="#" class="nav-list__link">Работы</a></li>
                 <li class="nav-list__item"><a href="#" class="nav-list__link">Отзывы</a></li>
                 <li class="nav-list__item"><a href="#" class="nav-list__link">Контакты</a></li>
-            </ul>
-
-            <button class="menu-button close-menu-button" type="button">Скрыть</button>
+            </ul>   
         </div>
 
+        <!-- <button class="menu-button close-menu-button visually-hidden" type="button">Скрыть</button> -->
+
         <ul class="main-nav__lang lang-list">
-            <li class="lang-list__item"><a href="#" class="lang-list__link lang-list__link--current visually-hidden">ru</a></li>
             <li class="lang-list__item"><a href="#" class="lang-list__link">en</a></li>
+            <li class="lang-list__item"><a href="#" class="lang-list__link lang-list__link--current visually-hidden">ru</a></li>
         </ul>
     </nav>
 
     <main class="main">
-        
         <div class="slide">
-
         <div class="container container__main-page">
             <section class="main-page page">
                 <h2 class="visually-hidden">Главная</h2>
@@ -232,7 +234,9 @@
                     Как нас найти
                 </header>
 
-                <div class="map"></div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7357.699760678601!2d36.22935497091361!3d50.01051472199048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1539335477906" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
 
                 <ul class="contacts-page__list contacts-list">
                     <li class="contacts-list__item">
@@ -345,22 +349,11 @@
         </ul>
     </section>
 
-    <script src="js/menu-script.js"></script>
-
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/libs.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/menu-script.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
 
-    <script>
-        $(document).ready(function(){
-            $('.slide').slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                fade: true
-            });
-        });
-    </script>
 </body>
 </html>

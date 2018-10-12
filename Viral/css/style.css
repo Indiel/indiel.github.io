@@ -11,11 +11,13 @@ body {
 
     color: #f3f3f3;
     background-color: #000;
+    overflow: hidden;
 }
 
 a {
     color: #f3f3f3;
     text-decoration: none;
+    outline: 0!important;
 }
 
 ul {
@@ -42,6 +44,7 @@ ul {
 
 .button {
     box-sizing: border-box;
+    position: relative;
 
     min-width: 160px;
     padding: 0 20px;
@@ -54,13 +57,31 @@ ul {
     background-color: transparent;
 
     cursor: pointer;
-    transition: 0.5s;
+    transition: 1s;
+}
+
+.button::after {
+    content: '';
+
+    position: absolute; 
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 0;
+    background-color: #d6ff00;
+
+    transition: 1s;
+    z-index: -1;
 }
 
 .button:hover {
     color: #000;
-    background-color: #d6ff00;
     border-color: #d6ff00;
+}
+
+.button:hover::after {
+    height: 100%;
 }
 
 .header {
@@ -70,6 +91,15 @@ ul {
 .header__logo {
     color: #d6ff00;
     font-size: 52px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 
 .logo__main {
@@ -137,7 +167,9 @@ ul {
 
 .menu-button {
     width: auto;
+    margin-top: auto;
     padding: 0;
+    outline: none;
 
     color: #7a7a7a;
     background-color: transparent;
@@ -145,7 +177,8 @@ ul {
     text-transform: uppercase;
 
     cursor: pointer;
-    transition: 0.5s;
+
+    order: 2;
 }
 
 .open-menu-button {
@@ -156,7 +189,6 @@ ul {
     position: relative;
 
     transform: rotate(-90deg);
-    transition: 0.5s;
 }
 
 .open-menu-button:hover {
@@ -168,29 +200,70 @@ ul {
     content: "";
 
     position: absolute;
-    top: 2px;
-    left: 0;
+    top: -5px;
+    left: 25px;
 
-    height: 2px;
-    width: 24px;
+    height: 20px;
+    width: 2px;
 
     background-color: #d6ff00;
 }
 
 .open-menu-button::after {
-    width: 12px;
-
-    top: 8px;
-    left: 12px;
+    top: 5px;
+    left: 21px;
+    height: 10px;
+    transform: rotate(-45deg);
+    transition: transform 0.5s;
 }
 
+.close-menu-button {
+    position: relative;
+    padding: 0 30px;
+    text-align: left;
+
+    transform: rotate(0deg);
+}
+
+.close-menu-button:hover {
+    color: #d6ff00;
+}
+
+.open-menu-button.close-menu-button::before,
+.open-menu-button.close-menu-button::after {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
+    height: 2px;
+    width: 20px;
+
+    background-color: #d6ff00;
+}
+
+.open-menu-button.close-menu-button::after {
+    top: 24px;
+    width: 10px;
+    transform: rotate(45deg);
+    transition: transform 0.5s;
+}
+
+
+
 .main-nav__wrapper {
+    margin: auto 0;
     padding: 0 30px;
     transition: 0.5s;
+
+    order: 1;
 }
 
 .nav-list__item {
+    box-sizing: border-box;
     height: 40px;
+    padding-top: 28px;
 }
 
 .nav-list__link {
@@ -202,43 +275,13 @@ ul {
     color: #d6ff00;
 }
 
-.close-menu-button {
-    position: relative;
-    margin-top: 45px;
-    padding-bottom: 20px;
-
-    transition: 0.5s;
-}
-
-.close-menu-button:hover {
-    color: #d6ff00;
-}
-
-.close-menu-button::before,
-.close-menu-button::after {
-    content: "";
-
-    position: absolute;
-    top: 20px;
-    left: 0;
-
-    height: 2px;
-    width: 40px;
-
-    background-color: #d6ff00;
-}
-
-.close-menu-button::after {
-    top: 24px;
-    width: 10px;
-    transform: rotate(45deg);
-}
-
 .lang-list {
+    margin-top: 100px;
     padding: 0 30px 28px;
 
     display: flex;
     justify-content: space-between;
+    order: 3;
 }
 
 .lang-list__link {
@@ -265,15 +308,12 @@ ul {
     text-transform: uppercase;
     text-align: left;
 
-    /* min-height: 0; */
     opacity: 0;
-    transition: 1s;
 }
 
 .slick-active .page-header{
-    /* min-height: 45px; */
     opacity: 1;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     transition: 1s;
     transition-delay: 0.5s;
 }
@@ -305,16 +345,17 @@ ul {
     background-color: #555555;
 }
 
-.main-page__p {
+.main-page__p,
+.about-us__p {
     margin-top: -40px;
     opacity: 0;
-    transition: 1s;
 }
 
-.slick-active .main-page__p{
+.slick-active .main-page__p,
+.slick-active .about-us__p {
     opacity: 1;
-    margin-top: 30px;
-    transition: 1s;
+    margin-top: 0;
+    transition: 1.5s;
     transition-delay: 1s;
 }
 
@@ -482,16 +523,10 @@ ul {
 
 .working-item__watch-projects {
     margin-top: 20px;
-    position: static;
 }
-
-
-
-
 
 .contacts-page {
     max-width: 868px;
-
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -503,10 +538,21 @@ ul {
 }
 
 .map {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     width: 100%;
     height: 290px;
-    background-color: #d6ff00;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.slick-active .map{
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .contacts-list {
@@ -542,6 +588,12 @@ ul {
     position: fixed;
     top: 40px;
     right: 80px;
+
+    opacity: 0.5;
+}
+
+.fixed__start-project-button:hover {
+    opacity: 1;
 }
 
 .arrow {
@@ -621,11 +673,100 @@ ul {
 
 .slick-dots {
     position: fixed;
-    top: 50%;
+    top: 0;
+    bottom: 0;
     right: 40px;
-    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    z-index: 3;
+}
+
+.slick-dots::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 2px;
+    background-color: #4b4b4b;
+
+    z-index: -1;
 }
 
 .slick-dots button {
+    font-size: 0;
     border: none;
+
+    position: relative;
+
+    width: 2px;
+    height: 30px;
+    padding: 0;
+    margin: 5px 0;
+
+    background-color: #a5a5a5;
+    outline: none;
+
+    transition: 0.5s;
+}
+
+.slick-dots button::after {
+    content: '';
+
+    position: absolute; 
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 0;
+    background-color: #d6ff00;
+
+    transition: 1s;
+}
+
+.slick-dots .slick-active button::after {
+    height: 100%;
+}
+
+#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    z-index: 9999999;
+}
+
+#parallax-bg {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    height: 120%;
+    width: 120%;
+}
+
+#parallax-bg .layer{
+    background-size: cover; 
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#parallax-bg .layer-1 {
+    background: url('../img/bg20.svg')no-repeat center center;
+}
+#parallax-bg .layer-2 {
+    background: url('../img/bg30.svg')no-repeat center center;
+}
+#parallax-bg .layer-3 {
+    background: url('../img/bg40.svg')no-repeat center center;
+}
+#parallax-bg .layer-4 {
+    background: url('../img/bg50.svg')no-repeat center center;
 }

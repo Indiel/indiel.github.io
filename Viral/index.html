@@ -7,19 +7,25 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     
     <title>Viral</title>
 </head>
 <body>
-    <div id="parallax-bg">
+    <div class="parallax-bg">
         <div data-depth="0.2" class="layer layer-1"></div>
         <div data-depth="0.3" class="layer layer-2"></div>
         <div data-depth="0.4" class="layer layer-3"></div>
         <div data-depth="0.5" class="layer layer-4"></div>
     </div>
     <div id="preloader">
+        <div class="parallax-bg">
+            <div data-depth="0.2" class="layer layer-1"></div>
+            <div data-depth="0.3" class="layer layer-2"></div>
+            <div data-depth="0.4" class="layer layer-3"></div>
+            <div data-depth="0.5" class="layer layer-4"></div>
+        </div>
         <a href="#" class="header__logo">
             <h1 class="logo__main">Viral</h1>
             <p class="logo__description">Digital agency</p>
@@ -28,27 +34,38 @@
 
     <nav class="main-nav">
         <div class="main-nav__logo-wrapper">
-            <a href="#" class="main-nav__logo logo visually-hidden">
+            <a href="http://viral.com.ua/" class="main-nav__logo logo visually-hidden">
                 <h2 class="logo__main">Viral</h2>
-                <p class="logo__description">Digital agency</p>
+                <p class="logo__description logo__description--media">Digital agency</p>
             </a>
 
-            <a href="#" class="main-nav__logo logo-sign">
+            <a href="http://viral.com.ua/" class="main-nav__logo logo-sign">
                 <p class="logo-sign__sign">V</p>
             </a>
         </div>
 
-        <button class="menu-button open-menu-button" type="button"><span class="menu-button__text-open">Меню</span><span class="menu-button__text-close visually-hidden">Скрыть</span></button>
+        <button class="menu-button open-menu-button hamburger hamburger--emphatic" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+            <span class="menu-button__text-open">Меню</span>
+            <span class="menu-button__text-close visually-hidden">Скрыть</span>
+            <img src="img/arrow_forward.svg" alt="">
+        </button>
 
         <div class="main-nav__wrapper visually-hidden">
             <ul class="main-nav__list nav-list">
-                <li class="nav-list__item"><a href="#" class="nav-list__link">Главная</a></li>
-                <li class="nav-list__item"><a href="#" class="nav-list__link">О нас</a></li>
-                <li class="nav-list__item"><a href="#" class="nav-list__link">Услуги</a></li>
-                <li class="nav-list__item"><a href="#" class="nav-list__link">Работы</a></li>
-                <li class="nav-list__item"><a href="#" class="nav-list__link">Отзывы</a></li>
-                <li class="nav-list__item"><a href="#" class="nav-list__link">Контакты</a></li>
-            </ul>   
+                <li class="nav-list__item"><a href="#container-main" id="main" class="nav-list__link">Главная</a></li>
+                <!-- <li class="nav-list__item"><a href="#" class="nav-list__link">О нас</a></li> -->
+                <li class="nav-list__item"><a href="#container-services" id="services" class="nav-list__link">Услуги</a></li>
+                <!-- <li class="nav-list__item"><a href="#" class="nav-list__link">Работы</a></li> -->
+                <!-- <li class="nav-list__item"><a href="#" class="nav-list__link">Отзывы</a></li> -->
+                <li class="nav-list__item"><a href="#container-contacts" id="contacts" class="nav-list__link">Контакты</a></li>
+            </ul>
+            <ul class="main-nav__wrapper__lang lang-list">
+                <li class="lang-list__item"><a href="#" class="lang-list__link">en</a></li>
+                <li class="lang-list__item"><a href="#" class="lang-list__link lang-list__link--current visually-hidden">ru</a></li>
+            </ul>
         </div>
 
         <!-- <button class="menu-button close-menu-button visually-hidden" type="button">Скрыть</button> -->
@@ -61,7 +78,7 @@
 
     <main class="main">
         <div class="slide">
-        <div class="container container__main-page">
+        <div class="container container__main-page" id = "container-main">
             <section class="main-page page">
                 <h2 class="visually-hidden">Главная</h2>
                 <header class="main-page__header page-header">
@@ -74,12 +91,69 @@
                     запускать продукты и получать конкурентные преимущества<br>
                     в современном мире с цифровым управлением.
                 </p>
-
                 <div class="arrow"></div>
             </section>
         </div>
+        <div class="container container__services" id="container-services">
+                <section class="services page">
+                    <h2 class="visually-hidden">Наши услуги</h2>
+                    <header class="services__header page-header">
+                        Наши услуги
+                    </header>
+    
+                    <ul class="services__list services-list">
+                        <li class="services-list__item">
+                            <h3 class="services-item__title">Дизайн</h3>
+                            <ul class="services__design design-list">
+                                <li class="design-list__item">
+                                    Разработка логотипа и фирменного стиля
+                                </li>
+                                <li class="design-list__item">
+                                    Дизайн сайтов
+                                </li>
+                                <li class="design-list__item">
+                                    Разработка брендбука
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="services-list__item">
+                            <h3 class="services-item__title">Веб-разработка</h3>
+                            <ul class="services__development development-list">
+                                <li class="development-list__item">
+                                    Разработка сайта
+                                </li>
+                                <li class="development-list__item">
+                                    Разработка интернет-магазина
+                                </li>
+                                <li class="development-list__item">
+                                    Разработка Landing Page
+                                </li>
+                                <li class="development-list__item">
+                                    Разработка мобильного приложения
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="services-list__item">
+                            <h3 class="services-item__title">Маркетинг</h3>
+                            <ul class="services__marketing marketing-list">
+                                <li class="marketing-list__item">
+                                    Разработка стратегии 
+                                </li>
+                                <li class="marketing-list__item">
+                                    Социальные сети
+                                </li>
+                                <li class="marketing-list__item">
+                                    Создание воронки продаж
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+    
+                </section>
+            </div>
+    
 
-        <div class="container container__about-us-page">
+        <!-- <div class="container container__about-us-page">
             <section class="about-us-page page">
                 <h2 class="visually-hidden">О нас</h2>
                 <header class="about-us-page__header page-header">
@@ -92,142 +166,10 @@
 
                 <div class="arrow"></div>
             </section>
-        </div>
+        </div> -->
 
-        <section class="working-page page">
-            <h2 class="visually-hidden">Работы</h2>
-
-            <ul class="working-page__list working-list">
-                <!-- <li class="working-list__item">
-                    <img src="img/preview1.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview2.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview3.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview4.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview5.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview6.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview7.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview8.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview9.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview10.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/preview11.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <p class="working-list__title">Lorem ipsum</p>
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="#" class="working-list__link working-list__button"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item working-item__projects">
-                    <p class="working-item__amount-projects">
-                        <span class="working-item__amount">+ 36</span> проектов
-                    </p>
-                    <a href="#" class="button working-item__watch-projects">Смотреть все</a>
-                </li> -->
-
-                <li class="working-list__item">
-                    <img src="img/1_cashyou_2.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <!-- <p class="working-list__title">Cashyou</p> -->
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="https://cashyou.ua" class="working-list__link working-list__button" target="_blank"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/1_Arigato.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <!-- <p class="working-list__title">Lorem ipsum</p> -->
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="http://www.arigato.kiev.ua/" class="working-list__link working-list__button" target="_blank"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item">
-                    <img src="img/2_bus4you.png" alt="" class="working-list__img">
-                    <div class="working-list__item--view">
-                        <!-- <p class="working-list__title">Lorem ipsum</p> -->
-                        <a href="#" class="working-list__view working-list__button"><span class="visually-hidden">View</span></a>
-                        <a href="http://bus4you.com.ua/" class="working-list__link working-list__button" target="_blank"><span class="visually-hidden">Link</span></a>
-                    </div>
-                </li>
-                <li class="working-list__item working-item__projects">
-                    <span class="working-item__amount">Понравились работы?</span>
-                    <p class="working-item__amount-projects">
-                        Оставьте заявку, чтобы обсудить Ваш проект.
-                    </p>
-                    <button type="button" class="working-item__watch-projects button">Оставить заявку</button>
-                </li>
-            </ul>
-        </section>
-
-        <div class="container">
+        
+        <!-- <div class="container">
             <section  class="contacts-page page">
                 <h2 class="visually-hidden">Контакты</h2>
                 <header class="contacts-page__header page-header">
@@ -260,49 +202,37 @@
 
                 <button class="contacts-page__button button" type="button">Связаться</button>
             </section>
-        </div>
+        </div> -->
 
-        <div class="container">
+        <div class="container" id="container-contacts">
             <section  class="write-page page">
-                <h2 class="visually-hidden">Начать проект</h2>
+                <h2 class="visually-hidden">Напишите нам</h2>
                 <header class="write-page__header page-header">
-                    Напишите нам
+                    Напишите нам<br>
+                    <span class="write-page__header--span">или свяжитесь любым удобным способом</span>
                 </header>
 
-                <form class="write-page__form" action="#" method="post">
-                    <div class="form-item">
-                        <label for="form-item__name" class="visually-hidden">Имя</label>
-                        <input id="form-item__name" type="text" name="date" value="" placeholder="Имя"> 
+                <form class="write-page__form" id="order">
+                    <div class="form-row tripple-row">
+                        <input type="text" id="name" name="name" placeholder="Ваше имя">
+                        <input type="text" id="phone" name="phone" placeholder="+380 (--) --- -- --">
+                        <input type="text" id="email" name="email" placeholder="Email">
                     </div>
-                    <div class="form-item">
-                        <label for="form-item__phone">Телефон</label>
-                        <input id="form-item__phone" type="tel" name="time" value="" placeholder="+380 (--) --- -- --">
+                    <div class="form-row">
+                        <textarea id="message" name="message" placeholder="Введите сообщение"></textarea>
                     </div>
-                    <div class="form-item">
-                        <label for="appointment-name">Email</label>
-                        <input id="appointment-name" type="email" name="name" value="" placeholder="Email">
-                    </div>
-                    <div class="form-item">
-                        <label class="ad-form__label" for="room_number">Тип услуги</label>
-                        <select id="room_number" name="rooms" required placeholder="Тип услуги">
-                            <option value="1" selected>1 комната</option>
-                            <option value="2">2 комнаты</option>
-                            <option value="3">3 комнаты</option>
-                            <option value="100">100 комнат</option>
-                        </select>
-                    </div>
-                    <div class="form-item" id="contact_form-course_select" class="customselect custom_form_elem option_selected open" name="Course" data-component="form-input" data-value="Web design">
-                        <button class="title placeholder_target">Дизайн</button>
-                        <ul class="option_list" data-no-page-scroll-area="true" style="max-height: 382.063px;">
-                            <li class="option" data-value="webdesign">Дизайн</li>
-                            <li class="option" data-value="frontend">Разработка</li>
-                            <li class="option" data-value="context_ads">Маркетинг</li>
-                        </ul>
-                    </div>
-
-                    <button class="button" type="submit">Отправить</button>
+                    <!-- <div class="form-row">
+                        <label for="file" class="file-upload-label">Прикрепить файл</label>
+                        <input type="file" id="file" name="file">
+                    </div> -->
+                    <button class="button" id="submit">Отправить</button>
                 </form>
-
+                <ul class="feedback">
+                    <li><span>Телефон:</span><a href="tel:+380 (67) 12 0000 2">+380 (67) 12 0000 2</a></li>
+                    <li><span>Telegram:</span><a href="tg:https://t.me/VIRAL_DA">t.me/VIRAL_DA</a></li>
+                    <li><span>Email:</span><a href="mailto:market@viral.com.ua">Market@viral.com.ua</a></li>
+                </ul>
+                <p class="write-page__copyright">© 2018 VIRAL. All right reserved</p>
             </section>
         </div>
 
@@ -311,7 +241,7 @@
     </main>
     
     <section class="fixed">
-        <button type="button" class="fixed__start-project-button button">Начать проект</button>
+        <!-- <button type="button" class="fixed__start-project-button button">Начать проект</button> -->
 
         <div class="fixed__progress-bar"></div>
 
@@ -354,6 +284,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="js/menu-script.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
 
 </body>
 </html>

@@ -6,34 +6,70 @@ function initPreloader() {
 
 $(document).ready(function(){
     initPreloader();
+    sliderRemove();
 });
 
-const slider = $(".slide");
-slider.slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    verticalSwiping: true
-});
-
-slider.on('wheel', (function(e) {
-    e.preventDefault();
-
-    if (e.originalEvent.deltaY < 0) {
-        $(this).slick('slickPrev');
-    } else {
-        $(this).slick('slickNext');
-    }
-}));
+   
 
 
 function initParallax() {
-	var scene = document.querySelector('#parallax-bg');
-	var parallaxInstance = new Parallax(scene, {
+	var scene = document.querySelector('.parallax-bg');
+	var parallaxInstance = new Parallax(scene, {    
 		relativeInput: true,
 	});
 }
 initParallax();
+
+function sliderRemove(){
+    if ($(window).width() > 768){
+        const slider = $(".slide");
+        slider.slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            verticalSwiping: true
+        });
+
+        window.addEventListener('wheel', function(e) {
+            if (e.target.classList.contains('text-block')){
+                e.stopPropagation;
+                return false;
+            }
+            if (e.deltaY < 0) {
+                $('.slide').slick('slickPrev');
+            }
+            if (e.deltaY > 0) {
+                $('.slide').slick('slickNext');
+            }
+        });
+        $('.arrow').on('click', function(){
+            $('.slide').slick('slickNext');
+        });
+
+        $('#main').on('click', function(){
+            $('.slide').slick('slickGoTo', 0);
+        });
+        $('#services').on('click', function(){
+            $('.slide').slick('slickGoTo', 1);
+        });
+        $('#contacts').on('click', function(){
+            $('.slide').slick('slickGoTo', 2);
+        });
+    }
+}
+
+$(window).resize(function(){
+    sliderRemove(); 
+})
+
+$(document).ready(function(){
+    $(".main-nav__list").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+    });
+});

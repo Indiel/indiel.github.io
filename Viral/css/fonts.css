@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "SF";
+    font-weight: 500;
+    src: url("../fonts/SFUIText-Regular.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "SF";
+    font-weight: 300;
+    src: url("../fonts/SFUIText-Light.ttf") format("ttf");
+}
+
+@font-face {
+    font-family: "SF";
+    font-weight: 700;
+    src: url("../fonts/SFUIText-Bold.ttf") format("ttf");
+}

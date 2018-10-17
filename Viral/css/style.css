@@ -271,6 +271,10 @@ ul {
     display: none;
 }
 
+.main-nav__start-project-button {
+    display: none;
+}
+
 .page-header {
     margin: 0 0 -40px 0;
 
@@ -316,6 +320,10 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #555555;
+}
+
+.main-page__start-project-button {
+    display: none;
 }
 
 .main-page__p,

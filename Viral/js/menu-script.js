@@ -20,6 +20,8 @@
 
     var hamburger = document.querySelector(".hamburger");
 
+    var navListLink = document.querySelectorAll(".nav-list__link");
+
     if (document.documentElement.clientWidth > 576) {
         openMenuButton.addEventListener('click', () => {
             // mainNav.classList.add('main-nav--active');
@@ -66,6 +68,14 @@
             // mainNavWrapper.classList.toggle('visually-hidden');
             
             langList.classList.toggle('visually-hidden');
+
+            Array.from(navListLink).forEach((elem) => {
+                elem.addEventListener("click", function () {
+                    hamburger.classList.remove("is-active");
+                    mainNavWrapper.classList.remove('main-nav__wrapper--active');
+                    langList.classList.add('visually-hidden');
+                });
+            });
         });
     }
 

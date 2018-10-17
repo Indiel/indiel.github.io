@@ -99,12 +99,24 @@
 
     .main-nav__wrapper--active {
         position: fixed;
-        height: 100vh;
+        height: calc(100vh - 40px);
     }
 
     /* .nav-list {
         width: 100%;
     } */
+
+    .main-nav__start-project-button {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+
+        /* position: absolute; */
+        /* bottom: 20px; */
+        top: 20vh;
+
+        order: 3;
+    }
 
     .nav-list__item {
         padding-top: 0;
@@ -289,6 +301,12 @@
 
     .arrow {
         display: none;
+    }
+
+    .main-page__start-project-button {
+        display: block;
+        margin-top: auto;
+        margin-bottom: 20px;
     }
 
     .about-us-page {

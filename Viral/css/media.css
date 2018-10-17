@@ -106,14 +106,26 @@
         width: 100%;
     } */
 
-    .main-nav__start-project-button {
+    .main-page__start-project-button {
         display: block;
+        margin: 0;
         box-sizing: border-box;
         width: 100%;
 
-        /* position: absolute; */
-        /* bottom: 20px; */
-        top: 20vh;
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+    }
+
+    .main-nav__start-project-button {
+        display: block;
+        margin: 0;
+        box-sizing: border-box;
+        width: calc(100% - 60px);
+
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
 
         order: 3;
     }
@@ -284,6 +296,10 @@
         width: 100%;
     }
 
+    .main-page {
+        position: relative;
+    }
+
     .main-page__header {
         margin-top: 0;
     }
@@ -305,8 +321,13 @@
 
     .main-page__start-project-button {
         display: block;
-        margin-top: auto;
-        margin-bottom: 20px;
+        margin: 0;
+        box-sizing: border-box;
+        width: 100%;
+
+        position: absolute;
+        bottom: 30px;
+        left: 0;
     }
 
     .about-us-page {

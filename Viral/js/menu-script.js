@@ -15,8 +15,8 @@
     var logoSign = document.querySelector('.logo-sign');
     var mainNavWrapper = document.querySelector('.main-nav__wrapper');
 
-    var langList = document.querySelector('.lang-list');
-    var langLinkCurrent = document.querySelector('.lang-list__link--current');
+    // var langList = document.querySelector('.lang-list');
+    // var langLinkCurrent = document.querySelector('.lang-list__link--current');
 
     var hamburger = document.querySelector(".hamburger");
 
@@ -38,7 +38,7 @@
             logoSign.classList.toggle('visually-hidden');
             mainNavWrapper.classList.toggle('visually-hidden');
     
-            langLinkCurrent.classList.toggle('visually-hidden');
+            // langLinkCurrent.classList.toggle('visually-hidden');
     
             openMenuButton.classList.toggle('close-menu-button');
             menuButtonTextOpen.classList.toggle('visually-hidden');
@@ -54,8 +54,8 @@
         menuButtonTextOpen.classList.add('visually-hidden');
         menuButtonTextClose.classList.add('visually-hidden');
 
-        langList.classList.add('visually-hidden')
-        langLinkCurrent.classList.remove('visually-hidden');
+        // langList.classList.add('visually-hidden')
+        // langLinkCurrent.classList.remove('visually-hidden');
 
         mainNavWrapper.classList.remove('visually-hidden');
         
@@ -67,15 +67,23 @@
             mainNavWrapper.classList.toggle('main-nav__wrapper--active');
             // mainNavWrapper.classList.toggle('visually-hidden');
             
-            langList.classList.toggle('visually-hidden');
+            // langList.classList.toggle('visually-hidden');
+
+            document.querySelector("body").classList.toggle("none-scroll");
 
             Array.from(navListLink).forEach((elem) => {
                 elem.addEventListener("click", function () {
                     hamburger.classList.remove("is-active");
                     mainNavWrapper.classList.remove('main-nav__wrapper--active');
-                    langList.classList.add('visually-hidden');
+                    // langList.classList.add('visually-hidden');
+                    document.querySelector("body").classList.remove("none-scroll");
                 });
             });
+        });
+
+        window.addEventListener('resize', () => {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
         });
     }
 

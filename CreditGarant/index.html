@@ -8,9 +8,29 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <script src="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <link href="css/chartist.min.css" rel="stylesheet">
+    <script src="js/chartist.min.js"></script>
 
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script>
+        $( function() {
+            $( ".slider-range-min" ).slider({
+                range: "min",
+                value: 37,
+                min: 1,
+                max: 3000,
+                slide: function( event, ui ) {
+                    $( "#amount" ).val( "$" + ui.value );
+                }
+                });
+            $( "#amount" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
+        } );
+    </script>
     <title>CreditGarant</title>
 </head>
 <body>
@@ -93,12 +113,18 @@
                         </div>
                         <table class="offer__calculation middle__3">
                             <tr>
-                                <td class="offer__description">Cумма</td>
+                                <td class="offer__description offer__description--calculation">
+                                    Cумма
+                                    <div class="slider-range-min"></div>
+                                </td>
                                 <td class="offer__value">3000</td>
                                 <td class="offer__units">грн</td>
                             </tr>
                             <tr>
-                                <td class="offer__description">Cрок</td>
+                                <td class="offer__description offer__description--calculation">
+                                    Cрок
+                                    <div class="slider-range-min"></div>
+                                </td>
                                 <td class="offer__value">31</td>
                                 <td class="offer__units">дней</td>
                             </tr>

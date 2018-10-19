@@ -177,6 +177,10 @@ h3 {
     margin-bottom: 30px;
 }
 
+.offers__item button{
+    cursor: pointer;
+}
+
 .offer__top {
     box-sizing: border-box;
     height: 88px;
@@ -229,7 +233,7 @@ h3 {
 
 .offer__info,
 .offer__graph {
-    width: 100%;
+    width: 230px;
 }
 
 .offer__info tr,
@@ -238,11 +242,15 @@ h3 {
 }
 
 .offer__description {
-    width: 65%;
+    width: 152px;
 }
 
+/* .offer__calculation .offer__description {
+    width: 152px;
+} */
+
 .offer__value {
-    width: 18%;
+    width: 40px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 500;
@@ -250,7 +258,7 @@ h3 {
 }
 
 .offer__units {
-    width: 17%;
+    width: 38px;
     text-align: right;
 }
 
@@ -259,6 +267,7 @@ h3 {
     position: absolute;
     top: 20px;
     left: 0;
+
     background-color: #e5e5e5;
     transition: 0.3s;
 
@@ -266,11 +275,28 @@ h3 {
 }
 
 .offer__calculation {
+    width: 230px;
+
     top: 15px;
     left: 20px;
 }
 
+/* .offer__description--calculation {
+    justify-content: space-between;
+} */
 
+.slider-range-min {
+    margin-right: 20px;
+    width: 80px;
+    text-align: right;
+}
+
+
+
+.middle__2 {
+    width: 230px;
+    margin-left: 20px;
+}
 
 .small-graph {
     height: 130px;

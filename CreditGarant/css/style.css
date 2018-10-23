@@ -9,13 +9,13 @@ body {
     text-align: justify;
     color: #999999;
     
-    background-image: url(../img/background.png);
+    background-image: url(../img/creditcard.png);
     background-repeat: no-repeat;
     background-color: #1a1a1a;
 }
 
 a {
-    color: #fff;
+    color: #cccccc;
     text-decoration: none;
 }
 
@@ -80,6 +80,10 @@ h3 {
 
 .header__logo {
     margin-right: auto;
+}
+
+.main-nav__button {
+    display: none;
 }
 
 .main-nav__list {
@@ -281,14 +285,43 @@ h3 {
     left: 20px;
 }
 
+.button-leaf {
+    display: none;
+}
+
 /* .offer__description--calculation {
     justify-content: space-between;
 } */
 
 .slider-range-min {
-    margin-right: 20px;
-    width: 80px;
-    text-align: right;
+    /* display: inline-block; */
+    margin: 5px 10px 0 0;
+    width: 66px;
+    height: 10px;
+
+    float: right;
+
+    background-color: #303030;
+}
+
+.ui-corner-all {
+    border: none !important;
+    border-radius: 0;
+}
+
+.ui-widget-header {
+    height: 10px;
+    background-color: #2d6d54;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -2px;
+}
+
+.ui-slider .ui-slider-handle {
+    height: 14px;
+    width: 14px;
+    background-color: #2aa876;
 }
 
 

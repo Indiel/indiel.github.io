@@ -2,65 +2,56 @@
 
 (function () {
 
-    var offerButtonPrev = document.querySelector('.offer__button-prev');
-    var offerButtonNext = document.querySelector('.offer__button-next');
+    function Slider (prevButton, nextButton, list, items) {
+        this.prevButton = prevButton;
+        this.nextButton = nextButton;
 
-    var offers = document.querySelector('.offers');
-    var offersItem = document.querySelectorAll('.offers__item');
+        this.list = list;
+        this.items = items;
 
-    var offersShift = 0;
-    var offersElemNumber = 1;  
-    offerButtonNext.addEventListener('click', () => {
-        offersShift -= 270;
-        offersElemNumber += 1;
-        if (offersItem.length === offersElemNumber) {
-            offersElemNumber = 1;
-            offersShift = 0;
-        }
-        offers.style.left = offersShift + 'px';
-    });
-    offerButtonPrev.addEventListener('click', () => {
-        offersShift += 270;
-        offersElemNumber -= 1;
-        if (offersElemNumber < 1) {
-            offersElemNumber = offersItem.length - 1;
-            offersShift = -270 * (offersItem.length - 1);
-        }
-        offers.style.left = offersShift + 'px';
-    });
+        this.shift = 0;
+        this.elemNumber = 1; 
 
-    // var next = function (shift, elemNumber, item) {
-    //     shift -= 270;
-    //     elemNumber += 1;
-    //     if (item.length === elemNumber) {
-    //         elemNumber = 1;
-    //         shift = 0;
-    //     }
-    //     offers.style.left = shift + 'px'; 
+        this.nextButton.addEventListener('click', () => {
+            this.shift -= this.list.clientWidth;
+            this.elemNumber += 1;
+            if (this.items.length < this.elemNumber) {
+                this.elemNumber = 1;
+                this.shift = 0;
+            }
+            this.list.style.left = this.shift + 'px';
+        });
 
-    //     return shift, elemNumber;
-    // }
+        this.prevButton.addEventListener('click', () => {
+            this.shift += this.list.clientWidth;
+            this.elemNumber -= 1;
+            if (this.elemNumber <= 0) {
+                this.elemNumber = this.items.length;
+                this.shift = -this.list.clientWidth * (this.items.length - 1);
+            }
+            this.list.style.left = this.shift + 'px';
+        });
+    };
+      
+    var offer = new Slider (
+        document.querySelector('.offer__button-prev'),
+        document.querySelector('.offer__button-next'),
+        document.querySelector('.offers'),
+        document.querySelectorAll('.offers__item')
+    );
 
-    // var prev = function (shift, elemNumber, item) {
-    //     shift += 270;
-    //     elemNumber -= 1;
-    //     if (elemNumber < 1) {
-    //         elemNumber = item.length - 1;
-    //         shift = -270 * (item.length - 1);
-    //     }
-    //     offers.style.left = shift + 'px';
-    // }
+    var top = new Slider (
+        document.querySelector('.top__button-prev'),
+        document.querySelector('.top__button-next'),
+        document.querySelector('.top__company-list'),
+        document.querySelectorAll('.top__company-item')
+    );
 
-    // var a = function () {
-    //     var offersShift = 0;
-    //     var offersElemNumber = 1;
-    //     offerButtonNext.addEventListener('click', () => {
-    //         next(offersShift, offersElemNumber, offersItem);
-    //     });
-    //     offerButtonPrev.addEventListener('click', () => {
-    //         prev(offersShift, offersElemNumber, offersItem);
-    //     });
-    // }
-    // a();
+    var blog = new Slider (
+        document.querySelector('.blog__button-prev'),
+        document.querySelector('.blog__button-next'),
+        document.querySelector('.blog__news-list'),
+        document.querySelectorAll('.blog__news-item')
+    );
 
 })();

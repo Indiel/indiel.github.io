@@ -27,6 +27,8 @@
         box-sizing: border-box;
         width: 100%;
         padding: 0 15px;
+
+        overflow-x: hidden;
     }
 
     /* .header {
@@ -226,7 +228,7 @@
     .offers-slider-container {
         width: 270px;
 
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     .offers-container::before,
@@ -296,6 +298,8 @@
         height: 2px;
         width: 12px;
         background-color: #e5e5e5;
+
+        z-index: 999;
     }
 
     .button-prev {
@@ -340,47 +344,105 @@
         padding: 55px 0 50px 0;
     }
 
-    /* .top__company-list {
-        width: 290px;
+    .wrapper-white {
+        position: relative;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .top__more-companies {
+        float: none;
+        text-align: center;
+        margin-top: 30px;
+
+        order: 1;
+    }
+
+    .top-slider-container {
+        margin: 0 auto;
+        width: 270px;
         height: 77px;
-        overflow: hidden;
+        overflow-x: hidden;
+    }
+
+    .top__company-list {
+        height: 100%;
+
+        position: relative;
+        left: 0;
+
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+
+        transition: 1s;
     }
 
     .top__company-item {
-        width: 290px;
-        height: 100%;
+        display: block;
+        flex-shrink: 0;
+        width: 270px;
+        margin: 0 auto;
     }
 
     .top__company-item a {
-        display: block;
-        width: auto;
-        height: 100%;
-        margin: 0 auto;
         display: flex;
         justify-content: center;
-        align-items: center;
+        height: 100%;
     }
 
-    .top__company-item a img {
+    .top__button-prev,
+    .top__button-next {
+        bottom: 45px;
+    }
+
+    .wrapper-light {
+        position: relative;
+    }
+
+    .blog {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog__more-news {
+        float: none;
+        text-align: center;
+        margin-top: 30px;
+
+        order: 1;
+    }
+
+    .blog-slider-container {
+        margin: 0 auto;
         width: 100%;
+        overflow-x: hidden;
     }
-
+    
     .blog__news-list {
         margin: 0;
         width: 100%;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: flex-start;
 
         position: relative;
         left: 0;
+
         transition: 1s;
     }
 
     .blog__news-item {
         margin: 0;
-        box-sizing: border-box;
-        width: 270px;
-    } */
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    .blog__button-prev,
+    .blog__button-next {
+        bottom: 45px;
+    }
 
     .footer__top {
         flex-direction: column;

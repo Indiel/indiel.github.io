@@ -5,8 +5,8 @@
     }
 
     body {
-        background-size: auto 11%;
-        background-position-x: -300px;
+        background-size: auto 15%;
+        background-position-x: -600px;
         background-color: #1a1a1a;
 
         overflow-x: hidden;
@@ -205,20 +205,25 @@
 
     .main__slogan {
         text-align: left;
-        margin-top: 100px;
+        margin-top: 50px;
         font-size: 24px;
         line-height: 30px;
     }
 
     .main__description {
-        margin-bottom: 100px;
+        margin-bottom: 20px;
         text-align: left;
         font-size: 18px;
         line-height: 24px;
     }
 
+    .main__button {
+        margin-bottom: 20px;
+    }
+
     .offers-container {
         position: relative;
+        margin-top: 50px;
         padding: 0;
 
         display: flex;

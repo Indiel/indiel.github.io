@@ -14,6 +14,10 @@ body {
     background-color: #1a1a1a;
 }
 
+* {
+    outline: none;
+}
+
 a {
     color: #cccccc;
     text-decoration: none;
@@ -57,7 +61,8 @@ h3 {
 
 .container {
     box-sizing: border-box;
-    width: 1170px;
+    max-width: 1170px;
+    min-width: 900px;
     margin: 0 auto;
 }
 
@@ -337,11 +342,11 @@ h3 {
 
 
 .middle__2 {
-    width: 230px;
-    margin-left: 20px;
+    width: 270px;
 }
 
 .small-graph {
+    width: 270px;
     height: 130px;
 }
 
@@ -400,6 +405,10 @@ h3 {
 
 
 .big-graph {
+    margin-left: -15px;
+    /* width:  calc(100vw - 130px); */
+    width: 1230px;
+    /* width: calc(100% + 65px); */
     height: 300px;
 }
 
@@ -412,8 +421,13 @@ h3 {
     color: #f0f0f0;
 }
 
+.big-graph .ct-labels foreignObject {
+    width: 18px;
+}
+
 .big-graph .ct-labels .ct-label.ct-vertical {
-    margin-left: -10px;
+    width: 18px !important;
+    margin-left: 5px;
 }
 
 .big-graph .ct-labels .ct-label.ct-horizontal {
@@ -512,6 +526,7 @@ h3 {
 }
 
 .wrapper-light {
+    width: 100%;
     padding: 95px 0 120px 0;
     background-color: #212121;
 }
@@ -521,6 +536,7 @@ h3 {
 }
 
 .wrapper-white {
+    width: 100%;
     padding: 95px 0 120px 0;
     background-color: #ebebeb;
 }

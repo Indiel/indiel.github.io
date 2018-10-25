@@ -13,9 +13,8 @@
     <link href="css/jquery-ui.css" rel="stylesheet">
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/jquery-ui.js"></script>
-    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
@@ -88,580 +87,596 @@
 
         <div class="container offers-container">
             <div class="offers-slider-container">
-                <ul class="offers">
+                <ul class="offers slider-offers">
                     <li class="offers__item offer">
-                        <div class="offer__top">
-                            <p class="offer__img">
-                                <img src="img/company-logo1.png" alt="Логотип компании">
-                            </p>
-                            <div class="offer__wrapper-compare">
-                                <div class="offer__rating"></div>
-                                <button class="offer__compare button" type="button">Сравнить</button>
+                        <div class="offers__item-container">
+                            <div class="offer__top">
+                                <p class="offer__img">
+                                    <img src="img/company-logo1.png" alt="Логотип компании">
+                                </p>
+                                <div class="offer__wrapper-compare">
+                                    <div class="offer__rating"></div>
+                                    <button class="offer__compare button" type="button">Сравнить</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="offer__middle">
-                            <table class="offer__info middle__1">
-                                <tr>
-                                    <td class="offer__description">Максимальная сумма</td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Максиимальный срок</td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент кредита</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Одобрение кредита</td>
-                                    <td class="offer__value">36</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                            </table>
-                            <div class="offer__graph middle__2">
-                                <div class="small-graph"></div>
+                            <div class="offer__middle">
+                                <table class="offer__info middle__1">
+                                    <tr>
+                                        <td class="offer__description">Максимальная сумма</td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Максиимальный срок</td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент кредита</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Одобрение кредита</td>
+                                        <td class="offer__value">36</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                </table>
+                                <div class="offer__graph middle__2">
+                                    <div class="small-graph"></div>
+                                </div>
+                                <table class="offer__calculation middle__3">
+                                    <tr>
+                                        <td class="offer__description offer__description--calculation">
+                                            Cумма
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description offer__description--calculation">
+                                            Cрок
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Сумма погашения</td>
+                                        <td class="offer__value">200</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <table class="offer__calculation middle__3">
-                                <tr>
-                                    <td class="offer__description offer__description--calculation">
-                                        Cумма
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description offer__description--calculation">
-                                        Cрок
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Сумма погашения</td>
-                                    <td class="offer__value">200</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="offer__bottom">
-                            <button class="offer__button--graph button" type="button">График</button>
-                            <button class="offer__button--calculation button" type="button">Расчет</button>
-                            <button class="offer__button--request button" type="button">Подать заявку</button>
+                            <div class="offer__bottom">
+                                <button class="offer__button--graph button" type="button">График</button>
+                                <button class="offer__button--calculation button" type="button">Расчет</button>
+                                <button class="offer__button--request button" type="button">Подать заявку</button>
+                            </div>
                         </div>
                     </li>
                     <li class="offers__item offer">
-                        <div class="offer__top">
-                            <p class="offer__img">
-                                <img src="img/company-logo2.png" alt="Логотип компании">
-                            </p>
-                            <div class="offer__wrapper-compare">
-                                <div class="offer__rating"></div>
-                                <button class="offer__compare button" type="button">Сравнить</button>
+                        <div class="offers__item-container">
+                            <div class="offer__top">
+                                <p class="offer__img">
+                                    <img src="img/company-logo2.png" alt="Логотип компании">
+                                </p>
+                                <div class="offer__wrapper-compare">
+                                    <div class="offer__rating"></div>
+                                    <button class="offer__compare button" type="button">Сравнить</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="offer__middle">
-                            <table class="offer__info middle__1">
-                                <tr>
-                                    <td class="offer__description">Максимальная сумма</td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Максиимальный срок</td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент кредита</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Одобрение кредита</td>
-                                    <td class="offer__value">36</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                            </table>
-                            <div class="offer__graph middle__2">
-                                <div class="small-graph"></div>
+                            <div class="offer__middle">
+                                <table class="offer__info middle__1">
+                                    <tr>
+                                        <td class="offer__description">Максимальная сумма</td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Максиимальный срок</td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент кредита</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Одобрение кредита</td>
+                                        <td class="offer__value">36</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                </table>
+                                <div class="offer__graph middle__2">
+                                    <div class="small-graph"></div>
+                                </div>
+                                <table class="offer__calculation middle__3">
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cумма
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cрок
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Сумма погашения</td>
+                                        <td class="offer__value">200</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <table class="offer__calculation middle__3">
-                                <tr>
-                                    <td class="offer__description">
-                                        Cумма
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">
-                                        Cрок
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Сумма погашения</td>
-                                    <td class="offer__value">200</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="offer__bottom">
-                            <button class="offer__button--graph button" type="button">График</button>
-                            <button class="offer__button--calculation button" type="button">Расчет</button>
-                            <button class="offer__button--request button" type="button">Подать заявку</button>
+                            <div class="offer__bottom">
+                                <button class="offer__button--graph button" type="button">График</button>
+                                <button class="offer__button--calculation button" type="button">Расчет</button>
+                                <button class="offer__button--request button" type="button">Подать заявку</button>
+                            </div>
                         </div>
                     </li>
                     <li class="offers__item offer">
-                        <div class="offer__top">
-                            <p class="offer__img">
-                                <img src="img/company-logo1.png" alt="Логотип компании">
-                            </p>
-                            <div class="offer__wrapper-compare">
-                                <div class="offer__rating"></div>
-                                <button class="offer__compare button" type="button">Сравнить</button>
+                        <div class="offers__item-container">
+                            <div class="offer__top">
+                                <p class="offer__img">
+                                    <img src="img/company-logo1.png" alt="Логотип компании">
+                                </p>
+                                <div class="offer__wrapper-compare">
+                                    <div class="offer__rating"></div>
+                                    <button class="offer__compare button" type="button">Сравнить</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="offer__middle">
-                            <table class="offer__info middle__1">
-                                <tr>
-                                    <td class="offer__description">Максимальная сумма</td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Максиимальный срок</td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент кредита</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Одобрение кредита</td>
-                                    <td class="offer__value">36</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                            </table>
-                            <div class="offer__graph middle__2">
-                                <div class="small-graph"></div>
+                            <div class="offer__middle">
+                                <table class="offer__info middle__1">
+                                    <tr>
+                                        <td class="offer__description">Максимальная сумма</td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Максиимальный срок</td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент кредита</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Одобрение кредита</td>
+                                        <td class="offer__value">36</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                </table>
+                                <div class="offer__graph middle__2">
+                                    <div class="small-graph"></div>
+                                </div>
+                                <table class="offer__calculation middle__3">
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cумма
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cрок
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Сумма погашения</td>
+                                        <td class="offer__value">200</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <table class="offer__calculation middle__3">
-                                <tr>
-                                    <td class="offer__description">
-                                        Cумма
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">
-                                        Cрок
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Сумма погашения</td>
-                                    <td class="offer__value">200</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="offer__bottom">
-                            <button class="offer__button--graph button" type="button">График</button>
-                            <button class="offer__button--calculation button" type="button">Расчет</button>
-                            <button class="offer__button--request button" type="button">Подать заявку</button>
+                            <div class="offer__bottom">
+                                <button class="offer__button--graph button" type="button">График</button>
+                                <button class="offer__button--calculation button" type="button">Расчет</button>
+                                <button class="offer__button--request button" type="button">Подать заявку</button>
+                            </div>
                         </div>
                     </li>
                     <li class="offers__item offer">
-                        <div class="offer__top">
-                            <p class="offer__img">
-                                <img src="img/company-logo2.png" alt="Логотип компании">
-                            </p>
-                            <div class="offer__wrapper-compare">
-                                <div class="offer__rating"></div>
-                                <button class="offer__compare button" type="button">Сравнить</button>
+                        <div class="offers__item-container">
+                            <div class="offer__top">
+                                <p class="offer__img">
+                                    <img src="img/company-logo2.png" alt="Логотип компании">
+                                </p>
+                                <div class="offer__wrapper-compare">
+                                    <div class="offer__rating"></div>
+                                    <button class="offer__compare button" type="button">Сравнить</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="offer__middle">
-                            <table class="offer__info middle__1">
-                                <tr>
-                                    <td class="offer__description">Максимальная сумма</td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Максиимальный срок</td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент кредита</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Одобрение кредита</td>
-                                    <td class="offer__value">36</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                            </table>
-                            <div class="offer__graph middle__2">
-                                <div class="small-graph"></div>
+                            <div class="offer__middle">
+                                <table class="offer__info middle__1">
+                                    <tr>
+                                        <td class="offer__description">Максимальная сумма</td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Максиимальный срок</td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент кредита</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Одобрение кредита</td>
+                                        <td class="offer__value">36</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                </table>
+                                <div class="offer__graph middle__2">
+                                    <div class="small-graph"></div>
+                                </div>
+                                <table class="offer__calculation middle__3">
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cумма
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cрок
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Сумма погашения</td>
+                                        <td class="offer__value">200</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <table class="offer__calculation middle__3">
-                                <tr>
-                                    <td class="offer__description">
-                                        Cумма
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">
-                                        Cрок
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Сумма погашения</td>
-                                    <td class="offer__value">200</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="offer__bottom">
-                            <button class="offer__button--graph button" type="button">График</button>
-                            <button class="offer__button--calculation button" type="button">Расчет</button>
-                            <button class="offer__button--request button" type="button">Подать заявку</button>
+                            <div class="offer__bottom">
+                                <button class="offer__button--graph button" type="button">График</button>
+                                <button class="offer__button--calculation button" type="button">Расчет</button>
+                                <button class="offer__button--request button" type="button">Подать заявку</button>
+                            </div>
                         </div>
                     </li>
                     <li class="offers__item offer">
-                        <div class="offer__top">
-                            <p class="offer__img">
-                                <img src="img/company-logo2.png" alt="Логотип компании">
-                            </p>
-                            <div class="offer__wrapper-compare">
-                                <div class="offer__rating"></div>
-                                <button class="offer__compare button" type="button">Сравнить</button>
+                        <div class="offers__item-container">
+                            <div class="offer__top">
+                                <p class="offer__img">
+                                    <img src="img/company-logo2.png" alt="Логотип компании">
+                                </p>
+                                <div class="offer__wrapper-compare">
+                                    <div class="offer__rating"></div>
+                                    <button class="offer__compare button" type="button">Сравнить</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="offer__middle">
-                            <table class="offer__info middle__1">
-                                <tr>
-                                    <td class="offer__description">Максимальная сумма</td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Максиимальный срок</td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент кредита</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Одобрение кредита</td>
-                                    <td class="offer__value">36</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                            </table>
-                            <div class="offer__graph middle__2">
-                                <div class="small-graph"></div>
+                            <div class="offer__middle">
+                                <table class="offer__info middle__1">
+                                    <tr>
+                                        <td class="offer__description">Максимальная сумма</td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Максиимальный срок</td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент кредита</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Одобрение кредита</td>
+                                        <td class="offer__value">36</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                </table>
+                                <div class="offer__graph middle__2">
+                                    <div class="small-graph"></div>
+                                </div>
+                                <table class="offer__calculation middle__3">
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cумма
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cрок
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Сумма погашения</td>
+                                        <td class="offer__value">200</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <table class="offer__calculation middle__3">
-                                <tr>
-                                    <td class="offer__description">
-                                        Cумма
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">
-                                        Cрок
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Сумма погашения</td>
-                                    <td class="offer__value">200</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="offer__bottom">
-                            <button class="offer__button--graph button" type="button">График</button>
-                            <button class="offer__button--calculation button" type="button">Расчет</button>
-                            <button class="offer__button--request button" type="button">Подать заявку</button>
+                            <div class="offer__bottom">
+                                <button class="offer__button--graph button" type="button">График</button>
+                                <button class="offer__button--calculation button" type="button">Расчет</button>
+                                <button class="offer__button--request button" type="button">Подать заявку</button>
+                            </div>
                         </div>
                     </li>
                     <li class="offers__item offer">
-                        <div class="offer__top">
-                            <p class="offer__img">
-                                <img src="img/company-logo1.png" alt="Логотип компании">
-                            </p>
-                            <div class="offer__wrapper-compare">
-                                <div class="offer__rating"></div>
-                                <button class="offer__compare button" type="button">Сравнить</button>
+                        <div class="offers__item-container">
+                            <div class="offer__top">
+                                <p class="offer__img">
+                                    <img src="img/company-logo1.png" alt="Логотип компании">
+                                </p>
+                                <div class="offer__wrapper-compare">
+                                    <div class="offer__rating"></div>
+                                    <button class="offer__compare button" type="button">Сравнить</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="offer__middle">
-                            <table class="offer__info middle__1">
-                                <tr>
-                                    <td class="offer__description">Максимальная сумма</td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Максиимальный срок</td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент кредита</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Одобрение кредита</td>
-                                    <td class="offer__value">36</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                            </table>
-                            <div class="offer__graph middle__2">
-                                <div class="small-graph"></div>
+                            <div class="offer__middle">
+                                <table class="offer__info middle__1">
+                                    <tr>
+                                        <td class="offer__description">Максимальная сумма</td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Максиимальный срок</td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент кредита</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Одобрение кредита</td>
+                                        <td class="offer__value">36</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                </table>
+                                <div class="offer__graph middle__2">
+                                    <div class="small-graph"></div>
+                                </div>
+                                <table class="offer__calculation middle__3">
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cумма
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cрок
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Сумма погашения</td>
+                                        <td class="offer__value">200</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <table class="offer__calculation middle__3">
-                                <tr>
-                                    <td class="offer__description">
-                                        Cумма
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">
-                                        Cрок
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Сумма погашения</td>
-                                    <td class="offer__value">200</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="offer__bottom">
-                            <button class="offer__button--graph button" type="button">График</button>
-                            <button class="offer__button--calculation button" type="button">Расчет</button>
-                            <button class="offer__button--request button" type="button">Подать заявку</button>
+                            <div class="offer__bottom">
+                                <button class="offer__button--graph button" type="button">График</button>
+                                <button class="offer__button--calculation button" type="button">Расчет</button>
+                                <button class="offer__button--request button" type="button">Подать заявку</button>
+                            </div>
                         </div>
                     </li>
                     <li class="offers__item offer">
-                        <div class="offer__top">
-                            <p class="offer__img">
-                                <img src="img/company-logo2.png" alt="Логотип компании">
-                            </p>
-                            <div class="offer__wrapper-compare">
-                                <div class="offer__rating"></div>
-                                <button class="offer__compare button" type="button">Сравнить</button>
+                        <div class="offers__item-container">
+                            <div class="offer__top">
+                                <p class="offer__img">
+                                    <img src="img/company-logo2.png" alt="Логотип компании">
+                                </p>
+                                <div class="offer__wrapper-compare">
+                                    <div class="offer__rating"></div>
+                                    <button class="offer__compare button" type="button">Сравнить</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="offer__middle">
-                            <table class="offer__info middle__1">
-                                <tr>
-                                    <td class="offer__description">Максимальная сумма</td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Максиимальный срок</td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент кредита</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Одобрение кредита</td>
-                                    <td class="offer__value">36</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                            </table>
-                            <div class="offer__graph middle__2">
-                                <div class="small-graph"></div>
+                            <div class="offer__middle">
+                                <table class="offer__info middle__1">
+                                    <tr>
+                                        <td class="offer__description">Максимальная сумма</td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Максиимальный срок</td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент кредита</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Одобрение кредита</td>
+                                        <td class="offer__value">36</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                </table>
+                                <div class="offer__graph middle__2">
+                                    <div class="small-graph"></div>
+                                </div>
+                                <table class="offer__calculation middle__3">
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cумма
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cрок
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Сумма погашения</td>
+                                        <td class="offer__value">200</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <table class="offer__calculation middle__3">
-                                <tr>
-                                    <td class="offer__description">
-                                        Cумма
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">
-                                        Cрок
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Сумма погашения</td>
-                                    <td class="offer__value">200</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="offer__bottom">
-                            <button class="offer__button--graph button" type="button">График</button>
-                            <button class="offer__button--calculation button" type="button">Расчет</button>
-                            <button class="offer__button--request button" type="button">Подать заявку</button>
+                            <div class="offer__bottom">
+                                <button class="offer__button--graph button" type="button">График</button>
+                                <button class="offer__button--calculation button" type="button">Расчет</button>
+                                <button class="offer__button--request button" type="button">Подать заявку</button>
+                            </div>
                         </div>
                     </li>
                     <li class="offers__item offer">
-                        <div class="offer__top">
-                            <p class="offer__img">
-                                <img src="img/company-logo1.png" alt="Логотип компании">
-                            </p>
-                            <div class="offer__wrapper-compare">
-                                <div class="offer__rating"></div>
-                                <button class="offer__compare button" type="button">Сравнить</button>
+                        <div class="offers__item-container">
+                            <div class="offer__top">
+                                <p class="offer__img">
+                                    <img src="img/company-logo1.png" alt="Логотип компании">
+                                </p>
+                                <div class="offer__wrapper-compare">
+                                    <div class="offer__rating"></div>
+                                    <button class="offer__compare button" type="button">Сравнить</button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="offer__middle">
-                            <table class="offer__info middle__1">
-                                <tr>
-                                    <td class="offer__description">Максимальная сумма</td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Максиимальный срок</td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент кредита</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Одобрение кредита</td>
-                                    <td class="offer__value">36</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                            </table>
-                            <div class="offer__graph middle__2">
-                                <div class="small-graph"></div>
+                            <div class="offer__middle">
+                                <table class="offer__info middle__1">
+                                    <tr>
+                                        <td class="offer__description">Максимальная сумма</td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Максиимальный срок</td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент кредита</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Одобрение кредита</td>
+                                        <td class="offer__value">36</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                </table>
+                                <div class="offer__graph middle__2">
+                                    <div class="small-graph"></div>
+                                </div>
+                                <table class="offer__calculation middle__3">
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cумма
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">3000</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">
+                                            Cрок
+                                            <div class="slider-range-min"></div>
+                                        </td>
+                                        <td class="offer__value">31</td>
+                                        <td class="offer__units">дней</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Процент</td>
+                                        <td class="offer__value">1</td>
+                                        <td class="offer__units">%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="offer__description">Сумма погашения</td>
+                                        <td class="offer__value">200</td>
+                                        <td class="offer__units">грн</td>
+                                    </tr>
+                                </table>
                             </div>
-                            <table class="offer__calculation middle__3">
-                                <tr>
-                                    <td class="offer__description">
-                                        Cумма
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">3000</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">
-                                        Cрок
-                                        <div class="slider-range-min"></div>
-                                    </td>
-                                    <td class="offer__value">31</td>
-                                    <td class="offer__units">дней</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Процент</td>
-                                    <td class="offer__value">1</td>
-                                    <td class="offer__units">%</td>
-                                </tr>
-                                <tr>
-                                    <td class="offer__description">Сумма погашения</td>
-                                    <td class="offer__value">200</td>
-                                    <td class="offer__units">грн</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="offer__bottom">
-                            <button class="offer__button--graph button" type="button">График</button>
-                            <button class="offer__button--calculation button" type="button">Расчет</button>
-                            <button class="offer__button--request button" type="button">Подать заявку</button>
+                            <div class="offer__bottom">
+                                <button class="offer__button--graph button" type="button">График</button>
+                                <button class="offer__button--calculation button" type="button">Расчет</button>
+                                <button class="offer__button--request button" type="button">Подать заявку</button>
+                            </div>
                         </div>
                     </li>
                 </ul>
             </div>
 
-            <button class="button-leaf button-prev offer__button-prev" type="button"><span class="visually-hidden">Предыдущий</span></button>
-            <button class="button-leaf button-next offer__button-next" type="button"><span class="visually-hidden">Следующий</span></button>
+            <!-- <button class="button-leaf button-prev offer__button-prev" type="button"><span class="visually-hidden">Предыдущий</span></button>
+            <button class="button-leaf button-next offer__button-next" type="button"><span class="visually-hidden">Следующий</span></button> -->
         </div>
 
         <div class="container">
@@ -725,7 +740,7 @@
 
                     <a href="#" class="top__more-companies">больше компаний ></a>
                     <div class="top-slider-container">
-                        <ul class="top__company-list">
+                        <ul class="top__company-list slider">
                             <li class="top__company-item"><a href="#"><img src="img/cashyou.png" alt=""></a></li>
                             <li class="top__company-item"><a href="#"><img src="img/credit-plus.png" alt=""></a></li>
                             <li class="top__company-item"><a href="#"><img src="img/creditup_logo.png" alt=""></a></li>
@@ -733,8 +748,8 @@
                         </ul>
                     </div>
 
-                    <button class="button-leaf button-prev top__button-prev" type="button"><span class="visually-hidden">Предыдущий</span></button>
-                    <button class="button-leaf button-next top__button-next" type="button"><span class="visually-hidden">Следующий</span></button>
+                    <!-- <button class="button-leaf button-prev top__button-prev" type="button"><span class="visually-hidden">Предыдущий</span></button>
+                    <button class="button-leaf button-next top__button-next" type="button"><span class="visually-hidden">Следующий</span></button> -->
                 </section>
             </div>
         </div>
@@ -747,7 +762,7 @@
 
                     <a href="#" class="blog__more-news">больше новостей ></a>
                     <div class="blog-slider-container">
-                        <div class="blog__news-list">
+                        <div class="blog__news-list slider">
                             <article class="blog__news-item">
                                 <h4 class="blog__news-title">Заголовок</h4>
                                 <time class="blog__news-time" datetime="2018-26-09">26.09.2018</time>
@@ -769,8 +784,8 @@
                         </div>
                     </div>
 
-                    <button class="button-leaf button-prev blog__button-prev" type="button"><span class="visually-hidden">Предыдущий</span></button>
-                    <button class="button-leaf button-next blog__button-next" type="button"><span class="visually-hidden">Следующий</span></button>
+                    <!-- <button class="button-leaf button-prev blog__button-prev" type="button"><span class="visually-hidden">Предыдущий</span></button>
+                    <button class="button-leaf button-next blog__button-next" type="button"><span class="visually-hidden">Следующий</span></button> -->
                 </section>
             </div>
         </div>
@@ -835,6 +850,8 @@
     <script src="js/graph.js"></script>
     <script src="js/offers.js"></script>
     <script src="js/menu.js"></script>
+    
+    <script type="text/javascript" src="js/slick.js"></script>
     <script src="js/sliders.js"></script>
 </body>
 </html>

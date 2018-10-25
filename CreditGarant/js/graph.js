@@ -14,6 +14,13 @@
     fullWidth: true,
     chartPadding: {
       right: 50
+    },
+    axisY: {
+      type: Chartist.FixedScaleAxis,
+      low: 0,
+      high: 100,
+      divisor: 11,
+      ticks: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
     }
   });
   
@@ -28,6 +35,13 @@
       fullWidth: true,
       chartPadding: {
         right: 30
+      },
+      axisY: {
+        type: Chartist.FixedScaleAxis,
+        low: 0,
+        high: 100,
+        divisor: 3,
+        ticks: [0, 50, 100]
       }
     });
   });

@@ -10,11 +10,17 @@ body {
     color: #999999;
     
     background-image: url(../img/creditcard.png);
+    background-position-y: 60px;
     background-repeat: no-repeat;
     background-color: #1a1a1a;
 }
 
 * {
+    outline: none;
+}
+
+*:hover,
+*:focus {
     outline: none;
 }
 
@@ -72,6 +78,8 @@ h3 {
     border: none;
     color: #fff;
     background-color: #626262;
+
+    user-select: none;
 }
 
 .header {
@@ -79,12 +87,21 @@ h3 {
     display: flex;
     align-items: center;
 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
     height: 60px;
     background-color: #131313;
 }
 
 .header__logo {
     margin-right: auto;
+}
+
+.main {
+    padding-top: 60px;
 }
 
 .main-nav__button {
@@ -110,7 +127,21 @@ h3 {
     height: 100%;
     box-sizing: border-box;
     padding: 20px; 
+
+    user-select: none;
 }
+
+/* .main-nav__item:active,
+.main-nav__item:hover,
+.main-nav__item:focus {
+    background-color: transparent;
+}
+
+.main-nav__item a:active,
+.main-nav__item a:hover,
+.main-nav__item a:focus {
+    background-color: transparent;
+} */
 
 .main-nav__item a:hover {
     background-color: #363636;
@@ -174,10 +205,14 @@ h3 {
 .button-green {
     box-sizing: border-box;
     display: inline-block;
-    margin: 0 30px 80px 0;
+    margin: 0 20px 80px 0;
     padding: 8px 20px  0;
     height: 40px;
     background-color: #2aa876;
+}
+
+.button-green:hover {
+    background-color: #33cc8f;
 }
 
 .offers {
@@ -342,11 +377,12 @@ h3 {
 
 
 .middle__2 {
-    width: 270px;
+    margin-left: 20px;
+    width: 230px;
 }
 
 .small-graph {
-    width: 270px;
+    width: 100%;
     height: 130px;
 }
 
@@ -405,10 +441,8 @@ h3 {
 
 
 .big-graph {
-    margin-left: -15px;
-    /* width:  calc(100vw - 130px); */
-    width: 1230px;
-    /* width: calc(100% + 65px); */
+    /* margin-left: -15px; */
+    width: 100%;
     height: 300px;
 }
 
@@ -493,36 +527,40 @@ h3 {
     margin: 5px 10px 5px 0;
 }
 
-.graph__company-item a {
+.graph__company-item button {
     display: block;
     padding: 8px 10px;
 
     font-size: 13px;
     line-height: 18px;
     text-transform: uppercase;
+    background-color: transparent;
     color: rgba(153, 153, 153, 0.5);
     border: 1px solid rgba(153, 153, 153, 0.5);
 }
 
-.graph__company-item--choice a {
+.graph__company-item--choice button {
     color: #fff;
-    border: none;
 }
 
-.company-item--choice1 a {
+.company-item--choice1 button {
     background-color: #f27422;
+    border-color: #f27422;
 }
 
-.company-item--choice2 a {
+.company-item--choice2 button {
     background-color: #f9b103;
+    border-color: #f9b103;
 }
 
-.company-item--choice3 a {
+.company-item--choice3 button {
     background-color: #2aa876;
+    border-color: #2aa876;
 }
 
-.company-item--choice4 a {
+.company-item--choice4 button {
     background-color: #0a7b83;
+    border-color: #0a7b83;
 }
 
 .wrapper-light {
@@ -645,6 +683,13 @@ h3 {
     height: 50px;
     border: 1px solid #fff;
     background-color:  transparent;
+
+    transition: 1s;
+}
+
+.footer__callback:hover {
+    border-color: #2aa876;
+    background-color: #2aa876;
 }
 
 .footer__copyright {
@@ -666,10 +711,6 @@ h3 {
 .main__h1 {
     margin: 30px 0;
     text-align: center;
-}
-
-.main__h1--green {
-    color: #2aa876;
 }
 
 .online-order {
@@ -741,12 +782,18 @@ h3 {
     height: 18px;
     background-color: #fff;
     border: 1px solid #cccccc;
+
+    transition: 0.5s;
 }
 
 .agreement input[type="checkbox"]:focus + .checkbox-indicator {
     border-color: #626262;
-    outline: thin dotted;
-    outline: -webkit-focus-ring-color auto 5px;
+    outline: none;
+}
+
+.agreement input[type="checkbox"]:checked + .checkbox-indicator {
+    background-color: #2aa876;
+    border: 1px solid #2aa876;
 }
 
 .agreement input[type="checkbox"]:checked + .checkbox-indicator::before,
@@ -754,20 +801,31 @@ h3 {
     content: "";
     
     position: absolute;
-    top: 8px;
-    left: 2px;
+    left: 4px;
     
-    width: 14px;
     height: 1px;
-    background-color: #333333;
+    background-color: #ffffff;
+
+    transition: 0.5s;
 }
 
 .agreement input[type="checkbox"]:checked + .checkbox-indicator::before {
+    top: 10px;
+
+    width: 5px;
     transform: rotate(45deg);
 }
 
 .agreement input[type="checkbox"]:checked + .checkbox-indicator::after {
+    top: 8px;
+    left: 6px;
+
+    width: 10px;
     transform: rotate(-45deg);
+}
+
+.online-order .agreement__link {
+    color: #2aa876;
 }
 
 .online-order__buttons {

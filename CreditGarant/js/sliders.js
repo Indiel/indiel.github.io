@@ -7,6 +7,9 @@ function sliderRemove(){
             slidesToShow: 1,
             slidesToScroll: 1,
             centerMode: true
+            // variableWidth: 110
+            // centerPadding: '100px'
+            // ariableWidth: true
         });
 
         const slider = $(".slider");

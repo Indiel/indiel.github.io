@@ -13,7 +13,8 @@
   }, {
     fullWidth: true,
     chartPadding: {
-      right: 50
+      right: 5,
+      left: -6
     },
     axisY: {
       type: Chartist.FixedScaleAxis,
@@ -34,7 +35,8 @@
     }, {
       fullWidth: true,
       chartPadding: {
-        right: 30
+        right: 11,
+        left: -12
       },
       axisY: {
         type: Chartist.FixedScaleAxis,
@@ -43,6 +45,38 @@
         divisor: 3,
         ticks: [0, 50, 100]
       }
+    });
+  });
+
+
+
+  var companyItem = document.querySelectorAll('.graph__company-item');
+  var companyItemChoice = document.querySelectorAll('.graph__company-item--choice');
+  var choiceArray = Array.from(companyItemChoice);
+  var classColor = [];
+  
+  Array.from(companyItem).forEach((elem) => {
+    elem.addEventListener('click', () => {
+
+      // if (elem.classList(3)) {
+      //   choiceArray.forEach()
+      //   classColor.push(elem.classList[2]);
+      //   elem.classList.remove(classColor[classColor.length - 1]);
+
+      //   elem.classList.toggle('graph__company-item--choice');
+      //   elem.classList.add(classColor[0]);
+      // } else {
+        classColor.push(choiceArray[0].classList[2]);
+        choiceArray[0].classList.remove(classColor[classColor.length - 1]);
+        choiceArray[0].classList.toggle('graph__company-item--choice');
+        choiceArray.shift();
+
+        elem.classList.toggle('graph__company-item--choice');
+        elem.classList.add(classColor[classColor.length - 1]);
+        choiceArray.push(elem);
+
+        classColor.shift();
+      // }
     });
   });
   

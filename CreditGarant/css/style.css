@@ -171,7 +171,7 @@ h3 {
 
     position: absolute;
     right: 30px;
-    top: 8px;
+    top: 6px;
 }
 
 .main-nav__search {
@@ -537,6 +537,8 @@ h3 {
     background-color: transparent;
     color: rgba(153, 153, 153, 0.5);
     border: 1px solid rgba(153, 153, 153, 0.5);
+
+    cursor: pointer;
 }
 
 .graph__company-item--choice button {

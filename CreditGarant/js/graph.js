@@ -54,29 +54,38 @@
   var companyItemChoice = document.querySelectorAll('.graph__company-item--choice');
   var choiceArray = Array.from(companyItemChoice);
   var classColor = [];
-  
+
   Array.from(companyItem).forEach((elem) => {
     elem.addEventListener('click', () => {
 
-      // if (elem.classList(3)) {
-      //   choiceArray.forEach()
-      //   classColor.push(elem.classList[2]);
-      //   elem.classList.remove(classColor[classColor.length - 1]);
-
-      //   elem.classList.toggle('graph__company-item--choice');
-      //   elem.classList.add(classColor[0]);
-      // } else {
-        classColor.push(choiceArray[0].classList[2]);
-        choiceArray[0].classList.remove(classColor[classColor.length - 1]);
-        choiceArray[0].classList.toggle('graph__company-item--choice');
-        choiceArray.shift();
+      if (elem.classList.length === 3) {
+        if (choiceArray.length === 1) {
+          return;
+        } else {
+          choiceArray.forEach((el, i) => {
+            if (el.classList[2] === elem.classList[2]) {
+              choiceArray.splice(i, 1);
+            }
+          });
+          classColor.push(elem.classList[2]);
+          elem.classList.remove(elem.classList[2]);
+  
+          elem.classList.toggle('graph__company-item--choice');
+        }
+      } else {
+        if (classColor.length === 0) {
+          classColor.push(choiceArray[0].classList[2]);
+          choiceArray[0].classList.remove(choiceArray[0].classList[2]);
+          choiceArray[0].classList.toggle('graph__company-item--choice');
+          choiceArray.shift();
+        }
 
         elem.classList.toggle('graph__company-item--choice');
-        elem.classList.add(classColor[classColor.length - 1]);
+        elem.classList.add(classColor[0]);
         choiceArray.push(elem);
 
         classColor.shift();
-      // }
+      }
     });
   });
   

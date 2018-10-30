@@ -4,12 +4,12 @@ function sliderRemove(){
         sliderOffers.slick({
             dots: false,
             speed: 300,
-            slidesToShow: 1,
+            // slidesToShow: 1,
             slidesToScroll: 1,
-            centerMode: true
-            // variableWidth: 110
-            // centerPadding: '100px'
-            // ariableWidth: true
+            centerMode: true,
+            variableWidth: true,
+            infinite: true,
+            slidesToShow: 2
         });
 
         const slider = $(".slider");

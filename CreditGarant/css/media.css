@@ -1,3 +1,101 @@
+/*
+* Hamburger
+*/
+.hamburger {
+    padding: 15px 15px;
+    /* display: inline-block; */
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible; 
+}
+
+.hamburger:hover {
+    opacity: 0.7; 
+}
+
+.hamburger.is-active:hover {
+    opacity: 0.7; 
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #2aa876; 
+}
+
+.hamburger-box {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative; 
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: 2px; 
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 2px;
+    background-color: #2aa876;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; 
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; 
+}
+.hamburger-inner::before {
+    top: -8px; 
+}
+
+.hamburger-inner::after {
+    bottom: -8px; 
+}
+
+/*
+* Slider
+*/
+.hamburger--slider .hamburger-inner {
+    top: 2px; 
+}
+
+.hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s; 
+}
+
+.hamburger--slider .hamburger-inner::after {
+    top: 20px; 
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(45deg); 
+}
+.hamburger--slider.is-active .hamburger-inner::before {
+    transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+    opacity: 0; 
+}
+
+.hamburger--slider.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-90deg); 
+}
+
 @media screen and (max-width: 576px) {
     html, body { 
         min-width: 320px;
@@ -44,7 +142,14 @@
         padding: 15px;
     }
 
+    .hamburger {
+        display: inline-block;
+    }
+
     .main-nav {
+        display: flex;
+        flex-direction: column;
+
         position: absolute;
         top: 60px;
         left: 0;
@@ -88,9 +193,9 @@
     }
 
     .search {
+        margin: 20px 25% 0 25%;
         height: 60px;
-        width: 75%;
-        margin: 20px 25% 0 0;
+        width: 50%;
         border: none;
     }
 
@@ -106,9 +211,9 @@
     }
 
     .registration {
+        margin: 0 25% 0 25%;
         height: 60px;
-        width: 75%;
-        margin: 0 25% 0 0;
+        width: 50%;
         border: none;
     }
 
@@ -121,9 +226,7 @@
 
 
 
-    /*
-   * Hamburger
-   */
+/* 
     .hamburger {
         padding: 15px 15px;
         display: inline-block;
@@ -189,9 +292,8 @@
         bottom: -8px; 
     }
 
-    /*
-   * Slider
-   */
+
+
     .hamburger--slider .hamburger-inner {
         top: 2px; 
     }
@@ -217,7 +319,7 @@
 
     .hamburger--slider.is-active .hamburger-inner::after {
         transform: translate3d(0, -20px, 0) rotate(-90deg); 
-    }
+    } */
 
 
 
@@ -651,5 +753,129 @@
 
     .advantages-slider-container {
         text-align: left;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 1200px) {
+    @media screen and (max-width: 1200px) {
+        html, body { 
+            min-width: 900px;
+            width: 100%;
+        }
+    
+        .container {
+            box-sizing: border-box;
+            max-width: 1200px;
+            min-width: 900px;
+            width: 100%;
+            padding: 0 15px;
+    
+            overflow-x: hidden;
+        }
+
+        .main-nav__button {
+            display: block;
+        }
+
+        .hamburger {
+            display: inline-block;
+        }
+
+        .main-nav {
+            position: relative;
+        }
+
+        .main-nav__list {
+            display: flex;
+            align-items: baseline;
+            flex-direction: column;
+    
+            position: absolute;
+            top: 60px;
+            left: -60px;
+    
+            width: 285px;
+    
+            height: 0;
+            overflow: hidden;
+    
+            background-color: #1a1a1a;
+    
+            z-index: 3;
+    
+            transition: height 1s;
+        }
+    
+        .main-nav__list--active {
+            height: 365px;
+            transition: 1s;
+        }
+
+        .main-nav__item {
+            margin-left: 5px;
+            height: auto;
+        }
+
+        .offers-slider-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .offers {
+            display: inline-block;
+            width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .offers::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    
+        .offers__item {
+            float: left;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        html, body { 
+            min-width: 576px;
+            width: 100%;
+        }
+    
+        .container {
+            box-sizing: border-box;
+            max-width: 900px;
+            min-width: 576px;
+            width: 100%;
+            padding: 0 15px;
+    
+            overflow-x: hidden;
+        }
+
+        .offers {
+            width: 600px;
+        }
+
+        .wrapper-white {
+            padding-bottom: 90px;
+        }
+
+        .top__company-list {
+            flex-wrap: wrap;
+        }
+
+        .top__company-item {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+
+        .footer__tel-list {
+            width: 350px;
+        }
     }
 }

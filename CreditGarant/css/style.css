@@ -104,6 +104,11 @@ h3 {
     padding-top: 60px;
 }
 
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
 .main-nav__button {
     display: none;
 }
@@ -171,7 +176,7 @@ h3 {
 
     position: absolute;
     right: 30px;
-    top: 6px;
+    top: 1px;
 }
 
 .main-nav__search {

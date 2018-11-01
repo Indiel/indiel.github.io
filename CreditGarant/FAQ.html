@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+
+    <!-- <link href="css/chartist.min.css" rel="stylesheet"> -->
+    <!-- <script src="js/chartist.min.js"></script> -->
+
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
+
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <script>
+        $( function() {
+            $( ".accordion" ).accordion({
+            collapsible: true,
+            heightStyle: "content",
+            active: false
+        });
+    });
+    </script>
+    <title>FAQ</title>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="header__logo">
+            <img src="img/logo.png" alt="Логотип CreditGarant" class="header__logo-img" width="236" height="60">
+        </a>
+        <button class="main-nav__button hamburger hamburger--slider" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+            <span class="visually-hidden">Меню</span>
+        </button>
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item">
+                    <a href="index.html">Главная</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Список компаний</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Как это работает</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Блог</a>
+                </li>
+                <li class="main-nav__item">
+                    <a>FAQ</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#">Контакты</a>
+                </li>
+                <!-- <li class="main-nav__item search">
+                    <input class="main-nav__search search__input" type="text" name="search" placeholder="Поиск">
+                </li>
+                <li class="main-nav__item registration">
+                    <button class="main-nav__registration button" type="button">Регистрация</button>
+                </li> -->
+            </ul>
+
+            <!-- <div class="search">
+                <input class="main-nav__search search__input" type="text" name="search" placeholder="Поиск">
+            </div> -->
+            <div class="registration">
+                <button class="main-nav__registration button" type="button">Регистрация</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+
+        <div class="wrapper-light">
+            <div class="container">
+                <section class="faq">
+                    <h2 class="faq__title">Как это работает?</h2>
+
+                    <h3 class="faq__category">Категория</h3>
+                    <div class="faq__questions accordion">
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">CashYou — це онлайн сервіс з мікрокредитування, побудованій завдяки найсучаснішим технологіям, який дозволяє отримати кредит на Вашу персональну банківську картку в зручний для Вас час. Час приймання заявок — 24/7, час роботи сервісу — кожен день з 09:00 до 20:00.</div>
+
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">На рішення системи впливає Ваш кредитний рейтинг, історія попередніх кредитних операцій, сума, термін, а також Ваш фінансовий стан.</div>
+    
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">Термін кредиту може складати від 1-го до 30-ти календарних днів. Максимальна сума кредиту — до 12 000 гривень. Сума та термін кредиту залежать від того, наскільки довго Ви користуєтесь системою CashYou та Вашого статусу у «Бонусній програмі». Ви можете змінити ці показники власноруч у Вашому «Особистому кабінеті».</div>
+                        
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">Це тризначний код на зворотній стороні Вашої банківської картки. Використовується виключно для перевірки справжності картки, за будь-яких операціях в інтернеті. Ми не зберігаємо цей код у себе, він використовується тільки через перевірену платіжну систему.</div>
+            
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">На третій день після дати виплати кредиту, зазначеної в договорі Вам буде нараховуватися штрафна вiдсоткова ставка за кожен день прострочення, до моменту погашення або пролонгації.</div>
+                
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">CashYou — це онлайн сервіс з мікрокредитування, побудованій завдяки найсучаснішим технологіям, який дозволяє отримати кредит на Вашу персональну банківську картку в зручний для Вас час. Час приймання заявок — 24/7, час роботи сервісу — кожен день з 09:00 до 20:00.</div>
+
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">На рішення системи впливає Ваш кредитний рейтинг, історія попередніх кредитних операцій, сума, термін, а також Ваш фінансовий стан.</div>
+    
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">Термін кредиту може складати від 1-го до 30-ти календарних днів. Максимальна сума кредиту — до 12 000 гривень. Сума та термін кредиту залежать від того, наскільки довго Ви користуєтесь системою CashYou та Вашого статусу у «Бонусній програмі». Ви можете змінити ці показники власноруч у Вашому «Особистому кабінеті».</div>
+                        
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">Це тризначний код на зворотній стороні Вашої банківської картки. Використовується виключно для перевірки справжності картки, за будь-яких операціях в інтернеті. Ми не зберігаємо цей код у себе, він використовується тільки через перевірену платіжну систему.</div>
+            
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">На третій день після дати виплати кредиту, зазначеної в договорі Вам буде нараховуватися штрафна вiдсоткова ставка за кожен день прострочення, до моменту погашення або пролонгації.</div>
+            
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">CashYou — це онлайн сервіс з мікрокредитування, побудованій завдяки найсучаснішим технологіям, який дозволяє отримати кредит на Вашу персональну банківську картку в зручний для Вас час. Час приймання заявок — 24/7, час роботи сервісу — кожен день з 09:00 до 20:00.</div>
+
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">На рішення системи впливає Ваш кредитний рейтинг, історія попередніх кредитних операцій, сума, термін, а також Ваш фінансовий стан.</div>
+    
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">Термін кредиту може складати від 1-го до 30-ти календарних днів. Максимальна сума кредиту — до 12 000 гривень. Сума та термін кредиту залежать від того, наскільки довго Ви користуєтесь системою CashYou та Вашого статусу у «Бонусній програмі». Ви можете змінити ці показники власноруч у Вашому «Особистому кабінеті».</div>
+                        
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">Це тризначний код на зворотній стороні Вашої банківської картки. Використовується виключно для перевірки справжності картки, за будь-яких операціях в інтернеті. Ми не зберігаємо цей код у себе, він використовується тільки через перевірену платіжну систему.</div>
+            
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">На третій день після дати виплати кредиту, зазначеної в договорі Вам буде нараховуватися штрафна вiдсоткова ставка за кожен день прострочення, до моменту погашення або пролонгації.</div>
+                    </div>
+
+                    <h3 class="faq__category">Категория</h3>
+                    <div class="faq__questions accordion">
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">CashYou — це онлайн сервіс з мікрокредитування, побудованій завдяки найсучаснішим технологіям, який дозволяє отримати кредит на Вашу персональну банківську картку в зручний для Вас час. Час приймання заявок — 24/7, час роботи сервісу — кожен день з 09:00 до 20:00.</div>
+
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">На рішення системи впливає Ваш кредитний рейтинг, історія попередніх кредитних операцій, сума, термін, а також Ваш фінансовий стан.</div>
+    
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">Термін кредиту може складати від 1-го до 30-ти календарних днів. Максимальна сума кредиту — до 12 000 гривень. Сума та термін кредиту залежать від того, наскільки довго Ви користуєтесь системою CashYou та Вашого статусу у «Бонусній програмі». Ви можете змінити ці показники власноруч у Вашому «Особистому кабінеті».</div>
+                        
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">На третій день після дати виплати кредиту, зазначеної в договорі Вам буде нараховуватися штрафна вiдсоткова ставка за кожен день прострочення, до моменту погашення або пролонгації.</div>
+                
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">CashYou — це онлайн сервіс з мікрокредитування, побудованій завдяки найсучаснішим технологіям, який дозволяє отримати кредит на Вашу персональну банківську картку в зручний для Вас час. Час приймання заявок — 24/7, час роботи сервісу — кожен день з 09:00 до 20:00.</div>
+
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">На рішення системи впливає Ваш кредитний рейтинг, історія попередніх кредитних операцій, сума, термін, а також Ваш фінансовий стан.</div>
+    
+                        <h4 class="faq__question">
+                            Текст вопроса
+                            <button type="button" class="faq__close-button"></button>
+                        </h4>
+                        <div class="faq__answer">Термін кредиту може складати від 1-го до 30-ти календарних днів. Максимальна сума кредиту — до 12 000 гривень. Сума та термін кредиту залежать від того, наскільки довго Ви користуєтесь системою CashYou та Вашого статусу у «Бонусній програмі». Ви можете змінити ці показники власноруч у Вашому «Особистому кабінеті».</div>
+                        
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+    </main>
+    
+    <!-- <script src="js/graph.js"></script> -->
+    <!-- <script src="js/offers.js"></script> -->
+    <script src="js/menu.js"></script>
+    
+    <!-- <script type="text/javascript" src="js/slick.js"></script> -->
+    <!-- <script src="js/sliders.js"></script> -->
+</body>
+</html>

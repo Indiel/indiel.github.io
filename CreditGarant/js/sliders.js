@@ -1,5 +1,24 @@
 function sliderRemove(){
-    if ($(window).width() < 576){
+    var seoButton = document.querySelector('.seo__button-hidden');
+    var seoText = document.querySelector('.seo__text-hidden');
+    var seo = document.querySelector('.seo');
+
+    seoButton.addEventListener('click', () => {
+        seoText.classList.toggle('seo__text-hidden--visible');
+        seo.classList.toggle('seo--visible');
+    });
+
+    if ($(window).width() > 576 && $(window).width() < 900) {
+        const blogSlider = $(".blog__slider");
+        blogSlider.slick({
+            dots: false,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1
+        });
+    }
+
+    if ($(window).width() < 576) {
         const sliderOffers = $(".slider-offers");
         sliderOffers.slick({
             dots: false,

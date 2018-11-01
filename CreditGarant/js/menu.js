@@ -4,13 +4,13 @@
 
     var hamburger = document.querySelector(".hamburger");
     var mainNav = document.querySelector(".main-nav");
-    var mainNavList = document.querySelector(".main-nav__list");
+    // var mainNavList = document.querySelector(".main-nav__list");
 
-    if (document.documentElement.clientWidth > 576 && document.documentElement.clientWidth <= 1200) {
+    if (document.documentElement.clientWidth > 576 && document.documentElement.clientWidth <= 1000) {
 
         hamburger.addEventListener("click", function() {
             hamburger.classList.toggle("is-active");
-            mainNavList.classList.toggle("main-nav__list--active");
+            mainNav.classList.toggle("main-nav--active");
         });
     }
 

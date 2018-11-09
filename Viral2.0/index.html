@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    
     <!-- <link rel="stylesheet" href="css/media.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
     
@@ -19,27 +21,30 @@
     </div>
     -->
 
-    <nav class="main-nav">
+    <div class="container__main-nav">
+    <nav class="main-nav" id="fullpage">
         <div class="main-nav__logo-wrapper">
             <a href="http://viral.com.ua/" class="main-nav__logo">
                 <h2 class="logo__main">Viral</h2>
             </a>
         </div>
 
-        <button class="menu-button hamburger hamburger--emphatic" type="button">
+        <div class="menu">
+        <button class="menu-button hamburger hamburger--emphatic menu_btn" type="button">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
             </span>
         </button>
 
-        <div class="main-nav__wrapper visually-hidden">
-            <ul class="main-nav__list nav-list">
+        <div class="main-nav__wrapper">
+            <ul class="main-nav__list nav-list menu_list">
                 <li class="nav-list__item"><a href="#container-main" id="main" class="nav-list__link">Главная</a></li>
                 <li class="nav-list__item"><a href="#container-services" id="services" class="nav-list__link">Услуги</a></li>
                 <li class="nav-list__item"><a href="#" class="nav-list__link">Работы</a></li>
                 <li class="nav-list__item"><a href="#" class="nav-list__link">Бриф</a></li>
                 <li class="nav-list__item"><a href="#container-contacts" id="contacts" class="nav-list__link">Контакты</a></li>
             </ul>
+        </div>
         </div>
 
         <button type="button" class="main-nav__start-project-button button">Начать проект</button>
@@ -49,7 +54,6 @@
             <li class="lang-list__item"><a href="#" class="lang-list__link visually-hidden">ru</a></li>
         </ul>
 
-        <!-- 
         <section class="fixed">
             <div class="fixed__progress-bar"></div>
     
@@ -78,7 +82,7 @@
                     <span class="visually-hidden">Мы в Behance</span>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 430.1 430.1" style="enable-background:new 0 0 430.1 430.1;" xml:space="preserve"
-                        width="16px" height="10px">
+                        width="18px" height="16px">
                         <g>
                         <path fill="rgb(0, 0, 0)" id="Behance" d="M388.4,119.1H280.7V92.3h107.8L388.4,119.1C388.4,119.1,388.4,119.1,388.4,119.1z M208.9,228.9
                             c7,10.8,10.4,23.8,10.4,39.2c0,15.9-3.9,30.1-11.9,42.7c-5.1,8.3-11.4,15.4-18.9,21c-8.5,6.5-18.6,11-30.2,13.4
@@ -108,9 +112,9 @@
     
             <div class="fixed__call"></div>
         </section>
-        -->
 
     </nav>
+    </div>
 
     <main class="main">
         <div class="slider-page">
@@ -273,7 +277,7 @@
         </div>
     </main>
     
-    <section class="fixed">
+    <!-- <section class="fixed">
         <div class="fixed__progress-bar"></div>
 
         <ul class="fixed__social-list social">
@@ -330,7 +334,7 @@
         </ul>
 
         <div class="fixed__call"></div>
-    </section>
+    </section> -->
 
     <div class="container container__footer">
         <footer class="footer">
@@ -424,6 +428,8 @@
     </div>
 
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/fullpage.min.js"></script>
+    
     <!-- <script type="text/javascript" src="js/libs.js"></script> -->
 
     <!-- <script type="text/javascript" src="js/slick.js"></script> -->

@@ -8,85 +8,76 @@
 
     menuButton.addEventListener('click', () => {
         menuButton.classList.toggle('is-active');
-        mainNav.classList.toggle('visually-hidden');
+        mainNav.classList.toggle('main-nav__wrapper--active');
     });
 
-    // if (document.documentElement.clientWidth > 576) {
-    //     openMenuButton.addEventListener('click', () => {
-    //         // mainNav.classList.add('main-nav--active');
-    //         // logoWrapper.classList.add('main-nav__logo-wrapper--active');
-    //         // logo.classList.remove('visually-hidden');
-    //         // logoSign.classList.add('visually-hidden');
-    //         // mainNavWrapper.classList.remove('visually-hidden');
-    
-    //         // langLinkCurrent.classList.remove('visually-hidden');
-    
-    //         mainNav.classList.toggle('main-nav--active');
-    //         logoWrapper.classList.toggle('main-nav__logo-wrapper--active');
-    //         logo.classList.toggle('visually-hidden');
-    //         logoSign.classList.toggle('visually-hidden');
-    //         mainNavWrapper.classList.toggle('visually-hidden');
-    
-    //         // langLinkCurrent.classList.toggle('visually-hidden');
-    
-    //         openMenuButton.classList.toggle('close-menu-button');
-    //         menuButtonTextOpen.classList.toggle('visually-hidden');
-    //         menuButtonTextClose.classList.toggle('visually-hidden');
-    
-    //         // openMenuButton.classList.add('visually-hidden');
-    //         // closeMenuButton.classList.remove('visually-hidden');
-    //     });
-    //     // main.addEventListener('click', () => {
-    //     //     mainNav.classList.toggle('main-nav--active');
-    //     //     logoWrapper.classList.toggle('main-nav__logo-wrapper--active');
-    //     //     logo.classList.toggle('visually-hidden');
-    //     //     logoSign.classList.toggle('visually-hidden');
-    //     //     mainNavWrapper.classList.toggle('visually-hidden');
-    
-    //     //     openMenuButton.classList.toggle('close-menu-button');
-    //     //     menuButtonTextOpen.classList.toggle('visually-hidden');
-    //     //     menuButtonTextClose.classList.toggle('visually-hidden');
-    //     // });
-    // } else {
-    //     logoSign.classList.add('visually-hidden');
-    //     logo.classList.remove('visually-hidden');
+    // var btn = true;
+    // $('.menu_btn').click(function () {
+    //     $(this).closest('.menu').toggleClass('active');
+    //     if ($('#fullpage').length > 0) {
+    //         if ($('.menu').hasClass('active')) {
+    //             $.fn.fullpage.setMouseWheelScrolling(false);
+    //             $.fn.fullpage.setAllowScrolling(false);
+    //         } else {
+    //             $.fn.fullpage.setMouseWheelScrolling(true);
+    //             $.fn.fullpage.setAllowScrolling(true);
+    //         }
+    //     }
+    //     var popup = setTimeout(function () {
+    //         $('.menu_list').slideDown(1500);
+    //         btn = false;
+    //     }, 800)
+    //     if (!btn) {
+    //         $('.menu_list').slideUp();
+    //         clearTimeout(popup)
+    //         btn = true;
+    //     }
 
-    //     menuButtonTextOpen.classList.add('visually-hidden');
-    //     menuButtonTextClose.classList.add('visually-hidden');
+    // })
+    // $('.menu_list a').click(function () {
+    //     $(this).closest('.menu').toggleClass('active');
+    //     if ($('#fullpage').length > 0) {
+    //         if ($('.menu').hasClass('active')) {
+    //             $.fn.fullpage.setMouseWheelScrolling(false);
+    //             $.fn.fullpage.setAllowScrolling(false);
+    //         } else {
+    //             $.fn.fullpage.setMouseWheelScrolling(true);
+    //             $.fn.fullpage.setAllowScrolling(true);
+    //         }
+    //     }
+    //     var popup = setTimeout(function () {
+    //         $('.menu_list').slideDown(1500);
+    //         btn = false;
+    //     }, 800)
+    //     if (!btn) {
+    //         $('.menu_list').slideUp();
+    //         clearTimeout(popup)
+    //         btn = true;
+    //     }
+    // })
 
-    //     // langList.classList.add('visually-hidden')
-    //     // langLinkCurrent.classList.remove('visually-hidden');
 
-    //     mainNavWrapper.classList.remove('visually-hidden');
-        
-    //     hamburger.addEventListener("click", function() {
-    //         hamburger.classList.toggle("is-active");
-
-    //         // mainNav.classList.toggle('main-nav--active');
-    //         // logoWrapper.classList.toggle('main-nav__logo-wrapper--active');
-    //         mainNavWrapper.classList.toggle('main-nav__wrapper--active');
-    //         // mainNavWrapper.classList.toggle('visually-hidden');
-            
-    //         // langList.classList.toggle('visually-hidden');
-
-    //         document.querySelector("body").classList.toggle("none-scroll");
-
-    //         Array.from(navListLink).forEach((elem) => {
-    //             elem.addEventListener("click", function () {
-    //                 hamburger.classList.remove("is-active");
-    //                 mainNavWrapper.classList.remove('main-nav__wrapper--active');
-    //                 // langList.classList.add('visually-hidden');
-    //                 document.querySelector("body").classList.remove("none-scroll");
-    //             });
+    // var socialItem = document.querySelectorAll('.social__item');
+    // var blackelement = document.querySelector('.container__brief');
+    // var top;
+    // window.addEventListener('scroll', () => {
+    //     top = window.pageYOffset + 200;
+    //     console.log(top);
+    //     if (top >= blackelement.offsetTop && top <= (blackelement.offsetTop + blackelement.clientHeight)) {
+    //         Array.from(socialItem).forEach((elem) => {
+    //             if (top >= elem.offsetTop) {
+    //                 elem.classList.add('social__item--white');
+    //             }
     //         });
-    //     });
-
-    //     window.addEventListener('resize', () => {
-    //         let vh = window.innerHeight * 0.01;
-    //         document.documentElement.style.setProperty('--vh', `${vh}px`);
-    //     });
-    // }
-
+    //     } else {
+    //         Array.from(socialItem).forEach((elem) => {
+    //             // if (top <= elem.offsetTop && top >= (elem.offsetTop + elem.clientHeight)) {
+    //             //     elem.classList.remove('social__item--white');
+    //             // }
+    //             elem.classList.remove('social__item--white');
+    //         });
+    //     }
+    // });
 
 })();
 

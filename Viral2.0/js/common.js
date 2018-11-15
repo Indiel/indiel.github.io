@@ -169,6 +169,16 @@
 // });
 
 (function () {
+    var DEBOUNCE_INTERVAL = 6000;
+
+    var lastTimeout;
+    var debounce = function (fun) {
+        if (lastTimeout) {
+            window.clearTimeout(lastTimeout);
+        }
+        lastTimeout = window.setTimeout(fun, DEBOUNCE_INTERVAL);
+    };
+
     var first = document.querySelector('.anchor1');
 
     var video = document.querySelector('.main-page__video');
@@ -183,20 +193,166 @@
     var servicesItem2 = document.querySelector('.services-list__item:nth-child(2)');
     var servicesItem3 = document.querySelector('.services-list__item:nth-child(3)');
 
-    // var third = document.querySelector('.anchor3');
-    // var third = document.querySelector('.container__working-page');
-    // var thirdTop = third.offsetParent.offsetTop;
-
-    // var third = document.querySelector('.working-page__text-container');
-    // var thirdTop = third.offsetParent.offsetTop;
-
     var third = document.querySelector('.container__about-company');
     var thirdTop = third.offsetParent.offsetTop;
 
+    
+    //     anchorSpacer.addEventListener('wheel', (evt) => {
+    //         debounce ( () => {
+    //         if (evt.wheelDelta <= 0) {
+    //             evt.preventDefault();
+    //             evt.stopPropagation();
+
+    //             $(stripe1).animate({
+    //                 opacity: 1
+    //             }, 100, 'swing');
+
+    //             $(stripe2).animate({
+    //                 opacity: 1
+    //             }, 100, 'swing');
+
+    //             $(stripe1).animate({
+    //                 top: 0
+    //             }, 800, 'swing');
+
+    //             $(stripe2).animate({
+    //                 top: 0
+    //             }, 1200, 'swing');
+
+    //             setTimeout(() => {
+    //                 $(video).animate({
+    //                     top: 63,
+    //                     height: 370
+    //                 }, 800, 'swing');
+
+    //                 setTimeout(() => {
+    //                     $(video).animate({
+    //                         opacity: 0
+    //                     }, 4000, 'swing');
+    //                 }, 800);
+    //             }, 1200);
+
+    //             $(servicesItem1).animate({
+    //                 opacity: 0
+    //             }, 100, 'swing'); 
+
+    //             $(servicesItem2).animate({
+    //                 opacity: 0
+    //             }, 100, 'swing'); 
+
+    //             $(servicesItem3).animate({
+    //                 opacity: 0
+    //             }, 100, 'swing'); 
+
+    //             setTimeout(() => {
+    //                 $(servicesItem1).animate({
+    //                     opacity: 1
+    //                 }, 1000, 'swing'); 
+        
+    //                 setTimeout(() => {
+    //                     $(servicesItem2).animate({
+    //                         opacity: 1
+    //                     }, 1000, 'swing');
+    //                 }, 500);
+        
+    //                 setTimeout(() => {
+    //                     $(servicesItem3).animate({
+    //                         opacity: 1
+    //                     }, 1000, 'swing');
+    //                 }, 1000);
+    //             }, 3000);
+
+    //             setTimeout(() => {
+    //                 $('html, body').animate({
+    //                     scrollTop: secondTop
+    //                 }, 500, 'swing');
+    //             }, 2000);
+    //         }
+    //         });
+    //     });
+    
+
+    // debounce (
+    //     second.addEventListener('wheel', (evt) => {
+    //         if (evt.wheelDelta <= 0) {
+    //             evt.preventDefault();
+    //             evt.stopPropagation();
+
+    //             $('html, body').animate({
+    //                 scrollTop: thirdTop
+    //             }, 500, 'swing');
+    //         }
+
+    //         if (evt.wheelDelta > 0) {
+    //             evt.preventDefault();
+    //             evt.stopPropagation();
+
+    //             $(stripe1).animate({
+    //                 top: 0,
+    //                 opacity: 1
+    //             }, 100, 'swing');
+
+    //             $(stripe2).animate({
+    //                 top: 0,
+    //                 opacity: 1
+    //             }, 100, 'swing');
+
+    //             $(video).animate({
+    //                 opacity: 1
+    //             }, 3000, 'swing');
+
+    //             setTimeout(() => {
+    //                 $(servicesItem3).animate({
+    //                     opacity: 0
+    //                 }, 1000, 'swing'); 
+    //             }, 500);
+
+    //             setTimeout(() => {
+    //                 $(servicesItem2).animate({
+    //                     opacity: 0
+    //                 }, 1000, 'swing'); 
+    //             }, 1000);
+
+    //             setTimeout(() => {
+    //                 $(servicesItem1).animate({
+    //                     opacity: 0
+    //                 }, 1000, 'swing');
+    //             }, 1500);
+
+    //             setTimeout(() => {
+    //                 $(video).animate({
+    //                     top: 0,
+    //                     height: 500
+    //                 }, 800, 'swing');
+    //             }, 2000);
+
+    //             setTimeout(() => {
+    //                 $(stripe2).animate({
+    //                     top: 500
+    //                 }, 800, 'swing');
+
+    //                 $(stripe1).animate({
+    //                     top: 500
+    //                 }, 1200, 'swing');
+    //             }, 4000);
+                
+
+    //             setTimeout(() => {
+    //                 $('html, body').animate({
+    //                     scrollTop: 0
+    //                 }, 500, 'swing');
+    //             }, 2500);
+    //         }
+    //     })
+    // );
+
     anchorSpacer.addEventListener('wheel', (evt) => {
+        evt.preventDefault();
+        evt.stopPropagation();
+
         if (evt.wheelDelta <= 0) {
-            evt.preventDefault();
-            evt.stopPropagation();
+            // evt.preventDefault();
+            // evt.stopPropagation();
 
             $(stripe1).animate({
                 opacity: 1
@@ -267,19 +423,16 @@
 
     
     second.addEventListener('wheel', (evt) => {
-        if (evt.wheelDelta <= 0) {
-            evt.preventDefault();
-            evt.stopPropagation();
+        evt.preventDefault();
+        evt.stopPropagation();
 
+        if (evt.wheelDelta <= 0) {
             $('html, body').animate({
                 scrollTop: thirdTop
             }, 500, 'swing');
         }
 
         if (evt.wheelDelta > 0) {
-            evt.preventDefault();
-            evt.stopPropagation();
-
             $(stripe1).animate({
                 top: 0,
                 opacity: 1

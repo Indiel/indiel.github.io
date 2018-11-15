@@ -178,101 +178,174 @@
     var anchorSpacer = document.querySelector('.anchor-spacer');
     var second = document.querySelector('.anchor2');
     var secondTop = second.offsetTop;
-    var third = document.querySelector('.anchor3');
-    var thirdTop = third.offsetTop;
+
+    var servicesItem1 = document.querySelector('.services-list__item:nth-child(1)');
+    var servicesItem2 = document.querySelector('.services-list__item:nth-child(2)');
+    var servicesItem3 = document.querySelector('.services-list__item:nth-child(3)');
+
+    // var third = document.querySelector('.anchor3');
+    // var third = document.querySelector('.container__working-page');
+    // var thirdTop = third.offsetParent.offsetTop;
+
+    // var third = document.querySelector('.working-page__text-container');
+    // var thirdTop = third.offsetParent.offsetTop;
+
+    var third = document.querySelector('.container__about-company');
+    var thirdTop = third.offsetParent.offsetTop;
 
     anchorSpacer.addEventListener('wheel', (evt) => {
-        console.log(evt);
-        console.log(evt.wheelDelta);
-
         if (evt.wheelDelta <= 0) {
             evt.preventDefault();
             evt.stopPropagation();
 
-            // $(stripes).animate({
-            //     display: block
-            // }, 500, 'swing');
+            $(stripe1).animate({
+                opacity: 1
+            }, 100, 'swing');
 
-            $(video).animate({
-                // opacity: 0,
-                top: 63,
-                height: 370
-            }, 1000, 'swing');
+            $(stripe2).animate({
+                opacity: 1
+            }, 100, 'swing');
+
+            $(stripe1).animate({
+                top: 0
+            }, 800, 'swing');
+
+            $(stripe2).animate({
+                top: 0
+            }, 1200, 'swing');
 
             setTimeout(() => {
-                $(stripe1).animate({
-                    opacity: 1
-                }, 100, 'swing');
-    
-                $(stripe2).animate({
-                    opacity: 1
-                }, 100, 'swing');
-    
-                $(stripe1).animate({
-                    // opacity: 1,
-                    top: 0
-                }, 1500, 'swing');
-    
-                $(stripe2).animate({
-                    // opacity: 1,
-                    top: 0
-                }, 2000, 'swing');
+                $(video).animate({
+                    top: 63,
+                    height: 370
+                }, 800, 'swing');
 
                 setTimeout(() => {
                     $(video).animate({
                         opacity: 0
-                    }, 1000, 'swing');
-                }, 2000);
-            }, 1000);
+                    }, 4000, 'swing');
+                }, 800);
+            }, 1200);
 
-            // setTimeout(() => {
-            //     $(video).animate({
-            //         // opacity: 0,
-            //         top: 63,
-            //         height: 370
-            //     }, 1000, 'swing');
-            // }, 1000);
-
-            $(second).animate({
+            $(servicesItem1).animate({
                 opacity: 0
-            }, 3000, 'swing');
+            }, 100, 'swing'); 
+
+            $(servicesItem2).animate({
+                opacity: 0
+            }, 100, 'swing'); 
+
+            $(servicesItem3).animate({
+                opacity: 0
+            }, 100, 'swing'); 
+
+            setTimeout(() => {
+                $(servicesItem1).animate({
+                    opacity: 1
+                }, 1000, 'swing'); 
+    
+                setTimeout(() => {
+                    $(servicesItem2).animate({
+                        opacity: 1
+                    }, 1000, 'swing');
+                }, 500);
+    
+                setTimeout(() => {
+                    $(servicesItem3).animate({
+                        opacity: 1
+                    }, 1000, 'swing');
+                }, 1000);
+            }, 3000);
 
             setTimeout(() => {
                 $('html, body').animate({
                     scrollTop: secondTop
-                }, 1000, 'swing');
+                }, 500, 'swing');
             }, 2000);
-
-            // setTimeout(() => {
-            //     $(second).animate({
-            //         opacity: 1
-            //     }, 2000, 'swing');
-            // }, 5000);
         }
-
-        setTimeout(() => {
-            $(first).animate({
-                opacity: 1
-            }, 1000, 'swing');
-    
-            $(second).animate({
-                opacity: 1
-            }, 1000, 'swing');
-        }, 2000);
     });
 
     
     second.addEventListener('wheel', (evt) => {
-        console.log(evt);
-        console.log(evt.wheelDelta);
-
         if (evt.wheelDelta <= 0) {
             evt.preventDefault();
             evt.stopPropagation();
 
             $('html, body').animate({
                 scrollTop: thirdTop
-            }, 2000, 'swing');
+            }, 500, 'swing');
+        }
+
+        if (evt.wheelDelta > 0) {
+            evt.preventDefault();
+            evt.stopPropagation();
+
+            $(stripe1).animate({
+                top: 0,
+                opacity: 1
+            }, 100, 'swing');
+
+            $(stripe2).animate({
+                top: 0,
+                opacity: 1
+            }, 100, 'swing');
+
+            $(video).animate({
+                opacity: 1
+            }, 3000, 'swing');
+
+            setTimeout(() => {
+                $(servicesItem3).animate({
+                    opacity: 0
+                }, 1000, 'swing'); 
+            }, 500);
+
+            setTimeout(() => {
+                $(servicesItem2).animate({
+                    opacity: 0
+                }, 1000, 'swing'); 
+            }, 1000);
+
+            setTimeout(() => {
+                $(servicesItem1).animate({
+                    opacity: 0
+                }, 1000, 'swing');
+            }, 1500);
+
+            setTimeout(() => {
+                $(video).animate({
+                    top: 0,
+                    height: 500
+                }, 800, 'swing');
+            }, 2000);
+
+            setTimeout(() => {
+                $(stripe2).animate({
+                    top: 500
+                }, 800, 'swing');
+
+                $(stripe1).animate({
+                    top: 500
+                }, 1200, 'swing');
+            }, 4000);
+            
+
+            setTimeout(() => {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 500, 'swing');
+            }, 2500);
+        }
+    });
+
+    third.addEventListener('wheel', (evt) => {
+        if (evt.wheelDelta > 0) {
+            evt.preventDefault();
+            evt.stopPropagation();
+
+            $('html, body').animate({
+                scrollTop: secondTop
+            }, 500, 'swing');
         }
     });
 })();

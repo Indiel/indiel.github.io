@@ -89,13 +89,16 @@ ul {
 }
 
 .container {
-    margin: 0 auto;
-    max-width: 1170px;
+    margin: 0;
+    width: 100%;
+    
 }
 
 .page {
-    margin: 0;
-    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
 
     display: flex;
     flex-direction: column;
@@ -497,10 +500,10 @@ ul {
 
 .stripes {
     position: absolute;
-    top: 370px;
+    top: 500px;
 
     width: 30px;
-    height: 370px;
+    height: 500px;
 
     background-color: #fff;
 
@@ -978,7 +981,9 @@ ul {
 
     padding-top: 80px;
     padding-bottom: 80px;
+
     display: flex;
+    flex-direction: row;
 
     font-size: 14px;
 
@@ -1056,7 +1061,12 @@ ul {
     right: 0;
 }
 
-.container__slider {
+.certificates {
+    padding-bottom: 80px;
+    max-width: 1110px;
+}
+
+.clients {
     padding-bottom: 80px;
     max-width: 1110px;
 }
@@ -1081,13 +1091,9 @@ ul {
 
 .container__brief {
     position: relative;
-
-    max-width: 100%;
-    width: 100%;
     margin-bottom: 80px;
 
     text-transform: uppercase;
-
     color: #fff;
     background-color: #000;
 }

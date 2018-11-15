@@ -21,11 +21,6 @@
             timeMenu = 0;
             timeItem = 1000;
         }
-        
-        // menuButton.classList.toggle('is-active');
-        // mainNav.classList.toggle('main-nav__wrapper--active');
-        // mainButton.classList.toggle('main-nav__start-project-button--active');
-        // mainLang.classList.toggle('lang-list__link--active');
 
         setTimeout(() => {
             menuButton.classList.toggle('is-active');

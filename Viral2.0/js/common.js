@@ -221,90 +221,69 @@
                 triggerHook: 'onLeave'
             }
         });
-    
-    //     var line1Action = new TimelineMax();
-    //     line1Action.fromTo("#section2", 1, {opacity:0, 'margin-top':'300px'}, {opacity:1.3, 'margin-top':'-300px'});
-    //     new ScrollMagic.Scene({
-    //         triggerElement: "body",
-    //         duration: '200%'
-    // //    }).setPin("#container")
-    //     }).setPin("body")
-    //     .setTween(line1Action)
-    //     .addTo(ctrl);
+
+        // var section1Height = new TimelineMax();
+        // section1Height
+        // // .fromTo("#anchor-spacer", 1, {'margin-top': '100px'}, {'margin-top': '0px', ease: Linear.easeNone})
+        // .fromTo("#anchor-spacer", 1, {height: '100vh'}, {height: '0', ease: Linear.easeNone});
+        // // .fromTo("#anchor-spacer", 0, {height: '100vh', 'margin-top': '100px'}, {height: '0', 'margin-top': '0px', ease: Linear.easeNone}, '-0.3')
+        // new ScrollMagic.Scene({
+        //     triggerElement: "body",
+        //     // triggerHook: "onLeave",
+        //     duration: '200%'
+        // })
+        // .setPin("#anchor-spacer")
+        // .setTween(section1Height)
+        // .addTo(ctrl);
 
         var section1Action = new TimelineMax();
         section1Action
-        .fromTo("#stripe1", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
-        .fromTo("#stripe2", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
+        // .to("#anchor-spacer", 1, {height: '0', delay: 10, ease: Linear.easeNone})
+        .from("#container-main", 1, {opacity: 1})
+        // .fromTo("#stripe1", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
+        // .fromTo("#stripe2", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
+        .fromTo(".stripes", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
         .fromTo("#video", 1, {height: '500px', top: '0px'}, {height: '370px', top: '63px', ease: Linear.easeNone})
-        .fromTo("#container-main", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone});
-        // .fromTo("#anchor-spacer", 0, {height: '100vh', 'margin-top': '100px'}, {height: '0', 'margin-top': '0px', ease: Linear.easeNone}, '-0.3')
+        .to("#anchor-spacer", 1, {height: '0', ease: Linear.easeNone})
+        .fromTo("#container-main", 1, {opacity: 1}, {opacity: 0.5, ease: Linear.easeNone})
 
+        // .fromTo("#services-item1", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
+        // .fromTo("#services-item2", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
+        // .fromTo("#services-item3", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
+        .fromTo("#container-services", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
+        .fromTo("#container-main", 1, {opacity: 0.5}, {opacity: 0, ease: Linear.easeNone})
+        .to("#container-main", 1, {opacity: 0, delay: 6, ease: Linear.easeNone});
+        
         new ScrollMagic.Scene({
             triggerElement: "body",
             // triggerHook: "onLeave",
-            duration: '100%'
+            duration: '200%'
         })
         .setPin("body")
         .setTween(section1Action)
         .addTo(ctrl);
 
-        var section2Action = new TimelineMax();
-        section2Action
-        .to("#anchor-spacer", 1, {height: '0', delay: 10, ease: Linear.easeNone})
-        // .to("#anchor-spacer", 1, {'margin-top': '0px', ease: Linear.easeNone})
-        .fromTo("#services-item1", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
-        .fromTo("#services-item2", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
-        .fromTo("#services-item3", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone});
-        // .from("#container-services", 1, {'margin-top': '100px', ease: Linear.easeNone});
-        // .fromTo("#anchor-spacer", 1, {height: '0'}, {height: '100vh', ease: Linear.easeNone});
+        // var section2Action = new TimelineMax();
+        // section2Action
+        // // .fromTo("#container-main", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone})
+        // .to("#anchor-spacer", 1, {height: '0', delay: 10, ease: Linear.easeNone})
+        // // .to("#anchor-spacer", 1, {'margin-top': '0px', ease: Linear.easeNone})
+        // .fromTo("#services-item1", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
+        // .fromTo("#services-item2", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
+        // .fromTo("#services-item3", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone});
+        // // .to(".scrollmagic-pin-spacer", 1, {'padding-bottom': 0, ease: Linear.easeNone});
+        // // .from("#container-services", 1, {'margin-top': '100px', ease: Linear.easeNone});
+        // // .fromTo("#anchor-spacer", 1, {height: '0'}, {height: '100vh', ease: Linear.easeNone});
 
-        // .fromTo("#container-services", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone});
-        new ScrollMagic.Scene({
-            triggerElement: "body",
-            // triggerHook: "onEnter",
-            duration: '100%'
-        })
-        .setPin("body")
-        .setTween(section2Action)
-        .addTo(ctrl);
-
-        // var section2Stop = new TimelineMax();
-        // section2Stop
-        // .from("#container-services", 1, {'padding-top': '100px', ease: Linear.easeNone});
+        // // .fromTo("#container-services", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone});
         // new ScrollMagic.Scene({
-        //     triggerElement: "#container-services",
+        //     triggerElement: "body",
         //     // triggerHook: "onEnter",
         //     duration: '200%'
         // })
-        // .setPin("#container-services")
-        // // .setTween(section2Stop)
+        // .setPin("body")
+        // .setTween(section2Action)
         // .addTo(ctrl);
     });
-
-
-
-    // new ScrollMagic.Scene({
-    //     triggerElement: $("#container-main")[0],
-    //     duration: '100%'
-    // })
-    // .setTween(mainPage)
-    // // .triggerElement($('body')[0])
-    // .addTo(ctrl);
-
-    // var mainPage = new TimelineMax();
-	// mainPage
-	// 	.from($second, 2, {opacity: 0})
-    //     .to($second, 0, {opacity: 1});
-    //     // .set($first, {opacity:0});
-    //     // .fromTo($first, 1, { opacity: 0}, {yPercent: 0, autoAlpha: 1, ease: Power4.easeInOut});
-        
-    // new ScrollMagic.Scene({
-    //     triggerElement: $("#container-services")[0],
-    //     duration: '50%'
-    // })
-    // .setTween(mainPage)
-    // // .triggerElement($('body')[0])
-    // .addTo(ctrl);
 
 })(jQuery);

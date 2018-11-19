@@ -11,7 +11,12 @@ body {
     background-color: #fefefe;
 
     position: relative;
+    /* overflow-y: hidden; */
 }
+
+/* .scrollmagic-pin-spacer {
+    padding-bottom: 0 !important;
+} */
 
 /* html::-webkit-scrollbar { 
     display: none; 
@@ -471,15 +476,44 @@ ul {
     position: fixed; 
     left: 50%;
     transform: translateX(-50%);
+
+    z-index: 1;
 }
 
 #anchor-spacer {
     position: relative;
+    top: 0;
+    left: 0;
 
     height: 100vh;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 
     z-index: 2;
+
+    /* background-color: rgba(0, 0, 255, 0.3); */
+}
+
+/* #anchor-spacer::before {
+    content: "";
+        
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+    background: url('../img/noise.png');
+
+    animation: 1s infinite noise;
+    
+    pointer-events: none;
+} */
+
+#container-main {
+    opacity: 1;
 }
 
 .main-page__video {
@@ -534,13 +568,31 @@ ul {
 .container__services {
     position: relative;
     z-index: 2;
-    /* padding-top: 100px; */
-    margin-top: 100px;
+    padding-top: 100px;
+    /* margin-top: 100px; */
     height: calc(100vh - 100px);
     /* height: 100vh; */
 
 
 }
+
+/* .container__services::before {
+    content: "";
+        
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: url('../img/noise.png');
+    
+    animation: 1s infinite noise;
+    
+    pointer-events: none;
+} */
 
 .bg {
     position: relative;
@@ -565,6 +617,24 @@ ul {
     
     pointer-events: none;
 }
+
+/* .container::before {
+    content: "";
+        
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: url('../img/noise.png');
+    
+    animation: 1s infinite noise;
+    
+    pointer-events: none;
+} */
 
 .services-list {
     height: 500px;

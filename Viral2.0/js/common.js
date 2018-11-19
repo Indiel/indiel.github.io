@@ -239,25 +239,29 @@
         var section1Action = new TimelineMax();
         section1Action
         // .to("#anchor-spacer", 1, {height: '0', delay: 10, ease: Linear.easeNone})
-        .from("#container-main", 1, {opacity: 1})
+        // .from("#container-main", 1, {opacity: 1})
+
         // .fromTo("#stripe1", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
         // .fromTo("#stripe2", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
         .fromTo(".stripes", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
+
         .fromTo("#video", 1, {height: '500px', top: '0px'}, {height: '370px', top: '63px', ease: Linear.easeNone})
         .to("#anchor-spacer", 1, {height: '0', ease: Linear.easeNone})
-        .fromTo("#container-main", 1, {opacity: 1}, {opacity: 0.5, ease: Linear.easeNone})
+        .fromTo("#container-main", 1, {opacity: 1}, {opacity: 0.3, ease: Linear.easeNone})
 
         // .fromTo("#services-item1", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
         // .fromTo("#services-item2", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
         // .fromTo("#services-item3", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
         .fromTo("#container-services", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
-        .fromTo("#container-main", 1, {opacity: 0.5}, {opacity: 0, ease: Linear.easeNone})
-        .to("#container-main", 1, {opacity: 0, delay: 6, ease: Linear.easeNone});
+
+        // .fromTo("#container-main", 1, {opacity: 0.5}, {opacity: 0, ease: Linear.easeNone})
+        .to("#container-main", 1, {opacity: 0, ease: Linear.easeNone})
+        .to("#container-main", 1, {opacity: 0, delay: 4, ease: Linear.easeNone});
         
         new ScrollMagic.Scene({
             triggerElement: "body",
             // triggerHook: "onLeave",
-            duration: '200%'
+            duration: '175%'
         })
         .setPin("body")
         .setTween(section1Action)

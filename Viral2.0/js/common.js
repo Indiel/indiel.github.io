@@ -256,12 +256,12 @@
 
         // .fromTo("#container-main", 1, {opacity: 0.5}, {opacity: 0, ease: Linear.easeNone})
         .to("#container-main", 1, {opacity: 0, ease: Linear.easeNone})
-        .to("#container-main", 1, {opacity: 0, delay: 4, ease: Linear.easeNone});
+        .to("#container-main", 1, {opacity: 0, delay: 2, ease: Linear.easeNone});
         
         new ScrollMagic.Scene({
             triggerElement: "body",
             // triggerHook: "onLeave",
-            duration: '175%'
+            duration: '40%'
         })
         .setPin("body")
         .setTween(section1Action)

@@ -243,9 +243,9 @@
 
         // .fromTo("#stripe1", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
         // .fromTo("#stripe2", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
-        .fromTo(".stripes", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
+        .fromTo(".stripes", 1.3, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
 
-        .fromTo("#video", 1, {height: '500px', top: '0px'}, {height: '370px', top: '63px', ease: Linear.easeNone})
+        .fromTo("#video", 0.9, {height: '500px', top: '0px'}, {height: '370px', top: '63px', ease: Linear.easeNone})
         .to("#anchor-spacer", 1, {height: '0', ease: Linear.easeNone})
         .fromTo("#container-main", 1, {opacity: 1}, {opacity: 0.3, ease: Linear.easeNone})
 
@@ -256,12 +256,12 @@
 
         // .fromTo("#container-main", 1, {opacity: 0.5}, {opacity: 0, ease: Linear.easeNone})
         .to("#container-main", 1, {opacity: 0, ease: Linear.easeNone})
-        .to("#container-main", 1, {opacity: 0, delay: 2, ease: Linear.easeNone});
+        .to("#container-main", 1, {opacity: 0, delay: 1, ease: Linear.easeNone});
         
         new ScrollMagic.Scene({
             triggerElement: "body",
             // triggerHook: "onLeave",
-            duration: '40%'
+            duration: '100%'
         })
         .setPin("body")
         .setTween(section1Action)

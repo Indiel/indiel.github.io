@@ -252,7 +252,7 @@
         // .fromTo("#services-item1", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
         // .fromTo("#services-item2", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
         // .fromTo("#services-item3", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
-        .fromTo("#container-services", 1, {opacity: 0, transition: 'opacity 1s'}, {opacity: 1, ease: Linear.easeNone})
+        .fromTo("#container-services", 1, {opacity: 0, transition: 'opacity 1s'}, {opacity: 1, transition: 'opacity 1s', ease: Linear.easeNone})
 
         // .fromTo("#container-main", 1, {opacity: 0.5}, {opacity: 0, ease: Linear.easeNone})
         .to("#container-main", 1, {opacity: 0, transition: '1s', ease: Linear.easeNone})

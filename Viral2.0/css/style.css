@@ -14,9 +14,9 @@ body {
     /* overflow-y: hidden; */
 }
 
-/* .scrollmagic-pin-spacer {
-    padding-bottom: 0 !important;
-} */
+.scrollmagic-pin-spacer {
+    min-height: 100vh !important;
+}
 
 /* html::-webkit-scrollbar { 
     display: none; 
@@ -327,6 +327,12 @@ ul {
     font-size: 30px;
     letter-spacing: 5px;
     color: #fff;
+
+    transition: 0.8s;
+}
+
+.nav-list__link:hover {
+    color: #cc0000;
 }
 
 
@@ -497,6 +503,10 @@ ul {
     color: #fff;
 }
 
+.lang-list__link:hover {
+    color: #cc0000;
+}
+
 .container__main-page {
     padding-top: 100px;
     height: 100vh;
@@ -508,7 +518,7 @@ ul {
     left: 50%;
     transform: translateX(-50%);
 
-    z-index: 1;
+    z-index: 0;
 }
 
 #anchor-spacer {
@@ -1139,6 +1149,7 @@ ul {
 
     text-align: center;
 
+    pointer-events: all;
     z-index: 15;
 }
 
@@ -1153,6 +1164,10 @@ ul {
 
 .social__item {
     margin: 20px 0;
+}
+
+.social__item:hover svg path {
+    fill: #cc0000;
 }
 
 /* .social__item--white svg path {
@@ -1251,6 +1266,9 @@ ul {
 .certificates {
     padding-bottom: 80px;
     max-width: 1110px;
+
+    position: relative;
+    z-index: 2;
 }
 
 .clients {

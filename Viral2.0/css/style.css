@@ -183,6 +183,36 @@ ul {
     pointer-events: none;
 }
 
+/* .gradient {
+    width: 100%;
+    height: 20px;
+
+    position: fixed;
+    top: 100px;
+    left: 0;
+
+    background: transparent; 
+    background: linear-gradient(to bottom, #fefefe, transparent);
+}
+
+.gradient::before {
+    content: "";
+        
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    background: url('../img/noise.png');
+    
+    animation: 1s infinite noise;
+    
+    pointer-events: none;
+} */
+
 .main-nav__logo {
     color: #cc0000;
     font-size: 32px;
@@ -648,9 +678,17 @@ ul {
 
 .services-list__item {
     width: 370px;
+    /* height: 370px; */
+    /* margin-bottom: 0; */
 
     position: relative;
+    transition: 0.8s;
 }
+
+/* .services-list__item:hover {
+    height: 500px;
+    margin-bottom: -180px;
+} */
 
 .services-item__title {
     padding-left: 30px;
@@ -668,7 +706,7 @@ ul {
     margin: 0;
     font-size: 30px;
 
-    transition: 1s ease-in-out;
+    transition: 0.8s ease-in-out;
     
 }
 
@@ -678,7 +716,7 @@ ul {
 
     color: #000;
 
-    transition: 1s cubic-bezier(0.44,-0.06,0.54,1.40);
+    transition: 0.8s cubic-bezier(0.44,-0.06,0.54,1.40);
 }
 
 .services-item__description {
@@ -697,7 +735,7 @@ ul {
     margin: 0;
     font-size: 14px;
 
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .services-list__item:hover .services-item__description {
@@ -706,7 +744,7 @@ ul {
 
     color: #000;
 
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
 }
 
 .services-item__img-container {
@@ -714,7 +752,7 @@ ul {
 
     position: relative;
 
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .services-list__item:hover .services-item__img-container {
@@ -733,7 +771,7 @@ ul {
 
     z-index: 2;
 
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .services-list__item:hover .services-item__img-red {
@@ -748,7 +786,7 @@ ul {
 
     opacity: 0.5;
 
-    transition: 1s;
+    transition: 0.8s;
 }
 
 .services-list__item:hover .services-item__img {

@@ -248,24 +248,25 @@
         // .fromTo("#stripe1", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
         // .fromTo("#stripe2", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
         
-        .fromTo("#video", 1, {height: '500px', transition: '1s'}, {height: '370px', ease: Linear.easeNone})
-        .fromTo(".stripes", 1, {top: "500px", transition: '1s'}, {top: "0px", ease: Linear.easeNone})
-        .to("#anchor-spacer", 1, {height: '0', transition: '1s', ease: Linear.easeNone})
-        .fromTo("#container-main", 1, {opacity: 1, transition: '1s'}, {opacity: 0.3, ease: Linear.easeNone})
+        .fromTo("#video", 1.2, {height: '500px', transition: '0.8s'}, {height: '370px', ease: Linear.easeNone})
+        .fromTo(".stripes", 1.2, {top: "500px", transition: '0.8s'}, {top: "0px", ease: Linear.easeNone})
+        .to("#anchor-spacer", 1, {height: '0', ease: Linear.easeNone})
+        .fromTo("#container-main", 1.2, {opacity: 1, transition: '1s'}, {opacity: 0.5, ease: Linear.easeNone})
 
         // .fromTo("#services-item1", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
         // .fromTo("#services-item2", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
         // .fromTo("#services-item3", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
-        .fromTo("#container-services", 1, {opacity: 0, transition: 'opacity 1s'}, {opacity: 1, transition: 'opacity 1s', ease: Linear.easeNone})
+        .fromTo("#container-services", 0.9, {opacity: 0, transition: '1.5s'}, {opacity: 1, ease: Linear.easeNone})
 
-        // .fromTo("#container-main", 1, {opacity: 0.5}, {opacity: 0, ease: Linear.easeNone})
-        .to("#container-main", 0, {opacity: 0, transition: '0.2s', ease: Linear.easeNone})
-        .to("#container-main", 1, {opacity: 0, transition: '1s', delay: 2, ease: Linear.easeNone});
+
+        .to("#container-main", 0.8, {opacity: 0, transition: '1s', delay: 2, ease: Linear.easeNone})
+        .to("#container-main", 1.2, {opacity: 0, transition: '1s', delay: 1, ease: Linear.easeNone});
         
         new ScrollMagic.Scene({
             triggerElement: "body",
             // triggerHook: "onLeave",
             duration: duration + '%'
+            // duration: '40%'
         })
         .setPin("body")
         .setTween(section1Action)
@@ -274,20 +275,21 @@
         // var section2Action = new TimelineMax();
         // section2Action
         // // .fromTo("#container-main", 1, {opacity: 1}, {opacity: 0, ease: Linear.easeNone})
-        // .to("#anchor-spacer", 1, {height: '0', delay: 10, ease: Linear.easeNone})
+        // // .to("#anchor-spacer", 1, {height: '0', delay: 10, ease: Linear.easeNone})
         // // .to("#anchor-spacer", 1, {'margin-top': '0px', ease: Linear.easeNone})
-        // .fromTo("#services-item1", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
-        // .fromTo("#services-item2", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
-        // .fromTo("#services-item3", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone});
-        // // .to(".scrollmagic-pin-spacer", 1, {'padding-bottom': 0, ease: Linear.easeNone});
-        // // .from("#container-services", 1, {'margin-top': '100px', ease: Linear.easeNone});
-        // // .fromTo("#anchor-spacer", 1, {height: '0'}, {height: '100vh', ease: Linear.easeNone});
+        // // .fromTo("#services-item1", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
+        // // .fromTo("#services-item2", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone})
+        // // .fromTo("#services-item3", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone});
+        // .fromTo("#container-services", 1.2, {opacity: 0, transition: '1.5s'}, {opacity: 1, ease: Linear.easeNone})
+
+        // .to("#container-main", 1, {opacity: 0, transition: '0.2s', ease: Linear.easeNone})
+        // .to("#container-main", 1, {opacity: 0, transition: '1s', delay: 2, ease: Linear.easeNone});
 
         // // .fromTo("#container-services", 1, {opacity: 0}, {opacity: 1, ease: Linear.easeNone});
         // new ScrollMagic.Scene({
         //     triggerElement: "body",
         //     // triggerHook: "onEnter",
-        //     duration: '200%'
+        //     duration: duration + '%'
         // })
         // .setPin("body")
         // .setTween(section2Action)

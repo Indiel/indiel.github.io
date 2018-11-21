@@ -610,7 +610,8 @@ ul {
     height: calc(100vh - 100px);
     /* height: 100vh; */
 
-
+    opacity: 0;
+    transition: 1.5s;
 }
 
 /* .container__services::before {

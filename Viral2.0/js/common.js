@@ -213,7 +213,11 @@
         // .addTo(ctrl);
     // });
 
+// console.log(document.querySelector('html').clientWidth);
 
+    console.log(document.querySelector('html').clientHeight);
+    var duration = Math.round(24400/document.querySelector('html').clientHeight);
+    console.log(duration);
 
     $(document).ready(function () {
         var ctrl = new ScrollMagic.Controller({
@@ -245,7 +249,7 @@
         // .fromTo("#stripe2", 1, {top: "500px"}, {top: "0px", ease: Linear.easeNone})
         
         .fromTo("#video", 1, {height: '500px', transition: '1s'}, {height: '370px', ease: Linear.easeNone})
-        .fromTo(".stripes", 1.3, {top: "500px", transition: '1s'}, {top: "0px", ease: Linear.easeNone})
+        .fromTo(".stripes", 1, {top: "500px", transition: '1s'}, {top: "0px", ease: Linear.easeNone})
         .to("#anchor-spacer", 1, {height: '0', transition: '1s', ease: Linear.easeNone})
         .fromTo("#container-main", 1, {opacity: 1, transition: '1s'}, {opacity: 0.3, ease: Linear.easeNone})
 
@@ -255,13 +259,13 @@
         .fromTo("#container-services", 1, {opacity: 0, transition: 'opacity 1s'}, {opacity: 1, transition: 'opacity 1s', ease: Linear.easeNone})
 
         // .fromTo("#container-main", 1, {opacity: 0.5}, {opacity: 0, ease: Linear.easeNone})
-        .to("#container-main", 1, {opacity: 0, transition: '1s', ease: Linear.easeNone})
+        .to("#container-main", 0, {opacity: 0, transition: '0.2s', ease: Linear.easeNone})
         .to("#container-main", 1, {opacity: 0, transition: '1s', delay: 2, ease: Linear.easeNone});
         
         new ScrollMagic.Scene({
             triggerElement: "body",
             // triggerHook: "onLeave",
-            duration: '80%'
+            duration: duration + '%'
         })
         .setPin("body")
         .setTween(section1Action)

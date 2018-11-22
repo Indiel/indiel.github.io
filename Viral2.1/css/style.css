@@ -1260,19 +1260,28 @@ ul {
 }
 
 .footer__copyright {
-    width: 40%;
+    /* width: 40%; */
+    margin-right: auto;
 
     display: flex;
     flex-direction: column;
 }
 
+.footer__nav-item {
+    height: 30px;
+}
+
 .footer__info {
     display: flex;
-    width: 60%;
+    /* width: 60%; */
 }
 
 .info__item {
-    width: 33.333%;
+    width: 270px;
+}
+
+.info__item:nth-child(3) {
+    width: 170px;
 }
 
 .footer__viral,

@@ -14,6 +14,7 @@
         // heights[i] = elem;
         offsets[i] = elem.offsetTop;
     });
+    console.log(offsets);
 
     window.addEventListener('wheel', (evt) => {
         // evt.preventDefault();

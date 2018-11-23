@@ -918,8 +918,8 @@ ul {
     /* position: relative; */
 }
 
-.learn-more__arrow1,
-.learn-more__arrow2 {
+.arrow1,
+.arrow2 {
     position: absolute; 
     bottom: 5px;
     left: 0;
@@ -931,7 +931,7 @@ ul {
     transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.8s;
 }
 
-.learn-more__arrow2 {
+.arrow2 {
     bottom: 3px;
     left: 94px;
 
@@ -1147,10 +1147,16 @@ ul {
     bottom: 0;
 }
 
+.working-page-item__link-container {
+    position: relative;
+}
+
 .working-page-item__link {
     color: #fff;
     text-transform: uppercase;
     font-size: 14px;
+
+    padding: 15px 0;
 
     position: relative;
 
@@ -1166,6 +1172,37 @@ ul {
     transition-delay: 0.6s;
     opacity: 1;
     bottom: 0;
+}
+
+.working-page-item__arrow1,
+.working-page-item__arrow2 {
+    transition-delay: 0s;
+    transition: width left 0.8s;
+
+    width: 0;
+    opacity: 0;
+
+    background-color: #fff;
+}
+
+.working-page-item__arrow2 {
+    width: 0;
+    left: 0;
+}
+
+.working-page-list__item:hover .working-page-item__arrow1 {
+    transition-delay: 0.6s;
+    transition: width left 0.8s;
+    width: 130px;
+    opacity: 1;
+}
+
+.working-page-list__item:hover .working-page-item__arrow2 {
+    transition-delay: 0.6s;
+    transition: width left 0.8s;
+    width: 6px;
+    left: 125px;
+    opacity: 1;
 }
 
 .working-item__watch-projects {
@@ -1192,7 +1229,7 @@ ul {
 .fixed__social-list {
     position: absolute;
     right: 30px;
-    top: 50%;
+    top: calc(50% - 100px);
     transform: translateY(-50%);
 
     text-align: center;
@@ -1322,6 +1359,7 @@ ul {
 
 .certificates {
     padding-bottom: 110px;
+    padding-top: 80px;
     /* max-width: 1110px; */
 
     position: relative;
@@ -1358,15 +1396,24 @@ ul {
 }
 
 .container__brief {
-    position: relative;
-    margin-bottom: 80px;
+    box-sizing: border-box;
+    padding: 0 80px;
+}
 
+.brief {
+    position: relative;
+    display: block;
+    /* margin: 0 auto; */
+    padding: 135px 0 120px 0;
+    /* max-width: 1170px; */
+
+    text-align: center;
     text-transform: uppercase;
     color: #fff;
     background-color: #000;
 }
 
-.container__brief::before {
+.brief::before {
     content: "";
         
     z-index: 1;
@@ -1382,15 +1429,6 @@ ul {
     animation: 1s infinite noise;
     
     pointer-events: none;
-}
-
-.brief {
-    display: block;
-    margin: 0 auto;
-    padding: 135px 0 120px 0;
-    max-width: 1170px;
-
-    text-align: center;
 }
 
 .brief__description {

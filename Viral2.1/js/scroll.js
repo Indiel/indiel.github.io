@@ -7,14 +7,17 @@
 
     // var heights = [];
     var offsets = [];
+    var anchors = [];
     // var count = 0;
     var isAnimating  = false;
 
     Array.from(sections).forEach((elem, i) => {
         // heights[i] = elem;
         offsets[i] = elem.offsetTop;
+        anchors[i] = $(elem).offset().top;
     });
     console.log(offsets);
+    console.log(anchors);
 
     window.addEventListener('wheel', (evt) => {
         // evt.preventDefault();

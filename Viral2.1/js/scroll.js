@@ -5,17 +5,18 @@
     var sections = document.querySelectorAll('section');
     // var html = document.querySelectorAll('body');
 
-    // var heights = [];
+    var heights = [];
     var offsets = [];
     var anchors = [];
     // var count = 0;
     var isAnimating  = false;
 
     Array.from(sections).forEach((elem, i) => {
-        // heights[i] = elem;
+        heights[i] = elem;
         offsets[i] = elem.offsetTop;
         anchors[i] = $(elem).offset().top;
     });
+    console.log(heights);
     console.log(offsets);
     console.log(anchors);
 

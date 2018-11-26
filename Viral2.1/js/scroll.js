@@ -7,7 +7,6 @@
 
     var heights = [];
     var offsets = [];
-    var anchors = [];
     // var count = 0;
     var isAnimating  = false;
 
@@ -15,12 +14,24 @@
         Array.from(sections).forEach((elem, i) => {
             heights[i] = elem;
             offsets[i] = elem.offsetTop;
-            anchors[i] = $(elem).offset().top;
         });
         console.log(heights);
         console.log(offsets);
-        console.log(anchors);
-    }, 5000);
+    }, 3000);
+
+
+    var buttonsNode = document.querySelectorAll('.progress-bar__item');
+    var buttons = [];
+    Array.from(buttonsNode).forEach((elem, i) => {
+        buttons[i] = elem;
+    });
+
+    var pageYOffset;
+    window.addEventListener('scroll', (evt) => {
+        // console.log(evt);
+        pageYOffset = window.pageYOffset;
+        console.log(pageYOffset);
+    });
     
 
     window.addEventListener('wheel', (evt) => {
@@ -39,6 +50,9 @@
                 evt.stopPropagation();
 
                 if (evt.wheelDelta < 0) {
+                    buttons[i + 1].classList.add('line-bottom');
+                    buttons[i + 1].classList.add('none-active-line-bottom');
+
                     isAnimating  = true;
                     $('html, body').animate({
                         scrollTop: offsets[i + 1] - 100
@@ -47,6 +61,8 @@
                     });
                     return;
                 } else {
+                    buttons[i].classList.add('line-top');
+
                     isAnimating  = true;
                     $('html, body').animate({
                         scrollTop: offsets[i - 1] - 100
@@ -60,6 +76,9 @@
                 evt.stopPropagation();
 
                 if (evt.wheelDelta < 0) {
+                    buttons[i + 1].classList.add('line-bottom');
+                    buttons[i + 1].classList.add('none-active-line-bottom');
+
                     isAnimating  = true;
                     $('html, body').animate({
                         scrollTop: offsets[i + 1] - 100
@@ -68,6 +87,8 @@
                     });
                     return;
                 } else {
+                    buttons[i].classList.add('line-top');                    
+
                     isAnimating  = true;
                     $('html, body').animate({
                         scrollTop: offsets[i] - 100
@@ -78,6 +99,8 @@
                 }
             }
         }
+
+        // console.log(window.offsetTop);
 
         // offsets.forEach((elem, i) => {
         //     if (window.pageYOffset >= elem && window.pageYOffset < elem)

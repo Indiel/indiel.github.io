@@ -15,11 +15,11 @@
         var timeItem;
         
         if (mainNav.classList.length === 2) {
-            timeMenu = 1200;
+            timeMenu = 400;
             timeItem = 0;
         } else {
             timeMenu = 0;
-            timeItem = 1000;
+            timeItem = 300;
         }
 
         setTimeout(() => {
@@ -34,7 +34,7 @@
             setTimeout(() => {
                 elem.classList.toggle('nav-list__item--active');
             }, timeItem);
-            timeItem += 200;
+            timeItem += 100;
         });
 
     });

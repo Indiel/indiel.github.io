@@ -623,7 +623,7 @@ ul {
 .container__services {
     position: relative;
     z-index: 2;
-    padding: 100px 80px 100px;
+    padding: 100px 80px 110px;
     /* margin-top: 100px; */
     /* height: calc(100vh - 100px); */
     /* height: 100vh; */
@@ -845,7 +845,7 @@ ul {
 
 .text-container {
     width: 100%;
-    padding: 80px 0 50px;
+    /* padding: 100px 0; */
 
     position: relative;
 }
@@ -854,7 +854,7 @@ ul {
     content: url(../img/points.png);
 
     position: absolute;
-    top: 0;
+    top: -50px;
     left: 0;
 }
 
@@ -862,7 +862,7 @@ ul {
     content: url(../img/lines.png);
 
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
     right: 0;
 }
 
@@ -916,6 +916,11 @@ ul {
     text-transform: uppercase;
 
     /* position: relative; */
+    transition: 0.8s;
+}
+
+.learn-more:hover {
+ color: #cc0000;
 }
 
 .arrow1,
@@ -928,7 +933,7 @@ ul {
     height: 1px;
     background-color: #cc0000;
 
-    transition: cubic-bezier(0.6, -0.28, 0.735, 0.045) 0.8s;
+    transition: 0.8s;
 }
 
 .arrow2 {
@@ -1155,6 +1160,7 @@ ul {
     color: #fff;
     text-transform: uppercase;
     font-size: 14px;
+    font-weight: 700;
 
     padding: 15px 0;
 
@@ -1177,7 +1183,7 @@ ul {
 .working-page-item__arrow1,
 .working-page-item__arrow2 {
     transition-delay: 0s;
-    transition: width left 0.8s;
+    transition: 0.8s;
 
     width: 0;
     opacity: 0;
@@ -1192,16 +1198,16 @@ ul {
 
 .working-page-list__item:hover .working-page-item__arrow1 {
     transition-delay: 0.6s;
-    transition: width left 0.8s;
-    width: 130px;
+    transition: 0.8s;
+    width: 100px;
     opacity: 1;
 }
 
 .working-page-list__item:hover .working-page-item__arrow2 {
     transition-delay: 0.6s;
-    transition: width left 0.8s;
+    transition: 0.8s;
     width: 6px;
-    left: 125px;
+    left: 95px;
     opacity: 1;
 }
 
@@ -1333,7 +1339,7 @@ ul {
 .footer {
     position: relative;
 
-    padding-top: 80px;
+    /* padding-top: 80px; */
     padding-bottom: 80px;
 
     display: flex;
@@ -1408,11 +1414,20 @@ ul {
     height: 30px;
 }
 
+.seo {
+    padding-top: 110px;
+    padding-bottom: 80px;
+}
+
+.about-company {
+    padding-bottom: 70px;
+}
+
 .seo__text-container::after {
     content: url(../img/lines-vert.png);
 
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     left: 0;
 }
 
@@ -1420,13 +1435,13 @@ ul {
     content: url(../img/squares.png);
 
     position: absolute;
-    top: 80px;
+    top: 0;
     right: 0;
 }
 
 .certificates {
-    padding-bottom: 110px;
-    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-top: 100px;
     /* max-width: 1110px; */
 
     position: relative;
@@ -1434,7 +1449,7 @@ ul {
 }
 
 .clients {
-    padding-bottom: 110px;
+    padding-bottom: 80px;
     /* max-width: 1110px; */
 }
 

@@ -1254,7 +1254,7 @@ ul {
     background-color: #cacaca;
     outline: none;
 
-    transition: 0.5s;
+    transition: 0.6s;
 }
 
 .progress-bar__item::after {
@@ -1269,28 +1269,28 @@ ul {
     /* height: 100%; */
     background-color: #cc0000;
 
-    transition: height 1s;
+    transition: height 0.6s;
 }
 
 .line-bottom.progress-bar__item::after {
     top: 0;
     bottom: auto;
     height: 100%;
-    transition: height 1s;
+    transition: height 0.6s;
 }
 
 .line-top.progress-bar__item::after {
     top: auto;
     bottom: 0;
     height: 100%;
-    transition: height 1s;
+    transition: height 0.6s;
 }
 
 .none-active-line-bottom.progress-bar__item::after {
     top: auto;
     bottom: 0;
     height: 0;
-    transition: height 1s;
+    transition: height 0.6s;
 }
 
 .fixed__social-list {
@@ -1510,11 +1510,12 @@ ul {
 
 .certificates__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .certificates__item {
     box-sizing: border-box;
+    margin: 0 15px;
     padding: 20px;
     width: 120px;
     height: 120px;

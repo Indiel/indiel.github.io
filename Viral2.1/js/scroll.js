@@ -35,7 +35,7 @@
         sectionNumber();
         buttons[count].classList.add('line-bottom');
     
-    }, 2000);
+    }, 5000);
 
 
     var buttonsNode = document.querySelectorAll('.progress-bar__item');

@@ -16,10 +16,8 @@
         for (let i = 0; i < offsets.length; i++) {
             if (window.pageYOffset + 100 >= offsets[offsets.length - 1]) {
                 count = offsets.length - 1;
-                return count;
             } else if (window.pageYOffset + 100 >= offsets[i] && window.pageYOffset + 100 < offsets[i + 1]) {
                 count = i;
-                return count;
             }
         }
     };

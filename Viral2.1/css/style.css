@@ -938,7 +938,7 @@ ul {
 
 .arrow2 {
     bottom: 3px;
-    left: 94px;
+    left: 95px;
 
     width: 6px;
     transform: rotate(-45deg);
@@ -949,7 +949,7 @@ ul {
 }
 
 .learn-more:hover + .learn-more__arrow1 + .learn-more__arrow2 {
-    left: 154px;
+    left: 155px;
 }
 
 /* .learn-more::before,
@@ -1326,6 +1326,59 @@ ul {
 
 .social__item:hover svg path {
     fill: #cc0000;
+}
+
+.fixed__call {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    pointer-events: all;
+    z-index: 15;
+
+    border: 1px solid #7f7f7f;
+    padding: 0 10px;
+
+    transition: 1s;
+}
+
+/* .fixed__call:hover {
+    transition: 1s;
+} */
+
+.fixed__call:hover .call__item--email,
+.fixed__call:hover .call__item--telegram {
+    position: relative;
+    opacity: 1;
+    transition: 1s;
+}
+
+.call__item {
+    width: 20px;
+    height: 20px;
+    margin: 10px 0;
+}
+
+.call__item svg path {
+    transition: 1s;
+}
+
+.call__item:hover svg path {
+    fill: #cc0000;
+}
+
+.call__item--email {
+    position: absolute;
+    opacity: 0;
+
+    transition: 0s;
+}
+
+.call__item--telegram {
+    position: absolute;
+    opacity: 0;
+
+    transition: 0s;
 }
 
 /* .social__item--white svg path {

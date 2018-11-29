@@ -31,13 +31,23 @@ var yposCurrent;
         buttons[i] = elem;
     });
 
-    Array.from(sections).forEach((elem, i) => {
-        heights[i] = elem;
-        offsets[i] = elem.offsetTop;
-    });
+    setTimeout(function() {
+        Array.from(sections).forEach((elem, i) => {
+            heights[i] = elem;
+            offsets[i] = elem.offsetTop;
+        });
+        
+        sectionNumber();
+        buttons[count].classList.add('line-bottom');
     
-    sectionNumber();
-    buttons[count].classList.add('line-bottom');
+    }, 3000);
+    // Array.from(sections).forEach((elem, i) => {
+    //     heights[i] = elem;
+    //     offsets[i] = elem.offsetTop;
+    // });
+    
+    // sectionNumber();
+    // buttons[count].classList.add('line-bottom');
     
 
     window.addEventListener('scroll', () => {

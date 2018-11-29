@@ -1329,6 +1329,8 @@ ul {
 }
 
 .fixed__call {
+    box-sizing: border-box;
+
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -1337,20 +1339,31 @@ ul {
     z-index: 15;
 
     border: 1px solid #7f7f7f;
-    padding: 0 10px;
+    padding: 0 9px;
+
+    width: 40px;
+    height: 40px;
+
+    overflow: hidden;
 
     transition: 1s;
 }
 
-/* .fixed__call:hover {
+.fixed__call:hover {
+    height: 100px;
     transition: 1s;
-} */
+}
 
-.fixed__call:hover .call__item--email,
-.fixed__call:hover .call__item--telegram {
-    position: relative;
+.fixed__call:hover .call__item--email {
+    /* position: relative; */
     opacity: 1;
-    transition: 1s;
+
+    transition-delay: 0.4s;
+}
+
+.fixed__call:hover .call__item--telegram {
+    /* position: relative; */
+    opacity: 1;
 }
 
 .call__item {
@@ -1369,16 +1382,27 @@ ul {
 
 .call__item--email {
     position: absolute;
+    bottom: 60px;
+
     opacity: 0;
 
-    transition: 0s;
+    transition: 1s;
 }
 
 .call__item--telegram {
     position: absolute;
+    bottom: 30px;
+
     opacity: 0;
 
-    transition: 0s;
+    /* transition-delay: 1s;  */
+    transition: 1.5s;
+}
+
+.call__item--telephone {
+    position: absolute;
+
+    bottom: 0;
 }
 
 /* .social__item--white svg path {
@@ -1423,7 +1447,7 @@ ul {
 }
 
 .footer__copyright {
-    /* width: 40%; */
+    width: 30%;
     margin-right: auto;
 
     display: flex;
@@ -1436,7 +1460,7 @@ ul {
 
 .footer__info {
     display: flex;
-    /* width: 60%; */
+    width: 70%;
 }
 
 .info__item {

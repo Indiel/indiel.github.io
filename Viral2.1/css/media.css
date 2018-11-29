@@ -1,3 +1,162 @@
 @media screen and (max-width: 900px) {
+    html, 
+    body {
+        font-size: 14px;
+    }
+
+
+
+    .slick-arrow {
+        display: block;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+
+        border: none;
+        font-size: 0;
+
+        z-index: 2;
+        outline: none;
+
+        box-shadow: 0 5px 25px 0 rgba(0,0,0,0.3);
+    }
+
+    .slick-arrow:active {
+        box-shadow: 0 5px 25px 0 rgba(0,0,0,0.5);
+    }
+
+    .slick-arrow::before,
+    .slick-arrow::after {
+        content: "";
+
+        position: absolute;
+        top: 10px;
+        left: 9px;
+
+        height: 2px;
+        width: 12px;
+        background-color: #cc0000;
+
+        z-index: 999;
+    }
+
+    .slick-prev  {
+        left: 0;
+    }
+
+    .slick-prev::before {
+        transform: rotate(-45deg);
+    }
+
+    .slick-prev::after {
+        transform: rotate(45deg);
+        top: 18px;
+    }
+
+    .slick-next::before {
+        transform: rotate(45deg);
+    }
+
+    .slick-next::after {
+        transform: rotate(-45deg);
+        top: 18px;
+    }
+
+    .slick-next {
+        right: 0;
+    }
+
+
+
+    .nav-list__item {
+        height: 40px;
+    }
+
+    .nav-list__link {
+        font-size: 24px;
+    }
+
+    .services-item__title {
+        padding-left: 15px;
+        font-size: 24px;
+    }
+
+    .services-item__description {
+        padding-left: 15px;
+        font-size: 12px;
+    }
+
+    .text {
+        max-width: 470px;
+        min-width: 250px;
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .page-title__shadow {
+        font-size: 36px;
+        top: -10px;
+    }
+
+    .learn-more {
+        font-size: 12px;
+    }
+
+    .working-page-item__text {
+        padding: 0 15px;
+    }
+
+    .working-page-item__title {
+        font-size: 24px;
+    }
+
+    .working-page-item__description {
+        font-size: 14px;
+    }
+
+    .working-page-item__p {
+        font-size: 12px;
+    }
+
+    .working-page-item__link {
+        padding: 5px 0 10px;
+    }
+
+    .working-page-item__link {
+        font-size: 10px;
+    }
+
+    .clients__list {
+        padding: 30px;
+    }
+
+    .certificates__item {
+        min-width: 100px;
+        max-width: 120px;
+    }
+
+    .footer__copyright {
+        width: 25%;
+    }
+
+    .footer__info {
+        justify-content: space-between;
+        width: 75%;
+    }
+
+    .info__item {
+        width: 36%;
+    }
+
+    .info__item:nth-child(3) {
+        width: 28%;
+    }
     
 }

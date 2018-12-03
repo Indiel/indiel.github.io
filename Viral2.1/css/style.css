@@ -1448,6 +1448,10 @@ ul {
     pointer-events: none;
 }
 
+.footer__social-list {
+    display: none;
+}
+
 .footer__copyright {
     width: 30%;
     margin-right: auto;
@@ -1463,6 +1467,10 @@ ul {
 .footer__info {
     display: flex;
     width: 70%;
+}
+
+.footer__mobile-copyright {
+    display: none;
 }
 
 .info__item {
@@ -1637,3 +1645,59 @@ ul {
     height: auto;
 }
 
+.modal__discuss-project  {
+    text-transform: uppercase;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* top: 50px;
+    left: 40px; */
+    /* top: 50%;*/
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* width: 100vw;
+    height: 100vh;
+    transform: scale(0); */
+    /* width: 0;  */
+    /* height: 100vh; */
+    height: 0;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    background-color: #333333;
+
+    overflow: hidden;
+    transition: 1.2s;
+
+    z-index: 10;
+}
+
+.modal__discuss-project--active {
+
+    height: 100vh;  
+    /* transform: translate(-50%, -50%); */
+}
+
+.modal__discuss-project::before {
+    content: "";
+        
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: url('../img/noise.png');
+    
+    animation: 1s infinite noise;
+    
+    pointer-events: none;
+}

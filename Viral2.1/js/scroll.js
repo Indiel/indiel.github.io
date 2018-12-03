@@ -101,7 +101,7 @@ var yposCurrent;
 
                 if (evt.wheelDelta < 0) {
                     isAnimating  = true;
-                    $('body').animate({
+                    $('html, body').animate({
                         scrollTop: offsets[i + 1] - 100
                     }, 500, 'swing', function(){
                         isAnimating  = false;
@@ -109,7 +109,7 @@ var yposCurrent;
                     return;
                 } else {
                     isAnimating  = true;
-                    $('body').animate({
+                    $('html, body').animate({
                         scrollTop: offsets[i - 1] - 100
                     }, 500, 'swing', function(){
                         isAnimating  = false;
@@ -122,7 +122,7 @@ var yposCurrent;
 
                 if (evt.wheelDelta < 0) {
                     isAnimating  = true;
-                    $('body').animate({
+                    $('html, body').animate({
                         scrollTop: offsets[i + 1] - 100
                     }, 500, 'swing', function(){
                         isAnimating  = false;
@@ -130,7 +130,7 @@ var yposCurrent;
                     return;
                 } else {
                     isAnimating  = true;
-                    $('body').animate({
+                    $('html, body').animate({
                         scrollTop: offsets[i] - 100
                     }, 500, 'swing', function(){
                         isAnimating  = false;

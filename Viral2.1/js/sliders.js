@@ -1,27 +1,19 @@
 function sliderRemove() {
 
-    // if ($(window).width() > 576 && $(window).width() < 900) {
-    //     const blogSlider = $(".blog__slider");
-    //     blogSlider.slick({
-    //         dots: false,
-    //         speed: 300,
-    //         slidesToShow: 2,
-    //         slidesToScroll: 1
-    //     });
-    // }
+    var clients = $(".clients__list");
+    var certificates = $(".certificates__list");
+    var workingPage = $(".working-page__list");
 
-    if ($(window).width() < 900) {
+    if ($(window).width() > 650 && $(window).width() < 900) {
 
-        const slider = $(".clients__list ");
-        slider.slick({
+        clients.slick({
             dots: false,
             speed: 300,
-            slidesToShow: 3,
+            slidesToShow: 2,
             slidesToScroll: 1
         });
 
-        const sliderOffers = $(".certificates__list");
-        sliderOffers.slick({
+        certificates.slick({
             dots: false,
             speed: 300,
             // slidesToShow: 1,
@@ -32,6 +24,51 @@ function sliderRemove() {
             slidesToShow: 4
         });
 
+    } else if ($(window).width() >= 500 && $(window).width() <= 650) {
+
+        clients.slick({
+            dots: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        certificates.slick({
+            dots: false,
+            speed: 300,
+            // slidesToShow: 1,
+            slidesToScroll: 1,
+            // centerMode: true,
+            // variableWidth: true,
+            // infinite: true,
+            slidesToShow: 2
+        });
+    } else if ($(window).width() < 500) {
+
+        clients.slick({
+            dots: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        certificates.slick({
+            dots: false,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+
+        workingPage.slick({
+            dots: false,
+            speed: 300,
+            // slidesToShow: 1,
+            slidesToScroll: 1,
+            // centerMode: true,
+            // variableWidth: true,
+            // infinite: true,
+            slidesToShow: 1
+        });
     }
 
 }

@@ -1893,8 +1893,16 @@ select {
     width: 165px;
 }
 
+.services-more__item:hover .services-more__arrow1 {
+    width: 215px;
+}
+
 .services-more__arrow2 {
     left: 160px;
+}
+
+.services-more__item:hover .services-more__arrow2 {
+    left: 210px;
 }
 
 .web-design {

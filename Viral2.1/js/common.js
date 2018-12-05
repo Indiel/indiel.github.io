@@ -1,3 +1,18 @@
+$(document).ready(function(){
+
+    initParallax();
+})
+
+function initParallax() {
+	var scene = document.getElementById('background-parallax');
+	var parallaxInstance = new Parallax(scene, {
+        relativeInput: true,
+        frictionX: 0.3,
+        frictionY: 0.3,
+	});
+}
+
+
 
 // (function () {
 //     console.log(document.scrollTop);
@@ -185,7 +200,7 @@
 //         }
 //     });
 // })();
-
+/*
 (function($) {
 
     // инициализация
@@ -297,3 +312,4 @@
     });
 
 })(jQuery);
+*/

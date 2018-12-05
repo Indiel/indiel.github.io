@@ -16,6 +16,7 @@ var yposCurrent;
 
     // getting block index
     var sectionNumber = function() {
+        
         for (let i = 0; i < offsets.length; i++) {
             if (window.pageYOffset + 100 >= offsets[offsets.length - 1]) {
                 currentBlockIndex = offsets.length - 1;

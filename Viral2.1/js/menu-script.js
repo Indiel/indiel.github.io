@@ -2,6 +2,25 @@
 
 (function () {
 
+    var projectButton = document.querySelector('.main-nav__start-project-button');
+    var briefButton = document.querySelector('.brief__button');
+    var formCancelButton = document.querySelector('.discuss-form__cancel');
+
+    var discussProject = document.querySelector('.modal__discuss-project');
+
+    projectButton.addEventListener('click', () => {
+        discussProject.classList.toggle('modal__discuss-project--active');
+    });
+
+    briefButton.addEventListener('click', () => {
+        discussProject.classList.toggle('modal__discuss-project--active');
+    });
+
+    formCancelButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        discussProject.classList.toggle('modal__discuss-project--active');
+    });
+
     var menuButton = document.querySelector('.menu-button');
 
     var mainNav = document.querySelector('.main-nav__wrapper');
@@ -9,6 +28,7 @@
     var mainLang = document.querySelector('.lang-list__link');
     var navItem = document.querySelectorAll('.nav-list__item');
     var socialList = document.querySelector('.fixed__social-list');
+    var fixedCall = document.querySelector('.fixed__call');
 
     menuButton.addEventListener('click', () => {
         var timeMenu;
@@ -28,6 +48,7 @@
             mainButton.classList.toggle('main-nav__start-project-button--active');
             mainLang.classList.toggle('lang-list__link--active');
             socialList.classList.toggle('fixed__social-list--active');
+            fixedCall.classList.toggle('menu');
         }, timeMenu);
 
         Array.from(navItem).forEach((elem) => {

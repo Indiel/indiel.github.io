@@ -1853,16 +1853,24 @@ select {
 .services-more__list {
     margin-bottom: 80px;
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
 
     text-align: left;
 }
 
 .services-more__item {
-    width: 370px;
+    display: inline-block;
+    margin: 0 4.5% 20px 0;
+    width: 30%;
     margin-bottom: 50px;
+    text-align: left;
+    vertical-align: text-top;
+}
+
+.services-more__item:nth-child(3n) {
+    margin: 0;
 }
 
 .services-more__title {

@@ -2,6 +2,8 @@
 
 (function () {
 
+    var body = document.querySelector('body');
+
     var projectButton = document.querySelector('.main-nav__start-project-button');
     var briefButton = document.querySelector('.brief__button');
     var formCancelButton = document.querySelector('.discuss-form__cancel');
@@ -10,15 +12,18 @@
 
     projectButton.addEventListener('click', () => {
         discussProject.classList.toggle('modal__discuss-project--active');
+        body.classList.toggle('none-scroll');
     });
 
     briefButton.addEventListener('click', () => {
         discussProject.classList.toggle('modal__discuss-project--active');
+        body.classList.toggle('none-scroll');
     });
 
     formCancelButton.addEventListener('click', (evt) => {
         evt.preventDefault();
         discussProject.classList.toggle('modal__discuss-project--active');
+        body.classList.toggle('none-scroll');
     });
 
     var menuButton = document.querySelector('.menu-button');
@@ -49,6 +54,7 @@
             mainLang.classList.toggle('lang-list__link--active');
             socialList.classList.toggle('fixed__social-list--active');
             fixedCall.classList.toggle('menu');
+            body.classList.toggle('none-scroll');
         }, timeMenu);
 
         Array.from(navItem).forEach((elem) => {

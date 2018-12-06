@@ -47,7 +47,7 @@
                     <li class="nav-list__item bigger margin-top"><a href="marketing.html"  class="nav-list__link">Маркетинг</a></li>
                     <li class="nav-list__item bigger"><a href="development.html"  class="nav-list__link">Разработка</a></li>
                     <li class="nav-list__item bigger margin-bottom"><a href="design.html"  class="nav-list__link">Дизайн</a></li>
-                    <li class="nav-list__item"><a href="#" class="nav-list__link">Портфолио</a></li>
+                    <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Портфолио</a></li>
                     <!-- <li class="nav-list__item"><a href="#" class="nav-list__link">Бриф</a></li> -->
                     <li class="nav-list__item"><a href="#container-contacts" id="contacts" class="nav-list__link">Контакты</a></li>
                 </ul>
@@ -273,6 +273,8 @@
                                 <div class="learn-more__arrow2 arrow2"></div>
                             </div>
                         </div>
+                        <div id="working-page__parallax-top"></div>
+                        <div id="working-page__parallax-bottom"></div>
                     </div>
                 </div>
             </section>
@@ -334,7 +336,7 @@
                         </li>
                     </ul>
 
-                    <button type="button" class="working-item__watch-projects button">Больше работ</button>
+                    <a href="portfolio.html" class="working-item__watch-projects button">Больше работ</a>
                 </div>
             </section>
 
@@ -355,6 +357,8 @@
                                 <div class="learn-more__arrow2 arrow2"></div>
                             </div>
                         </div>
+                        <div id="seo__parallax-top"></div>
+                        <div id="seo__parallax-bottom"></div>
                     </div>
                 </div>
             </section>
@@ -578,7 +582,7 @@
     </section>
 
     <script type="text/javascript" src="js/jquery.js"></script>
-
+    <script type="text/javascript" src="js/libs.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <script src="js/jquery-ui.js"></script>
 
@@ -599,11 +603,46 @@
         });
     </script>
 
+    <script type="text/javascript" src="js/jcf.js"></script>
+    <script type="text/javascript" src="js/jcf.select.js"></script>
+    <script>
+        $(function() {
+            var customSelect = $('.discuss-form__service');
+            
+            // Options for custom Select
+            jcf.setOptions('Select', {
+                wrapNative: false,
+                fakeDropInBody: false
+            });
+            
+            jcf.replace(customSelect);
+        });
+    </script>
+
+    <script>
+        jQuery(document).ready(function(){
+            $(window).scroll(function(e){
+                parallaxScroll();
+            });
+                
+            function parallaxScroll(){
+                var scrolled = $(window).scrollTop();
+                $('#working-page__parallax-bottom').css('bottom',(-150+(scrolled*.2))+'px');
+                $('#working-page__parallax-top').css('top',(50-(scrolled*.2))+'px');
+
+                $('#seo__parallax-bottom').css('bottom',(-400+(scrolled*.2))+'px');
+                $('#seo__parallax-top').css('top',(300-(scrolled*.2))+'px');
+                // $('.seo__title').css('top',(0-(scrolled*.25))+'px');
+            }
+            
+        });
+    </script>
+
     <!-- <script type="text/javascript" src="js/TweenMax.min.js"></script> -->
     <!-- <script type="text/javascript" src="js/ScrollMagic.js"></script> -->
     <!-- <script type="text/javascript" src="js/animation.gsap.min.js"></script> -->
 
-    <script type="text/javascript" src="js/libs.js"></script>
+
     <script type="text/javascript" src="js/slick.js"></script>
     <script type="text/javascript" src="js/sliders.js"></script>
     <!-- <script type="text/javascript" src="js/slide-line.js"></script> -->

@@ -42,14 +42,6 @@ var yposCurrent;
         buttons[currentBlockIndex].classList.add('line-bottom');
     
     }, 3000);
-    // Array.from(sections).forEach((elem, i) => {
-    //     heights[i] = elem;
-    //     offsets[i] = elem.offsetTop;
-    // });
-    
-    // sectionNumber();
-    // buttons[count].classList.add('line-bottom');
-    
 
     window.addEventListener('scroll', () => {
         yposCurrent = window.pageYOffset;

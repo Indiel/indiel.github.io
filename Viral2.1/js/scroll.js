@@ -18,9 +18,9 @@ var yposCurrent;
     var sectionNumber = function() {
         
         for (let i = 0; i < offsets.length; i++) {
-            if (window.pageYOffset + 120 >= offsets[offsets.length - 1]) {
+            if (window.pageYOffset + 100 >= offsets[offsets.length - 1]) {
                 currentBlockIndex = offsets.length - 1;
-            } else if (window.pageYOffset + 120 >= offsets[i] && window.pageYOffset + 100 < offsets[i + 1]) {
+            } else if (window.pageYOffset + 100 >= offsets[i] && window.pageYOffset + 100 < offsets[i + 1]) {
                 currentBlockIndex = i;
             }
         }

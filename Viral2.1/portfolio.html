@@ -60,8 +60,6 @@
         <div class="fixed__progress-bar">
             <button class="progress-bar__item" type="button"></button>
             <button class="progress-bar__item" type="button"></button>
-            <button class="progress-bar__item" type="button"></button>
-            <button class="progress-bar__item" type="button"></button>
         </div>
         <div class="fixed">    
             <ul class="fixed__social-list social">
@@ -336,7 +334,7 @@
             </div>
         </section>
 
-        <section class="container container__brief">
+        <section class="container container__brief anchor">
             <div class="brief page">
                 <h2 class="visually-hidden">Бриф</h2>
                 <p class="brief__description">Есть идея? Расскажите нам о ней</p>
@@ -561,6 +559,26 @@
             });
             
             jcf.replace(customSelect);
+        });
+    </script>
+
+    <script src="js/scrollify.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.scrollify({
+                section : ".anchor",
+                sectionName : "main",
+                interstitialSection : ".container__main-nav,.anchor,.container__footer",
+                easing: "linear",
+                scrollSpeed: 500,
+                offset : -100,
+                scrollbars: true,
+                standardScrollElements: ".container__footer,.container__anchor",
+                setHeights: false,
+                overflowScroll: true,
+                updateHash: true,
+                touchScroll:false
+            });
         });
     </script>
 

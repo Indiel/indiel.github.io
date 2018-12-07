@@ -173,18 +173,18 @@
 
     <main class="marketing">
 
-        <section class="page container container__main-design anchor">
-            <div class="main-design">
-                <h2 class="main-design__title">
+        <section class="page container container__main anchor">
+            <div class="main">
+                <h2 class="main__title">
                     Маркетинг <br>
-                    <span class="main-design__title-mini">продвижение сайтов</span>
+                    <span class="main__title-mini">продвижение сайтов</span>
                 </h2>
-                <!-- <ul class="main-design__services-list">
-                    <li class="main-design__service-item">Продвижение сайта (SEO)</li>
-                    <li class="main-design__service-item">Контекстная реклама</li>
-                    <li class="main-design__service-item">Юзабилити аудит</li>
-                    <li class="main-design__service-item">Продвижение в Instagram</li>
-                    <li class="main-design__service-item">Продвижение ICO</li>
+                <!-- <ul class="main__services-list">
+                    <li class="main__service-item">Продвижение сайта (SEO)</li>
+                    <li class="main__service-item">Контекстная реклама</li>
+                    <li class="main__service-item">Юзабилити аудит</li>
+                    <li class="main__service-item">Продвижение в Instagram</li>
+                    <li class="main__service-item">Продвижение ICO</li>
                 </ul> -->
             </div>
         </section>
@@ -257,7 +257,8 @@
             </div>
         </section>
 
-        <section class="container container__working-page anchor" id="container-working-page">
+        <div class="anchor container__anchor">
+        <section class="container container__working-page" id="container-working-page">
             <div class="working-page page">
                 <h2 class="visually-hidden">Работы</h2>      
                 <ul class="working-page__list working-page-list">
@@ -326,6 +327,7 @@
                 <button type="button" class="brief__button button">Перейти к брифу</button>
             </div>
         </section>
+        </div>
 
     </main>
 
@@ -554,11 +556,31 @@
                 
             function parallaxScroll(){
                 var scrolled = $(window).scrollTop();
-                $('#service-description__parallax-bottom').css('bottom',(-200+(scrolled*.2))+'px');
-                $('#service-description__parallax-top').css('top',(100-(scrolled*.2))+'px');
+                $('#service-description__parallax-bottom').css('bottom',(-300+(scrolled*.3))+'px');
+                $('#service-description__parallax-top').css('top',(200-(scrolled*.3))+'px');
 
             }
             
+        });
+    </script>
+
+    <script src="js/scrollify.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.scrollify({
+                section : ".anchor",
+                sectionName : "main",
+                interstitialSection : ".container__main-nav,.anchor,.container__footer",
+                easing: "linear",
+                scrollSpeed: 500,
+                offset : -100,
+                scrollbars: true,
+                standardScrollElements: ".container__footer,.container__anchor",
+                setHeights: false,
+                overflowScroll: true,
+                updateHash: true,
+                touchScroll:false
+            });
         });
     </script>
 

@@ -180,7 +180,7 @@
     <div class="gradient"></div>
     </div>
 
-    <main class="main">
+    <main class="main-index">
 
         <section class="page container container__main-page anchor anchor1" id="container-main">
             <div class="main-page">
@@ -199,7 +199,7 @@
 
         <!-- <div id="cont"> -->
 
-        <div class="container" id="anchor-spacer"></div>
+        <!-- <div class="container" id="anchor-spacer"></div> -->
 
         <section class="page container container__services anchor anchor2" id="container-services">
             <div class="services">
@@ -363,8 +363,8 @@
                 </div>
             </section>
 
-            <div class="anchor">
-            <section class="container container__slider">
+            <div class="anchor container__anchor">
+            <section class="container container__clients container__slider">
                 <div class="clients page">
                     <h2 class="visually-hidden">Клиенты</h2>
                     <ul class="clients__list slider">
@@ -403,7 +403,7 @@
     </main>
 
     <footer class="container container__footer">
-        <footer class="footer page">
+        <div class="footer page">
             <ul class="footer__social-list social">
                 <li class="social__item"><a href="#" class="social__link social__link--facebook">
                     <span class="visually-hidden">Мы в Фейсбуке</span>
@@ -627,14 +627,67 @@
                 
             function parallaxScroll(){
                 var scrolled = $(window).scrollTop();
-                $('#working-page__parallax-bottom').css('bottom',(-150+(scrolled*.2))+'px');
-                $('#working-page__parallax-top').css('top',(50-(scrolled*.2))+'px');
+                $('#working-page__parallax-bottom').css('bottom',(-300+(scrolled*.3))+'px');
+                $('#working-page__parallax-top').css('top',(150-(scrolled*.3))+'px');
 
-                $('#seo__parallax-bottom').css('bottom',(-400+(scrolled*.2))+'px');
-                $('#seo__parallax-top').css('top',(300-(scrolled*.2))+'px');
+                $('#seo__parallax-bottom').css('bottom',(-500+(scrolled*.3))+'px');
+                $('#seo__parallax-top').css('top',(400-(scrolled*.3))+'px');
                 // $('.seo__title').css('top',(0-(scrolled*.25))+'px');
             }
             
+        });
+    </script>
+
+    <script src="js/scrollify.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.scrollify({
+                section : ".anchor",
+                sectionName : "main",
+                interstitialSection : ".container__main-nav,.anchor,.container__footer",
+                easing: "linear",
+                scrollSpeed: 500,
+                offset : -100,
+                scrollbars: true,
+                standardScrollElements: ".container__footer,.container__anchor",
+                setHeights: false,
+                overflowScroll: true,
+                updateHash: true,
+                touchScroll:false,
+                // before:function(i,panels) {
+
+                //     var ref = panels[i].attr("data-section-name");
+
+                //     $(".pagination .active").removeClass("active");
+
+                //     $(".pagination").find("a[href=\"#" + ref + "\"]").addClass("active");
+                // },
+                // afterRender:function() {
+                //     var pagination = "<ul class=\"pagination\">";
+                //     var activeClass = "";
+                //     $(".anchor").each(function(i) {
+                //         activeClass = "";
+                //         if(i===0) {
+                //             activeClass = "active";
+                //         }
+                //         pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
+                //     });
+
+                //     pagination += "</ul>";
+
+                //     $(".fixed__progress-bar").append(pagination);
+                //     /*
+
+                //     Tip: The two click events below are the same:
+
+                //     $(".pagination a").on("click",function() {
+                //         $.scrollify.move($(this).attr("href"));
+                //     });
+
+                //     */
+                //     $(".pagination a").on("click",$.scrollify.move);
+                // }
+            });
         });
     </script>
 

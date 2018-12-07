@@ -185,21 +185,21 @@
 
 
 
-    .main-design {
+    .main {
         margin-bottom: 80px;
         min-height: 300px;
     }
 
-    .main-design__title {
+    .main__title {
         width: 50%;
         font-size: 24px;
     }
     
-    .main-design__title-mini {
+    .main__title-mini {
         font-size: 18px;
     }
 
-    .main-design__services-list {
+    .main__services-list {
         width: 45%;
         font-size: 12px;
     }
@@ -584,7 +584,7 @@
 
 
 
-    .main-design {
+    .main {
         margin-bottom: 40px;
     }
 
@@ -592,7 +592,7 @@
         margin-bottom: 0;
     }
 
-    .main-design__service-item {
+    .main__service-item {
         padding: 10px 0 10px 15px;
     }
 
@@ -615,11 +615,11 @@
         width: 100%;
     }
 
-    .main-design__title {
+    .main__title {
         width: 100%;
     }
 
-    .main-design__services-list {
+    .main__services-list {
         display: none;
  
     }

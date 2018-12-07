@@ -265,7 +265,8 @@
             </div>
         </section>
 
-        <section class="container container__working-page anchor" id="container-working-page">
+        <div class="anchor container__anchor">
+        <section class="container container__working-page" id="container-working-page">
             <div class="working-page page">
                 <h2 class="visually-hidden">Работы</h2>      
                 <ul class="working-page__list working-page-list">
@@ -334,6 +335,7 @@
                 <button type="button" class="brief__button button">Перейти к брифу</button>
             </div>
         </section>
+        </div>
 
     </main>
 
@@ -551,6 +553,26 @@
             });
             
             jcf.replace(customSelect);
+        });
+    </script>
+
+    <script src="js/scrollify.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.scrollify({
+                section : ".anchor",
+                sectionName : "main",
+                interstitialSection : ".container__main-nav,.anchor,.container__footer",
+                easing: "linear",
+                scrollSpeed: 500,
+                offset : -100,
+                scrollbars: true,
+                standardScrollElements: ".container__footer,.container__anchor",
+                setHeights: false,
+                overflowScroll: true,
+                updateHash: true,
+                touchScroll:false
+            });
         });
     </script>
 

@@ -18,9 +18,9 @@ var yposCurrent;
     var sectionNumber = function() {
         
         for (let i = 0; i < offsets.length; i++) {
-            if (window.pageYOffset + 100 >= offsets[offsets.length - 1]) {
+            if (window.pageYOffset + 120 >= offsets[offsets.length - 1]) {
                 currentBlockIndex = offsets.length - 1;
-            } else if (window.pageYOffset + 100 >= offsets[i] && window.pageYOffset + 100 < offsets[i + 1]) {
+            } else if (window.pageYOffset + 120 >= offsets[i] && window.pageYOffset + 100 < offsets[i + 1]) {
                 currentBlockIndex = i;
             }
         }
@@ -41,7 +41,7 @@ var yposCurrent;
         sectionNumber();
         buttons[currentBlockIndex].classList.add('line-bottom');
     
-    }, 3000);
+    }, 1500);
 
     window.addEventListener('scroll', () => {
         yposCurrent = window.pageYOffset;
@@ -80,59 +80,59 @@ var yposCurrent;
         previousBlockIndex = currentBlockIndex;
     });
 
-    window.addEventListener('wheel', (evt) => {
-        if (isAnimating) {
-            return false;
-        }
+    // window.addEventListener('wheel', (evt) => {
+    //     if (isAnimating) {
+    //         return false;
+    //     }
 
-        for (var i = 0; i < offsets.length; i++) {
-            if (window.pageYOffset + 100 >= offsets[offsets.length - 1]) {
-                return;
-            } else if (window.pageYOffset + 100 === offsets[i]) {
-                evt.preventDefault();
-                evt.stopPropagation();
+    //     for (var i = 0; i < offsets.length; i++) {
+    //         if (window.pageYOffset + 100 >= offsets[offsets.length - 1]) {
+    //             return;
+    //         } else if (window.pageYOffset + 100 === offsets[i]) {
+    //             evt.preventDefault();
+    //             evt.stopPropagation();
 
-                if (evt.wheelDelta < 0) {
-                    isAnimating  = true;
-                    $('html, body').animate({
-                        scrollTop: offsets[i + 1] - 100
-                    }, 500, 'swing', function(){
-                        isAnimating  = false;
-                    });
-                    return;
-                } else {
-                    isAnimating  = true;
-                    $('html, body').animate({
-                        scrollTop: offsets[i - 1] - 100
-                    }, 500, 'swing', function(){
-                        isAnimating  = false;
-                    });
-                    return;
-                }
-            } else if (window.pageYOffset + 100 > offsets[i] && window.pageYOffset + 100 < offsets[i + 1]) {
-                evt.preventDefault();
-                evt.stopPropagation();
+    //             if (evt.wheelDelta < 0) {
+    //                 isAnimating  = true;
+    //                 $('html, body').animate({
+    //                     scrollTop: offsets[i + 1] - 100
+    //                 }, 500, 'swing', function(){
+    //                     isAnimating  = false;
+    //                 });
+    //                 return;
+    //             } else {
+    //                 isAnimating  = true;
+    //                 $('html, body').animate({
+    //                     scrollTop: offsets[i - 1] - 100
+    //                 }, 500, 'swing', function(){
+    //                     isAnimating  = false;
+    //                 });
+    //                 return;
+    //             }
+    //         } else if (window.pageYOffset + 100 > offsets[i] && window.pageYOffset + 100 < offsets[i + 1]) {
+    //             evt.preventDefault();
+    //             evt.stopPropagation();
 
-                if (evt.wheelDelta < 0) {
-                    isAnimating  = true;
-                    $('html, body').animate({
-                        scrollTop: offsets[i + 1] - 100
-                    }, 500, 'swing', function(){
-                        isAnimating  = false;
-                    });
-                    return;
-                } else {
-                    isAnimating  = true;
-                    $('html, body').animate({
-                        scrollTop: offsets[i] - 100
-                    }, 500, 'swing', function(){
-                        isAnimating  = false;
-                    });
-                    return;
-                }
-            }
-        }
-    });
+    //             if (evt.wheelDelta < 0) {
+    //                 isAnimating  = true;
+    //                 $('html, body').animate({
+    //                     scrollTop: offsets[i + 1] - 100
+    //                 }, 500, 'swing', function(){
+    //                     isAnimating  = false;
+    //                 });
+    //                 return;
+    //             } else {
+    //                 isAnimating  = true;
+    //                 $('html, body').animate({
+    //                     scrollTop: offsets[i] - 100
+    //                 }, 500, 'swing', function(){
+    //                     isAnimating  = false;
+    //                 });
+    //                 return;
+    //             }
+    //         }
+    //     }
+    // });
 });
 
 /*(function () {

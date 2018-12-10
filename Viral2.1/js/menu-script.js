@@ -4,11 +4,11 @@
 
     var body = document.querySelector('body');
 
-    var projectButton = document.querySelector('.main-nav__start-project-button');
-    var briefButton = document.querySelector('.brief__button');
-    var formCancelButton = document.querySelector('.discuss-form__cancel');
+    var projectButton = document.querySelector('#main-nav__start-project-button');
+    var briefButton = document.querySelector('#brief__button');
+    var formCancelButton = document.querySelector('#discuss-form__cancel');
 
-    var discussProject = document.querySelector('.modal__discuss-project');
+    var discussProject = document.querySelector('#modal__discuss-project');
 
     projectButton.addEventListener('click', () => {
         discussProject.classList.toggle('modal__discuss-project--active');
@@ -26,25 +26,25 @@
         body.classList.toggle('none-scroll');
     });
 
-    var menuButton = document.querySelector('.menu-button');
+    var menuButton = document.querySelector('#menu-button');
 
-    var mainNav = document.querySelector('.main-nav__wrapper');
-    var mainButton = document.querySelector('.main-nav__start-project-button');
-    var mainLang = document.querySelector('.lang-list__link');
-    var navItem = document.querySelectorAll('.nav-list__item');
-    var socialList = document.querySelector('.fixed__social-list');
-    var fixedCall = document.querySelector('.fixed__call');
+    var mainNav = document.querySelector('#main-nav__wrapper');
+    var mainButton = document.querySelector('#main-nav__start-project-button');
+    var mainLang = document.querySelector('#lang-list__link-en');
+    var navItem = document.querySelectorAll('#main-nav__list .nav-list__item');
+    var socialList = document.querySelector('#fixed__social-list');
+    var fixedCall = document.querySelector('#fixed__call');
 
     menuButton.addEventListener('click', () => {
         var timeMenu;
         var timeItem;
         
         if (mainNav.classList.length === 2) {
-            timeMenu = 400;
+            timeMenu = 1000;
             timeItem = 0;
         } else {
             timeMenu = 0;
-            timeItem = 300;
+            timeItem = 1200;
         }
 
         setTimeout(() => {

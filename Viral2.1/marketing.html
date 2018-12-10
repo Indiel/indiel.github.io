@@ -26,17 +26,17 @@
         </div>
 
         <!-- <div class="menu"> -->
-            <button class="menu-button hamburger hamburger--stand menu_btn" type="button">
+            <button id="menu-button" class="menu-button hamburger hamburger--stand menu_btn" type="button">
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
             </button>
 
-            <div class="main-nav__wrapper">
+            <div id="main-nav__wrapper" class="main-nav__wrapper">
                 <div id="background-parallax">
                     <div data-depth="0.3" class="viral-bg layer-1">VIRAL</div>
                 </div>
-                <ul class="main-nav__list nav-list menu_list">
+                <ul class="main-nav__list nav-list menu_list" id="main-nav__list">
                     <li class="nav-list__item"><a href="index.html" id="main" class="nav-list__link">Главная</a></li>
                     <!-- <li class="nav-list__item"><a href="#container-services" id="services" class="nav-list__link">Услуги</a></li> -->
                     <li class="nav-list__item bigger margin-top"><a class="nav-list__link">Маркетинг</a></li>
@@ -49,10 +49,10 @@
             </div>
         <!-- </div> -->
 
-        <button type="button" class="main-nav__start-project-button button">Начать проект</button>
+        <button type="button" class="main-nav__start-project-button button" id="main-nav__start-project-button">Начать проект</button>
 
         <ul class="main-nav__lang lang-list">
-            <li class="lang-list__item"><a href="#" class="lang-list__link">en</a></li>
+            <li class="lang-list__item"><a href="#" class="lang-list__link" id="lang-list__link-en">en</a></li>
             <li class="lang-list__item"><a href="#" class="lang-list__link visually-hidden">ru</a></li>
         </ul>
 
@@ -64,7 +64,7 @@
             <button class="progress-bar__item" type="button"></button>
         </div>
         <div class="fixed">    
-            <ul class="fixed__social-list social">
+            <ul class="fixed__social-list social" id="fixed__social-list">
                 <li class="social__item"><a href="#" class="social__link social__link--facebook">
                     <span class="visually-hidden">Мы в Фейсбуке</span>
                     <svg 
@@ -117,7 +117,7 @@
                 </a></li>
             </ul>
     
-            <ul class="fixed__call">
+            <ul class="fixed__call" id="fixed__call">
                 <li class="call__item call__item--email"><a href="#" class="call__link">
                     <span class="visually-hidden">Почта</span>
                     <svg width="20px" height="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -324,7 +324,7 @@
                 <h2 class="visually-hidden">Бриф</h2>
                 <p class="brief__description">Есть идея? Расскажите нам о ней</p>
                 <p class="brief__description">Для удобства мы предлагаем заполнить онлайн бриф</p>
-                <button type="button" class="brief__button button">Перейти к брифу</button>
+                <button type="button" class="brief__button button" id="brief__button">Перейти к брифу</button>
             </div>
         </section>
         </div>
@@ -477,7 +477,7 @@
         </div>
     </footer>
 
-    <section class="modal modal__discuss-project">
+    <section class="modal modal__discuss-project" id="modal__discuss-project">
         <h2 class="discuss-project__title">Обсудить проект</h2>
         <form class="discuss-project__form discuss-form" action="#" method="post">
             <p class="discuss-form__p">
@@ -505,7 +505,7 @@
             </p>
             <p class="discuss-form__p-buttons">
                 <button class="button discuss-form__order" type="submit">Заказать</button>
-                <button class="button discuss-form__cancel">Отмена</button>
+                <button class="button discuss-form__cancel" id="discuss-form__cancel">Отмена</button>
             </p>
         </form>
     </section>

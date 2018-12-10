@@ -1,7 +1,10 @@
-$(document).ready(function(){
-
-    initParallax();
-})
+function initPreloader() {
+    $(window).load(function() {
+        setTimeout(function() {
+          $('#preloader').fadeOut('slow', function() {});
+        }, 2000);
+    });
+};
 
 function initParallax() {
 	var scene = document.getElementById('background-parallax');
@@ -10,7 +13,12 @@ function initParallax() {
         frictionX: 0.3,
         frictionY: 0.3,
 	});
-}
+};
+
+$(document).ready(function(){
+    initParallax();
+    initPreloader();
+})
 
 
 

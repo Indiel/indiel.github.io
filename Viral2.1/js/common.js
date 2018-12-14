@@ -1,8 +1,10 @@
-function initPreloader() {
+function initPreloader() {  
     $(window).load(function() {
+        // $('#logo__preloader').addClass('logo__preloader--active');
         setTimeout(function() {
-          $('#preloader').fadeOut('slow', function() {});
-        }, 2000);
+            $('#preloader').fadeOut('slow', function() {});
+        }, 3000);
+        // $('#logo__preloader').removeClass('logo__preloader--active');
     });
 };
 

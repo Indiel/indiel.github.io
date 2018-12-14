@@ -71,6 +71,19 @@ function sliderRemove() {
         });
     }
 
+    var videoReviews = $(".video-reviews__list");
+
+    if (videoReviews) {
+        if ($(window).width() < 550) {
+            videoReviews.slick({
+                dots: false,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        }
+    }
+
 }
 
 $(document).ready(function(){

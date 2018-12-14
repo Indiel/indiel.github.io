@@ -44,7 +44,7 @@
                     <li class="nav-list__item bigger margin-bottom"><a class="nav-list__link">Дизайн</a></li>
                     <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Портфолио</a></li>
                     <!-- <li class="nav-list__item"><a href="#" class="nav-list__link">Бриф</a></li> -->
-                    <li class="nav-list__item"><a href="#container-contacts" id="contacts" class="nav-list__link">Контакты</a></li>
+                    <li class="nav-list__item"><a href="contacts.html" id="contacts" class="nav-list__link">Контакты</a></li>
                 </ul>
             </div>
         <!-- </div> -->
@@ -171,7 +171,7 @@
     <div class="gradient"></div>
     </div>
 
-    <main class="design">
+    <main class="blog">
 
         <section class="page container container__main anchor">
             <div class="main">
@@ -190,12 +190,225 @@
             </div>
         </section>
 
-       <div class="search">
-            <p>Подписаться</p>
-            <a href="#">FB</a>
-            <a href="#">TW</a>
-            <a href="#">G+</a>
-       </div>
+        <div class="page container container__subscription-search anchor">
+            <div class="subscription">
+                <p class="subscription__description">Подписаться</p>
+                <a class="subscription__link" href="#">FB</a>
+                <a class="subscription__link" href="#">TW</a>
+                <a class="subscription__link" href="#">G+</a>
+            </div>
+
+            <div class="search">
+                <form class="search-form" action="#" method="get">
+                    <label class="visually-hidden" for="search-form-input">Поиск по статьям</label>
+                    <input class="search-form-input" id="search-form-input" type="text" name="search" placeholder="Поиск по статьям">
+                </form>
+            </div>
+        </div>
+
+        <section class="page container container__blog">
+        <!-- <div class="left-column"> -->
+            <div class="rubrics accordion-rubrics">
+                <h2 class="rubrics__title">Рубрики</h2>
+                <ul class="rubrics__list">
+                    <li class="rubric__item"><a href="#" class="rubric__link">Дизайн</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Старты и бизнес</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Наши услуги</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">SEO-энциклопедия</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Mobile</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Интернет-маркетинг</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">SEO</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Копирайтинг</a></li>
+                </ul>
+            </div>
+
+            <div class="video-reviews container__slider">
+                <h2 class="video-reviews__title">Видеообзоры</h2>
+                <ul class="video-reviews__list slider">
+                    <li class="video-review__item"><a href="#" class="video-review__link"><img src="img/video-review.png" alt=""></a></li>
+                    <li class="video-review__item"><a href="#" class="video-review__link"><img src="img/video-review.png" alt=""></a></li>
+                    <li class="video-review__item"><a href="#" class="video-review__link"><img src="img/video-review.png" alt=""></a></li>
+                </ul>
+            </div>
+        <!-- </div> -->
+
+        <div class="right-column">
+            <form class="articles-filter-form" action="#" method="get">
+                <ul class="articles-filter__list">
+                    <li class="articles-filter__item">
+                        <input class="articles-filter__input" id="articles-filter__last" class="visually-hidden" type="radio" name="articles-filter" value="last" checked>
+                        <label class="articles-filter__label" for="articles-filter__last">Последние статьи</label>
+                    </li>
+                    <li class="articles-filter__item">
+                        <input class="articles-filter__input" id="articles-filter__popular" class="visually-hidden" type="radio" name="articles-filter" value="popular">
+                        <label class="articles-filter__label" for="articles-filter__popular">Популярные статьи</label>
+                    </li>
+                </ul>
+                <ul class="articles-list">
+                    <li class="articles-item">
+                        <article class="article">
+                            <div class="article__img-block">
+                                <div class="img-block__container"> 
+                                    <img class="article__img" src="img/article-img01.png" alt="">
+                                    <div class="article__red">
+                                        <time class="article__time" datetime="2018-10-11">11 октября 2018</time>
+                                        <div class="article__stats">
+                                            <span class="article__views">78</span>
+                                            <span class="article__comments">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article__text">
+                                <h3 class="article__title">Как найти престижную работу</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
+                                <div class="learn-more__container">
+                                    <a href="#" class="article__more learn-more">Узнать больше</a>
+                                    <div class="learn-more__arrow1 arrow1"></div>
+                                    <div class="learn-more__arrow2 arrow2"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="articles-item">
+                        <article class="article">
+                            <div class="article__img-block">
+                                <div class="img-block__container"> 
+                                    <img class="article__img" src="img/article-img02.png" alt="">
+                                    <div class="article__red">
+                                        <time class="article__time" datetime="2018-10-11">11 октября 2018</time>
+                                        <div class="article__stats">
+                                            <span class="article__views">78</span>
+                                            <span class="article__comments">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article__text">
+                                <h3 class="article__title">Как найти престижную работу</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
+                                <div class="learn-more__container">
+                                    <a href="#" class="article__more learn-more">Узнать больше</a>
+                                    <div class="learn-more__arrow1 arrow1"></div>
+                                    <div class="learn-more__arrow2 arrow2"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="articles-item">
+                        <article class="article">
+                            <div class="article__img-block">
+                                <div class="img-block__container"> 
+                                    <img class="article__img" src="img/article-img03.png" alt="">
+                                    <div class="article__red">
+                                        <time class="article__time" datetime="2018-10-11">11 октября 2018</time>
+                                        <div class="article__stats">
+                                            <span class="article__views">78</span>
+                                            <span class="article__comments">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article__text">
+                                <h3 class="article__title">Как найти престижную работу</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
+                                <div class="learn-more__container">
+                                    <a href="#" class="article__more learn-more">Узнать больше</a>
+                                    <div class="learn-more__arrow1 arrow1"></div>
+                                    <div class="learn-more__arrow2 arrow2"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="articles-item">
+                        <article class="article">
+                            <div class="article__img-block">
+                                <div class="img-block__container"> 
+                                    <img class="article__img" src="img/article-img01.png" alt="">
+                                    <div class="article__red">
+                                        <time class="article__time" datetime="2018-10-11">11 октября 2018</time>
+                                        <div class="article__stats">
+                                            <span class="article__views">78</span>
+                                            <span class="article__comments">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article__text">
+                                <h3 class="article__title">Как найти престижную работу</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
+                                <div class="learn-more__container">
+                                    <a href="#" class="article__more learn-more">Узнать больше</a>
+                                    <div class="learn-more__arrow1 arrow1"></div>
+                                    <div class="learn-more__arrow2 arrow2"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="articles-item">
+                        <article class="article">
+                            <div class="article__img-block">
+                                <div class="img-block__container"> 
+                                    <img class="article__img" src="img/article-img02.png" alt="">
+                                    <div class="article__red">
+                                        <time class="article__time" datetime="2018-10-11">11 октября 2018</time>
+                                        <div class="article__stats">
+                                            <span class="article__views">78</span>
+                                            <span class="article__comments">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article__text">
+                                <h3 class="article__title">Как найти престижную работу</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
+                                <div class="learn-more__container">
+                                    <a href="#" class="article__more learn-more">Узнать больше</a>
+                                    <div class="learn-more__arrow1 arrow1"></div>
+                                    <div class="learn-more__arrow2 arrow2"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="articles-item">
+                        <article class="article">
+                            <div class="article__img-block">
+                                <div class="img-block__container"> 
+                                    <img class="article__img" src="img/article-img03.png" alt="">
+                                    <div class="article__red">
+                                        <time class="article__time" datetime="2018-10-11">11 октября 2018</time>
+                                        <div class="article__stats">
+                                            <span class="article__views">78</span>
+                                            <span class="article__comments">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article__text">
+                                <h3 class="article__title">Как найти престижную работу</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem</p>
+                                <div class="learn-more__container">
+                                    <a href="#" class="article__more learn-more">Узнать больше</a>
+                                    <div class="learn-more__arrow1 arrow1"></div>
+                                    <div class="learn-more__arrow2 arrow2"></div>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </form>
+
+            <ul class="pagination-list">
+                <li class="pagination-item"><a href="#">1</a></li>
+                <li class="pagination-item"><a href="#">2</a></li>
+                <li class="pagination-item"><a href="#">3</a></li>
+                <li class="pagination-item"><a href="#">4</a></li>
+                <li class="pagination-item"><a href="#">5</a></li>
+
+                <li class="pagination-item"><a href="#">></a></li>
+            </ul>
+        </div>
+        </section>
 
     </main>
 
@@ -391,6 +604,12 @@
                     activeHeader: "iconOpen"
                 };
                 $( ".accordion" ).accordion({
+                    collapsible: true,
+                    heightStyle: "content",
+                    active: false,
+                    icons: icons
+                });
+                $( ".accordion-rubrics" ).accordion({
                     collapsible: true,
                     heightStyle: "content",
                     active: false,

@@ -18,7 +18,8 @@
 <body>
     
     <div id="preloader">
-        <h1 class="logo__preloader">Viral</h1>
+        <h1 id="logo__preloader" class="logo__preloader" data-text="Viral">Viral</h1>
+        <!-- <h1 class="logo__preloader glitch" data-text="GLITCH">GLITCH</h1> -->
     </div>
    
 
@@ -49,7 +50,7 @@
                     <li class="nav-list__item bigger margin-bottom"><a href="design.html"  class="nav-list__link">Дизайн</a></li>
                     <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Портфолио</a></li>
                     <!-- <li class="nav-list__item"><a href="#" class="nav-list__link">Бриф</a></li> -->
-                    <li class="nav-list__item"><a href="#container-contacts" id="contacts" class="nav-list__link">Контакты</a></li>
+                    <li class="nav-list__item"><a href="contacts.html" id="contacts" class="nav-list__link">Контакты</a></li>
                 </ul>
             </div>
         <!-- </div> -->
@@ -187,7 +188,11 @@
                 <h2 class="visually-hidden">Главная</h2>
 
                 <div class="main-page__video" id="video">
-                    <img class="video" src="img/Video.png" alt="">
+                    <video width="100%" height="auto" controls autoplay loop poster="img/Video.png">
+                        <source src="media/VIRAL.mp4" type="video/mp4"></source>
+                    </video>
+                    <!-- <img class="video" src="img/Video.png" alt=""> -->
+
                     <!-- <div class="main-page__img-red red-mask"></div> -->
 
                     <!-- <div class="stripes" id="stripe1"></div>

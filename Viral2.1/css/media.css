@@ -17,6 +17,14 @@
     }
 }
 
+@media screen and (max-width: 1080px) {
+    .contacts-info {
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 900px) {
     html, 
     body {
@@ -241,11 +249,67 @@
     .project-link__link {
         margin: 0 10px;
     }
+
+
+
+    .container__blog {
+        display: flex;
+        justify-content: space-between;
+        /* flex-direction: row; */
+        flex-wrap: wrap;
+    }
+
+    .rubrics {
+        width: 100%;
+        float: none;
+    }
+
+    .rubrics__list {
+        margin-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .rubric__item {
+        height: auto;
+        width: 49%;
+    }
+    
+    .video-reviews {
+        width: 100%;
+        float: none;
+
+        order: 3;
+    }
+
+    .video-reviews__list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .video-review__item {
+        width: 32%;
+    }
+
+    .right-column {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .pagination-list {
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .project-link {
         display: none;
+    }
+
+    .contacts {
+        height: auto;
+        padding: 60px 15px;
     }
 }
 
@@ -461,6 +525,10 @@
         align-items: center;
     }
 
+    .contacts {
+        height: auto;
+    }
+
     .certificates__item {
         max-width: 180px;
     }
@@ -606,6 +674,48 @@
 
     hr {
         margin: 15px 0;
+    }
+
+
+    .container__subscription-search {
+        margin-bottom: 0;
+    }
+
+    .rubrics {
+        margin-bottom: 30px;
+    }
+
+    .rubrics__title {
+        padding-left: 0 !important;
+        color: #000;
+    }
+
+    .rubrics__list {
+        margin-bottom: 0;
+        padding-left: 0 !important;
+    }
+
+    .rubric__item {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .container__subscription-search {
+        flex-wrap: wrap;
+    }
+
+    .search {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .article__img-block {
+        display: none;
+    }
+
+    .article__text {
+        width: 100%;
     }
 }
 

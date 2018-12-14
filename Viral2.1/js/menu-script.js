@@ -15,11 +15,13 @@
         body.classList.toggle('none-scroll');
     });
 
-    briefButton.addEventListener('click', () => {
-        discussProject.classList.toggle('modal__discuss-project--active');
-        body.classList.toggle('none-scroll');
-    });
-
+    if (briefButton) {
+        briefButton.addEventListener('click', () => {
+            discussProject.classList.toggle('modal__discuss-project--active');
+            body.classList.toggle('none-scroll');
+        });
+    }
+    
     formCancelButton.addEventListener('click', (evt) => {
         evt.preventDefault();
         discussProject.classList.toggle('modal__discuss-project--active');

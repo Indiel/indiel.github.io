@@ -3,7 +3,7 @@ function initPreloader() {
         // $('#logo__preloader').addClass('logo__preloader--active');
         setTimeout(function() {
             $('#preloader').fadeOut('slow', function() {});
-        }, 3000);
+        }, 5000);
         // $('#logo__preloader').removeClass('logo__preloader--active');
     });
 };

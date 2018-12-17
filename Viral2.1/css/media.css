@@ -717,6 +717,28 @@
     .article__text {
         width: 100%;
     }
+
+    .article-section__title {
+        font-size: 26px;
+    }
+
+    .article-section h3 {
+        font-size: 18px;
+    }
+
+    .share {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+    }
+
+    .share__button {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .share-button__share {
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 500px) {

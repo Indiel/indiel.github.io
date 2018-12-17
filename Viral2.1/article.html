@@ -41,7 +41,7 @@
                     <!-- <li class="nav-list__item"><a href="#container-services" id="services" class="nav-list__link">Услуги</a></li> -->
                     <li class="nav-list__item bigger margin-top"><a href="marketing.html"  class="nav-list__link">Маркетинг</a></li>
                     <li class="nav-list__item bigger"><a href="development.html"  class="nav-list__link">Разработка</a></li>
-                    <li class="nav-list__item bigger margin-bottom"><a href="design.html" class="nav-list__link">Дизайн</a></li>
+                    <li class="nav-list__item bigger margin-bottom"><a class="nav-list__link">Дизайн</a></li>
                     <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Портфолио</a></li>
                     <!-- <li class="nav-list__item"><a href="#" class="nav-list__link">Бриф</a></li> -->
                     <li class="nav-list__item"><a href="contacts.html" id="contacts" class="nav-list__link">Контакты</a></li>
@@ -58,7 +58,6 @@
 
 
         <div class="fixed__progress-bar">
-            <button class="progress-bar__item" type="button"></button>
             <button class="progress-bar__item" type="button"></button>
             <button class="progress-bar__item" type="button"></button>
         </div>
@@ -170,62 +169,92 @@
     <div class="gradient"></div>
     </div>
 
-    <main class="design">
+    <main class="article-page">
 
         <section class="page container container__main anchor">
             <div class="main">
                 <h2 class="main__title">
-                    Дизайн <br>
-                    <span class="main__title-mini">привлекающий внимание</span>
+                    Как найти престижную работу <br>
                 </h2>
-                <!-- <ul class="main__services-list">
-                    <li class="main__service-item">Редизайн сайта</li>
-                    <li class="main__service-item">Дизайн адаптивного сайта</li>
-                    <li class="main__service-item">Дизайн лендингов</li>
-                    <li class="main__service-item">Дизайн корпоративного сайта</li>
-                    <li class="main__service-item">Индивидуальный дизайн сайта</li>
-                    <li class="main__service-item">Дизайн интернет-магазина</li>
-                </ul> -->
             </div>
         </section>
 
-        <section class="container container__service-description anchor" id="container-service-description">
-            <div class="service-description page">
-                <div class="service-description__text-container text-container">
-                    <div class="service-description__text text">
-                        <h2 class="service-description__title page-title">
-                            Как мы можем помочь вам сегодня?
-                            <span class="page-title__shadow">Как нам вам помочь?</span>
-                        </h2>
-                        <p class="service-description__description">
-                            Дизайн интернет-сайтов – это их графический образ и стиль. Чтобы привлекать клиентов, ресурс должен быть не просто единственным в своём числе. Главные критерии – это удобство использования, оригинальность, соответствие тематике и чтобы всё было  обернуто в качественный современный web-дизайн!
-                        </p>
-                        <p class="service-description__description">
-                            Цена оговаривается индивидуально с каждым клиентом в зависимости от сложности работы.
-                        </p>
+        <div class="page container container__subscription-search anchor">
+            <div class="subscription">
+                <p class="subscription__description">Подписаться</p>
+                <a class="subscription__link" href="#">FB</a>
+                <a class="subscription__link" href="#">TW</a>
+                <a class="subscription__link" href="#">G+</a>
+            </div>
+
+            <div class="search">
+                <form class="search-form" action="#" method="get">
+                    <label class="visually-hidden" for="search-form-input">Поиск по статьям</label>
+                    <input class="search-form-input" id="search-form-input" type="text" name="search" placeholder="Поиск по статьям">
+                </form>
+            </div>
+        </div>
+
+        <section class="page container container__blog">
+        <!-- <div class="left-column"> -->
+            <div class="rubrics accordion-rubrics">
+                <h2 class="rubrics__title">Рубрики</h2>
+                <ul class="rubrics__list">
+                    <li class="rubric__item"><a href="#" class="rubric__link">Дизайн</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Старты и бизнес</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Наши услуги</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">SEO-энциклопедия</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Mobile</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Интернет-маркетинг</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">SEO</a></li>
+                    <li class="rubric__item"><a href="#" class="rubric__link">Копирайтинг</a></li>
+                </ul>
+            </div>
+
+            <div class="video-reviews container__slider">
+                <h2 class="video-reviews__title">Видеообзоры</h2>
+                <ul class="video-reviews__list slider">
+                    <li class="video-review__item"><a href="#" class="video-review__link"><img src="img/video-review.png" alt=""></a></li>
+                    <li class="video-review__item"><a href="#" class="video-review__link"><img src="img/video-review.png" alt=""></a></li>
+                    <li class="video-review__item"><a href="#" class="video-review__link"><img src="img/video-review.png" alt=""></a></li>
+                </ul>
+            </div>
+        <!-- </div> -->
+
+        <div class="right-column">
+            <section class="article-section">
+                <h2 class="article-section__title">Как найти престижную работу</h2>
+
+                <div class="article-date article-section__date">
+                    <time class="article__time" datetime="2018-10-11">11 октября 2018</time>
+                    <div class="article__stats">
+                        <span class="article__views">78</span>
+                        <span class="article__comments">0</span>
                     </div>
-                    <div id="service-description__parallax-top"></div>
-                    <div id="service-description__parallax-bottom"></div>
                 </div>
-            </div>
-        </section>
 
-        <section class="container container__brief anchor">
-            <div class="contacts brief page">
-                <h2 class="contacts-title">Контакты</h2>
-                <div class="contacts-info">
-                    <p class="contacts-description">Получите гарантированный результат!</p>
-                    <button type="button" class="brief__button button" id="brief__button">Написать нам</button>
-                </div>
-                <div class="contacts-tel">
-                    <a href="tel:+3800330185">0 800 330 185</a><br>
-                    <a href="tel:+3800330185">0 800 330 185</a>
-                </div>
-                <div class="contacts-mail">
-                    <a class="contacts-mail__mail" href="mailto:">viral@.gmail.com</a><br>
-                    <a class="contacts-mail__telegram" href="">viral_digital_agency</a>
-                </div>
-            </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <img class="article-section__img" src="img/article-section-img.png" alt="Как найти престижную работу">
+                
+                <h3>1. НАВЫКИ КОММУНИКАЦИИ (ОБЩЕНИЕ, ПРАВОПИСАНИЕ)</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                
+                <h3>Этическая работа</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+            </section>
+
+            <ul class="share">
+                <li class="share__item"><button class="share__button share-button__like" type="button">Нравится</button></li>
+                <li class="share__item"><a class="share__button share-button__share" href="#">Поделиться</a></li>
+                <li class="share__item"><a class="share__button share-button__twitter" href="#">Твитнуть</a></li>
+                <li class="share__item"><a class="share__button share-button__G" href="#">G+</a></li>
+            </ul>
+        </div>
         </section>
 
     </main>
@@ -427,6 +456,12 @@
                     active: false,
                     icons: icons
                 });
+                $( ".accordion-rubrics" ).accordion({
+                    collapsible: true,
+                    heightStyle: "content",
+                    active: false,
+                    icons: icons
+                });
             }
         });
     </script>
@@ -455,8 +490,9 @@
                 
             function parallaxScroll(){
                 var scrolled = $(window).scrollTop();
-                $('#service-description__parallax-bottom').css('top',(100+(scrolled*.3))+'px');
-                $('#service-description__parallax-top').css('top',(-100+(scrolled*.3))+'px');
+                $('#service-description__parallax-bottom').css('bottom',(-300+(scrolled*.3))+'px');
+                $('#service-description__parallax-top').css('top',(200-(scrolled*.3))+'px');
+
             }
             
         });

@@ -42,11 +42,11 @@
         var timeItem;
         
         if (mainNav.classList.length === 2) {
-            timeMenu = 1000;
+            timeMenu = 600;
             timeItem = 0;
         } else {
             timeMenu = 0;
-            timeItem = 1200;
+            timeItem = 800;
         }
 
         setTimeout(() => {

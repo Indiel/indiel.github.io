@@ -556,9 +556,8 @@
                 
             function parallaxScroll(){
                 var scrolled = $(window).scrollTop();
-                $('#service-description__parallax-bottom').css('bottom',(-300+(scrolled*.3))+'px');
-                $('#service-description__parallax-top').css('top',(200-(scrolled*.3))+'px');
-
+                $('#service-description__parallax-bottom').css('top',(-150+(scrolled*.3))+'px');
+                $('#service-description__parallax-top').css('top',(-300+(scrolled*.3))+'px');
             }
             
         });

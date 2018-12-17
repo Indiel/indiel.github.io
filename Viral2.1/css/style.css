@@ -1265,10 +1265,10 @@ ul {
     transition: 0.8s;
 }
 
-.services-list__item:hover {
-    /* height: calc(100% + 200px); */
-    /* margin-top: -60px; */
-}
+/* .services-list__item:hover {
+    height: calc(100% + 200px);
+    margin-top: -60px;
+} */
 
 .services-item__title {
     padding-left: 30px;

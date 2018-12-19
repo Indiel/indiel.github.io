@@ -15,10 +15,10 @@ window.index = function () {
         }
     });
 
-    // AOS.init({
-    //     offset: 150,
-    //     duration: 600,
-    // });
+    AOS.init({
+        offset: 150,
+        duration: 600,
+    });
 
     $(function() {
         var customSelect = $('.discuss-form__service');

@@ -183,6 +183,7 @@ body::before {
     position: relative;
 
     font-size: 64px;
+    font-size: 6vw;
     color: #cc0000;
 
     animation: animatePreloader 4s linear forwards,
@@ -349,11 +350,16 @@ body::before {
     animation: noise-anim-2 3s 3s infinite linear alternate-reverse;
 }
 
+#content {
+    display: none;
+}
+
 
 
 .none-scroll {
     /* position: absolute; */
     /* max-height: 100vh; */
+    padding-right: 15px;
     overflow: hidden !important;
 }
 
@@ -625,7 +631,11 @@ ul {
 }
 
 .nav-list__item {
-    height: 50px;
+    /* height: 50px; */
+    padding: 5px 0;
+
+    display: flex;
+    align-items: center;
 
     position: relative;
 
@@ -645,6 +655,7 @@ ul {
 
 .nav-list__link {
     font-size: 24px;
+    font-size: 1.8vw;
     letter-spacing: 5px;
     color: #fff;
     display: inline-block;
@@ -654,6 +665,7 @@ ul {
 
 .bigger a{
     font-size: 36px;
+    font-size: 2.7vw;
 }
 
 .margin-top {
@@ -661,7 +673,7 @@ ul {
 }
 
 .margin-bottom {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .nav-list__link:hover {

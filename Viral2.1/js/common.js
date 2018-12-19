@@ -1,10 +1,15 @@
 function initPreloader() {  
-    $(window).load(function() {
-        // $('#logo__preloader').addClass('logo__preloader--active');
+    $(window).load(function() {  
+
         setTimeout(function() {
-            $('#preloader').fadeOut('slow', function() {});
+            $('#preloader').fadeOut('slow', function() {
+                $('#content').fadeIn('slow', function() {
+                    window.scrolling();
+                    window.index();
+                });
+            });
         }, 5000);
-        // $('#logo__preloader').removeClass('logo__preloader--active');
+        
     });
 };
 

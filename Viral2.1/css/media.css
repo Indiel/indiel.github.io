@@ -104,12 +104,13 @@
 
 
 
-    .nav-list__item {
+    /* .nav-list__item {
         height: 40px;
-    }
+    } */
 
     .nav-list__link {
         font-size: 24px;
+        font-size: 2vw;
     }
 
     .services-item__title {

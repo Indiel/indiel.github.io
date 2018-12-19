@@ -24,7 +24,7 @@
         <!-- <h1 class="logo__preloader glitch" data-text="GLITCH">GLITCH</h1> -->
     </div>
    
-
+    <div id="content">
     <div class="container__main-nav">
     <nav class="main-nav" id="fullpage">
         <div class="main-nav__logo-wrapper">
@@ -190,7 +190,7 @@
                 <h2 class="visually-hidden">Главная</h2>
 
                 <div class="main-page__video" id="video">
-                    <video width="100%" height="auto" controls autoplay loop poster="img/Video.png">
+                    <video width="100%" height="auto" autoplay loop poster="img/Video.png">
                         <source src="media/VIRAL.mp4" type="video/mp4"></source>
                     </video>
                     <!-- <img class="video" src="img/Video.png" alt=""> -->
@@ -591,13 +591,15 @@
             </p>
         </form>
     </section>
+    </div>
 
+    <div id="scripts">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/libs.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
     <script src="js/jquery-ui.js"></script>
 
-    <script>
+    <!-- <script>
         $( function() {
             if ($(window).width() < 650) {
                 var icons = {
@@ -612,19 +614,19 @@
                 });
             }
         });
-    </script>
+    </script> -->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
+    <!-- <script>
         AOS.init({
             offset: 200,
             duration: 600,
         });
-    </script>
+    </script> -->
 
     <script type="text/javascript" src="js/jcf.js"></script>
     <script type="text/javascript" src="js/jcf.select.js"></script>
-    <script>
+    <!-- <script>
         $(function() {
             var customSelect = $('.discuss-form__service');
             
@@ -636,9 +638,9 @@
             
             jcf.replace(customSelect);
         });
-    </script>
+    </script> -->
 
-    <script>
+    <!-- <script>
         jQuery(document).ready(function(){
             $(window).scroll(function(e){
                 parallaxScroll();
@@ -655,7 +657,9 @@
             }
             
         });
-    </script>
+    </script> -->
+
+    <script type="text/javascript" src="js/index.js"></script>
 
     <!-- <script src="js/scrollify.js"></script>
     <script>
@@ -723,6 +727,7 @@
     <script type="text/javascript" src="js/scroll.js"></script>
     <script type="text/javascript" src="js/common.js"></script>
     <!-- <script type="text/javascript" src="js/ajax.js"></script> -->
+    </div>
 
 </body>
 </html>

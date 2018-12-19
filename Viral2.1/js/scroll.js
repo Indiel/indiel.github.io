@@ -1,7 +1,7 @@
-'use strict';
+window.scrolling = function () {
 $(document).ready(function (){
-var ypos = 0;
-var yposCurrent;
+    var ypos = 0;
+    var yposCurrent;
 
     var sections = document.querySelectorAll('.anchor');
     // var sections = document.querySelectorAll('section');
@@ -134,6 +134,7 @@ var yposCurrent;
     //     }
     // });
 });
+};
 
 /*(function () {
 

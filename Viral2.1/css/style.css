@@ -183,8 +183,9 @@ body::before {
     position: relative;
 
     font-size: 64px;
-    font-size: 6vw;
+    font-size: 5vw;
     color: #cc0000;
+    text-transform: uppercase;
 
     animation: animatePreloader 4s linear forwards,
     preloaderBlur 3s 2.5s infinite linear alternate-reverse;
@@ -473,7 +474,6 @@ ul {
     max-width: 100%;
     z-index: -1;
     top: 50px;
-    left: 0%;
     transform: translate(-50%, -50%);
     position: absolute;
     height: 94%;
@@ -590,24 +590,26 @@ ul {
     background-color: #333333;
 
     overflow: hidden;
-    /* transition: 1.2s; */
 
-    -webkit-transform: translateY(-100%);
+    /* -webkit-transform: translateY(-100%);
     -ms-transform: translateY(-100%);
-    transform: translateY(-100%);
-    transition: 1.2s linear;
-    /* will-change: transform; */
+    transform: translateY(-100%); */
+
+    transition: 0.5s linear;
+    opacity: 0;
+    visibility: hidden;
 
     z-index: 11;
 }
 
 .main-nav__wrapper--active {
-
+    opacity: 1;
+    visibility: visible;
+    /* clip: unset; */
     /* height: 100vh; */
-    -webkit-transform: none;
+    /* -webkit-transform: none;
     -ms-transform: none;
-    transform: none;
-    z-index: 11;  
+    transform: none; */
 }
 
 .main-nav__wrapper::before {
@@ -1124,17 +1126,24 @@ ul {
     /* width: 1170px;
     height: 500px; */
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 100px);
     /* background-image: url(../img/Video.png); */
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    overflow: hidden;
 }
 
 .video {
-    height: calc(100vh - 100px);
-    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: auto;
+    width: 100%;
 }
 
 .stripes {
@@ -1269,12 +1278,16 @@ ul {
 
     width: calc((100% - 60px)/3);
     min-width: 150px;
-    height: auto;
+    height: 0;
+    padding-top: calc((100% - 60px)/3);
+    /* height: auto; */
     /* height: 500px; */
     /* min-height: 370px; */
 
     position: relative;
     transition: 0.8s;
+
+    overflow: hidden;
 }
 
 /* .services-list__item:hover {
@@ -1350,7 +1363,7 @@ ul {
 .services-item__img-container {
     width: 100%;
 
-    position: relative;
+    position: absolute;
     left: 0;
     /* right: 0; */
     top: 0;
@@ -1466,6 +1479,7 @@ ul {
     color: #000;
     font-size: 36px;
     text-transform: uppercase;
+    text-align: left;
 
     position: relative;
     z-index: 2;
@@ -1580,8 +1594,9 @@ ul {
     /* height: 370px; */
     width: calc((100% - 60px)/3);
     min-width: 150px;
-    height: 100%;
-    /* overflow: hidden; */
+    height: 0;
+    padding-top: calc((100% - 60px)/3);
+    overflow: hidden;
 
     position: relative;
 }
@@ -1590,7 +1605,9 @@ ul {
     /* width: 370px; */
     width: 100%;
 
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     overflow: hidden;
 
     transition: 1s;
@@ -2181,14 +2198,20 @@ ul {
 
 .container__brief {
     box-sizing: border-box;
+}
+
+.brief-padding {
+    box-sizing: border-box;
+    margin: 0 auto;
     padding: 0 80px;
+    max-width: 1940px;
 }
 
 .brief {
     position: relative;
     display: block;
     margin: 100px auto;
-    padding: 135px 0 120px 0;
+    padding: 135px 0 120px;
     /* max-width: 1170px; */
 
     text-align: center;
@@ -3122,6 +3145,10 @@ hr {
 
 
 
+.contact .main {
+    background-image: url(../img/contacts-bg.png);
+}
+
 .contacts {
     display: flex;
     flex-direction: row;
@@ -3182,6 +3209,11 @@ hr {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.contacts-button {
+    margin-top: 40px;
+    width: 100%;
 }
 
 

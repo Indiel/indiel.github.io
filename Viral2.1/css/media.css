@@ -1,4 +1,9 @@
 @media screen and (max-width: 1300px) {
+    .video {
+        height: 100%;
+        width: auto;
+    }    
+
     .viral-bg {
         font-size: 16em;
     }
@@ -362,19 +367,19 @@
     }
 
     .container__main-page {
-        padding: 70px 0 15px;
+        /* padding: 70px 0 15px; */
         /* height: 400px; */
 
         overflow: hidden;
     }
 
-    .video {
+    /* .video {
         margin: 0 15px;
         height: 100%;
         width: 100%;
 
         overflow: hidden;
-    }
+    } */
 
     .services__list {
         display: block;
@@ -512,8 +517,8 @@
         padding: 15px 0;
     }
 
-    .container__brief {
-        padding: 0;
+    .brief-padding {
+        padding: 0 15px;
     }
 
     .brief {

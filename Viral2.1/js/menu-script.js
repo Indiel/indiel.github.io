@@ -42,12 +42,16 @@
         var timeItem;
         
         if (mainNav.classList.length === 2) {
-            timeMenu = 600;
+            timeMenu = 400;
             timeItem = 0;
         } else {
             timeMenu = 0;
-            timeItem = 800;
+            timeItem = 200;
         }
+
+        // if (menuButton.classList.contains('is-active')) {
+        //     mainNav.hide('slow', function() {});
+        // }
 
         setTimeout(() => {
             menuButton.classList.toggle('is-active');

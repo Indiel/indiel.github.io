@@ -1,0 +1,507 @@
+// forms
+form,
+fieldset {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='number'],
+//input[type='url'],
+// input[type='date'],
+textarea {
+	@include placeholder {
+		color: $placeholder-color;
+	}
+	color: $dark-gray;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	box-sizing: border-box;
+	display: block;
+	background: $form-element-background;
+	border: 1px solid $form-element-border-color;
+	font-size: 18px;
+	line-height: 23px;
+	height: 45px;
+	padding: 10px 16px;
+	width: 100%;
+	margin: 0 0 27px;
+	outline: none;
+	box-shadow: none;
+	transition: border-color 0.3s, box-shadow 0.3s;
+	
+	@include media("<tablet") {
+		height: 36px;
+		padding: 8px 15px;
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 26px;
+	}
+	
+	&.has-error {
+		border-color: $form-element-error-border-color;
+		box-shadow: 0 0 0 1px $form-element-error-border-color inset;
+		
+		&:focus {
+			box-shadow: none;
+		}
+	}
+
+	&:focus {
+		border-color: $form-element-focus-border-color;
+	}
+}
+
+.jcf-file {
+	position: relative;
+
+	.has-error{
+		border-color: red;
+		box-shadow: 0 0 0 2px #f00 inset;
+		color:red;
+		transition: 0.3s;
+	}
+}
+
+.req {
+  color: $orange;
+	padding-left: 5px;
+}
+
+select {
+	-webkit-border-radius: 0;
+	width: 100%;
+	color: $dark-gray;
+	background: $form-element-background;
+	border: 1px solid $form-element-border-color;
+	display: block;
+	height: 45px;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 23px;
+	margin: 0 0 27px;
+	box-shadow: none;
+	outline: none;
+	
+	&.has-error {
+		border-color: $form-element-error-border-color;
+		box-shadow: 0 0 0 1px $form-element-error-border-color inset;
+	}
+	
+	&:-moz-focusring {
+		color: transparent;
+		text-shadow: 0 0 0 $dark-gray;
+	}
+	
+	@include media("<tablet") {
+		height: 36px;
+		padding: 8px 15px;
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 26px;
+		
+	}
+	
+	.hideme {
+		display: none;
+	}
+}
+
+textarea {
+	resize: vertical;
+	vertical-align: top;
+	height: 150px;
+	min-height: 120px;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
+	cursor: pointer;
+}
+
+input[type='checkbox'] {
+	width: 15px;
+	height: 15px;
+	float: left;
+	margin: 1px 11px 0 0;
+	padding: 0;
+}
+
+label,
+.label {
+	display: block;
+	margin: 0 0 5px;
+	text-align: left;
+	font-size: 18px;
+	line-height: 1.2;
+	
+	&.button {
+		background: $disabled;
+		border-color: $disabled;
+		
+		&:hover {
+			background: $disabled;
+			border-color: $disabled;
+		}
+		
+		&.jcf-label-active {
+			background: $btn-background;
+			border-color: $btn-background;
+		}
+		
+		.jcf-checkbox {
+			width: 28px;
+			height: 28px;
+			border: none;
+			margin: -4px 21px -2px 0;
+			
+			&:before {
+				font-size: 18px;
+				margin-top: 1px;
+			}
+			
+			@include media("<desktop") {
+				width: 21px;
+				height: 21px;
+				margin: -3px 10px -2px 0;
+			}
+			
+			@include media("<tablet") {
+				margin: 0 10px -1px 0;
+			}
+		}
+	}
+	
+	@include media("<tablet") {
+		font-size: 14px;
+	}
+	
+	.req {
+		color: $orange;
+	}
+}
+
+.password-block {
+	position: relative;
+	
+	&.showed {
+		.show-password {
+			&:before {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	
+	input[type='password'],
+	input[type='text'] {
+		padding-right: 45px;
+		
+		&:focus + .show-password {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	
+	.show-password {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 50%;
+		right: 12px;
+		transform: translateY(-50%);
+		cursor: pointer;
+		color: $base-link-color;
+		font-size: 14px;
+		line-height: 1;
+		transition: color 0.3s, opacity 0.3s, visibility 0.3s;
+		
+		&:before {
+			content: '';
+			height: 1px;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			transform: rotate(30deg);
+			background: $base-link-color;
+			transition: background 0.3s, opacity 0.3s;
+			opacity: 0;
+		}
+		
+		&:hover {
+			color: $base-link-hover-color;
+			
+			&:before {
+				background: $base-link-hover-color;
+			}
+		}
+		
+		@include media("<tablet") {
+			font-size: 12px;
+			right: 10px;
+		}
+		
+		i {
+			display: block;
+		}
+	}
+}
+
+.check-holder {
+	label {
+		@extend %clearfix;
+		font-size: 12px;
+		margin: 0;
+		display: inline;
+	}
+}
+
+.radio-list {
+	// display: table;
+	display: flex;
+	border-collapse: collapse;
+	width: 100%;
+	margin: 0 0 25px;
+	
+	@include media("<widescreen") {
+		display: block;
+	}
+	
+	@include media("<desktop") {
+		display: flex;
+	}
+	
+	@include media("<tablet") {
+		display: block;
+		margin-bottom: 26px;
+	}
+	
+	&.half-width {
+		label {
+			width: 50%;
+		}
+	}
+	
+	&.half-width-xs {
+		@include media("<widescreen") {
+			label {
+				width: 50%;
+			}
+		}
+		
+		@include media("<tablet") {
+			label {
+				width: 50%;
+			}
+		}
+	}
+	
+	&.list-has-error {
+		label {
+			border-color: $form-element-error-border-color;
+			box-shadow: 0 0 0 1px $form-element-error-border-color inset;
+		}
+	}
+	
+	.row {
+		// display: table-cell;
+		flex-grow: 1;
+		
+		&:first-child {
+			&:not(:only-child) {
+				label {
+					@include media("<widescreen") {
+						border-bottom: none;
+					}
+					
+					@include media("<desktop") {
+						border-bottom: 1px solid $form-element-border-color;
+					}
+					
+					@include media("<tablet") {
+						border-bottom: none;
+					}
+				}
+			}
+			
+			&:not(:only-child) {
+				label {
+					&:last-child {
+						border-right-width: 0;
+						
+						@include media("<widescreen") {
+							border-right: 1px solid $form-element-border-color;
+						}
+						
+						@include media("<desktop") {
+							border-right: none;
+						}
+						
+						@include media("<tablet") {
+							border-right: 1px solid $form-element-border-color;
+						}
+					}
+				}
+			}
+		}
+		
+		// @include media("<widescreen") {
+		// 	display: table-row;
+		// }
+		// 
+		// @include media("<desktop") {
+		// 	display: table-cell;
+		// }
+		// 
+		// @include media("<tablet") {
+		// 	display: table-row;
+		// }
+		
+		.frame {
+			// display: table;
+			// width: 100%;
+			
+			display: flex;
+			
+		}
+	}
+	
+	label {
+		flex-grow: 1;
+		// display: table-cell;
+		border: solid $form-element-border-color;
+		border-width: 1px 1px 1px 0;
+		margin: 0;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 45px;
+		font-size: 14px;
+		padding: 5px 9px;
+		transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+		
+		&:first-child {
+			border-left-width: 1px;
+		}
+		
+		@include media("<tablet") {
+			height: 34px;
+			padding: 5px 7px;
+		}
+		
+		&.jcf-label-active {
+			background: $orange;
+			color: $white;
+		}
+	}
+	
+	.jcf-radio {
+		position: absolute;
+		left: -9999px;
+	}
+}
+#registration_form_maritalStatus {
+	@include media("<phone") {
+		.frame {
+			display: block;
+		}
+		label {
+			border-width: 0 1px 1px 1px;
+			&:first-child {
+				border-width: 1px;
+			}
+		}
+	}
+}
+.form-row {
+	position: relative;
+	.check-button {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		padding: 10px 12px;
+		min-width: 170px;
+		height: 40px;
+        font-size: 16px;
+        line-height: 20px;
+
+		@include media('<tablet') {
+		  font-size: 12px;
+		  height: 40px;
+		  min-width: 120px;
+		  width: 120px;
+		}
+	}
+}
+.form-row .error,
+.security-inner form .error {
+	margin: -20px 0 20px;
+	color: $red;
+	font-size: 14px;
+}
+.security-inner > .error {
+	text-align: center;
+	margin: 30px 0;
+	padding: 10px;
+	border: $red 2px solid;
+	color: $red;
+}
+.flash {
+	text-align: center;
+	margin: 30px 0;
+	padding: 10px;
+	
+	&.flash-error {
+		border: $red 2px solid;
+		color: $red;
+	}
+
+	&.flash-success {
+		border: $green 2px solid;
+		color: $green;
+	}
+}
+.input-holder {
+	position: relative;
+}
+.checkbox-has-error {
+	.jcf-checkbox {
+		border-color: $red;
+		border-width: 1px;
+	}
+	color: $red;
+}
+.agree-checkbox-holder {
+	text-align: center;
+	margin: -33px auto 33px;
+	max-width: 500px;
+}
+.jcf-checkbox:before {
+  content: "";
+  height: 6px;
+  top: 3px;
+  left: 2px;
+  width: 10px;
+  border-top: 1px solid #ff6200;
+  border-right: 1px solid #ff6200;
+  transform: rotate(131deg) skew(-6deg);
+}
+.agree-checkbox-holder .jcf-checkbox{
+	margin-top: 2px;
+}
+
+.breadcrumbs .active{
+	color: $orange;
+}

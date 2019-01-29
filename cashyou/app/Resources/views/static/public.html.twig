@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block mainContent %}
+	<div class="container">
+		<div class="terms-hodler">
+			{% include 'components/breadcrumbs.html.twig' %}
+
+			<div class="heading">
+				<h1>{{' <b>ПУБЛІЧНА </b>ІНФОРМАЦІЯ'|trans|raw }}</h1>
+			</div>
+			<div class="static-content">
+				{{ 'public_information_content'|trans({}, 'messages', 'uk')|raw }}
+			</div>
+			<div class="annualAccount block">
+				<h2>{{ 'Річна звітність' | trans }}</h2>
+				<p><a href="{{ asset('docs/cashyou_account_2017.zip') }}" download="">{{ 'Завантажити інформацію' | trans }}</a></p>
+			</div>
+		</div>
+		<aside class="client-aside bg-transparent">
+			<div class="container">
+				<div class="frame">
+					<div class="chat-holder">
+						<div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>
+							<div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>
+								<form action="#">
+									<label>Оставьте Ваш телефон и мы Вам перезвоним</label>
+									<input type="tel" placeholder="" value="+380">
+									<input class="button" type="submit" value="Перезвоните">
+								</form>
+							</div>
+						</div>
+						<div class="chat-block"><a class="chat-opener" href="#">{{ 'Связь с менеджером'|trans }}</a></div>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</div> 
+{% endblock %}

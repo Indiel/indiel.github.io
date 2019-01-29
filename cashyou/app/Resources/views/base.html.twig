@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" {{ sonata_seo_html_attributes() }}>
+<head {{ sonata_seo_head_attributes() }}>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<meta charset="utf-8">
+    {% block title %}<title>CashYou</title>{% endblock %}
+    {% block meta %}<meta name="description" content="{{ 'Получить быстрый кредит на карту онлайн без поручителей и залогов. Займ на карту или деньги до зарплаты. Выплаты в течение 5 минут. Ускоренная форма получения кредита.'|trans }}">{% endblock %}
+    {#{{ sonata_seo_title() }}
+    {{ sonata_seo_metadatas() }}
+    {{ sonata_seo_link_canonical() }}#}
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ asset('images/apple-touch-icon-57x57.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('images/apple-touch-icon-114x114.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('images/apple-touch-icon-72x72.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('images/apple-touch-icon-144x144.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ asset('images/apple-touch-icon-60x60.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset('images/apple-touch-icon-120x120.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ asset('images/apple-touch-icon-76x76.png') }}" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset('images/apple-touch-icon-152x152.png') }}" />
+	<link rel="icon" type="image/png" href="{{ asset('images/favicon-196x196.png') }}" sizes="196x196" />
+	<link rel="icon" type="image/png" href="{{ asset('images/favicon-96x96.png') }}" sizes="96x96" />
+	<link rel="icon" type="image/png" href="{{ asset('images/favicon-32x32.png') }}" sizes="32x32" />
+	<link rel="icon" type="image/png" href="{{ asset('images/favicon-16x16.png') }}" sizes="16x16" />
+	<link rel="icon" type="image/png" href="{{ asset('images/favicon-128.png') }}" sizes="128x128" />
+	<link rel="manifest" href="/manifest.json">
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="{{ asset('images/mstile-144x144.png') }}" />
+	<meta name="msapplication-square70x70logo" content="{{ asset('images/mstile-70x70.png') }}" />
+	<meta name="msapplication-square150x150logo" content="{{ asset('images/mstile-150x150.png') }}" />
+	<meta name="msapplication-wide310x150logo" content="{{ asset('images/mstile-310x150.png') }}" />
+	<meta name="msapplication-square310x310logo" content="{{ asset('images/mstile-310x310.png') }}" />
+
+	{% block stylesheets %}
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&amp;amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+		<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+	{% endblock %}
+
+	{% block javascripts %}
+		<script type="text/javascript">
+            var creditConfig = {
+                {% if activeLoans[0] is not defined %}
+                percent: {{ TKLenderApi.defaultProduct.InterestRate }},
+                {% else %}
+                percent: {{ activeLoans[0].interestRate }},
+                {% endif %}
+                percentNormal: {{ TKLenderApi.normalProduct.InterestRate }}
+            }
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+		<script src="{{ asset('js/all.js') }}"></script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','{{ googleTagManagerId }}');</script>
+		<!-- End Google Tag Manager -->
+
+		<!-- DMP Cloud -->
+		<script>
+            (function (js) {
+                var scr = document.createElement('script');
+                scr.setAttribute("src", js + "?ts=" + (new Date().getTime()));
+                scr.setAttribute("async", true);
+                document.getElementsByTagName("head")[0].appendChild(scr);
+            }("//www.dmpcloud.net/spx/cashyou.ua/spx.js"));
+		</script>
+		<!-- DMP Cloud -->
+	{% endblock %}
+</head>
+<body {% block bodyAttributes %}{% endblock %}>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ googleTagManagerId }}"
+				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+{% block body %}
+<div id="wrapper">
+	{% block header %}
+	<header id="header">
+		<div class="container">
+			<div class="logo"><a href="{{ path('app.home') }}"><img src="{{ asset('images/logo.svg') }}" width="auto" height="100%" alt="CASHYOU"></a></div>
+			{# {% if not comingSoonMode %}
+				{% if not is_route('app.registration-new') %}
+					<a class="btn-profile profile-opener desktop-hidden" href="#"></a>
+					{% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+						{% if not is_route('app.login') %}
+							<a class="button btn-white lightbox-opener desktop-hidden btn-login" href="#enter-account">{{ 'Вход в кабинет'|trans }}</a>
+						{% else %}
+							<a class="button btn-white desktop-hidden btn-login" href="{{ path('app.login') }}">{{ 'Вход в кабинет'|trans }}</a>
+						{% endif %}
+					{% else %}
+						<a class="button btn-white desktop-hidden btn-login" href="{{path('app.logout') }}">{{ 'Выход'|trans }}</a>
+					{% endif %}
+				{% endif %}
+			{% endif %} #}
+			<div class="header-holder">
+				{% if not is_route('app.registration-new') %}
+				<a class="header-opener" href="#"></a>
+				{% endif %}
+				<div class="header-slide">
+					<div class="frame">
+						{# <div class="header-frame"> #}
+							{# <ul class="language-list">
+								<li{% if (app.request.getLocale() == 'uk') %} class="active"{% endif %}><a href="{{ path(app.request.get('_route') ?: 'app.home', (app.request.get('_route_params') ?: {})|merge({'_locale': 'uk'})) }}">{{ 'Укр' }}</a></li>
+								<li{% if (app.request.getLocale() == 'ru') %} class="active"{% endif %}><a href="{{ path(app.request.get('_route') ?: 'app.home', (app.request.get('_route_params') ?: {})|merge({'_locale': 'ru'})) }}">{{ 'Рус' }}</a></li> #}
+								{# <li{% if (app.request.getLocale() == 'en') %} class="active"{% endif %}><a href="{{ path(app.request.get('_route') ?: 'app.home', (app.request.get('_route_params') ?: {})|merge({'_locale': 'en'})) }}">{{ 'En' }}</a></li> #}
+							{# </ul> #}
+							{# <span class="phone"><a href="tel:0800212300">0800-21-23-00</a></span> #}
+							{# {% if not comingSoonMode %}
+								{% if not is_route('app.registration-new') %}
+									{% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+										{% if not is_route('app.login') %}
+											<a class="button btn-white lightbox-opener mobile-hidden" href="#enter-account">{{ 'Вход в кабинет'|trans }}</a>
+										{% else %}
+											<a class="button btn-white mobile-hidden" href="{{ path('app.login') }}">{{ 'Вход в кабинет'|trans }}</a>
+										{% endif %}
+									{% else %}
+										<a class="button btn-white mobile-hidden" href="{{ path('app.profile') }}">{{ 'Вход в кабинет'|trans }}</a>
+									{% endif %}
+								{% endif %}
+							{% endif %} #}
+						{# </div> #}
+						<nav>
+							<ul class="main-nav">
+								{# <li{%if is_route('app.investors') %} class="active"{% endif %}><a href="{{ path('app.investors') }}">{{ 'Для инвесторов'|trans }}</a></li> #}
+								<li{%if is_route('app.getting') %} class="active"{% endif %}><a href="{{ path('app.getting') }}">{{ 'Как получить?'|trans }}</a></li>
+								<li{%if is_route('app.return') %} class="active"{% endif %}><a href="{{ path('app.return') }}">{{ 'Как вернуть?'|trans }}</a></li>
+								{# <li{%if is_route('app.faq') %} class="active"{% endif %}><a href="{{ path('app.faq') }}">FAQ</a></li> #}
+								{% if not comingSoonMode %}
+									{# <li{%if is_route('app.blog') %} class="active"{% endif %}><a href="{{ path('app.blog') }}">{{ 'Блог'|trans }}</a></li> #}
+									<li{%if is_route('app.deal') %} class="active"{% endif %}><a href="{{ path('app.deal') }}">{{ 'Акции'|trans }}</a></li>
+								{% endif %}
+
+								<li{%if is_route('app.about') %} class="active"{% endif %}><a href="{{ path('app.about') }}">{{ 'О нас'|trans }}</a></li>
+								<li{%if is_route('app.contacts') %} class="active"{% endif %}><a href="{{ path('app.contacts') }}">{{ 'Контакты'|trans }}</a></li>
+
+								<li>
+									<ul class="language-list">
+										<li{% if (app.request.getLocale() == 'uk') %} class="active language-hidden"{% endif %}><a href="{{ path(app.request.get('_route') ?: 'app.home', (app.request.get('_route_params') ?: {})|merge({'_locale': 'uk'})) }}">{{ 'UA' }}</a></li>
+										<li{% if (app.request.getLocale() == 'ru') %} class="active language-hidden"{% endif %}><a href="{{ path(app.request.get('_route') ?: 'app.home', (app.request.get('_route_params') ?: {})|merge({'_locale': 'ru'})) }}">{{ 'RU' }}</a></li>
+
+										{# <li{% if (app.request.getLocale() == 'en') %} class="active"{% endif %}><a href="{{ path(app.request.get('_route') ?: 'app.home', (app.request.get('_route_params') ?: {})|merge({'_locale': 'en'})) }}">{{ 'En' }}</a></li> #}
+									</ul>
+								</li>
+
+								<li>
+									<ul class="enter-list">
+										<li>
+											{% if not comingSoonMode %}
+												{% if not is_route('app.registration-new') %}
+													{% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+														{% if not is_route('app.login') %}
+															<a class="active lightbox-opener" href="#enter-account">{{ 'Вход'|trans }}</a>
+														{% else %}
+															<a class="active" href="{{ path('app.login') }}">{{ 'Вход'|trans }}</a>
+														{% endif %}
+													{% else %}
+														<a class="active" href="{{ path('app.profile') }}">{{ 'Вход'|trans }}</a>
+													{% endif %}
+												{% endif %}
+											{% endif %}
+										</li>
+										{# <li{% if is_route('app.blog') %} class="active"{% endif %}><a href="{{ path('app.blog') }}">{{ 'Блог'|trans }}</a></li> #}
+									</ul>
+								</li>
+							</ul>
+							
+							
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% if not is_granted('IS_AUTHENTICATED_REMEMBERED') and not is_route('app.login')%}
+		<div class="popup-holder">
+			<div class="lightbox" id="enter-account"><a class="lightbox-close" href="#" data-fancybox-close><i class="icon-close"></i></a>
+				<div class="lightbox-block">
+					<span class="span-h">{{ 'Вход в кабинет'|trans }}</span>
+					{% include 'security/form-login.html.twig' %}
+				</div>
+			</div>
+
+			{% if not is_route('app.password.reset') %}
+			<div class="lightbox" id="reset-password"><a class="lightbox-close" href="#" data-fancybox-close><i class="icon-close"></i></a>
+				<div class="lightbox-block password-recovery">
+					<span class="span-h">{{ 'Восстановление пароля'|trans }}</span>
+					{{ render(controller('AppBundle:Security:forgotPasswordForm')) }}
+				</div>
+			</div>
+			{% endif %}
+		</div>
+		{% endif %}
+
+		<div class="popup-holder">
+			{{ render(controller('AppBundle:Alert:show')) }}
+			<div class="lightbox" id=""><a class="lightbox-close" href="#" data-fancybox-close><i class="icon-close"></i></a>
+				<div class="lightbox-block">
+					<h2>{{ 'Для получения кредита Вы должны заполнить все поля персональной информации!' | trans }}</h2>
+					<a class="button" href="">{{'Редактировать'|trans}}</a>
+				</div>
+			</div>
+		</div>
+
+	</header>
+	{% endblock %}
+
+	<main>
+		<div class="padding">
+		{% block mainContent %}{% endblock %}
+		</div>
+	</main>
+
+	{% block footer %}
+	<footer id="footer">
+		<div class="container">
+			<div class="footer-left">
+				<div class="logo"><a href="{{ path('app.home') }}"><img src="{{ asset('images/logo-footer.png') }}" alt="CASHYOU"></a></div>
+				<p class="footer-title">{{'Про нас'|trans}}</p>
+				<p>Apple Inc has decided to launch the much <br>
+				awaited Apple Watch in the upcoming month of <br>
+				April and has already received around five to six</p>
+
+				<div class="footer-social">
+					<p class="footer-title">{{'Социальные сети'|trans}}</p>
+					<ul class="social-networks">
+						<li class="facebook"><a href="https://www.facebook.com/Cashyou-371352639870774/"> <i class="icon-facebook"></i></a></li>
+						<li class="twitter"><a href="https://twitter.com/CashYou_Ukraine"> <i class="icon-twitter"></i></a></li>
+						<li class="instagram"><a href="https://www.instagram.com/cashyou_official/"> <i class="icon-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-center">
+				<div class="footer-company">
+					<p class="footer-title">{{'Компания'|trans}}</p>
+					<ul class="company-list">
+						<li class="company-item"><a href="">Popular</a></li>
+						<li class="company-item"><a href="">Trending</a></li>
+						<li class="company-item"><a href="">Catalog</a></li>
+						<li class="company-item"><a href="">Features</a></li>
+					</ul>
+				</div>
+				<div class="footer-loans">
+					<p class="footer-title">{{'Займы'|trans}}</p>
+					<ul class="loans-list">
+						<li class="loans-item"><a href="">Press Releases</a></li>
+						<li class="loans-item"><a href="">Mission</a></li>
+						<li class="loans-item"><a href="">Strategy</a></li>
+						<li class="loans-item"><a href="">Works</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-right">
+				<p class="phone"><a href="tel:0800212300">0800-21-23-00</a></p>
+				<a class="button mobile-hidden" href="">{{ 'Получить деньги'|trans }}</a>
+				<p class="contact">
+					Электронная почта:<br>
+					support@cashyou.com<br>
+					Телефон: 8 800 7000 197 (Круглосуточно)<br>
+					Украина, Харьков, ул. Кирова 48, офис 1401
+				</p>
+				<a class="button mobile-hidden" href="">{{ 'Написать в службу поддержки'|trans }}</a>
+			</div>
+			{# <div class="logo"><a href="{{ path('app.home') }}"><img src="{{ asset('images/logo-footer.png') }}" alt="CASHYOU"></a></div> #}
+			{# <div class="footer-holder"> #}
+				{# <div class="col"><strong class="conditions"><a href="{{ path('app.confidentiality') }}">{{ 'Условия пользования'|trans }}</a></strong>{% if not comingSoonMode %}<a class="button btn-white" href="#">{{ 'Приведи друга'|trans }}</a>{% endif %}</div> #}
+				{# <div class="col">
+					<ul class="social-networks">
+						<li class="facebook"><a href="https://www.facebook.com/Cashyou-371352639870774/"> <i class="icon-facebook"></i></a></li>
+						<li class="twitter"><a href="https://twitter.com/CashYou_Ukraine"> <i class="icon-twitter"></i></a></li>
+						<li class="instagram"><a href="https://www.instagram.com/cashyou_official/"> <i class="icon-instagram"></i></a></li>
+					</ul><span class="phone"><a href="tel:0800212300">0800-21-23-00</a></span>
+				</div> #}
+			{# </div> #}
+			<a class="btn-top" href="#">{{'Назад'|trans}}</a>
+		</div>
+	</footer>
+	<div class="footer-icons-payment">
+		<img src="{{ asset('images/visa-card.png') }}" alt="">
+		<img src="{{ asset('images/way4pay.png') }}" alt="">
+		<img src="{{ asset('images/comod.png') }}" alt="">
+	</div>
+	{% endblock %}
+</div>
+{% endblock %}
+</body>
+</html>

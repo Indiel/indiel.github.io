@@ -1,0 +1,46 @@
+{% form_theme form 'form/profile-fields.html.twig' %}
+
+<div class="form-holder">
+	{{ form_start(form, {'attr': {'class': 'data-info js-ajax-form'}}) }}
+	<div class="columns">
+		<div class="col">
+			{{ form_row(form.gender, {'attr': {'disabled': 'disabled'}|merge(profile.gender is empty ? {'class': 'has-error'} : {})}) }}
+			{{ form_row(form.lastName, {'attr': {'disabled': 'disabled', 'data-rule-onlyLetter': 1, 'data-rule-notSpaces': 1, 'minlength': 2}|merge(profile.lastName is empty ? {'class': 'has-error'} : {})}) }}
+			{{ form_row(form.firstName, {'attr': {'disabled': 'disabled', 'data-rule-onlyLetter': 1, 'data-rule-notSpaces': 1, 'minlength': 2}|merge(profile.firstName is empty ? {'class': 'has-error'} : {})}) }}
+			{{ form_row(form.middleName, {'attr': {'disabled': 'disabled', 'data-rule-onlyLetter': 1, 'data-rule-notSpaces': 1, 'minlength': 2}|merge(profile.middleName is empty ? {'class': 'has-error'} : {})}) }}
+		</div>
+		<div class="col">
+			{{ form_row(form.birthDate, {
+				'attr': {
+					'disabled': 'disabled',
+					'placeholder': 'дд.мм.гггг'|trans,
+					'data-rule-dateValidate': 1,
+					'data-mask': '99.99.9999',
+					'minlength': 10,
+					'maxlength': 10
+				}|merge(profile.birthDate is empty ? {'class': 'has-error'} : {})
+			}) }}
+			{{ form_row(form.email, {'attr': {'disabled': 'disabled'}|merge(profile.email is empty ? {'class': 'has-error'} : {})}) }}
+			{{ form_row(form.phone, {
+				'attr': {
+					'disabled': 'disabled',
+					'data-rule-phoneValidate': 1,
+					'placeholder': '+38 (___) ___-__-__'|trans,
+					'data-mask': '+38 (099) 999-99-99',
+					'minlength': 19,
+					'maxlength': 19
+				}|merge(profile.phone is empty ? {'class': 'has-error'} : {})
+			}) }}
+		</div>
+	</div>
+	
+	{% if not hasUnpaidLoans %}
+	<div class="button-block">
+		<a href="#" class="button btn-edit open-editing">{{ 'Редактировать'|trans }}</a>
+		<a href="#" class="button back-btn">{{ 'Назад'|trans }}</a>
+		<button type="submit" class="button submit-profile" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Сохранить'|trans }}</button>
+	</div>
+	{% endif %}
+
+	{{ form_end(form) }}
+</div>

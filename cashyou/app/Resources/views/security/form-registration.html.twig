@@ -1,0 +1,404 @@
+{{ form_start(form, {'attr': {'class': 'step-form js-step-form','novalidate': 'novalidate'}}) }}
+{#<div class="heading">#}
+	{#<h1>#}
+		{#{% trans with {'%step%': 1} %}Регистрация аккаунта {% endtrans %}#}
+	{#</h1>#}
+{#</div>#}
+
+{{ form_errors(form) }}
+
+<!-- First step-->
+<div class="step-block " data-step="1" data-percent="20">
+	<div class="form-columns">
+		<div class="column">
+			{# TODO : Need to remove dummy example #}
+			{% set dummy_help = 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis' %}
+			{{ form_row(form.lastName, {'attr': {'data-rule-onlyLetter': 1, 'data-rule-notSpaces': 1, 'minlength': 2, 'placeholder': 'Фамилия'}}) }}
+			{{ form_row(form.firstName, {'attr': {'data-rule-onlyLetter': 1, 'data-rule-notSpaces': 1, 'minlength': 2 , 'placeholder': 'Имя'}}) }}
+			{{ form_row(form.middleName, {'attr': {'data-rule-onlyLetter': 1, 'data-rule-notSpaces': 1, 'minlength': 2 , 'placeholder': 'Отчество'}}) }}
+			{{ form_row(form.gender) }}
+		</div>
+		<div class="column">
+            {{ form_row(form.birthDate, {
+                'attr': {
+                    'placeholder': 'дд.мм.гггг'|trans,
+                    'data-rule-dateValidate': 1,
+                    'data-mask': '99.99.9999',
+                    'minlength': 10,
+                    'maxlength': 10
+                }
+            }) }}
+			<div class="form-row">
+                {{ form_label(form.phone) }}
+				<div class="input-holder">
+					<a href="#check-phone" class="button check-button hidden js-check-phone" data-verified="{{ phoneVerifyStorage.verifiedPhones|json_encode }}" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}" data-text-verified="{{ 'Подтвержден'|trans }}" data-send-url="{{ path('app.phone_verify.send') }}">{{ 'Подтвердить'|trans }}</a>
+                    {{ form_widget(form.phone, {
+                        'attr': {
+                            'data-rule-phoneValidate': 1,
+                            'data-rule-phoneVerified': 1,
+                            'placeholder': '+38 (___) ___-__-__'|trans,
+                            'data-mask': '+38 (099) 999-99-99',
+                            'minlength': 19,
+                            'maxlength': 19
+                        }, 'help': 'registration.help.phone'|trans
+                    }) }}
+				</div>
+                {{ form_errors(form.phone) }}
+			</div>
+            {{ form_row(form.email.first, {'help': 'registration.help.email'|trans}) }}
+            {{ form_row(form.email.second, {'attr': {'data-rule-equalTo': '#registration_form_email_first'}, 'help': 'registration.help.emailSecond'|trans}) }}
+		</div>
+		<div class="column">
+			{{ form_row(form.secretQuestion, {'help': 'registration.help.secretQuestion'|trans}) }}
+			{{ form_row(form.secretAnswer, {'attr': {'data-rule-notSpaces': '1'}, 'help': 'registration.help.secretAnswer'|trans}) }}
+			{{ form_row(form.password.first, {'attr': {'data-rule-notSpaces': '1'}, 'help': 'registration.help.password'|trans}) }}
+			{{ form_row(form.password.second, {'attr': {'data-rule-notSpaces': '1', 'data-rule-equalTo': '#registration_form_password_first'}, 'help': 'registration.help.passwordSecond'|trans }) }}
+		</div>
+	</div>
+	<div class="agree-checkbox-holder">
+		<label for="remember">
+			<input type="checkbox" id="remember" name="_remember_me" class="agree-checkbox" data-rule-required="1">
+            {{ 'З <a href="%rules_url%">правилами</a> та умовами надання займу ознайомлений, та підтверджую <a href="%agreement_url%">згоду</a> на обробку своїх особистих даних, а також на передачу даних у бюро кредитних історій.'|trans({
+				'%rules_url%': path('app.creditrules'),
+				'%agreement_url%': path('app.agreementpersonaldata'),
+			})|raw }}
+		</label>
+	</div>
+	<div class="button-block"><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+<!-- Second step-->
+<div class="step-block " data-step="2" data-percent="40">
+	<div class="form-columns">
+		<div class="column">
+            {{ form_row(form.isPassportNewType, {'attr': {'class': 'passport'}, 'help': 'registration.help.isPassportNewType'|trans}) }}
+		</div>
+		<div class="column">
+            {{ form_row(form.passportRegistration, {
+                'attr': {
+                    'placeholder': 'дд.мм.гггг'|trans,
+                    'data-rule-dateValidate': 1,
+                    'data-rule-required': 1,
+                    'data-mask': '99.99.9999',
+                    'minlength': 10,
+                    'maxlength': 10
+                }, 'help': 'registration.help.passportRegistration'|trans
+            }) }}
+			<div class="passport-block" data-passport="type1">
+				{{ form_row(form.documentNumber, {
+					'attr': {
+						'data-rule-documentNumberValidate': '#registration_form_isPassportNewType_0:checked',
+						'minlength': 9,
+						'maxlength': 9,
+						'data-mask': '999999999'
+					}, 'help': 'registration.help.passport'|trans
+				}) }}
+
+				{{ form_row(form.passportIssuedByNumber, {
+					'attr': {
+						'data-rule-passportIssuedByNumberValidate': '#registration_form_isPassportNewType_0:checked',
+						'data-rule-required': '#registration_form_isPassportNewType_0:checked',
+						'data-mask': '9999',
+					},
+					'help': 'registration.help.passportIssuedBy'|trans
+				}) }}
+
+			</div>
+			<div class="passport-block selected" data-passport="type2">
+				{{ form_row(form.passport, {
+					'attr': {
+						'data-rule-passportValidate': '#registration_form_isPassportNewType_1:checked',
+						'minlength': 9,
+						'maxlength': 9,
+						'data-mask': 'RR 999999'
+					}, 'help': 'registration.help.passport'|trans
+				}) }}
+
+				{{ form_row(form.passportIssuedBy, {
+					'attr': {
+						'data-rule-required': '#registration_form_isPassportNewType_1:checked',
+					},
+					'help': 'registration.help.passportIssuedBy'|trans
+				}) }}
+			</div>
+		</div>
+		<div class="column">
+			<div class="passport-block" data-passport="type1">
+                {{ form_row(form.passportValidDate, {
+                    'attr': {
+                        'placeholder': 'дд.мм.гггг'|trans,
+                        'data-rule-dateValidate': 1,
+                        'data-rule-required': '#registration_form_isPassportNewType_0:checked',
+                        'data-mask': '99.99.9999',
+                        'minlength': 10,
+                        'maxlength': 10
+                    }, 'help': 'registration.help.passportValidDate'|trans
+                }) }}
+                {{ form_row(form.passportRecordNumber, {
+                    'attr': {
+                        'data-rule-required': '#registration_form_isPassportNewType_0:checked',
+                        'data-rule-passportRecordNumberValidate': 1,
+                        'data-mask': '99999999-99999',
+                        'minlength': 14,
+                        'maxlength': 14
+                    }, 'help': 'registration.help.passportRecordNumber'|trans
+                }) }}
+			</div>
+            {{ form_row(form.socialSecurityNumber, {'attr': {'data-rule-digits': 1, 'minlength': 10, 'maxlength': 10},  'help': 'registration.help.socialSecurityNumber'|trans}) }}
+		</div>
+		<div class="column-hidden">
+            {{ form_row(form.maritalStatus, {'attr': {'value' : 2, 'style': 'visibility: hidden'}, 'help': 'registration.help.maritalStatus'|trans}) }}
+            {{ form_row(form.numberOfDependents, {'attr': {'value' : 1, 'style': 'visibility: hidden'}, 'help': 'registration.help.numberOfDependents'|trans}) }}
+            {{ form_row(form.education, {'attr': {'value' : 4, 'style': 'visibility: hidden'}, 'help': 'registration.help.education'|trans}) }}
+            {{ form_row(form.citizenship, {'attr': {'value' : 1, 'style': 'visibility: hidden'}, 'help': 'registration.help.citizenship'|trans}) }}
+		</div>
+	</div>
+	<div class="button-block"><a class="button btn-light button-prev" href="#">{{ 'Назад'|trans }}</a><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+<!-- Third step-->
+<div class="step-block " data-step="3" data-percent="60">
+	<div class="heading-block">
+		<h2>{{ 'Адрес проживания'|trans }}</h2>
+	</div>
+	<div class="form-columns">
+		<div class="column">
+			{{ form_row(form.address.street, {
+				'attr': {
+					'class': 'js-address-autocomplete',
+					'data-autocomplete-id': 'registration_form_address_street',
+					'data-autocomplete-field': 'route',
+				}, 'help': 'registration.help.street'|trans
+			}) }}
+
+			{{ form_row(form.address.state, {
+				'attr': {
+					'data-rule-onlyLetter': 1,
+					'data-autocomplete-id': 'registration_form_address_street',
+					'data-autocomplete-field': 'administrative_area_level_1',
+                    'data-rule-notSpaces': 1,
+				}, 'help': 'registration.help.state'|trans
+			}) }}
+		</div>
+		<div class="column">
+            {{ form_row(form.address.typeOfSettlement, {'help': 'registration.help.typeOfSettlement'|trans}) }}
+            {{ form_row(form.address.city, {
+                'attr': {
+                    'data-rule-onlyLetter': 1,
+                    'data-autocomplete-id': 'registration_form_address_street',
+                    'data-autocomplete-field': 'locality',
+                    'data-rule-notSpaces': 1,
+                }, 'help': 'registration.help.city'|trans
+            }) }}
+            {{ form_row(form.address.zipCode, {
+                'attr': {
+                    'data-rule-digits': 1,
+                    'data-autocomplete-id': 'registration_form_address_street',
+                    'data-autocomplete-field': 'postal_code',
+                }, 'help': 'registration.help.zipCode'|trans})
+            }}
+		</div>
+		<div class="column">
+			<div class="three-columns">
+				<div class="col">
+                    {{ form_row(form.address.house, {
+                        'attr': {
+                            'data-autocomplete-id': 'registration_form_address_street',
+                            'data-autocomplete-field': 'street_number',
+                        }, 'help': 'registration.help.house'|trans
+                    }) }}
+				</div>
+				<div class="col">
+                    {{ form_row(form.address.building, {'help': 'registration.help.building'|trans}) }}
+				</div>
+				<div class="col">
+                    {{ form_row(form.address.apartment, {'help': 'registration.help.apartment'|trans}) }}
+				</div>
+			</div>
+			{{ form_row(form.address.residentialMatchesRegistration, {'help': 'registration.help.residentialMatchesRegistration'|trans}) }}
+		</div>
+	</div>
+	<div class="address-holder">
+		<div class="heading-block">
+			<h2>{{ 'Адрес регистрации'|trans }}</h2>
+		</div>
+		<div class="form-columns">
+			<div class="column">
+				{{ form_row(form.secondAddress.street, {
+					'attr': {
+						'class': 'js-address-autocomplete',
+						'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+						'data-autocomplete-id': 'registration_form_secondAddress_street',
+						'data-autocomplete-field': 'route',
+					}, 'help': 'registration.help.secondAddress.street'|trans}) }}
+                {{ form_row(form.secondAddress.state, {
+                    'attr': {
+                        'data-rule-onlyLetter': 1,
+                        'data-rule-notSpaces': 1,
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                        'data-autocomplete-id': 'registration_form_secondAddress_street',
+                        'data-autocomplete-field': 'administrative_area_level_1',
+                    }, 'help': 'registration.help.secondAddress.state'|trans
+                }) }}
+			</div>
+			<div class="column">
+                {{ form_row(form.secondAddress.typeOfSettlement, {
+                    'choice_attr': {
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                    }, 'help': 'registration.help.secondAddress.typeOfSettlement'|trans
+                }) }}
+                {{ form_row(form.secondAddress.city, {
+                    'attr': {
+                        'data-rule-onlyLetter': 1,
+                        'data-rule-notSpaces': 1,
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                        'data-autocomplete-id': 'registration_form_secondAddress_street',
+                        'data-autocomplete-field': 'locality',
+                    }, 'help': 'registration.help.secondAddress.city'|trans
+                }) }}
+                {{ form_row(form.secondAddress.zipCode, {
+                    'attr': {
+                        'data-rule-digits': 1,
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                        'data-autocomplete-id': 'registration_form_secondAddress_street',
+                        'data-autocomplete-field': 'postal_code',
+                    }, 'help': 'registration.help.secondAddress.zipCode'|trans
+                }) }}
+			</div>
+			<div class="column">
+				<div class="three-columns">
+					<div class="col">
+                        {{ form_row(form.secondAddress.house, {
+                            'attr': {
+                                'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                                'data-autocomplete-id': 'registration_form_secondAddress_street',
+                                'data-autocomplete-field': 'street_number',
+                            }, 'help': 'registration.help.secondAddress.house'|trans
+                        }) }}
+					</div>
+					<div class="col">
+                        {{ form_row(form.secondAddress.building, {'help': 'registration.help.secondAddress.building'|trans}) }}
+					</div>
+					<div class="col">
+                        {{ form_row(form.secondAddress.apartment, {
+                            'help': 'registration.help.secondAddress.apartment'|trans
+                        }) }}
+					</div>
+				</div>
+			</div>
+			<div class="column-hidden">
+                {{ form_row(form.address.realEstate, {'attr': {'value' : 1, 'style': 'visibility: hidden'},'help': 'registration.help.realEstate'|trans}) }}
+                {{ form_row(form.secondAddress.realEstate, {
+                    'attr': {
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                    }, 'help': 'registration.help.secondAddress.realEstate'|trans
+                }) }}
+			</div>
+		</div>
+	</div>
+	<div class="button-block"><a class="button btn-light button-prev" href="#">{{ 'Назад'|trans }}</a><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+<!-- Fourth step-->
+<div class="step-block " data-step="4" data-percent="80">
+	<div class="form-columns">
+		<div class="column">
+			{{ form_row(form.incomeType, {'help': 'registration.help.incomeType'|trans}) }}
+			{{ form_row(form.monthlyIncome, {'help': 'registration.help.monthlyIncome'|trans}) }}
+		</div>
+		<div class="column">
+			<div data-show-if-field="#registration_form_incomeType" data-show-if-value="1|3">
+                {{ form_row(form.businessType, {'help': 'registration.help.businessType'|trans}) }}
+			</div>
+		</div>
+		<div class="column">
+			<div data-show-if-field="#registration_form_incomeType" data-show-if-value="1|3">
+				{{ form_row(form.workPhone, {
+					'attr': {
+						'data-rule-phoneValidate': 1,
+						'placeholder': '+38 (___) ___-__-__'|trans,
+						'data-mask': '+38 (099) 999-99-99',
+						'minlength': 19,
+						'maxlength': 19
+					}, 'help': 'registration.help.workPhone'|trans
+				}) }}
+			</div>
+
+		</div>
+        <div class="column-hidden">
+            {{ form_row(form.lastExperience, {'help': 'registration.help.lastExperience'|trans}) }}
+            {{ form_row(form.totalExperience, {'help': 'registration.help.totalExperience'|trans}) }}
+            {{ form_row(form.carOwner, {'help': 'registration.help.carOwner'|trans}) }}
+            {{ form_row(form.realEstateOwner, {'help': 'registration.help.realEstateOwner'|trans}) }}
+			<div data-show-if-field="#registration_form_incomeType" data-show-if-value="1|3">
+                {{ form_row(form.companyName, {'help': 'registration.help.companyName'|trans}) }}
+                {{ form_row(form.position, {'help': 'registration.help.position'|trans}) }}
+			</div>
+        </div>
+	</div>
+	<div class="button-block"><a class="button btn-light button-prev" href="#">{{ 'Назад'|trans }}</a><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+<!-- Fifth step-->
+<div class="step-block active" data-step="5" data-percent="100">
+	<div class="download-holder">
+		<div class="download-row selfie-download-row file-require">
+			<div>{{ 'Загрузите фото 1й страницы Вашего паспорта'|trans }}<span class="req">*</span><span class="req-descr">{{ 'Зазгрузите фото'|trans }}</span></div>
+			{{ form_widget(form.docPassport1Json) }}
+			{#<div class="tool-tip">#}
+				{#<h2 class="text-instruction">{{ 'Пожалуйста, сделайте и загрузите фото с документом как показано на картинке'|trans }}</h2>#}
+				{#<img class = "photo-istruction" src = "{{ asset('images/photoUploadPopup.jpg') }}" alt="">#}
+			{#</div>#}
+		</div>
+		<div class="download-row file-require">
+			<div>{{ 'Загрузите фото 2й страницы Вашего паспорта'|trans }}<span class="req">*</span><span class="req-descr">{{ 'Зазгрузите фото'|trans }}</span></div>
+			{{ form_widget(form.docPassport2Json) }}
+		</div>
+		<div class="download-row file-require">
+			<div>{{ 'Загрузите фото страницы прописки'|trans }}<span class="req">*</span><span class="req-descr">{{ 'Зазгрузите фото'|trans }}</span></div>
+			{{ form_widget(form.docPassport3Json) }}
+		</div>
+		<div class="download-row">
+			<div>{{ 'Загрузите фото Вашего ИНН'|trans }}</div>
+			{{ form_widget(form.docIpnJson) }}
+		</div>
+		<div class="download-row">
+			<div>{{ 'Дополнительные документы'|trans }}</div>
+			{{ form_widget(form.docsJson) }}
+		</div>
+	</div>
+	<div class="button-block"><a class="button btn-light button-prev" href="#">{{ 'Назад'|trans }}</a><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+
+<!-- Sixth step-->
+<div class="step-block" data-step="6" data-percent="100">
+	{% include 'security/registration-preview.html.twig' %}
+	<div class="button-block"><a class="button btn-light button-prev" href="#">{{ 'Назад'|trans }}</a><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+
+<!-- Seven step-->
+<div class="step-block" data-step="7" data-percent="100">
+	<div class="max-amount-holder container">
+		<div class="heading-block"><h2>{{ 'Ваша гарантированная сумма на выдачу'|trans }}</h2></div>
+		<div class="max-amount-row">
+			<ul>
+				<li><span class="descr">{{ 'Вы можете взять эту сумму'|trans }}</span><b>{#{{ limitAmount }}#}1000</b> {{ 'гривен'|trans }}</li>
+				<li class="plus"><span></span></li>
+				<li><span class="descr">{{ 'Сумма накопленных бонусов'|trans }}</span><b>2000</b> {{ 'гривен'|trans }}</li>
+				<li class="equal"><span></span></li>
+				<li><span class="descr">{{ 'Сумма к возврату с учетом бонусов'|trans }}</span><b>{#{{ limitAmount - 20}}#}980</b> {{ 'гривен'|trans }}</li>
+			</ul>
+		</div>
+		<div class="button-block">
+			<a href="" class="button btn-get">{{ 'Получить'|trans }}</a>
+			<a href="" class="button btn-profile btn-gray">{{ 'В кабинет'|trans }}</a>
+		</div>
+		<div class="info">
+			<h6>{{ 'Почему сумма в'|trans }} {#{{ rejectedAmount }}#}2000 {{ 'грн не может быть одобрена'|trans }}</h6>
+			<ul>
+				<li><i class="fas fa-frown"></i>{{ 'Много непогашенных кредитов'|trans }}</li>
+				<li><i class="fas fa-credit-card"></i>{{ 'Мало кредитов в нашем сервисе'|trans }}</li>
+				<li><i class="fas fa-star"></i>{{ 'Низкий кредитный рейтинг'|trans }}</li>
+			</ul>
+			<p><span class="star">*</span>{{ 'Возьмите эту сумму и верните в срок, таким образом Вы повысите свой кредитный рейтинг для одобрения следующего займа в любой организации.'|trans }}</p>
+		</div>
+	</div>
+</div>
+
+{{ form_end(form) }}

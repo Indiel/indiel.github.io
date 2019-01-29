@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block bodyAttributes %} class="bg-gray"{% endblock %}
+
+{% block mainContent %}
+	<div class="container">
+		<div class="heading">
+			<h1>{{ 'loan.rollover.repay.title'|trans|nl2br|raw }}</h1>
+		</div>
+		<p>{{ 'loan.rollover.repay.description'|trans|nl2br|raw }}</p>
+		<div class="redemption">
+			<div class="holder">
+				<div class="column">
+					<div class="client-block client-content redemption-block">
+						<div class="heading-area">
+							<h2>{{ '<b>Погашение </b> кредита'|trans|raw }}</h2>
+						</div>
+						
+						{{ form_start(moneyForm) }}
+							<div class="data-holder">
+								<div class="row row-price"><span class="name">{{ 'Сумма к погашению'|trans }}</span>
+									<div class="data-block">
+										<b class="thisCreditAmount">{{ loan.rolloverRepayAmount|format_float }}</b> {{ 'грн'|trans }}
+{#
+										<div class="popup-block"><a class="popup-opener" href="#"> <i class="icon-question"></i></a>
+											<div class="popup">
+												<p>{{'loan.rollover.repay.money.help'|trans|raw }}</p>
+											</div>
+										</div>
+#}
+									</div>
+								</div>
+							</div>
+							<div class="button-block">
+								<button class="button double-submit-protect" type="submit">{{ 'Оплатить'|trans }}</button>
+							</div>
+						{{ form_end(moneyForm) }}
+					</div>
+				</div>
+				<div class="column">
+					<div class="client-block client-content redemption-block">
+						<div class="heading-area">
+							<h2>{{ '<b>Погашение  </b>кредита бонусами'|trans|raw }}</h2>
+						</div>
+						
+						{% if bonusesForm %}
+                            {{ form_start(bonusesForm) }}
+								<div class="bonuses-status has-bonuses is-active">
+									<div class="button-block"><button type="submit" class="button double-submit-protect">{{ 'Погасить кредит'|trans }}</button></div>
+								</div>
+                            {{ form_end(bonusesForm) }}
+						{% else %}
+							<div class="bonuses-status no-bonuses is-active">
+								<div class="total-bonuses">{{ 'На данный момент у Вас нет бонусов'|trans }}</div>
+								<div class="button-block"><button class="button" type="button" disabled>{{ 'Погасить кредит'|trans }}</button></div>
+							</div>                                          
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

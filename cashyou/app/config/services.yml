@@ -1,0 +1,246 @@
+services:
+    app.turnkey.lender.api:
+        class: AppBundle\Helper\TurnkeyLenderApi
+        arguments:
+            -   '@app.turnkey.lender.api.client'
+            -   '@app.turnkey.lender.api.cache'
+            -   '@security.token_storage'
+            -   '%turnkey_lender_cache_enabled%'
+            -   '%turnkey_lender_cache_lifetime%'
+            -   '%turnkey_lender_initial_special_product%'
+            -   '%turnkey_lender_initial_product%'
+            -   '%turnkey_lender_base_product%'
+            -   '@jms_serializer'
+            -   '@monolog.logger.api'
+            -   '%turnkey_lender_api_logging%'
+            -   '@router'
+            -   '%max_term_days%'
+
+    app.turnkey.lender.api.client:
+        class: GuzzleHttp\Client
+        arguments:
+            -   base_uri:           '%turnkey_lender_api_url%'
+                http_errors:        '%turnkey_lender_api_http_errors%'
+                verify:             '%turnkey_lender_api_ssl_verify%'
+                timeout:            '%turnkey_lender_api_timeout%'
+                connect_timeout:    '%turnkey_lender_api_timeout%'
+                headers:
+                    'tkLender_ApiKey': '%turnkey_lender_api_key%'
+
+    app.wayforpay.client:
+        class: GuzzleHttp\Client
+        arguments:
+            -   http_errors:        '%turnkey_lender_api_http_errors%'
+                verify:             '%turnkey_lender_api_ssl_verify%'
+                timeout:            '%turnkey_lender_api_timeout%'
+                connect_timeout:    '%turnkey_lender_api_timeout%'
+
+    app.turnkey.lender.api.cache:
+        class: Doctrine\Common\Cache\FilesystemCache
+        arguments: ['%turnkey_lender_cache_path%']
+
+    app.turnkey.lender.api.sync_helper:
+        class: AppBundle\Helper\ApiSyncHelper
+        arguments:
+          - "@doctrine.orm.entity_manager"
+          - "@security.token_storage"
+          - "@app.turnkey.lender.api"
+          - "@app.security.user.provider"
+          - "%secret%"
+
+    app.security.authentication.provider.api:
+        class: AppBundle\Security\Authentication\Provider\ApiProvider
+        abstract: true
+        arguments:
+            - ~
+            - ~
+            - '@security.encoder_factory'
+            - '%security.authentication.hide_user_not_found%'
+            - '@app.turnkey.lender.api'
+            - '@app.security.user.provider.cache'
+            - '%secret%'
+
+    app.security.user.provider:
+        class: AppBundle\Security\User\ApiUserProvider
+        arguments:
+            - '@app.security.user.provider.cache'
+            - '%secret%'
+
+    app.security.user.provider.cache:
+        class: Doctrine\Common\Cache\FilesystemCache
+        arguments: ['%user_provider_cache_path%']
+
+    app.twig.extension:
+        class: AppBundle\Twig\AppExtension
+        arguments:
+            - '@security.authentication_utils'
+            - '@app.turnkey.lender.api'
+            - '@request_stack'
+        tags:
+            - { name: twig.extension }
+    app.security.authentication.handler:
+        class: AppBundle\Security\Authentication\Handler\AuthenticationHandler
+        arguments:
+            - '@router'
+            - "@app.turnkey.lender.api"
+            - "@app.turnkey.lender.api.sync_helper"
+            - "@service_container"
+            - "@app.alert.helper"
+            - "@translator"
+
+    app.form.type.enum:
+        class: AppBundle\Form\EnumType
+        arguments:
+            - '@form.choice_list_factory'
+        tags:
+            - { name: form.type }
+
+    app.form.type.tel:
+        class: AppBundle\Form\TelType
+        tags:
+            - { name: form.type }
+
+    app.form.type.upload.document:
+        class: AppBundle\Form\UploadDocumentType
+        tags:
+            - { name: form.type }
+
+    app.form.type.forgot_password:
+        class: AppBundle\Form\ForgotPasswordType
+        tags:
+            - { name: form.type }
+            
+    app.turbosms:
+        class: AppBundle\Helper\Turbosms
+        arguments: ["@doctrine.orm.entity_manager", "@translator", "@service_container"]
+        
+    app.phone_verify_storage:
+        class: AppBundle\Helper\PhoneVerifyStorage
+        arguments:
+            - "@session"
+            
+    app.phone_verify_validator:
+        class: AppBundle\Validator\Constraints\PhoneVerifyValidator
+        arguments:
+            - "@app.phone_verify_storage"
+        tags:
+            - { name: 'validator.constraint_validator', alias: 'app.phone_verify_validator' }
+            
+#    AppBundle\EventSubscriber\LocaleSubscriber:
+#        arguments:
+#            - "@jms_i18n_routing.locale_resolver"
+#        tags: [kernel.event_subscriber]
+        
+    app.alert.helper:
+        class: AppBundle\Helper\AlertHelper
+        arguments:
+            - "@session"
+            
+    app.serializer.event_subscriber:
+        class: AppBundle\Serializer\EventSubscriber
+        tags:
+            - { name: jms_serializer.event_subscriber }
+            
+    app.tracking.salesdoubler.listener:
+        class: AppBundle\EventListener\TrackingSalesdoublerListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.response }
+
+    app.tracking.listener:
+            class: AppBundle\EventListener\TrackingListener
+            tags:
+                - { name: kernel.event_listener, event: kernel.response }
+            
+    app.tracking.helper:
+        class: AppBundle\Helper\TrackingHelper
+        arguments:
+            - "@request_stack"
+            - "@doctrine.orm.entity_manager"
+            - "@app.tracking.repository"
+            - "@app.tracking.keitaro"
+
+    app.cashyou.tracker.helper:
+            class: AppBundle\Helper\CashyouTrackerHelper
+            arguments:
+            - "@app.tracking.cashyou"
+            - '%cashyou_tracker_token%'
+
+    app.tracking.salesdoubler.helper:
+            class: AppBundle\Helper\TrackingSalesdoublerHelper
+            arguments:
+                - "@request_stack"
+                - "@app.tracking.salesdoubler"
+                - '%token_salesdoubler%'
+            
+    app.tracking.repository:
+        class: Doctrine\Common\Persistence\ObjectRepository
+        factory:   ['@doctrine.orm.entity_manager', 'getRepository']
+        arguments: ['AppBundle:Tracking', '@doctrine.orm.entity_manager']
+        
+    app.tracking.keitaro:
+        class: GuzzleHttp\Client
+        arguments:
+            -   base_uri:           '%keitaro_url%'
+                http_errors:        false
+                verify:             true
+                timeout:            10
+                connect_timeout:    10
+    app.tracking.salesdoubler:
+            class: GuzzleHttp\Client
+            arguments:
+                -   base_uri:           '%salesdoubler_url%'
+                    http_errors:        false
+                    verify:             true
+                    timeout:            10
+                    connect_timeout:    10
+
+
+    app.tracking.cashyou:
+            class: GuzzleHttp\Client
+            arguments:
+                - base_uri:           '%cashyou_tracker_url%'
+                  http_errors:        false
+                  verify:             true
+                  timeout:            10
+                  connect_timeout:    10
+
+    app.cloudwatch.client:
+        class: Aws\CloudWatchLogs\CloudWatchLogsClient
+        arguments:
+            -
+                credentials: { key: "%aws_cloudwatch_accesskey%", secret: "%aws_cloudwatch_secretkey%" }
+                region: "%aws_cloudwatch_region%"
+                version: "latest"
+
+    app.cloudwatch.handler:
+        class: AppBundle\Logger\CloudWatchHandler
+        arguments:
+            - "@security.token_storage"
+            - "@app.cloudwatch.client"
+            - "%aws_cloudwatch_group%"
+            - "%aws_cloudwatch_stream_prefix%_%kernel.environment%"
+            - 365 # retentionDays
+            - 10000 # logsInBatch
+            - { customer: "cashyou" } # tags
+            - !php/const:Monolog\Logger::DEBUG # logLevel
+
+    app.sms.sign.storage:
+        class: AppBundle\Helper\SmsSignStorage
+        arguments:
+            - "@session"
+
+    app.twig.extension.intl:
+        class: Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension }
+
+    app.risktools.client:
+        class: Risktools\Client
+        arguments:
+        -   '%risktools_key%'
+        -   '%risktools_url%'
+
+    app.save.cashyou.tracker.session.id.listener:
+        class: AppBundle\EventListener\SaveCashyouTrackerSessionIdListener
+        tags:
+        - { name: kernel.event_listener, event: kernel.response }

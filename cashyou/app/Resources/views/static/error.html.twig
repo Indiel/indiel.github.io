@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% set headingText = block('headingText')|trim %}
+{% set descriptionText = block('descriptionText')|trim %}
+{% set imageUrl = block('imageUrl')|trim %}
+{% set errorCode = block('errorCode')|trim %}
+
+{% block mainContent %}
+	<div class="container">
+		<div class="not-found">
+			<section class="holder">
+				{% if errorCode is not empty %}
+				<div class="block">
+					<h1 class="title">{{ errorCode }}</h1>
+				</div>
+				{% endif %}
+				
+				{% if imageUrl is not empty %}
+				<div class="block center">
+					<img src="{{ imageUrl }}" alt="{{ errorCode }}" class="image">
+				</div>
+				{% endif %}
+				
+				{% if headingText is not empty or descriptionText is not empty %}
+				<div class="block">
+					{% if headingText is not empty %}
+					<h2 class="subtitle">{{ headingText|raw }}</h2>
+					{% endif %}
+
+					{% if descriptionText is not empty %}
+					<span class="info">{{ descriptionText|raw }}</span>
+					{% endif %}
+				</div>
+				{% endif %}
+			</section>
+			<ul class="button-block">
+				<li>
+					<a href="{{ path('app.home', {'_locale': 'uk'}) }}" class="button">{{ 'Перейти на главную страницу'|trans }}</a>
+				</li>
+				<li>
+					<a href="{{ path('app.profile', {'_locale': 'uk'}) }}" class="button">{{ 'Перейти в личный кабинет'|trans }}</a>
+				</li>
+			</ul>
+		</div>
+		<aside class="client-aside bg-transparent">
+			<div class="container">
+				<div class="frame">
+					<div class="chat-holder">
+						<div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>
+							<div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>
+								<form action="#">
+									<label>Оставьте Ваш телефон и мы Вам перезвоним</label>
+									<input type="tel" placeholder="" value="+380">
+									<input class="button" type="submit" value="Перезвоните">
+								</form>
+							</div>
+						</div>
+						<div class="chat-block"><a class="chat-opener" href="#">{{ 'Связь с менеджером'|trans }}</a></div>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</div> 
+{% endblock %}

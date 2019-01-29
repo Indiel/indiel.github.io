@@ -1,0 +1,104 @@
+{% for loan in activeLoans %}
+<div class="client-columns">
+	<div class="column">
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Ваша </b>история'|trans|raw }}</h2>
+			</div>
+			<div class="data-holder">
+                {% if loan.isProcessing == false %}
+					<div class="row"><span class="name">{{ 'Сумма, грн.'|trans }}</span>
+						<div class="data-block"> <b class="thisCreditAmount">{{ loan.amount|format_float }}</b> {{ 'грн'|trans }}</div>
+					</div>
+                {% endif %}
+				<div class="row"><span class="name">{{ 'Процент'|trans }}</span>
+					<div class="data-block"> <b>{{ (loan.interestRate * 100)|format_float }}% </b></div>
+				</div>
+				<div class="row"><span class="name">{{ 'Срок, дни'|trans }}</span>
+					<div class="data-block"> <b>{{ loan.term }}</b></div>
+				</div>
+				<div class="row{% if loan.expired %} loan-expired{% endif %}">
+					<span class="name">{{ loan.expired ? 'Кредит просрочен на'|trans : 'Дней осталось'|trans }}</span>
+					<div class="data-block">
+						<b>{{ loan.daysUntilNextPayment|abs }}</b>[ <span>{{ 'до'|trans }}
+							<mark>{{ loan.nextPaymentDate|date('d.m.Y') }}</mark></span>]
+					</div>
+				</div>
+                {% if loan.isProcessing == false %}
+					<div class="row"><span class="name">{{ 'Сумма к погашению, грн'|trans }}</span>
+						<div class="data-block"><b>{{ loan.totalToRepay|format_float }} </b></div>
+					</div>
+                {% endif %}
+				<div class="row"><span class="name">{{ 'Баллы для погашения %'|trans }}</span>
+					<div class="data-block"><b>{{ (loan.outstandingBalanceInterest * bonusExchangeRate)|round(0, 'ceil')  }}</b></div>
+				</div>
+				<div class="row"><span class="name">{{ 'Баллы для погашения тела'|trans }}</span>
+					<div class="data-block"><b>{{ (loan.outstandingBalancePrincipal * bonusExchangeRate)|round(0, 'ceil')  }}</b></div>
+				</div>
+			</div>
+			{% if loan.isProcessing %}
+				<div class="button-block"><a class="button disabled" disabled="disabled">{{ 'В обработке'|trans }}</a></div>
+			{% elseif loan.status == 'WaitingForCustomerSignature' %}
+				<div class="button-block"><a class="button" href="{{ path('app.loan.sign', {'loanId': loan.id}) }}">{{ 'Подписать'|trans }}</a></div>
+			{% else %}
+				<div class="button-block"><a class="button" href="{{ path('app.loan.repay', {loanId: loan.id}) }}">{{ 'Погасить'|trans }}</a></div>
+			{% endif %}
+		</div>
+	</div>
+	<div class="column">
+		{% if loan.canRollover and loan.status != 'WaitingForCustomerSignature' and loan.creditProductName != initialSpecialProduct %}
+		<div class="client-block">
+			<div class="heading-area">
+				<h2><b>{{ 'Лонгация'|trans }}</b></h2>
+			</div>
+			<div class="intro-section">
+				<div class="row row-period modified">
+					<strong class="title term head-title modified"><span>{{ 'Продлить срок выплаты'|trans }}</span><span class="date-holder"><span class="icon-calendar"></span><input type="text" class="datepicker" data-mindays="{{ loan.minRolloverTermDays }}" data-maxdays="{{ loan.maxRolloverTermDays }}"></span></strong>
+					<p class="rollover-tip">{{ 'Выберите срок, на который Вы хотите продлить кредит'|trans }}</p>
+					<div class="col-credit-form">
+						<form id="extension-credit" class="extension-credit" action="{{ path('app.loan.rollover.submit') }}" method="post">
+							<div class="line">
+								<div class="line-holder">
+									<div class="line-slider"><span class="minus-slider minus-slider2"></span>
+										<div id="slider-rollover-{{ loan.id }}" data-input="#termRollover-{{ loan.id }}" data-step="{{ TKLenderConfig.defaultTermStep }}" data-default="{{ loan.minRolloverTermDays }}" data-min="{{ loan.minRolloverTermDays }}" data-max="{{ loan.maxRolloverTermDays }}"  class="slider period2"></div><span class="plus-slider plus-slider2"></span>
+									</div>
+								</div>
+							</div>
+							<div class="total-line">
+								<div class="total-info">
+									<div class="col">
+										<span>{{ 'Срок погашения'|trans }}</span>
+										<div class="l-wrap"><b class="expired-date"></b></div>
+									</div>
+									<div class="col">
+										<span>{{ 'Процентная ставка'|trans }}</span>
+										<div class="l-wrap"><b class="percent"></b><span class="percent-s">%</span></div>
+									</div>
+									<div class="col">
+										<b>{{ 'Итого'|trans }}</b>
+										<div class="l-wrap"><b class="total-value"></b>{# <span class="currency">{{ 'грн'|trans }}</span> #}</div>
+									</div>
+								</div>
+								<input type="hidden" name="termRollover" id="termRollover-{{ loan.id }}" value="{{ loan.minRolloverTermDays }}">
+								<input type="hidden" name="loanId" id="loanId-{{ loan.id }}" value="{{ loan.id }}">
+								<a class="button rollover-instruction-opener" href="#rollover-instruction">{{ 'Продлить'|trans }}</a>
+								<div class="popup-holder">
+									<div class="lightbox" id="rollover-instruction"><a class="lightbox-close" href="#" data-fancybox-close><i class="icon-close close-popup"></i></a>
+										<div class="lightbox-block">
+											<h2 class="text-instruction">{{ 'Для продления кредита выполните пошагово следующие действия'|trans }}</h2>
+                                            {{ '<ol class="step-instruction"><li>После того, как Вы нажмете кнопку "Продлить", программа укажет сумму, необходимую для погашения процентов.</li><li>Вам необходимо оплатить проценты в открывшемся окне деньгами либо бонусами.</li><li>Далее, Вам необходимо подписать дополнительное соглашение к договору о увеличении срока кредита. Если вы случайно вышли на главную страницу личного кабинета, вам необходимо снова выбрать  срок пролонгации и нажать на кнопку "Продлить" и вы попадёте на страницу подписания договора.</li><li>Поздравяем, вы пролонгировали кредит.</li></ol>'| trans | raw }}
+											<p><label><input type="checkbox" class="agree-instruction">{{ 'С инструкцией ознакомлен'| trans }}</label></p>
+											<a class="button rollover-button disabled-button">{{ 'Продлить'|trans }}</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endfor %}

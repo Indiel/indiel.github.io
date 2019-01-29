@@ -1,0 +1,86 @@
+'BusinessType::AGRICULTURE': 'Сільське господарство'
+'BusinessType::ARMED_FORCES': 'Збройні сили'
+'BusinessType::AUDIT_CONSULTING': 'Аудит консалтинг'
+'BusinessType::CHEMISTRY_PERFUMERY_PHARMACEUTICALS': 'Хімія, парфумерія, фармацевтика'
+'BusinessType::CONSTRUCTION': Будівництво
+'BusinessType::CULTURE': Культура
+'BusinessType::DEVELOPMENT': Девелопмент
+'BusinessType::EDUCATION': Освіта
+'BusinessType::ENTERTAINING_GAMBLING_SHOW_BUSINESS': 'Розважальний, гральний, шоу-бізнес'
+'BusinessType::EXTRACTION_OF_MINERALS_EXCEPT_FUEL_AND_ENERGY': 'Видобуток корисних копалин, крім ПЕК'
+'BusinessType::FINANCE_BANKING_INSURANCE': 'Фінанси, банківська справа, страхування'
+'BusinessType::FUEL_AND_ENERGY': 'Видобуток ПЕК корисних копалин'
+'BusinessType::HEALTHCARE': 'Охорона здоров''я'
+'BusinessType::INFORMATION_SERVICES_TELECOMMUNICATIONS': 'Інформаційні сервіси, телекомунікації'
+'BusinessType::LAW_ENFORCEMENT_AGENCIES_CUSTOMS_TAX_POLICE': 'Правоохоронні органи, митниця, податкова поліція'
+'BusinessType::LEGAL_NOTARIAL_SERVICES': 'Юридичні, нотаріальні послуги'
+'BusinessType::LIGHT_AND_FOOD_INDUSTRY': 'Легка і харчова промисловість'
+'BusinessType::MACHINE_BUILDING_METAL_WORKING': 'Машинобудування, металообробка'
+'BusinessType::MASS_MEDIA_ADVERTISING_PR_AGENCIES': 'ЗМІ, реклама, PR-агентства'
+'BusinessType::MUNICIPAL_ECONOMY': 'Комунальне господарство'
+'BusinessType::OTHER': Інше
+'BusinessType::PRIVATE_DETECTIVE_SECURITY_AGENCY': 'Приватне детективне / охоронне агентство'
+'BusinessType::PRODUCTION_OF_BUILDING_MATERIALS': 'Виробництво будматеріалів'
+'BusinessType::PUBLIC_CATERING_RESTAURANTS': 'Громадське харчування, ресторани'
+'BusinessType::PUBLISHING_ACTIVITIES': 'Видавнича діяльність'
+'BusinessType::REALTOR_ACTIVITY': 'Ріелторська діяльність'
+'BusinessType::REGIONAL_GOVERNMENT': 'Органи державного або регіонального управління'
+'BusinessType::RETAIL_TRADE': 'Торгівля роздрібна'
+'BusinessType::SCIENCE': Наука
+'BusinessType::TRANSPORT_COMMUNICATION': 'Транспорт, зв''язок'
+'BusinessType::WHOLESALE_AND_INTERMEDIARY_TRADE': 'Торгівля оптова і посередницька'
+'Education::ACADEMIC_DEGREE': 'Вчений ступінь'
+'Education::FEW_HIGHER': 'Декілька вищих'
+'Education::HIGHER': Вища
+'Education::HIGHER_UNFINISHED': 'Неповна вища'
+'Education::SECONDARY': Середня
+'Education::SECONDARY_UNFINISHED': 'Незакінчена середня'
+'Gender::FEMALE': Жіноча
+'Gender::MALE': Чоловіча
+'IncomeType::EMPLOYED': Працюю
+'IncomeType::ENTREPRENEUR': Підприємець
+'IncomeType::PENSIONER': Пенсіонер
+'IncomeType::STUDENT': Навчаюсь
+'IncomeType::UNEMPLOYED': 'Не працюю'
+'MaritalStatus::CIVIL_MARRIAGE': 'Цивільний шлюб'
+'MaritalStatus::DIVORCED': 'Розлучений / розлучена'
+'MaritalStatus::MARRIED': 'Одружений / заміжня'
+'MaritalStatus::UNMARRIED': 'Неодружений / незаміжня'
+'MaritalStatus::WIDOWER': 'Вдова / вдівець'
+'MonthlyIncome::FROM_3200_TO_5000': 'До 5000'
+'MonthlyIncome::FROM_5000_TO_8000': 'До 8000'
+'MonthlyIncome::FROM_8000_TO_15000': 'До 15000'
+'MonthlyIncome::MORE_THAN_15000': 'Більше 15000'
+'MonthlyIncome::UNDER_3200': 'До 3200'
+'NumberOfDependents::FOUR_TO_SIX': 'від 4 до 6'
+'NumberOfDependents::NONE': Немає
+'NumberOfDependents::ONE': '1'
+'NumberOfDependents::SEVEN_TO_NINE': 'від 7 до 9'
+'NumberOfDependents::THREE': '3'
+'NumberOfDependents::TWO': '2'
+'Position::AUXILIARY_STAFF': 'Допоміжний персонал'
+'Position::DEPUTY_HEAD': 'Заступник керівника'
+'Position::HEAD': Керівник
+'Position::MANAGER': 'Інші керівні посади'
+'Position::SPECIALIST': Спеціаліст
+'Position::WORKER': Робітник
+'RealEstate::HOSTEL': 'Проживання у гуртожитку'
+'RealEstate::LIVING_WITH_RELATIVES': 'Проживання у родичів'
+'RealEstate::PURCHASED': 'Придбана власність'
+'RealEstate::RENT': 'Оренда приміщення'
+'SecretQuestion::LAST_5_DIGITS_OF_CREDIT_CARD': 'Які п''ять останніх цифр вашої кредитной картки?'
+'SecretQuestion::MOTHERS_MIDDLE_NAME': 'Яке по-батькові вашої матусі?'
+'SecretQuestion::NICKNAME': 'Яке прізвисько ви мали у дитинстві?'
+'SecretQuestion::RELATIVE_CITY': 'У якому місті проживає ваш найближчий родич?'
+'SecretQuestion::YEAR_OF_GRADUATION': 'У якому році ви закінчили університет?'
+'TypeOfSettlement::CITY': Місто
+'TypeOfSettlement::SETTLEMENT': Селище
+'TypeOfSettlement::STEADING': Хутір
+'TypeOfSettlement::URBAN_VILLAGE': 'Селище міського типу'
+'TypeOfSettlement::VILLAGE': Село
+'WorkingExperience::FROM_0_TO_2_YEARS': 'від 0 до 2 років включно'
+'WorkingExperience::FROM_2_TO_4_YEARS': 'більше 2 років та до 4 років включно'
+'WorkingExperience::FROM_4_TO_9_YEARS': 'більше 4 років та до 9 років включно'
+'WorkingExperience::MORE_THAN_9_YEARS': 'більше 9 років'
+'YesNo::NO': Ні
+'YesNo::YES': Так

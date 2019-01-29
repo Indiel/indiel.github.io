@@ -1,0 +1,285 @@
+{% spaceless %}
+    {% set mainAddress = (agreement.user.address.residentialMatchesRegistration.value == 2) ? agreement.user.secondAddress : agreement.user.address %}
+    {%- set fullAddress %}
+            Україна
+            {%- if mainAddress.city %}, {{ mainAddress.city }}{% endif -%}
+            {%- if mainAddress.street %}, {{ mainAddress.street }}{% endif -%}
+            {%- if mainAddress.house %}, б. {{ mainAddress.house }}{% endif -%}
+            {%- if mainAddress.building %}, корп. {{ mainAddress.building }}{% endif -%}
+            {%- if mainAddress.apartment %}, кв. {{ mainAddress.apartment }}{% endif -%}
+    {% endset -%}
+    <style>
+        body {
+            font-size: 10px;
+        }
+        h1 {
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+        }
+        h1 span {
+            font-family: dejavusans;
+        }
+        h2 {
+            font-size: 12px;
+            text-align: center;
+            margin: 0;
+        }
+        .meta {
+            font-size: 9px;
+            line-height: 12px;
+            font-weight: bold;
+        }
+        .meta td {
+            border: none;
+        }
+
+        ol {
+            font-size: 10px;
+            line-height: 12px;
+        }
+        ol ul {
+            padding: 0;
+            margin: 0;
+                    list-style-type: disc;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+        }
+        table td {
+            border: 1px solid #000;
+            width: 50%;
+            padding: 5px 30px;
+        }
+        .note-block td {
+            border: none;
+        }
+        .four-columns td {
+            width: 25%;
+        }
+    </style>
+    <body>
+        <h1>ДОДАТКОВА УГОДА № {{ agreement.documentId }} <br> про зміну умов до примірного договору № {{ agreement.loan.publicId }} від {{ agreement.loan.creationDate|date('d.m.Y') }}</h1>
+        <table class="meta">
+            <tr>
+                <td>
+                    &laquo;{{ agreement.created|date('j') }}&raquo;
+                    {{ agreement.created|localizeddate('none', 'none', 'uk_UA', null, "MMMM") }}
+                    {{ agreement.created|date('Y') }}
+                </td>
+                <td style="text-align: right;">м. Харків</td>
+            </tr>
+        </table>
+        <p><b>Товариство з обмеженою відповідальністю &laquo;Кешью&raquo;</b> (код ЄДРПОУ 40885016), в особі директора Ткаченка Андрія Вікторовича, що діє на підставі Статуту, надалі – <b>&laquo;Кредитодавець&raquo;</b>, з однієї сторони та {{ agreement.user.fullName }}, ІПН {{ agreement.user.socialSecurityNumber }}, паспорт серії {{ agreement.user.passport }}, виданий {{ agreement.user.passportIssuedBy }} від {{ agreement.user.passportRegistration|date('d.m.Y') }}, місцезнаходження: {{ fullAddress }} надалі – <b>&laquo;Позичальник&raquo;</b>, який діє особисто, з іншої сторони, а разом іменовані як <b>&laquo;Сторони&raquo;</b>, уклали цю додаткову угоду (далі - &laquo;Додаткова угода&raquo;) про зміну умов договору № {{ agreement.loan.publicId }} від {{ agreement.loan.creationDate|date('d.m.Y') }} року  (надалі - "Договір") про наступне:</p>
+        <ol>
+            <li>Сторони дійшли згоди продовжити строк дії Договору на {{ agreement.termDays }} {{ 'день|дня|дней'|transchoice(agreement.termDays) }}, з урахуванням положень всіх додаткових угод до Договору, на наступну кількість днів: {{ agreement.termDays }} {{ 'день|дня|дней'|transchoice(agreement.termDays) }}. У будь-якому разі Договір діє до повного виконання Позичальником своїх зобов‘язань за Договором.</li>
+            <li>На дату укладання цієї Додаткової угоди Позичальник сплачує фактично нараховані проценти за користування кредитом та пеню у випадку її наявності.</li>
+            <li>Починаючи з дати укладення Додаткової угоди, Позичальник сплачує за користування кредитом {{ agreement.loan.interestRate * 100 }} процентів в день від суми кредиту на період строку дії Додаткової угоди.</li>
+            <li>Розрахунок сукупної вартості кредиту зазначено в Графіку розрахунків у Додатку №2, який є невід'ємною частиною цієї Додаткової угоди до Договору № {{ agreement.loan.publicId }} від {{ agreement.loan.creationDate|date('d.m.Y') }}.</li>
+            <li>Всі інші умови Договору не змінені цією Додатковою угодою, залишаються чинними у попередній редакції і Сторони підтверджують їх обов'язковість до виконання.</li>
+            <li>Ця Додаткова угода набирає чинності з моменту її укладення та є невід'ємною частиною Договору.</li>
+        </ol>
+        <h2>9. Місцезнаходження (адреси), реквізити та підписи сторін</h2>
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td style="padding: 10px 30px;">
+                    <strong class="title">
+                        Кредитодавець <br>
+                        ТОВ &laquo;Кешью&raquo;
+                    </strong>
+                </td>
+                <td style="padding: 10px 30px;">
+                    <strong class="title">
+                        Позичальник <br>
+                        {{ agreement.user.fullName }}
+                    </strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 30px;">
+                    Місцезнаходження: <br>
+                    61058, м.Харків, <br>
+                    вул. Чичибабіна б.7-А, оф. 42.
+                </td>
+                <td style="padding: 10px 30px;">
+                    Місцезнаходження: <br>
+                    {{ fullAddress }}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 30px;">
+                    ЄДРПОУ 40885016 <br>
+                    Платник податку на прибуток на загальних підставах <br>
+                    Поточний рахунок № 26506052200111 у ПАТ КБ «ПРИВАТБАНК  <br>
+                    МФО 351533 <br>
+                    Свідоцтво про внесення фінансової установи до Державного реєстру фінансових установ: <br>
+                    ФК № 916 від «06» липня 2017 р. <br>
+                    Email: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#099;&#097;&#115;&#104;&#121;&#111;&#117;&#046;&#117;&#097;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#099;&#097;&#115;&#104;&#121;&#111;&#117;&#046;&#117;&#097;</a> <br>
+                    Tel: (служба підтримкі): 0 800 21 2300
+                </td>
+                <td style="padding: 10px 30px;">
+                    Паспорт серії {{ agreement.user.passport }}, виданий {{ agreement.user.passportIssuedBy }} від {{ agreement.user.passportRegistration|date('d.m.Y') }} <br>
+                    Ідентифікаційний персональний номер: <br>
+                    {{ agreement.user.socialSecurityNumber }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong class="title">Директор</strong>
+                </td>
+                <td>
+                    <strong class="title">Фізична особа</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong class="title">
+                        Електронний підпис
+                        <br><br>
+                        /Ткаченко А.В. /
+                    </strong>
+                </td>
+                <td>
+                    <strong class="title">
+                        Електронний підпис
+                        <br><br>
+                        /{{ agreement.user.shortName }}/
+                    </strong>
+                </td>
+            </tr>
+        </table>
+        <br pagebreak="true">
+        <br><br><br><br><br><br>
+        <table class="note-block">
+            <tr>
+                <td>
+                    &nbsp;
+                </td>
+                <td>
+                    <b>Додаток № 2</b> <br>
+                    До Додаткової угоди № {{ agreement.documentId }} <br>
+                    До примірного договору № {{ agreement.loan.publicId }} від {{ agreement.loan.creationDate|date('d.m.Y') }}
+                </td>
+            </tr>
+        </table>
+        <br><br>
+        <h2>ГРАФІК РОЗРАХУНКІВ</h2>
+        <ol>
+            <li>
+                Цей Графік розрахунків містить розрахунок Заборгованості (в тому числі суми кредиту і процентів за користування кредитом) із зазначенням Терміну платежу, а саме:
+                <br><br>
+                <table class="four-columns" width="100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="center" valign="center" style="vertical-align: middle;">
+                            Термін платежу
+                        </td>
+                        <td align="center" valign="center" style="vertical-align: middle;">
+                            Сума кредиту
+                        </td>
+                        <td align="center" valign="center" style="vertical-align: middle;">
+                            Нарахований процент
+                        </td>
+                        <td align="center" valign="center" style="vertical-align: middle;">
+                            До сплати (разом)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="center" style="vertical-align: middle;">
+                            {{ agreement.loan.lastPaymentDate|date('d.m.Y') }}
+                        </td>
+                        <td align="center" valign="center" style="vertical-align: middle;">
+                            {{ agreement.loan.principal }}
+                        </td>
+                        <td align="center" valign="center" style="vertical-align: middle;">
+                            {{ (agreement.loan.interest - (agreement.expiredDays * agreement.loan.principal * agreement.loan.interestRate)) |format_float}}
+                        </td>
+                        <td align="center" valign="center" style="vertical-align: middle;">
+                            {{ (agreement.loan.total - (agreement.expiredDays * agreement.loan.principal * agreement.loan.interestRate)) |format_float}}
+                        </td>
+                    </tr>
+                </table>
+            </li>
+            <li>
+                Сукупна вартість кредиту складає {{ ((agreement.loan.outstandingBalanceInterest - (agreement.expiredDays * agreement.loan.principal * agreement.loan.interestRate)) / agreement.loan.outstandingBalancePrincipal * 100) |format_float}}% від суми кредиту (у процентному вираженні) або {{ (agreement.loan.outstandingBalanceInterest - (agreement.expiredDays * agreement.loan.principal * agreement.loan.interestRate)) |format_float}}грн. (у грошовому вираженні) та включає в себе:
+                <ul>
+                    <li>проценти за користування кредитом {{ ((agreement.loan.outstandingBalanceInterest - (agreement.expiredDays * agreement.loan.principal * agreement.loan.interestRate)) / agreement.loan.outstandingBalancePrincipal * 100) |format_float}}% від суми кредиту (у процентному вираженні) або {{ (agreement.loan.outstandingBalanceInterest - (agreement.expiredDays * agreement.loan.principal * agreement.loan.interestRate)) |format_float}}грн. (у грошовому виразі);</li>
+                    <li>суму кредиту {{ agreement.loan.expectedPaymentAmount|format_float }}грн.(у грошовому вираженні).</li>
+                </ul>
+            </li>
+            <li>
+                Цей Графік розрахунків укладений у двох оригінальних примірниках, по одному для кожної зі Сторін, та є невід'ємною частиною Додаткової угоди № {{ agreement.documentId }} до Договору № {{ agreement.loan.publicId }} від {{ agreement.loan.creationDate|date('d.m.Y') }}р.
+            </li>
+        </ol>
+        <h2>4. МІСЦЕЗНАХОДЖЕННЯ (АДРЕСИ), РЕКВІЗИТИ ТА ПІДПИСИ СТОРІН</h2>
+        <table>
+            <tr>
+                <td style="padding: 10px 30px;">
+                    <strong class="title">
+                        Кредитодавець <br>
+                        ТОВ &laquo;Кешью&raquo;
+                    </strong>
+                </td>
+                <td style="padding: 10px 30px;">
+                    <strong class="title">
+                        Позичальник <br>
+                        {{ agreement.user.fullName }}
+                    </strong>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 30px;">
+                    Місцезнаходження: <br>
+                    61058, м.Харків, <br>
+                    вул. Чичибабіна б.7-А, оф. 42.
+                </td>
+                <td style="padding: 10px 30px;">
+                    Місцезнаходження: <br>
+                    {{ fullAddress }}
+                </td>
+            </tr>
+            <tr>
+                <td style="padding: 10px 30px;">
+                    ЄДРПОУ 40885016 <br>
+                    Платник податку на прибуток на загальних підставах <br>
+                    Поточний рахунок № 26506052200111 у ПАТ КБ «ПРИВАТБАНК  <br>
+                    МФО 351533 <br>
+                    Свідоцтво про внесення фінансової установи до Державного реєстру фінансових установ: <br>
+                    ФК № 916 від «06» липня 2017 р. <br>
+                    Email: <a href="mailto:&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#099;&#097;&#115;&#104;&#121;&#111;&#117;&#046;&#117;&#097;">&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#064;&#099;&#097;&#115;&#104;&#121;&#111;&#117;&#046;&#117;&#097;</a> <br>
+                    Tel: (служба підтримкі): 0 800 21 2300
+                </td>
+                <td style="padding: 10px 30px;">
+                    Паспорт серії {{ agreement.user.passport }}, виданий {{ agreement.user.passportIssuedBy }} від {{ agreement.user.passportRegistration|date('d.m.Y') }} <br>
+                    Ідентифікаційний персональний номер: <br>
+                    {{ agreement.user.socialSecurityNumber }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong class="title">Директор</strong>
+                </td>
+                <td>
+                    <strong class="title">Фізична особа</strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong class="title">
+                        Електронний підпис
+                        <br><br>
+                        /Ткаченко А.В. /
+                    </strong>
+                </td>
+                <td>
+                    <strong class="title">
+                        Електронний підпис
+                        <br><br>
+                        /{{ agreement.user.shortName }}/
+                    </strong>
+                </td>
+            </tr>
+        </table>
+    </body>
+{% endspaceless %}

@@ -1,0 +1,86 @@
+{% form_theme form 'form/profile-fields.html.twig' %}
+
+<div class="form-holder">
+	{{ form_start(form, {'attr': {'class': 'data-info js-ajax-form'}}) }}
+	<div class="columns">
+		<div class="col">
+			{{ form_row(form.isPassportNewType, {'attr': {'disabled': 'disabled'}|merge(profile.isPassportNewType is empty ? {'class': 'passport has-error'} : {'class': 'passport'})}) }}
+			{{ form_row(form.passportRegistration, {
+				'attr': {
+					'disabled': 'disabled',
+					'placeholder': 'дд.мм.гггг'|trans,
+					'data-rule-dateValidate': 1,
+					'data-mask': '99.99.9999',
+					'minlength': 10,
+					'maxlength': 10
+				}|merge(profile.passportRegistration is empty ? {'class': 'has-error'} : {})
+			}) }}
+			{{ form_row(form.socialSecurityNumber, {'attr': {'data-rule-digits': 1, 'minlength': 10, 'maxlength': 10, 'disabled': 'disabled'}|merge(profile.socialSecurityNumber is empty ? {'class': 'has-error'} : {})}) }}
+		</div>
+		<div class="col">
+			<div class="passport-block" data-show-if-field="#profile_passport_isPassportNewType" data-show-if-value="1">
+				{{ form_row(form.documentNumber, {
+					'attr': {
+						'disabled': 'disabled',
+						'data-rule-documentNumberValidate': 1,
+						'minlength': 9,
+						'maxlength': 9,
+						'data-mask': '999999999'
+					}|merge(profile.documentNumber is empty ? {'class': 'has-error'} : {})
+				}) }}
+				{{ form_row(form.passportIssuedByNumber, {
+					'attr': {
+						'disabled': 'disabled',
+						'data-rule-passportIssuedByNumberValidate': 1,
+						'data-mask': '9999',
+					}|merge(profile.passportIssuedByNumber is empty ? {'class': 'has-error'} : {})
+				}) }}
+				{{ form_row(form.passportValidDate, {
+					'attr': {
+						'disabled': 'disabled',
+						'placeholder': 'дд.мм.гггг'|trans,
+						'data-rule-dateValidate': 1,
+						'data-mask': '99.99.9999',
+						'minlength': 10,
+						'maxlength': 10
+					}|merge(profile.passportValidDate is empty ? {'class': 'has-error'} : {})
+				}) }}
+				{{ form_row(form.passportRecordNumber, {
+					'attr': {
+						'disabled': 'disabled',
+						'data-rule-passportRecordNumberValidate': 1,
+						'data-mask': '99999999-99999',
+						'minlength': 14,
+						'maxlength': 14
+					}|merge(profile.passportRecordNumber is empty ? {'class': 'has-error'} : {})
+				}) }}
+			</div>
+			<div class="passport-block" data-show-if-field="#profile_passport_isPassportNewType" data-show-if-value="2">
+				{{ form_row(form.passport, {
+					'attr': {
+						'disabled': 'disabled',
+						'data-rule-passportValidate': 1,
+						'minlength': 9,
+						'maxlength': 9,
+						'data-mask': 'RR 999999'
+					}|merge(profile.passport is empty ? {'class': 'has-error'} : {})
+				}) }}
+				{{ form_row(form.passportIssuedBy, {
+					'attr': {
+						'disabled': 'disabled',
+					}|merge(profile.passportIssuedBy is empty ? {'class': 'has-error'} : {})
+				}) }}
+			</div>
+		</div>
+	</div>
+
+	{% if not hasUnpaidLoans %}
+	<div class="button-block">
+		<a href="#" class="button btn-edit open-editing">{{ 'Редактировать'|trans }}</a>
+		<a href="#" class="button back-btn">{{ 'Назад'|trans }}</a>
+		<button type="submit" class="button submit-profile" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Сохранить'|trans }}</button>
+	</div>
+	{% endif %}
+	
+	{{ form_end(form) }}
+</div>

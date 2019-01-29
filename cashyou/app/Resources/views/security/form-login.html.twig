@@ -1,0 +1,27 @@
+{% include 'flash-notices.html.twig' %}
+
+<form action="{{ path('app.login') }}" method="post">
+	{% if loginError %}
+		<div class="error">{{ loginError.messageKey|trans(loginError.messageData, 'security') }}</div>
+	{% endif %}
+
+	<input type="text" id="username" name="_username" value="{{ loginLastUsername }}" placeholder="{{ 'Логин'|trans }}" />
+	<div class="password-block">
+		<input type="password" id="password" name="_password" placeholder="{{ 'Пароль'|trans }}"><span class="show-password"><i class="icon-eye"></i></span>
+	</div>
+
+	<div class="form-row form-row-button-bottom">
+		<div class="check-holder">
+			<label for="remember">
+				<input type="checkbox" id="remember" name="_remember_me">	{{ 'Запомнить'|trans }}
+			</label>
+		</div>
+		{% if not is_route(['app.password.reset', 'app.login']) %}
+			<a class="forgot-password lightbox-opener" href="#reset-password">{{ 'Забыли пароль ?'|trans }}</a>
+		{% else %}
+			<a href="{{ path('app.password.reset') }}">{{ 'Забыли пароль ?'|trans }}</a>
+		{% endif %}
+	</div>
+
+	<input class="button" type="submit" value="{{ 'Войти'|trans }}">
+</form>

@@ -1,0 +1,506 @@
+/* custom checkbox styles */
+.jcf-checkbox {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	overflow: hidden;
+	cursor: default;
+	background: $white;
+	border: 1px solid $middle-gray;
+	margin: 0 9px 0 0;
+	height: 16px;
+	width: 16px;
+	transition: border 0.2s;
+	
+	&:before {
+		content: 'v';
+		color: $orange;
+		font-size: 15px;
+		margin: -1px 0 0;
+		font-weight: 500;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: opacity 0.3s;
+		opacity: 0;
+	}
+	
+	&.jcf-checked {
+		border-color: $orange;
+		
+		&:before {
+			opacity: 1;
+		}
+	}
+	
+	input[type="checkbox"] {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		margin: 0;
+		left: 0;
+		top: 0;
+	}
+}
+
+/* custom radio styles */
+.jcf-radio {
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	cursor: default;
+	background: $white;
+	border: 1px solid $form-element-border-color;
+	border-radius: 9px;
+	margin: 0 3px 0 0;
+	height: 16px;
+	width: 16px;
+	
+	&.jcf-checked {
+		border-color: $orange;
+		
+		span {
+			display: block;
+		}
+	}
+	
+	span {
+		display: none;
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		right: 3px;
+		bottom: 3px;
+		background: $orange;
+		border-radius: 100%;
+	}
+	
+	input[type="radio"] {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border: 0;
+		margin: 0 3px 0 0;
+		left: 0;
+		top: 0;
+	}
+}
+
+/* custom select styles */
+.jcf-select {
+	display: block;
+	position: relative;
+	background: $form-element-background;
+	border: 1px solid $form-element-border-color;
+	width: 100%;
+	margin: 0 0 27px;
+	// min-width: 150px;
+	height: 45px;
+	transition: border-color 0.3s, box-shadow 0.3s;
+	
+	&.select-has-error,
+	&.jcf-select-has-error {
+		border-color: $form-element-error-border-color;
+		box-shadow: 0 0 0 1px $form-element-error-border-color inset;
+		
+		.jcf-select-opener {
+			border-color: $form-element-error-border-color;
+		}
+	}
+	
+	&.jcf-focus {
+		box-shadow: none;
+	}
+	
+	@include media("<tablet") {
+		height: 36px;
+		margin-bottom: 26px;
+	}
+	
+	select {
+		z-index: 1;
+		left: 0;
+		top: 0;
+	}
+	
+	.jcf-select-text {
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		cursor: default;
+		display: block;
+		color: $dark-gray;
+		font-size: 18px;
+		line-height: 43px;
+		margin: 0 63px 0 19px;
+		
+		@include media("<tablet") {
+			font-size: 14px;
+			line-height: 34px;
+			margin: 0 50px 0 15px;
+		}
+	}
+	
+	&.jcf-drop-active {
+		border-color: $orange;
+		
+		.jcf-select-opener {
+			border-color: $orange;
+			
+			&:before {
+				border-color: $orange transparent transparent;
+			}
+		}
+	}
+	
+	.jcf-select-opener {
+		position: absolute;
+		text-align: center;
+		border-left: 1px solid $form-element-border-color;
+		width: 44px;
+		bottom: 0;
+		right: 0;
+		top: 0;
+		transition: border 0.3s;
+		
+		&:before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-top: 1px;
+			transform: translate(-50%, -50%);
+			border: solid;
+			border-width: 8px 5px 0;
+			border-color: $form-element-border-color transparent transparent;
+			width: 0;
+			height: 0;
+			transition: border 0.2s;
+		}
+		
+		@include media("<tablet") {
+			width: 35px;
+			
+			&:before {
+				border-width: 7px 4px 0;
+				margin-top: 0;
+			}
+		}
+	}
+	
+	// &.jcf-focus {
+	// 	border-color: $orange !important;
+	// }
+	
+	.jcf-select-drop {
+		position: absolute;
+		margin-top: 0px;
+		z-index: 9999;
+		top: 100%;
+		left: -1px;
+		right: -1px;
+		
+		.jcf-select-drop-content {
+			border: 1px solid $orange;
+		}
+	}
+	
+	.jcf-drop-flipped {
+		bottom: 100%;
+		top: auto;
+	}
+}
+
+body>.jcf-select-drop {
+		position: absolute;
+		margin: -1px 0 0;
+		z-index: 9999;
+}
+
+body>.jcf-select-drop.jcf-drop-flipped {
+		margin: 1px 0 0;
+}
+
+
+/* multiple select styles */
+.jcf-list-box {
+	overflow: hidden;
+	display: inline-block;
+	border: 1px solid #b8c3c9;
+	min-width: 200px;
+	margin: 0 15px;
+}
+
+
+/* select options styles */
+.jcf-list {
+	display: block;
+	position: relative;
+	background: $white;
+	line-height: 1.22;
+	font-size: 18px;
+	width: 100%;
+	
+	@include media("<tablet") {
+		font-size: 14px;
+		line-height: 17px;
+	}
+	
+	.jcf-list-content {
+		vertical-align: top;
+		display: inline-block;
+		overflow: auto;
+		width: 100%;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		
+		li {
+			padding: 0;
+			overflow: hidden;
+			display: block;
+			
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	.jcf-overflow {
+		overflow: auto;
+	}
+
+	.jcf-option {
+		overflow: hidden;
+		cursor: default;
+		display: block;
+		padding: 10px 19px;
+		color: $dark-gray;
+		height: 1%;
+		transition: color 0.2s, background 0.2s;
+		
+		&.jcf-option-hideme {
+			display: none;
+		}
+		
+		@include media("<tablet") {
+			padding: 7px 15px;
+		}
+	}
+
+	.jcf-disabled {
+		background: #fff !important;
+		color: #aaa !important;
+	}
+}
+
+
+.jcf-select-drop .jcf-hover,
+.jcf-list-box .jcf-selected {
+		background: #e6e6e6;
+		background: $orange;
+		color: #000;
+		color: $white;
+}
+
+.jcf-list .jcf-optgroup-caption {
+		white-space: nowrap;
+		font-weight: bold;
+		display: block;
+		padding: 5px 9px;
+		cursor: default;
+		color: #000;
+}
+
+.jcf-list .jcf-optgroup .jcf-option {
+		padding-left: 30px;
+}
+
+
+/* custom file input styles */
+.jcf-file {
+	display: block;
+	white-space: nowrap;
+	position: relative;
+	overflow: hidden;
+	background: $white;
+	color: $orange;
+	font-size: 18px;
+	min-width: 262px;
+	text-align: center;
+	text-transform: uppercase;
+	
+	@include media("<desktop") {
+		font-size: 14px;
+		min-width: 157px;
+	}
+	
+	@include media("<tablet") {
+		min-width: 0;
+	}
+	
+	&[class^="jcf-extension-"],
+	&[class*=" jcf-extension-"] {
+		.jcf-fake-input {
+			display: none;
+		}
+		
+		.jcf-upload-button {
+			display: block;
+			color: $white;
+			background: $btn-background;
+		}
+	}
+	
+	.jcf-fake-input,
+	.jcf-upload-button {
+		display: block;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		border: 1px solid $btn-background;
+		padding: 10px 10px 9px;
+		
+		@include media("<desktop") {
+			padding: 13px 10px 11px;
+		}
+		
+		@include media("<tablet") {
+			padding: 5px 10px;
+		}
+	}
+	
+	.jcf-upload-button {
+		display: none;
+		font-weight: 900;
+		
+		@include media("<tablet") {
+			font-weight: 400;
+		}
+	}
+	
+	.jcf-real-element {
+		position: absolute;
+		font-size: 200px;
+		height: 200px;
+		margin: 0;
+		right: 0;
+		top: 0;
+	}
+}
+
+
+/* custom scrollbars styles */
+.jcf-scrollable-wrapper {
+	box-sizing: content-box;
+	position: relative;
+	width: 100% !important;
+	
+	.jcf-scrollable {
+		width: 100% !important;
+	}
+}
+
+.jcf-scrollbar-vertical {
+	position: absolute;
+	cursor: default;
+	background: $base-text-color;
+	width: 2px;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	
+	.jcf-scrollbar-slider {
+		height: 100% !important;
+	}
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+	background: $base-text-color;
+	height: 14px;
+	width: 14px;
+	left: 0;
+	top: 0;
+	display: none;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+	top: auto;
+	bottom: 0;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-handle {
+	background: $base-text-color;
+	height: 36px !important;
+	width: 6px;
+	margin-left: -2px;
+}
+
+.jcf-scrollbar-horizontal {
+	position: absolute;
+	background: $base-text-color;
+	right: auto;
+	left: 0;
+	top: 0;
+	width: 1px;
+	height: 2px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-dec,
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	background: $base-text-color;
+	height: 6px;
+	width: 6px;
+	display: none;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+	left: auto;
+	right: 0;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-slider {
+	display: block;
+	position: relative;
+	height: 2px;
+	width: 100% !important;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-handle {
+	position: absolute;
+	background: $base-text-color;
+	width: 36px !important;
+	height: 10px;
+	margin-top: -4px;
+}
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+	visibility: hidden;
+}
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-dec,
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-inc {
+	background: $base-text-color;
+	display: none;
+}
+
+
+/* common custom form elements styles */
+// .jcf-disabled {
+// 	background: #ddd !important;
+// }
+
+// .jcf-focus,
+// .jcf-focus * {
+// 	border-color: $orange !important;
+// }

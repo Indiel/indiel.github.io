@@ -1,0 +1,126 @@
+{% extends 'base.html.twig' %}
+
+{% block mainContent %}
+	<div class="registration-info-header">
+		<div class="container">
+			<div class="credit-details-holder">
+				<ul class="info-columns">
+					{% if(haveLoan) %}
+						<li><span>{{ 'Кредит'|trans }}</span><span class="bold-gray">{{headerData.amount}}<span class="small">{{ 'грн'|trans }}</span></span></li>
+						<li><span>{{ 'Процент кредита'|trans }}</span><span class="bold-gray">{{headerData.percent}}<span class="small">%</span></span></li>
+						<li><span>{{ 'Срок'|trans }}</span><span class="bold-gray">{{headerData.term}}<span class="small">{{ headerData.dayWord }}</span></span></li>
+					{% else %}			
+						<p class="info-credit-config">{{ 'Выбрать сумму и срок кредита вы сможете после прохождения всех этапов регистрации.'|trans }}</p>
+					{% endif %}					
+				</ul>
+			</div>
+			<div class="progress-holder">
+				<div class="heading-block"><h2>{{currentStep.number}}  {{currentStep.name|trans}}</h2></div>
+				<ul class="progress-bar">
+					{% for step in steps %}
+						{% if(step.alias != 'finish') %}
+							{% if(step.number == currentStep.number) %}
+							<li class="active">{{step.number}} <span class="step-descr">
+								{% if(step.bonus > 0 and not(currentStep.number < userCurrentStep.number)) %}
+								+{{step.bonus}}
+								{% endif %}
+							</span></li>
+							{% else %}
+								{% if(step.number < userCurrentStep.number) %}
+									<li class="active passed">{{step.number}} <span class="step-descr"></span></li>
+								{% else %}
+									<li>{{step.number}} <span class="step-descr">
+									{% if(step.bonus > 0) %}
+									+{{step.bonus}}
+									{% endif %}
+									</span></li>
+								{% endif %}		                						
+							{% endif %}
+						{% endif %}
+		            {% endfor %}					
+					<li class="bonuses">
+						<div class="bonuses-text"><span>{{ 'Бонусы'|trans }}</span><b>{{headerData.totalBonus}}</b></div>
+						<svg>
+							<style>
+								.st0{
+									stroke-miterlimit: 5;
+									-moz-transform: rotate(-90deg); /* Для Firefox */
+									-ms-transform: rotate(-90deg); /* Для IE */
+									-webkit-transform: rotate(-90deg); /* Для Safari, Chrome, iOS */
+									-o-transform: rotate(-90deg); /* Для Opera */
+									transform: rotate(-90deg);
+								}
+								.st0 {
+									stroke-dasharray: 1000;
+									stroke-dashoffset: 1000;
+									animation: dash 7s linear forwards;
+								}
+
+								@keyframes dash {
+									from{
+										stroke-dashoffset: 1000;
+									}
+									to {
+										stroke-dashoffset: 0;
+									}
+								}
+
+							</style>
+							<circle class="big" cy=50 cx=50 r=45 fill=transparent stroke="#ccc" stroke-width="8"></circle>
+							<circle class="big st0" cy=50 cx=-50 r=45 fill=transparent stroke="#ff6200" stroke-width="8" stroke-dasharray="100, 500"  stroke-dashoffset=0></circle>
+							<circle class="small" cy=35 cx=35 r=30 fill=transparent stroke="#ccc" stroke-width="8"></circle>
+							<circle class="small st0" cy=35 cx=-35 r=30 fill=transparent stroke="#ff6200" stroke-width="8" stroke-dasharray="100, 500"  stroke-dashoffset=0></circle>
+					</svg></li>
+				</ul>
+			</div>
+			<div class="credit-details-holder">
+				{% if(haveLoan) %}
+				<ul class="info-columns">
+					{# <li><span>{{ 'Шанс выдачи'|trans }}</span><span class="bold-light-orange">50<span class="small">%</span></span></li>#}
+					<li><span>{{ 'К возврату'|trans }}</span><span class="bold-orange">{{headerData.returnAmount}}<span class="small">{{ 'грн'|trans }}</span></span></li>
+					<li><span>{{ 'С учетом бонусов'|trans }}</span><span class="bold-light-orange">{{headerData.returnAmountBonus}}<span class="small">{{ 'грн'|trans }}</span></span></li>
+				</ul>
+				{% endif %}
+			</div>
+		</div>
+		<div class="triangle-opener"></div>
+	</div>
+	<div class="registration-holder">
+		<div class="container">
+			<div class="ajax-holder">
+				{% include formView %}				
+			</div>
+			{#<div class="chat-holder">#}
+				{#<div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>#}
+					{#<div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>#}
+						{#<form action="#">#}
+							{#<label>Оставьте Ваш телефон и мы Вам перезвоним</label>#}
+							{#<input type="tel" placeholder="" value="+380">#}
+							{#<input class="button" type="submit" value="Перезвоните">#}
+						{#</form>#}
+					{#</div>#}
+				{#</div>#}
+				{#<div class="chat-block"><a class="chat-opener" href="#">Связь с менеджером</a></div>#}
+			{#</div>#}
+			</aside>
+		</div>
+	</div>
+	<div class="popup-holder">
+		<div class="lightbox" id="check-phone"><a class="lightbox-close" href="#" data-fancybox-close><i class="icon-close"></i></a>
+			<form action="{{ path('app.phone_verify.check') }}" method="post" class="js-check-phone-form js-form-validate" novalidate="novalidate">
+				<div class="lightbox-block">
+					<h2>{{ 'Введите код из SMS' | trans }}</h2>
+					
+					<input type="number" name="code" data-mask="9999" placeholder="" required="required" minlength="4" maxlength="4">
+					
+					<div class="form-row form-row-button-bottom">
+						{{ 'Я не получил код' | trans }}
+						<a href="#" class="js-resent-code" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Запросить код повторно' | trans }}</a>
+					</div>
+
+					<button type="submit" class="button" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Подтвердить' | trans }}</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

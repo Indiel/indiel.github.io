@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+{% block mainContent %}
+	<div class="registration-info-header">
+		<div class="container">
+			<div class="credit-details-holder">
+				{#<ul class="info-columns">#}
+					{#<li><span>{{ 'Кредит'|trans }}</span><span class="bold-gray">1000<span class="small">{{ 'грн'|trans }}</span></span></li>#}
+					{#<li><span>{{ 'Процент кредита'|trans }}</span><span class="bold-gray">0,1<span class="small">%</span></span></li>#}
+					{#<li><span>{{ 'Срок'|trans }}</span><span class="bold-gray">14<span class="small">{{ 'дней'|trans }}</span></span></li>#}
+				{#</ul>#}
+				{#<p class="info-credit-config">{{ 'Выбрать сумму и срок кредита вы сможете после прохождения всех этапов регистрации.'|trans }}</p>#}
+			</div>
+			<div class="progress-holder">
+				<div class="heading-block"><h2>{{ '1. Створіть особистий кабінет'|trans }}</h2></div>
+				<ul class="progress-bar">
+					<li class="active">1 <span class="step-descr"></span></li>
+					<li>2 <span class="step-descr">+150</span></li>
+					<li>3 <span class="step-descr">+200</span></li>
+					<li>4 <span class="step-descr">+250</span></li>
+					<li>5 <span class="step-descr">x3</span></li>
+					<li>6</li>
+					<li class="bonuses">
+						<div class="bonuses-text"><span>{{ 'Бонусы'|trans }}</span><b>2000</b></div>
+						<svg>
+							<style>
+								.st0{
+									stroke-miterlimit: 5;
+									-moz-transform: rotate(-90deg); /* Для Firefox */
+									-ms-transform: rotate(-90deg); /* Для IE */
+									-webkit-transform: rotate(-90deg); /* Для Safari, Chrome, iOS */
+									-o-transform: rotate(-90deg); /* Для Opera */
+									transform: rotate(-90deg);
+								}
+								.st0 {
+									stroke-dasharray: 1000;
+									stroke-dashoffset: 1000;
+									animation: dash 7s linear forwards;
+								}
+
+								@keyframes dash {
+									from{
+										stroke-dashoffset: 1000;
+									}
+									to {
+										stroke-dashoffset: 0;
+									}
+								}
+
+							</style>
+							<circle class="big" cy=50 cx=50 r=45 fill=transparent stroke="#ccc" stroke-width="8"></circle>
+							<circle class="big st0" cy=50 cx=-50 r=45 fill=transparent stroke="#ff6200" stroke-width="8" stroke-dasharray="100, 500"  stroke-dashoffset=0></circle>
+							<circle class="small" cy=35 cx=35 r=30 fill=transparent stroke="#ccc" stroke-width="8"></circle>
+							<circle class="small st0" cy=35 cx=-35 r=30 fill=transparent stroke="#ff6200" stroke-width="8" stroke-dasharray="100, 500"  stroke-dashoffset=0></circle>
+					</svg></li>
+				</ul>
+			</div>
+			<div class="credit-details-holder">
+				<ul class="info-columns">
+					{#<li><span>{{ 'Шанс выдачи'|trans }}</span><span class="bold-light-orange">50<span class="small">%</span></span></li>#}
+					<li><span>{{ 'К возврату'|trans }}</span><span class="bold-orange">1014<span class="small">{{ 'грн'|trans }}</span></span></li>
+					<li><span>{{ 'С учетем бонусов'|trans }}</span><span class="bold-light-orange">996<span class="small">{{ 'грн'|trans }}</span></span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="triangle-opener"></div>
+	</div>
+	<div class="registration-holder">
+		<div class="container">
+			<div class="ajax-holder">
+				{% include 'security/form-registration.html.twig' %}
+				{{ render(controller('AppBundle:Registration:linkBankCard')) }}
+			</div>
+		</div>
+	</div>
+	<div class="popup-holder">
+		<div class="lightbox" id="check-phone"><a class="lightbox-close" href="#" data-fancybox-close><i class="icon-close"></i></a>
+			<form action="{{ path('app.phone_verify.check') }}" method="post" class="js-check-phone-form js-form-validate" novalidate="novalidate">
+				<div class="lightbox-block">
+					<h2>{{ 'Введите код из SMS' | trans }}</h2>
+					
+					<input type="text" name="code" data-mask="9999" placeholder="" required="required" minlength="4" maxlength="4">
+					
+					<div class="form-row form-row-button-bottom">
+						{{ 'Я не получил код' | trans }}
+						<a href="#" class="js-resent-code" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Запросить код повторно' | trans }}</a>
+					</div>
+
+					<button type="submit" class="button" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Подтвердить' | trans }}</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		var W4PConfig = {{ (W4PConfig ? W4PConfig : null)|json_encode|raw }};
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzH6Z5qQhd-IhbP6MJRA84Cd0KbdcrDBU&amp;libraries=places&amp;language={{ app.request.getLocale() }}&amp;region=UA"></script>
+	<script id="widget-wfp-script" language="javascript" type="text/javascript" src="https://secure.wayforpay.com/server/pay-widget.js"></script>
+
+	{{ parent() }}
+{% endblock %}

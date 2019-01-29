@@ -1,0 +1,19 @@
+{% form_theme form 'form/profile-fields.html.twig' %}
+
+<div class="form-holder">
+	{{ form_start(form, {'attr': {'class': 'data-info js-ajax-form'}}) }}
+	<div class="columns">
+		<div class="col">
+			{{ form_row(form.cardType, {'attr': {'disabled': 'disabled'}|merge(card is empty or card.cardType is empty ? {'class': 'has-error'} : {})}) }}
+		</div>
+		<div class="col">
+			{{ form_row(form.cardPan, {'attr': {'disabled': 'disabled'}|merge(card is empty or card.cardPan is empty ? {'class': 'has-error'} : {})}) }}
+		</div>
+	</div>
+	
+	<div class="button-block">
+		<button type="button" class="button btn-edit btn-validate-card btn-validate-card-submit" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Редактировать'|trans }}</button>
+	</div>
+	
+	{{ form_end(form) }}
+</div>

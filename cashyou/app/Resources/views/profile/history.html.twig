@@ -1,0 +1,117 @@
+<div class="client-columns">
+	<div class="column">
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Ваша </b>история'|trans|raw }}</h2>
+			</div>
+			<div class="data-holder">
+				<div class="row"><span class="name">{{ 'Кредитов оформлено'|trans }}</span>
+					<div class="data-block"><b>{{ loansHistory|length }}</b></div>
+				</div>
+				<div class="row"><span class="name">{{ 'Общая сумма'|trans }}</span>
+					<div class="data-block"><b>{{ loansHistoryTotalAmount }}</b></div>
+				</div>
+				<div class="row"><span class="name">{{ 'Максимальная сумма'|trans }}</span>
+					<div class="data-block"><b>{{ loyalityMapping.maxAmount[customerBonuses.maxAmountDegree.value] }}</b></div>
+				</div>
+				<div class="row"><span class="name">{{ 'Процентная ставка'|trans }}</span>
+					<div class="data-block"><b>{{ loyalityMapping.interestRate[customerBonuses.interestRateDegree.value] * 100 }}%</b></div>
+				</div>
+				<div class="row"><span class="name">{{ 'Максимальный срок, дни'|trans }}</span>
+					<div class="data-block"><b>{{ loyalityMapping.maxTerm[customerBonuses.maxTermDegree.value] }}</b></div>
+				</div>
+				<div class="row"><span class="name">{{ 'Бонусов накоплено'|trans }}</span>
+					<div class="data-block"><b>{{ customerBonuses.bonusesTotal }}</b></div>
+				</div>
+				<div class="row"><span class="name">{{ 'Бонусов осталось'|trans }}</span>
+					<div class="data-block"><b>{{ customerBonuses.bonusesBalance }}</b></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+{#
+		<div class="client-block">
+			<div class="heading-area">
+				<h2> <b>Акция </b>1</h2>
+			</div>
+			<div class="deal-text">
+				<p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non	mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris</p>
+			</div>
+		</div>
+		<div class="client-block">
+			<div class="heading-area">
+				<h2> <b>Акция </b>2</h2>
+			</div>
+			<div class="deal-text">
+				<p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non	mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris</p>
+			</div>
+		</div>
+#}
+	</div>
+</div>
+{% if loansHistory|length %}
+<div class="client-block">
+	<div class="heading-area">
+		<h2>{{ '<b>Кредитная </b>история'|trans|raw }}</h2>
+	</div>
+	<div class="more-holder">
+		<div class="table-holder">
+			<div class="jcf-scrollable">
+				<table>
+					<thead>
+					<tr>
+						<th>{{ 'Дата выдачи'|trans }}</th>
+						<th>{{ 'Сумма'|trans }}</th>
+						<th>{{ 'Процент'|trans }}</th>
+						<th>{{ 'Сумма к погашению'|trans }}</th>
+						<th>{{ 'Дата погашения'|trans }}</th>
+						<th>{{ 'Бонусов за кредит'|trans }}</th>
+						<th>{{ 'Кредитный договор'|trans }}</th>
+					</tr>
+					</thead>
+					<tbody>
+					{% for loan in loansHistory %}
+					<tr>
+						<td>{{ loan.creationDate|date('d.m.Y') }}</td>
+						<td>{{ loan.amount }}</td>
+						<td>{{ (loan.interestRate * 100)|format_float }}</td>
+						<td>{{ loan.totalPayedAmount|format_float }}</td>
+						<td>{{ loan.lastPaymentDate|date('d.m.Y') }}</td>
+						<td>{{ bonusHistory.loanEarnedBonuses(loan.id) }}</td>
+						<td>
+							<div class="js-dropdown dropdown">
+								<span class="js-trigger trigger link-download">
+									<i class="icon-download"></i>
+								</span>
+								<div class="js-content drop-content">
+									<ul class="simple-list">
+										<li>
+											<a href="{{ path('app.loan.agreement.download', {'loanId': loan.id}) }}">{{ 'Кредитный договор'|trans }}</a>
+										</li>
+										{% if loansHistoryRolloversDocs[loan.id] is defined %}
+											{% for rolloverDocId in loansHistoryRolloversDocs[loan.id] %}
+												<li>
+													<a href="{{ path('app.loan.rollover.document', {'loanId': loan.id, 'documentId': rolloverDocId}) }}">{{ 'Договор лонгации № %count%'|trans({'%count%': rolloverDocId}) }}</a>
+												</li>
+											{% endfor %}
+										{% endif %}
+									</ul>
+								</div>
+							</div>
+							{# <a class="link-download" href="{{ path('app.loan.agreement.download', {'loanId': loan.id}) }}"><i class="icon-download"></i></a> #}
+						</td>
+					</tr>
+					{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+		{% if loansHistory|length > 3 %}
+		<div class="button-block">
+			<a class="button link-more" href="#">{{ 'еще'|trans }}</a>
+		</div>
+		{% endif %}
+	</div>
+</div>
+{% endif %}

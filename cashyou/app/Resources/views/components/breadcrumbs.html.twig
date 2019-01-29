@@ -1,0 +1,27 @@
+<ul class="breadcrumbs">
+    <li>
+        <a {% if is_route('app.confidentiality') %} class="active" {% endif %} href="{{ path('app.confidentiality') }}">
+            {{ 'Конфиденциальность'|trans }}
+        </a>
+    </li>
+    <li>
+        <a {% if is_route('app.creditrules') %} class="active" {% endif %} href="{{ path('app.creditrules') }}">
+            {{ 'Условия договора'|trans }}
+        </a>
+    </li>
+    <li>
+        <a {% if is_route('app.agreementpersonaldata') %} class="active" {% endif %} href="{{ path('app.agreementpersonaldata') }}">
+            {{ 'Согласие на обработку данных'|trans }}
+        </a>
+    </li>
+    <li>
+        <a {% if is_route('app.registrationcertificate') %} class="active" {% endif %} href="{{ path('app.registrationcertificate') }}">
+            {{ 'Сертификаты'|trans }}
+        </a>
+    </li>
+    <li>
+        <a {% if is_route('app.public') %} class="active" {% endif %} href="{{ path('app.public') }}">
+            {{ 'Публичная информация'|trans }}
+        </a>
+    </li>
+</ul>

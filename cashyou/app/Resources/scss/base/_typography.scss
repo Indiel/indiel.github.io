@@ -1,0 +1,123 @@
+// Typography
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+	font-family: $headings-font-family;
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0 0 0.5em;
+	color: $headings-color;
+	text-transform: uppercase;
+	
+	b {
+		font-weight: 900;
+	}
+}
+
+h1, .h1 {
+	font-size: $h1-font-size;
+	font-weight: 400;
+	
+	@include media("<tablet") {
+		font-size: 24px;
+		line-height: 29px;
+		letter-spacing: -0.2px;
+	}
+}
+
+.heading {
+	h1, .h1 {
+		padding: 0 0 4px;
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		
+		&:before {
+			content: '';
+			background: $orange;
+			height: 2px;
+			position: absolute;
+			right: 0;
+			left: -9999px;
+			bottom: 0;
+		}
+		
+		@include media("<tablet") {
+			padding: 0 0 9px;
+			
+			&:before {
+				right: -9999px;
+			}
+		}
+		
+		span {
+			font-size: 14px;
+			text-transform: none;
+			
+			@include media("<tablet") {
+				font-size: 12px;
+				display: block;
+				white-space: nowrap;
+				margin: -8px 0 -7px;
+			}
+			
+			.step-count {
+				@include media("<tablet") {
+					display: inline;
+				}
+			}
+		}
+	}
+}
+
+h2, .h2 {
+	font-size: $h2-font-size;
+	margin-bottom: 11px;
+	
+	@include media("<tablet") {
+		font-size: 18px;
+		margin-bottom: 13px;
+	}
+}
+
+h3, .h3 {
+	font-size: $h3-font-size;
+}
+
+h4, .h4 {
+	font-size: $h4-font-size;
+}
+
+h5, .h5 {
+	font-size: $h5-font-size;
+}
+
+h6, .h6 {
+	font-size: $h6-font-size;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+mark {
+	background: none;
+	color: $orange;
+	text-transform: uppercase;
+}
+
+a {
+	color: $base-link-color;
+	transition: color 0.3s;
+	text-decoration: none;
+	outline: none;
+	
+	&:hover {
+		text-decoration: none;
+		color: $base-link-hover-color;
+	}
+}

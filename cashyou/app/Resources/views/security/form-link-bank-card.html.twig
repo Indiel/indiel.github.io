@@ -1,0 +1,69 @@
+{{ form_start(form, {'attr': {'class': 'step-form js-step-form','novalidate': 'novalidate', 'data-success-url': url('app.pending.approval'), 'data-profile-url': url('app.profile')}}) }}
+
+	{{ form_errors(form) }}
+
+	<div class="step-block active" data-step="7" data-percent="100">
+		<div class="heading-block">
+			<h2>{{ 'Данные карты для пополнения'|trans }}</h2>
+		</div>
+		<div class="text-verified-card">
+			{{ 'verified.text' | trans | raw }}
+			<div class="tabs-banks">
+				<div id="js-tabs-banks">
+					<ul>
+						<li class="privat"><a href="#tabs-1"><img src="{{ asset('images/privat.png') }}" alt=""></a></li>
+						<li class="other"><a href="#tabs-2">{{ 'Другие банки' | trans }}</a></li>
+					</ul>
+					<div id="tabs-1" class="bank-content">
+						{{ 'verified.privatbank' | trans | raw }}
+					</div>
+					<div id="tabs-2" class="bank-content">
+						{{ 'verified.otherbank' | trans | raw }}
+					</div>
+				</div>
+	 		</div>
+ 			<div class="icons-payment">
+				<img src="{{ asset('images/visa-card.png') }}" alt="">
+				<img src="{{ asset('images/way4pay.png') }}" alt="">
+				<img src="{{ asset('images/comod.png') }}" alt="Comod">
+			</div>
+		</div>
+		<div class="button-block">
+			<a class="button btn-light button-prev" href="{{ path('app.registration-new', {'step': 'photo-of-documents'}) }}">{{ 'Назад'|trans }}</a>
+			<button type="button" class="button btn-validate-card  btn-validate-card-submit">{{ 'Указать карту'|trans }}</button>
+			<button type="submit" class="button hidden btn-validate" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Указать карту'|trans }}</button>
+		</div>
+	</div>
+
+	{{ form_widget(form.loanId, {'value': loanId}) }}
+
+	{#agreement preview step#}
+	{#
+	<div class="step-block" data-step="8" data-percent="100">
+		<div class="agreement-holder">
+			<div class="frame">
+				<div class="heading-block">
+					<h2>{{ 'Кредитный договор'|trans }}</h2>
+				</div>
+				{% if loanId %}
+				<div class="pdf-holder">
+					<object data="{{ path('app.loan.agreement', {'loanId': loanId}) }}" type="application/pdf" width="100%" height="100%">
+						<iframe src="{{ path('app.loan.agreement', {'loanId': loanId}) }}" width="100%" height="100%" style="border: none;">
+							<a href="{{ path('app.loan.agreement', {'loanId': loanId}) }}">{{ 'Скачать PDF'|trans }}</a>
+						</iframe>
+					</object>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+		<div class="button-block">
+			<a class="button btn-light button-prev" href="#">{{ 'К предыдущему этапу'|trans }}</a>
+			{% if loanId %}
+				<a class="button btn-light" href="{{ path('app.loan.agreement.download', {'loanId': loanId}) }}">{{ 'Скачать PDF'|trans }}</a>
+			{% endif %}
+			<button type="submit" class="button btn-validate" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Получить деньги'|trans }}</button>
+		</div>
+	</div>
+	#}
+
+{{ form_end(form) }}

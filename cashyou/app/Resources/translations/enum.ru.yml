@@ -1,0 +1,86 @@
+'BusinessType::AGRICULTURE': 'Сельское хозяйство'
+'BusinessType::ARMED_FORCES': 'Вооруженные силы'
+'BusinessType::AUDIT_CONSULTING': 'Аудит консалтинг'
+'BusinessType::CHEMISTRY_PERFUMERY_PHARMACEUTICALS': 'Химия, парфюмерия, фармацевтика'
+'BusinessType::CONSTRUCTION': Строительство
+'BusinessType::CULTURE': Культура
+'BusinessType::DEVELOPMENT': Разработка
+'BusinessType::EDUCATION': Образование
+'BusinessType::ENTERTAINING_GAMBLING_SHOW_BUSINESS': 'Развлекательный, игровой, шоу-бизнес'
+'BusinessType::EXTRACTION_OF_MINERALS_EXCEPT_FUEL_AND_ENERGY': 'Добыча полезных ископаемых, кроме ТЭК'
+'BusinessType::FINANCE_BANKING_INSURANCE': 'Финансы, банковское дело, страхование'
+'BusinessType::FUEL_AND_ENERGY': 'Добыча ТЭК полезных ископаемых'
+'BusinessType::HEALTHCARE': 'Охрана здоровья'
+'BusinessType::INFORMATION_SERVICES_TELECOMMUNICATIONS': ' Информационные сервисы, телекоммуникации'
+'BusinessType::LAW_ENFORCEMENT_AGENCIES_CUSTOMS_TAX_POLICE': 'Правоохранительные органы, таможня, налоговая полиция'
+'BusinessType::LEGAL_NOTARIAL_SERVICES': 'Юридические, нотариальные услуги'
+'BusinessType::LIGHT_AND_FOOD_INDUSTRY': 'Легкая и пищевая промышленность'
+'BusinessType::MACHINE_BUILDING_METAL_WORKING': 'Машиностроение, металооброботка'
+'BusinessType::MASS_MEDIA_ADVERTISING_PR_AGENCIES': 'СМИ, реклама, PR-агенства'
+'BusinessType::MUNICIPAL_ECONOMY': 'Комунальное хозяйство'
+'BusinessType::OTHER': Другое
+'BusinessType::PRIVATE_DETECTIVE_SECURITY_AGENCY': 'Приватное детективное / охранное агенство'
+'BusinessType::PRODUCTION_OF_BUILDING_MATERIALS': 'Производство стройматериалов'
+'BusinessType::PUBLIC_CATERING_RESTAURANTS': 'Общественное питание, рестораны'
+'BusinessType::PUBLISHING_ACTIVITIES': 'Издательская деятельность'
+'BusinessType::REALTOR_ACTIVITY': 'Риелторская деятельность'
+'BusinessType::REGIONAL_GOVERNMENT': 'Органы государственного или регионального управления'
+'BusinessType::RETAIL_TRADE': 'Розничная торговля'
+'BusinessType::SCIENCE': Наука
+'BusinessType::TRANSPORT_COMMUNICATION': 'Транспорт и связь'
+'BusinessType::WHOLESALE_AND_INTERMEDIARY_TRADE': 'Оптовая и посредническая торговля'
+'Education::ACADEMIC_DEGREE': 'Ученая ступень'
+'Education::FEW_HIGHER': 'Несколько высших'
+'Education::HIGHER': Высшее
+'Education::HIGHER_UNFINISHED': 'Неполное высшее'
+'Education::SECONDARY': Среднее
+'Education::SECONDARY_UNFINISHED': 'Незаконченное среднее'
+'Gender::FEMALE': Женский
+'Gender::MALE': Мужской
+'IncomeType::EMPLOYED': Работаю
+'IncomeType::ENTREPRENEUR': Предприниматель
+'IncomeType::PENSIONER': Пенсионер
+'IncomeType::STUDENT': Учусь
+'IncomeType::UNEMPLOYED': 'Не работаю'
+'MaritalStatus::CIVIL_MARRIAGE': 'Гражданский брак'
+'MaritalStatus::DIVORCED': 'Разведен / Разведена'
+'MaritalStatus::MARRIED': 'Женат / Замужем'
+'MaritalStatus::UNMARRIED': 'Не женат / Не замужем'
+'MaritalStatus::WIDOWER': 'Вдова / Вдовец'
+'MonthlyIncome::FROM_3200_TO_5000': 'До 5000'
+'MonthlyIncome::FROM_5000_TO_8000': 'До 8000'
+'MonthlyIncome::FROM_8000_TO_15000': 'До 15000'
+'MonthlyIncome::MORE_THAN_15000': 'Больше 15000'
+'MonthlyIncome::UNDER_3200': 'До 3200'
+'NumberOfDependents::FOUR_TO_SIX': 'от 4 до 6'
+'NumberOfDependents::NONE': Нет
+'NumberOfDependents::ONE': '1'
+'NumberOfDependents::SEVEN_TO_NINE': 'от 7 до 9'
+'NumberOfDependents::THREE': '3'
+'NumberOfDependents::TWO': '2'
+'Position::AUXILIARY_STAFF': 'Вспомогательный персоналл'
+'Position::DEPUTY_HEAD': 'Заместитель руководителя'
+'Position::HEAD': Руководитель
+'Position::MANAGER': 'Другие руководящие должности'
+'Position::SPECIALIST': Специалист
+'Position::WORKER': Работник
+'RealEstate::HOSTEL': 'Проживание в общежитии'
+'RealEstate::LIVING_WITH_RELATIVES': 'Проживание у родственников'
+'RealEstate::PURCHASED': 'Купленная собственность'
+'RealEstate::RENT': 'Аренда помещения'
+'SecretQuestion::LAST_5_DIGITS_OF_CREDIT_CARD': 'Какие 5 последних чисел у вашей кредитной карточки?'
+'SecretQuestion::MOTHERS_MIDDLE_NAME': 'Какое отчество у вашей мамы?'
+'SecretQuestion::NICKNAME': 'Какое прозвище у вас было в детстве?'
+'SecretQuestion::RELATIVE_CITY': 'В каком городе проживает ваш ближайший родственник?'
+'SecretQuestion::YEAR_OF_GRADUATION': 'В каком году вы закончили университет?'
+'TypeOfSettlement::CITY': Город
+'TypeOfSettlement::SETTLEMENT': Поселок
+'TypeOfSettlement::STEADING': Хутор
+'TypeOfSettlement::URBAN_VILLAGE': 'Поселок городского типа'
+'TypeOfSettlement::VILLAGE': Село
+'WorkingExperience::FROM_0_TO_2_YEARS': 'от 0 до 2 лет включительно'
+'WorkingExperience::FROM_2_TO_4_YEARS': 'больше 2 лет и до 4 лет включительно'
+'WorkingExperience::FROM_4_TO_9_YEARS': 'больше 4 лет и до 9 лет включительно'
+'WorkingExperience::MORE_THAN_9_YEARS': 'больше 9 лет'
+'YesNo::NO': Нет
+'YesNo::YES': Да

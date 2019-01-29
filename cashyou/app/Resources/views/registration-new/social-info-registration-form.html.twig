@@ -1,0 +1,93 @@
+{{ form_start(form, {'attr': {'class': 'step-form js-step-form','novalidate': 'novalidate'}}) }}
+
+{{ form_errors(form) }}
+
+<div class="step-block active" data-step="2" data-percent="40">
+	<div class="form-columns">
+		<div class="column">
+            {{ form_row(form.isPassportNewType, {'attr': {'class': 'passport'}, 'help': 'registration.help.isPassportNewType'|trans}) }}            
+		</div>
+		<div class="column">
+			<div class="passport-block" data-passport="type1">
+				{{ form_row(form.documentNumber, {
+					'attr': {
+						'data-rule-documentNumberValidate': '#registration_form_isPassportNewType_0:checked',
+						'minlength': 9,
+						'maxlength': 9,
+						'data-mask': '999999999'
+					}, 'help': 'registration.help.passport'|trans
+				}) }}
+
+				{{ form_row(form.passportIssuedByNumber, {
+					'attr': {
+						'data-rule-passportIssuedByNumberValidate': '#registration_form_isPassportNewType_0:checked',
+						'data-rule-required': '#registration_form_isPassportNewType_0:checked',
+						'data-mask': '9999',
+					},
+					'help': 'registration.help.passportIssuedBy'|trans
+				}) }}				
+			</div>
+			<div class="passport-block selected" data-passport="type2">
+				{{ form_row(form.passport, {
+					'attr': {
+						'data-rule-passportValidate': '#registration_form_isPassportNewType_1:checked',
+						'minlength': 9,
+						'maxlength': 9,
+						'data-mask': 'RR 999999'
+					}, 'help': 'registration.help.passport'|trans
+				}) }}
+
+				{{ form_row(form.passportIssuedBy, {
+					'attr': {
+						'data-rule-required': '#registration_form_isPassportNewType_1:checked',
+					},
+					'help': 'registration.help.passportIssuedBy'|trans
+				}) }}
+			</div>
+
+			{{ form_row(form.passportRegistration, {
+                'attr': {
+                    'placeholder': 'дд.мм.гггг'|trans,
+                    'data-rule-dateValidate': 1,
+                    'data-rule-required': 1,
+                    'data-mask': '99.99.9999',
+                    'minlength': 10,
+                    'maxlength': 10
+                }, 'help': 'registration.help.passportRegistration'|trans
+            }) }}
+		</div>
+		<div class="column">
+			<div class="passport-block" data-passport="type1">
+                {{ form_row(form.passportValidDate, {
+                    'attr': {
+                        'placeholder': 'дд.мм.гггг'|trans,
+                        'data-rule-dateValidate': 1,
+                        'data-rule-required': '#registration_form_isPassportNewType_0:checked',
+                        'data-mask': '99.99.9999',
+                        'minlength': 10,
+                        'maxlength': 10
+                    }, 'help': 'registration.help.passportValidDate'|trans
+                }) }}
+                {{ form_row(form.passportRecordNumber, {
+                    'attr': {
+                        'data-rule-required': '#registration_form_isPassportNewType_0:checked',
+                        'data-rule-passportRecordNumberValidate': 1,
+                        'data-mask': '99999999-99999',
+                        'minlength': 14,
+                        'maxlength': 14
+                    }, 'help': 'registration.help.passportRecordNumber'|trans
+                }) }}
+			</div>
+            {{ form_row(form.socialSecurityNumber, {'attr': {'data-rule-digits': 1, 'minlength': 10, 'maxlength': 10, 'data-mask': '9999999999'},  'help': 'registration.help.socialSecurityNumber'|trans}) }}
+		</div>
+		<div class="column-hidden">
+            {{ form_row(form.maritalStatus, {'attr': {'style': 'visibility: hidden'}, 'help': 'registration.help.maritalStatus'|trans}) }}
+            {{ form_row(form.numberOfDependents, {'attr': {'style': 'visibility: hidden'}, 'help': 'registration.help.numberOfDependents'|trans}) }}
+            {{ form_row(form.education, {'attr': {'style': 'visibility: hidden'}, 'help': 'registration.help.education'|trans}) }}
+            {{ form_row(form.citizenship, {'attr': {'style': 'visibility: hidden'}, 'help': 'registration.help.citizenship'|trans}) }}
+		</div>
+	</div>
+	<div class="button-block"><a class="button btn-light button-prev" href="{{prevURL}}">{{ 'Назад'|trans }}</a><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+
+{{ form_end(form) }}

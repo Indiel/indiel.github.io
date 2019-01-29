@@ -1,0 +1,86 @@
+'BusinessType::AGRICULTURE': Agriculture
+'BusinessType::ARMED_FORCES': 'Armed forces'
+'BusinessType::AUDIT_CONSULTING': 'Audit consulting'
+'BusinessType::CHEMISTRY_PERFUMERY_PHARMACEUTICALS': 'Chemisrty, parfumery, pharmacy'
+'BusinessType::CONSTRUCTION': Building
+'BusinessType::CULTURE': Culture
+'BusinessType::DEVELOPMENT': Development
+'BusinessType::EDUCATION': Education
+'BusinessType::ENTERTAINING_GAMBLING_SHOW_BUSINESS': 'Entertaining, game, show business'
+'BusinessType::EXTRACTION_OF_MINERALS_EXCEPT_FUEL_AND_ENERGY': 'Mining, except energy industry'
+'BusinessType::FINANCE_BANKING_INSURANCE': 'Finances, banking, insurance'
+'BusinessType::FUEL_AND_ENERGY': 'Energy industry mining '
+'BusinessType::HEALTHCARE': 'Health care'
+'BusinessType::INFORMATION_SERVICES_TELECOMMUNICATIONS': 'Information services, telecommunications'
+'BusinessType::LAW_ENFORCEMENT_AGENCIES_CUSTOMS_TAX_POLICE': 'Law enforcement bodies, customs, tax police'
+'BusinessType::LEGAL_NOTARIAL_SERVICES': 'Legal, notarial services'
+'BusinessType::LIGHT_AND_FOOD_INDUSTRY': 'Light and food processing industry '
+'BusinessType::MACHINE_BUILDING_METAL_WORKING': 'Engineering, metalworking'
+'BusinessType::MASS_MEDIA_ADVERTISING_PR_AGENCIES': 'Mass media, advertisement, PR-agencies'
+'BusinessType::MUNICIPAL_ECONOMY': 'Public utilities'
+'BusinessType::OTHER': Other
+'BusinessType::PRIVATE_DETECTIVE_SECURITY_AGENCY': 'Private detective / protection agency'
+'BusinessType::PRODUCTION_OF_BUILDING_MATERIALS': 'Production of building materials'
+'BusinessType::PUBLIC_CATERING_RESTAURANTS': 'Catering industry, restaurants'
+'BusinessType::PUBLISHING_ACTIVITIES': Publishing
+'BusinessType::REALTOR_ACTIVITY': 'Realtor activity'
+'BusinessType::REGIONAL_GOVERNMENT': 'State and regional administration bodies'
+'BusinessType::RETAIL_TRADE': 'Retail trade'
+'BusinessType::SCIENCE': Science
+'BusinessType::TRANSPORT_COMMUNICATION': 'Transport and connection'
+'BusinessType::WHOLESALE_AND_INTERMEDIARY_TRADE': 'Wholesale and intermediary trade'
+'Education::ACADEMIC_DEGREE': 'Academic degree'
+'Education::FEW_HIGHER': 'Several higher'
+'Education::HIGHER': Higher
+'Education::HIGHER_UNFINISHED': 'Incomplete higher'
+'Education::SECONDARY': Middle
+'Education::SECONDARY_UNFINISHED': 'Incomplete middle'
+'Gender::FEMALE': Female
+'Gender::MALE': Male
+'IncomeType::EMPLOYED': Work
+'IncomeType::ENTREPRENEUR': Enterpreneur
+'IncomeType::PENSIONER': Pensioner
+'IncomeType::STUDENT': Study
+'IncomeType::UNEMPLOYED': 'Don''t work'
+'MaritalStatus::CIVIL_MARRIAGE': 'Civil marriage'
+'MaritalStatus::DIVORCED': Divorced
+'MaritalStatus::MARRIED': Married
+'MaritalStatus::UNMARRIED': 'Not married'
+'MaritalStatus::WIDOWER': 'Widow / widower'
+'MonthlyIncome::FROM_3200_TO_5000': 'Up to 5000'
+'MonthlyIncome::FROM_5000_TO_8000': 'Up to 8000'
+'MonthlyIncome::FROM_8000_TO_15000': 'Up to 15000'
+'MonthlyIncome::MORE_THAN_15000': 'More than 15000'
+'MonthlyIncome::UNDER_3200': 'Up to 3200'
+'NumberOfDependents::FOUR_TO_SIX': 'from 4 to 6'
+'NumberOfDependents::NONE': 'No'
+'NumberOfDependents::ONE': '1'
+'NumberOfDependents::SEVEN_TO_NINE': 'from 7 to 9'
+'NumberOfDependents::THREE': '3'
+'NumberOfDependents::TWO': '2'
+'Position::AUXILIARY_STAFF': 'Supporting staff'
+'Position::DEPUTY_HEAD': Vice-director
+'Position::HEAD': Director
+'Position::MANAGER': 'Other governing positions'
+'Position::SPECIALIST': Expert
+'Position::WORKER': Employee
+'RealEstate::HOSTEL': 'Living in dormitory'
+'RealEstate::LIVING_WITH_RELATIVES': 'Stay with relatives'
+'RealEstate::PURCHASED': 'Purchased property'
+'RealEstate::RENT': 'Rent of premises'
+'SecretQuestion::LAST_5_DIGITS_OF_CREDIT_CARD': 'What are the last 5 numbers of your credit card?'
+'SecretQuestion::MOTHERS_MIDDLE_NAME': 'What is your mother''s paternal name?'
+'SecretQuestion::NICKNAME': 'Which nickname you had in the childhood?'
+'SecretQuestion::RELATIVE_CITY': 'In which city does your closest relative live?'
+'SecretQuestion::YEAR_OF_GRADUATION': 'In which year did you graduate from the university?'
+'TypeOfSettlement::CITY': City
+'TypeOfSettlement::SETTLEMENT': Township
+'TypeOfSettlement::STEADING': Farmstead
+'TypeOfSettlement::URBAN_VILLAGE': 'Urban-type settlement'
+'TypeOfSettlement::VILLAGE': Village
+'WorkingExperience::FROM_0_TO_2_YEARS': 'from 0 to 2 years inclusively'
+'WorkingExperience::FROM_2_TO_4_YEARS': 'more than 2 years and up to 4 years inclusively'
+'WorkingExperience::FROM_4_TO_9_YEARS': 'more than 4 years and up to 9 years inclusively'
+'WorkingExperience::MORE_THAN_9_YEARS': 'More than 9 years'
+'YesNo::NO': 'No'
+'YesNo::YES': 'Yes'

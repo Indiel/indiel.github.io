@@ -1,0 +1,17 @@
+{% extends 'loan/repay/result.html.twig' %}
+
+{% block headingText %}
+	{{ 'Произошла ошибка, свяжитесь с менеджером или попробуйте позже'|trans|raw }}
+{% endblock %}
+
+{% block imageUrl %}
+	{{ asset('images/man-notfound.png') }}
+{% endblock %}
+
+{% block buttonLink %}
+	{{ path('app.profile') }}
+{% endblock %}
+
+{% block buttonText %}
+	{{ 'Продолжить'|trans|raw }}
+{% endblock %}

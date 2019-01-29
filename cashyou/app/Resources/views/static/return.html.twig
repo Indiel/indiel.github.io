@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>{{ 'Как вернуть кердит. Как вернуть кредит в Cashyou'|trans }}</title>{% endblock %}
+{% block meta %}<meta name="description" content="{{ 'Вернуть деньги вы сможете любым удобным для вас способом. Через Ваш личный кабинет, бонусами или переводом на наши банковские реквизиты.'|trans }}">{% endblock %}
+
+{% block bodyAttributes %} class="totop-page"{% endblock %}
+
+{% block mainContent %}
+	<div class="return-holder">
+		<div class="container">
+			<section class="inner-section">
+				<div class="heading">
+					<h1>{{' <b>Как </b>вернуть кредит?'|trans|raw }}</h1>
+				</div>
+				<div class="inform-hold">
+					<div class="inform-block">
+						<div class="intro">
+							<img src="{{ asset('/images/ico-bank-card.png')}}" alt="Picture" class="image">
+							<psan class="title">{{ 'Банковская карта'|trans }}</psan>
+						</div>
+						<div class="content">
+							<div class="head">{{ 'return.how.item1.title'|trans }}</div>
+							<div class="description">
+								<p>{{ 'return.how.item1.desc'|trans|nl2br }}</p>
+							</div>
+						</div>
+					</div>
+					<div class="inform-block">
+						<div class="content">
+							<div class="head">{{ 'return.how.item2.title'|trans }}</div>
+							<div class="description">
+								<p>{{ 'return.how.item2.desc'|trans|nl2br }}</p>
+							</div>
+						</div>
+						<div class="intro">
+							<img src="{{ asset('/images/ico-atm.png')}}" alt="Picture" class="image">
+							<psan class="title">{{ 'Платежный терминал'|trans }}</psan>
+						</div>
+					</div>
+					<div class="inform-block">
+						<div class="intro">
+							<img src="{{ asset('/images/ico-transfer.png')}}" alt="Picture" class="image">
+							<psan class="title">{{ 'Банковский перевод'|trans }}</psan>
+						</div>
+						<div class="content">
+							<div class="head">{{ 'return.how.item3.title'|trans }}</div>
+							<div class="description">
+								<p>{{ 'return.how.item3.desc'|trans|nl2br }}</p>
+							</div>
+						</div>
+					</div>
+					<div class="inform-block">
+						<div class="content">
+							<div class="head">{{ 'return.how.item4.title'|trans }}</div>
+							<div class="description">
+								<p>{{ 'return.how.item4.desc'|trans|nl2br }}</p>
+							</div>
+						</div>
+						<div class="intro">
+							<img src="{{ asset('/images/ico-account.png')}}" alt="Picture" class="image">
+							<psan class="title">{{ 'Личный кабинет'|trans }}</psan>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="inner-section">
+				<div class="heading">
+					<h1>{{ '<b>Возможность </b>оплаты бонусами'|trans|raw }}</h1>
+				</div>
+				<div class="bonus-hold">
+					<div class="image">
+						<img src="{{ asset('/images/bonus.png?v2')}}" alt="Picture" class="desktop-picture picture">
+						<img src="{{ asset('/images/bonus-tablet.png')}}" alt="Picture" class="tablet-picture picture">
+						<img src="{{ asset('/images/bonus-mobile.png')}}" alt="Picture" class="mobile-picture picture">
+					</div>
+					<div class="content">
+						{{ 'return.bonuspay.desc'|trans|nl2br|raw }}
+					</div>
+				</div>
+				<div class="button-block">
+					<a href="#" class="button">{{ 'Бонусная система'|trans }}</a>
+				</div>
+			</section>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,158 @@
+{{ form_start(form, {'attr': {'class': 'step-form js-step-form','novalidate': 'novalidate'}}) }}
+
+{{ form_errors(form) }}
+
+<!-- Third step-->
+<div class="step-block active" data-step="3" data-percent="60">
+	<div class="heading-block">
+		<h2>{{ 'Адрес проживания'|trans }}</h2>
+	</div>
+	<div class="form-columns">
+		<div class="column">
+			{{ form_row(form.address.street, {
+				'attr': {
+					'class': 'js-address-autocomplete',
+                    'autocomplete': 'off',
+					'data-autocomplete-id': 'registration_address_form_address_street',
+					'data-autocomplete-field': 'route',
+				}, 'help': 'registration.help.street'|trans
+			}) }}
+
+			{{ form_row(form.address.state, {
+				'attr': {
+					'data-rule-onlyLetter': 1,
+					'data-autocomplete-id': 'registration_address_form_address_street',
+					'data-autocomplete-field': 'administrative_area_level_1',
+                    'data-rule-notSpaces': 1,
+				}, 'help': 'registration.help.state'|trans
+			}) }}
+		</div>
+		<div class="column">
+            {{ form_row(form.address.typeOfSettlement, {'help': 'registration.help.typeOfSettlement'|trans}) }}
+            {{ form_row(form.address.city, {
+                'attr': {
+                    'data-rule-onlyLetter': 1,
+                    'data-autocomplete-id': 'registration_address_form_address_street',
+                    'data-autocomplete-field': 'locality',
+                    'data-rule-notSpaces': 1,
+                }, 'help': 'registration.help.city'|trans
+            }) }}
+            {{ form_row(form.address.zipCode, {
+                'attr': {
+                    'data-rule-digits': 1,
+                    'minlength': 5,
+                    'maxlength': 5,
+                    'data-mask': '99999',
+                    'data-autocomplete-id': 'registration_address_form_address_street',
+                    'data-autocomplete-field': 'postal_code',
+                }, 'help': 'registration.help.zipCode'|trans})
+            }}
+		</div>
+		<div class="column">
+			<div class="three-columns">
+				<div class="col">
+                    {{ form_row(form.address.house, {
+                        'attr': {
+                            'data-autocomplete-id': 'registration_address_form_address_street',
+                            'data-autocomplete-field': 'street_number',
+                        }, 'help': 'registration.help.house'|trans
+                    }) }}
+				</div>
+				<div class="col">
+                    {{ form_row(form.address.building, {'help': 'registration.help.building'|trans}) }}
+				</div>
+				<div class="col">
+                    {{ form_row(form.address.apartment, {'help': 'registration.help.apartment'|trans}) }}
+				</div>
+			</div>            
+			{{ form_row(form.address.residentialMatchesRegistration, {'help': 'registration.help.residentialMatchesRegistration'|trans}) }}
+		</div>
+	</div>
+	<div class="address-holder">
+		<div class="heading-block">
+			<h2>{{ 'Адрес регистрации'|trans }}</h2>
+		</div>
+		<div class="form-columns">
+			<div class="column">
+				{{ form_row(form.secondAddress.street, {
+					'attr': {
+						'class': 'js-address-autocomplete',
+                        'autocomplete': false,
+						'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+						'data-autocomplete-id': 'registration_address_form_secondAddress_street',
+						'data-autocomplete-field': 'route',
+					}, 'help': 'registration.help.secondAddress.street'|trans}) }}
+                {{ form_row(form.secondAddress.state, {
+                    'attr': {
+                        'data-rule-onlyLetter': 1,
+                        'data-rule-notSpaces': 1,
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                        'data-autocomplete-id': 'registration_address_form_secondAddress_street',
+                        'data-autocomplete-field': 'administrative_area_level_1',
+                    }, 'help': 'registration.help.secondAddress.state'|trans
+                }) }}
+			</div>
+			<div class="column">
+                {{ form_row(form.secondAddress.typeOfSettlement, {
+                    'choice_attr': {
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                    }, 'help': 'registration.help.secondAddress.typeOfSettlement'|trans
+                }) }}
+                {{ form_row(form.secondAddress.city, {
+                    'attr': {
+                        'data-rule-onlyLetter': 1,
+                        'data-rule-notSpaces': 1,
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                        'data-autocomplete-id': 'registration_address_form_secondAddress_street',
+                        'data-autocomplete-field': 'locality',
+                    }, 'help': 'registration.help.secondAddress.city'|trans
+                }) }}
+                {{ form_row(form.secondAddress.zipCode, {
+                    'attr': {
+                        'data-rule-digits': 1,
+                        'minlength': 5,
+                        'maxlength': 5,
+                        'data-mask': '99999',
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                        'data-autocomplete-id': 'registration_address_form_secondAddress_street',
+                        'data-autocomplete-field': 'postal_code',
+                    }, 'help': 'registration.help.secondAddress.zipCode'|trans
+                }) }}
+			</div>
+			<div class="column">
+				<div class="three-columns">
+					<div class="col">
+                        {{ form_row(form.secondAddress.house, {
+                            'attr': {
+                                'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                                'data-autocomplete-id': 'registration_address_form_secondAddress_street',
+                                'data-autocomplete-field': 'street_number',
+                            }, 'help': 'registration.help.secondAddress.house'|trans
+                        }) }}
+					</div>
+					<div class="col">
+                        {{ form_row(form.secondAddress.building, {'help': 'registration.help.secondAddress.building'|trans}) }}
+					</div>
+					<div class="col">
+                        {{ form_row(form.secondAddress.apartment, {
+                            'help': 'registration.help.secondAddress.apartment'|trans
+                        }) }}
+					</div>
+				</div>
+			</div>
+			<div class="column-hidden">
+                {{ form_row(form.address.realEstate, {'attr': {'style': 'visibility: hidden'},'help': 'registration.help.realEstate'|trans}) }}                
+                {{ form_row(form.secondAddress.realEstate, {
+                    'attr': {
+                        'data-rule-required': '#registration_form_address_residentialMatchesRegistration_1:checked',
+                    }, 'help': 'registration.help.secondAddress.realEstate'|trans
+                }) }}
+			</div>
+		</div>
+	</div>
+	<div class="button-block"><a class="button btn-light button-prev" href="{{prevURL}}">{{ 'Назад'|trans }}</a><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+
+{{ form_end(form) }}
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAli3aZELQPqt5PN4gkPZyKzfLu_sIc7us&amp;libraries=places&amp;language={{ app.request.getLocale() }}&amp;region=UA"></script>

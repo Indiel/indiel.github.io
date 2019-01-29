@@ -1,0 +1,17 @@
+{% extends 'loan/repay/result.html.twig' %}
+
+{% block headingText %}
+	{{ 'Спасибо! Договор успешно подписан'|trans|raw }}
+{% endblock %}
+
+{% block imageUrl %}
+	{{ asset('images/man-like.png')}}
+{% endblock %}
+
+{% block buttonLink %}
+	{{ path('app.profile') }}
+{% endblock %}
+
+{% block buttonText %}
+	{{ 'Продолжить'|trans|raw }}
+{% endblock %}

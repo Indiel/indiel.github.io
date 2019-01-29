@@ -1,0 +1,59 @@
+{{ form_start(form, {'attr': {'class': 'step-form js-step-form','novalidate': 'novalidate'}}) }}
+
+{{ form_errors(form) }}
+
+<!-- Fifth step-->
+<div class="step-block active" data-step="5" data-percent="100">
+	<div class="download-holder">
+		<div class="download-row selfie-download-row file-require">
+			<div>{{ 'Загрузите фото 1й страницы Вашего паспорта'|trans }}<span class="req">*</span>
+			<span class="req-descr download-error-required">{{ 'Зазгрузите фото'|trans }}</span>
+			<span class="req-descr download-error-type">{{ 'download.error.type'|trans }}</span>
+			<span class="req-descr download-error-other">{{ 'download.error.other'|trans }}</span>
+			<span class="req-descr download-error-fatal">{{ 'download.error.fatal'|trans }}</span>
+			</div>
+			{{ form_widget(form.docPassport1Json) }}
+			<div class="tool-tip">
+				<h2 class="text-instruction">{{ 'Пожалуйста, сделайте и загрузите фото с документом как показано на картинке'|trans }}</h2>
+				<img class = "photo-istruction" src = "{{ asset('images/photoUploadPopup.jpg') }}" alt="">
+			</div>
+		</div>
+		<div class="download-row file-require">
+			<div>{{ 'Загрузите фото 2й страницы Вашего паспорта'|trans }}<span class="req">*</span>
+			<span class="req-descr download-error-required">{{ 'Зазгрузите фото'|trans }}</span>
+			<span class="req-descr download-error-type">{{ 'download.error.type'|trans }}</span>
+			<span class="req-descr download-error-other">{{ 'download.error.other'|trans }}</span>
+			<span class="req-descr download-error-fatal">{{ 'download.error.fatal'|trans }}</span>
+			</div>
+			{{ form_widget(form.docPassport2Json) }}
+		</div>
+		<div class="download-row file-require">
+			<div>{{ 'Загрузите фото страницы прописки'|trans }}<span class="req">*</span>
+			<span class="req-descr download-error-required">{{ 'Зазгрузите фото'|trans }}</span>
+			<span class="req-descr download-error-type">{{ 'download.error.type'|trans }}</span>
+			<span class="req-descr download-error-other">{{ 'download.error.other'|trans }}</span>
+			<span class="req-descr download-error-fatal">{{ 'download.error.fatal'|trans }}</span>
+			</div>
+			{{ form_widget(form.docPassport3Json) }}
+		</div>
+		<div class="download-row">
+			<div>{{ 'Загрузите фото Вашего ИНН'|trans }}
+			<span class="req-descr download-error-type">{{ 'download.error.type'|trans }}</span>
+			<span class="req-descr download-error-other">{{ 'download.error.other'|trans }}</span>
+			<span class="req-descr download-error-fatal">{{ 'download.error.fatal'|trans }}</span>
+			</div>
+			{{ form_widget(form.docIpnJson) }}
+		</div>
+		<div class="download-row">
+			<div>{{ 'Дополнительные документы'|trans }}
+			<span class="req-descr download-error-type">{{ 'download.error.type'|trans }}</span>
+			<span class="req-descr download-error-other">{{ 'download.error.other'|trans }}</span>
+			<span class="req-descr download-error-fatal">{{ 'download.error.fatal'|trans }}</span>
+			</div>
+			{{ form_widget(form.docsJson) }}
+		</div>
+	</div>
+	<div class="button-block"><a class="button btn-light button-prev" href="{{prevURL}}">{{ 'Назад'|trans }}</a><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+
+{{ form_end(form) }}

@@ -1,0 +1,139 @@
+{% extends 'base.html.twig' %}
+
+{% block bodyAttributes %} class="profile"{% endblock %}
+
+{% block mainContent %}
+
+	{% for loan in activeLoans %}
+		{% if (loan.status == 'PastDue') and (loan.daysUntilNextPayment|abs>50 )%}
+            {% include 'profile/repay-offer.html.twig' %}
+		{% endif %}
+	{% endfor %}
+	
+	<div class="client-area-holder">
+		<div class="container">
+			<div class="tabset-holder">
+				<ul class="client-tabset">
+					<li{% if activeTab is empty or activeTab == 'main' %} class="active"{% endif %}><a href="#tab-main">{{ 'Главная'|trans }}</a></li>
+					<li{% if activeTab == 'history' %} class="active"{% endif %}><a href="#tab-history">{{ 'Кредитная история'|trans }}</a></li>
+					{% if activeLoans|length %}
+					<li{% if activeTab == 'credit' %} class="active"{% endif %}><a href="#tab-credit">{{ 'Текущий кредит'|trans }}</a></li>
+					{% endif %}
+					{#<li><a href="#tab-trade">{{ 'Торговля'|trans }}</a></li>#}
+					{% if loansHistory|length %}
+					<li class="bonuses-tab{% if activeTab == 'bonuses' %} active"{% endif %}"><a href="#tab-bonuses">{{ 'Бонусная программа'|trans }}</a></li>
+					{% endif %}
+					<li{% if activeTab == 'photo' %} class="active"{% endif %}><a href="#tab-photo">{{ 'Мои фото'|trans }}</a></li>
+					<li{% if activeTab == 'info' %} class="active"{% endif %}><a href="#tab-info">{{ 'Моя информация'|trans }}</a></li>
+					<li{% if activeTab == 'settings' %} class="active"{% endif %}><a href="#tab-settings">{{ 'Настройки'|trans }}</a></li>
+					<li><a href="{{ path('app.logout') }}">{{ 'Выход'|trans }}</a></li>
+				</ul>
+			</div>
+			<div class="client-content tab-content">
+				<div class="tab" data-id="tab-main">
+					{% include 'profile/dashboard.html.twig' %}
+				</div>
+				<div class="tab" data-id="tab-history">
+					{% include 'profile/history.html.twig' %}
+				</div>
+				{% if activeLoans|length %}
+				<div class="tab" data-id="tab-credit">
+					{% include 'profile/current-loan.html.twig' %}
+				</div>
+				{% endif %}
+				{#<div class="tab" id="tab-trade">
+					<div class="trade-text">
+						<p>Благодаря нашему сервису Вы можете оплатить любую услугу
+							<mark>даже не имея свободных денег</mark>Пользуйся сейчас, плати потом! С Нами просто.
+						</p>
+					</div>
+					<div class="trade-holder">
+						<ul class="services-list">
+							<li>
+								<div class="block">
+									<div class="icon-block"><img src="{{ asset('images/ico-house.png') }}" alt=""></div><span>Оплата <br>комунальных услуг</span>
+								</div>
+							</li>
+							<li>
+								<div class="block">
+									<div class="icon-block"><img src="{{ asset('images/ico-web.png') }}" alt=""></div><span>Пополнение интернета <br>и мобильного</span>
+								</div>
+							</li>
+							<li>
+								<div class="block">
+									<div class="icon-block"><img src="{{ asset('images/ico-tickets.png') }}" alt=""></div><span>Покупка <br>Билетов</span>
+								</div>
+							</li>
+							<li>
+								<div class="block">
+									<div class="icon-block"><img src="{{ asset('images/ico-joystick.png') }}" alt=""></div><span>Пополнение <br>в играх</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+#}
+                {% if loansHistory|length %}
+				<div class="tab" data-id="tab-bonuses">
+					{% include 'profile/bonuses.html.twig' %}
+				</div>
+                {% endif %}
+				<div class="tab" data-id="tab-photo">
+					{% include 'profile/documents.html.twig' %}
+				</div>
+				<div class="tab" data-id="tab-info">
+					{{ render(controller('AppBundle:Profile:editProfile')) }}
+				</div>
+				<div class="tab" data-id="tab-settings">
+					{% include 'profile/settings.html.twig' %}
+				</div>
+			</div>
+		</div>
+		<aside class="client-aside">
+			<div class="container">
+				<div class="frame">
+					{#<a class="button btn-gift" href="#"><i class="icon-gift"></i><span>Тебя ждут <b>9000 </b>бонусов</span></a>#}
+{#
+					<div class="chat-holder">
+						<div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>
+							<div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>
+								<form action="#">
+									<label>Оставьте Ваш телефон и мы Вам перезвоним</label>
+									<input type="tel" placeholder="" value="+380">
+									<input class="button" type="submit" value="Перезвоните">
+								</form>
+							</div>
+						</div>
+						<div class="chat-block"><a class="chat-opener" href="#">Связь с менеджером</a></div>
+					</div>
+#}
+				</div>
+			</div>
+		</aside>
+		{% if rejectedAmount %}
+        {% include ':components:alert-popup-limit-agreement.html.twig' %}
+		{% endif %}
+        {% if rejectedLoan %}
+            {% include ':components:alert-popup-rejected.html.twig' %}
+        {% endif %}
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	<script type="text/javascript">
+		var creditConfig = {
+			percent: {{ TKLenderApi.defaultProduct.InterestRate }}
+		}
+	</script>
+
+	{% set lang = (app.request.getLocale() == 'ru') ? 'ru-RU' : 'ua-UA' %}
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzH6Z5qQhd-IhbP6MJRA84Cd0KbdcrDBU&amp;libraries=places&amp;language={{ lang }}&amp;region=UA"></script>
+
+	<script type="text/javascript">
+		var W4PConfig = {{ (W4PConfig ? W4PConfig : null)|json_encode|raw }};
+	</script>
+
+	<script id="widget-wfp-script" language="javascript" type="text/javascript" src="https://secure.wayforpay.com/server/pay-widget.js"></script>
+
+	{{ parent() }}
+{% endblock %}

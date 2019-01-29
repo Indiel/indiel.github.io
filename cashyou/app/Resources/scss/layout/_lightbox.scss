@@ -1,0 +1,583 @@
+.popup-holder {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+}
+
+.lightbox {
+	background: $white;
+	box-shadow: 0 4px 4px rgba($black, 0.25);
+	width: 390px;
+	padding: 40px 15px 20px;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	max-width: 100%;
+	
+	@include media("<tablet") {
+		width: 320px;
+	}
+	
+	a {
+		text-decoration: underline;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	
+	h2 {
+		text-align: center;
+		text-transform: none;
+		font-weight: 400;
+		font-size: 24px;
+		margin-bottom: 30px;
+		
+		@include media("<tablet") {
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.span-h {
+		display: block;
+		text-align: center;
+		text-transform: none;
+		font-weight: 400;
+		font-size: 24px;
+		margin-bottom: 30px;
+		
+		@include media("<tablet") {
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+	}
+	
+	input[type='text'],
+	input[type='password'],
+	input[type='tel'],
+	input[type='number'],
+	input[type='email'] {
+		text-align: center;
+		padding: 12px 45px;
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 19px;
+		
+		@include media("<tablet") {
+			padding: 8px 45px;
+		}
+	}
+
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    appearance: none;
+	    margin: 0; 
+	}
+
+	input[type='number'] {
+	    -moz-appearance:textfield;
+	}
+	
+	.button {
+		width: 100%;
+		font-weight: 900;
+		padding: 10px 12px;
+		
+		@include media("<tablet") {
+			font-size: 16px;
+		}
+	}
+	
+	.form-row {
+		display: flex;
+		justify-content: space-between;
+		font-size: 12px;
+		padding: 18px 0 0;
+		
+		&.one-column {
+			display: block;
+		}
+		
+		&.form-row-button-bottom {
+			padding: 0 0 18px;
+		}
+	}
+	
+	p {
+		margin-bottom: 12px;
+	}
+	
+	.recovery-form {
+		input[type='text'],
+		input[type='password'],
+		input[type='tel'],
+		input[type='email'] {
+			text-align: left;
+			padding: 10px 16px;
+			font-size: 18px;
+			line-height: 23px;
+			
+			@include media("<tablet") {
+				font-size: 14px;
+				padding: 7px 10px;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	
+	.link-holder {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 12px 16px 0;
+		
+		@include media("<tablet") {
+			padding: 5px 0 20px;
+		}
+		
+		.button {
+			width: auto;
+			min-width: 164px;
+			margin: 0;
+			padding: 10px 7px;
+		}
+		
+		.link {
+			text-transform: uppercase;
+			font-weight: 900;
+			font-size: 17px;
+			line-height: 1.2;
+			text-decoration: none;
+			
+			@include media("<tablet") {
+				font-size: 15px;
+			}
+		}
+	}
+	
+	.text-area {
+		padding: 0 0 29px;
+		margin: -5px 0 0;
+		
+		@include media("<tablet") {
+			padding-bottom: 10px;
+		}
+	}
+	
+	.hint-text {
+		line-height: 17px;
+		max-width: 216px;
+		margin: -11px auto 0;
+		padding: 0 0 14px;
+	}
+	
+	.code-form {
+		input[type="text"] {
+			margin-bottom: 32px;
+			font-size: 18px;
+			border-color: $light-gray;
+		}
+		
+		.button {
+			min-width: 226px;
+			margin: 0 auto;
+			width: auto;
+		}
+		
+		.form-row {
+			padding: 33px 0 5px;
+			font-size: 14px;
+		}
+	}
+}
+
+.fancybox-show-buttons .fancybox-buttons {
+	display: none !important;
+}
+
+.fancybox-bg {
+	background: $black;
+}
+
+.fancybox-container--ready .fancybox-bg {
+	opacity: 0.5;
+}
+
+a.lightbox-close {
+	position: absolute;
+	text-decoration: none;
+	top: 21px;
+	right: 15px;
+	font-size: 21px;
+	
+	@include media("<tablet") {
+		top: 15px;
+	}
+}
+
+.fancybox-slide > * {
+	margin: 0;
+}
+.lightbox-alert {
+	padding-top: 20px;
+	
+	.description {
+		font-size: 18px;
+		margin: 20px 0;
+	}
+	a {
+		cursor: pointer;
+	}
+}
+
+.lightbox-alert-limit-agreement {
+	width: 	80%;
+	max-width: 1000px;
+	overflow: hidden;
+	padding: 50px 20px;
+
+	@media all and (max-width: 770px) {
+		width: 90%!important;
+		padding: 45px 20px 105px 20px;
+	}
+
+	@media all and (max-width: 320px) {
+		width: 90%!important;
+		padding: 25px 20px 85px 20px;
+	}
+
+	.lightbox-block {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		position: relative;
+
+		@media all and (max-width: 770px) {
+			flex-direction: column;
+		}
+
+		.left {
+			width: 38%;
+
+			@include media("<desktop") {
+				width: 44%;
+			}
+
+			@media all and (max-width: 770px) {
+				width: 100%;
+			}
+
+			h6 {
+				position: relative;
+				font-size: 20px;
+				font-weight: normal;
+				text-transform: none;
+				color: $dark-gray;
+				margin-bottom: 50px;
+				text-align: center;
+				padding-bottom: 10px;
+
+				@media all and (max-width: 770px) {
+					margin-bottom: 20px;
+				}
+
+				&:after {
+					content: '';
+					height: 2px;
+					width: 1000px;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					background-color: $light-orange;
+				}
+			}
+
+			.center {
+				display: flex;
+				flex-direction: column;
+				align-content: center;
+				align-items: center;
+				margin: 0 auto;
+
+				b {
+					display: block;
+					font-size: 60px;
+					line-height: 62px;
+					color: $orange;
+					padding-bottom: 10px;
+					margin-bottom: 50px;
+					border-bottom: 2px solid $light-gray;
+
+					@media all and (max-width: 770px) {
+						margin-bottom: 20px;
+					}
+
+					@media all and (max-width: 770px) {
+						margin-bottom: 10px;
+					}
+				}
+
+				.button {
+					max-width: 	140px;
+					height: 50px;
+					font-size: 13px;
+					letter-spacing: 2px;
+
+					@media all and (max-width: 770px) {
+						position: absolute;
+						bottom: -60px;
+						width: 140px;
+						left: 50%;
+						margin-left: -113px;
+					}
+				}
+			}
+		}
+
+		.gif-img {
+			width: 20%;
+
+			@include media("<desktop") {
+				display: none;
+			}
+		}
+
+		.right {
+			width: 38%;
+			padding: 0 20px;
+
+			@include media("<desktop") {
+				width: 44%;
+			}
+
+			@media all and (max-width: 770px) {
+				width: 100%;
+			}
+
+			h6 {
+				position: relative;
+				font-size: 20px;
+				text-transform: none;
+				font-weight: normal;
+				color: $dark-gray;
+				text-align: center;
+				padding-bottom: 10px;
+
+				&:after {
+					content: '';
+					height: 2px;
+					width: 1000px;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					background-color: $light-orange;
+				}
+			}
+			.center {
+				display: flex;
+				flex-direction: column;
+				align-content: center;
+				align-items: center;
+				margin: 30px auto 0;
+
+				ul {
+					list-style: none!important;
+
+					li {
+						margin-bottom: 25px;
+						text-align: left;
+						font-size: 18px;
+						line-height: 20px;
+						font-weight: bold;
+						letter-spacing: 3px;
+						display: flex;
+						flex-direction: row;
+						align-content: center;
+						align-items: center;
+
+						@media all and (max-width: 770px) {
+							letter-spacing: 1px;
+							margin-bottom: 10px;
+						}
+
+						i {
+							width: 0;
+							margin-right: 60px;
+							font-size: 30px;
+							font-weight: bold;
+							color: $orange;
+
+							&.fa-frown:before {
+								position: relative;
+								left: 3px;
+							}
+						}
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+
+						&:before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.alert-rejected {
+	min-width: 880px;
+	min-height: 450px;
+	padding: 50px 100px;
+
+	@include media("<desktop") {
+		min-width: 90%;
+		padding: 20px 40px;
+	}
+
+	@include media("<desktop") {
+		min-width: 90%;
+		padding: 20px 20px;
+	}
+
+	span {
+		display: inline-block;
+		margin-bottom: 10px;
+		font-size: 36px;
+		color: #212121;
+		@include media("<tablet") {
+			font-size: 28px;
+		}
+		@include media("<phone") {
+			font-size: 22px;
+		}
+	}
+
+	.left {
+		position: relative;
+		float: left;
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.rejected-img {
+			display: block;
+			margin-bottom: 70px;
+			img {
+				width: 90px;
+				height: 85px;
+				margin: 0 auto;
+			}
+			@include media("<phone") {
+				margin-bottom: 40px;
+			}
+		}
+
+		.unfortunately {
+			display: block;
+			min-width: 180px;
+		}
+	}
+
+	.right {
+		position: relative;
+		float: right;
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.button {
+		height: 50px;
+		margin-top: 10px;
+		line-height: 27px;
+		font-size: 12px;
+		letter-spacing: 3px;
+		border-radius: 25px;
+		text-decoration: none;
+		box-shadow: none!important;
+
+		@include media("<tablet") {
+			min-width: 190px!important;
+			max-width: 190px!important;
+			font-size: 12px;
+		}
+
+		@include media("<phone") {
+			min-width: 130px!important;
+			max-width: 130px!important;
+			margin-top: 20px;
+			padding: 10px 0;
+			font-size: 10px;
+			letter-spacing: 1px;
+		}
+	}
+
+	.bonus-img {
+		display: block;
+		margin-bottom: 70px;
+		img {
+			width: 90px;
+			height: 85px;
+			margin: 0 auto;
+		}
+		@include media("<phone") {
+			margin-bottom: 40px;
+		}
+	}
+
+	.bonus {
+		display: block;
+	}
+
+	.description {
+		height: 130px;
+		padding: 0 20px;
+		color: #9fa3a7;
+		font-size: 14px;
+		line-height: 22px;
+		margin-bottom: 20px;
+
+		@include media("<tablet") {
+			padding: 0;
+		}
+
+		@include media("<phone") {
+			font-size: 13px;
+			line-height: 18px;
+			margin-bottom: 30px;
+		}
+	}
+
+	.rejected-message {
+		display: block;
+	}
+
+	.redirect-button {
+		display: block;
+		border: 2px solid $orange;
+	}
+
+	.alert-close {
+		display: none;
+	}
+
+	.alert-rejected-close {
+		display: block;
+		color: #222222;
+		background-color: #fff!important;
+		border: 2px solid $light-orange;
+
+		&:hover {
+			color: $orange;
+		}
+	}
+}

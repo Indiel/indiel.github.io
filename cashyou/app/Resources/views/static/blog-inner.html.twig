@@ -1,0 +1,178 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>{{ 'Финансовые статьи и актуальные новости от Cashyou'|trans }}</title>{% endblock %}
+{% block meta %}<meta name="description" content="{{ 'Громкие новости финансового мира и  акутальные известия о системе. Все последние изменения и события в Cashyou и финансовом мире.'|trans }}">{% endblock %}
+
+{% block bodyAttributes %} class="bg-gray"{% endblock %}
+
+{% block mainContent %}
+ <div class="content-holder bg-gray">
+	 <div class="container">
+		 <div class="main">
+			 <div class="heading">
+				<h1><b>{{ 'Блог'|trans }}</b></h1>
+			</div>
+			<div class="deal-wrapper">
+				<div class="deal-row">
+					<div class="client-block deal-block large modified">
+						<div class="image-block">
+							<a href="#">
+								<img src="{{ asset('images/img-deal3.jpg') }}" alt="">
+							</a>
+						</div>
+						<h2><a href="#">Заголовок последней новости</a></h2>
+						<time class="date" datetime="2017-08-06">6 августа 2017</time>
+						<div class="description">
+							<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auactor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+							<p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo.</p>
+							<p>Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+							<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent</p>
+						</div>
+						<div class="social-block">
+							<span class="info">{{ 'Поделиться новостью'|trans }}</span>
+							<ul class="social-networks modified small">
+								<li class="facebook">
+									<a href="#"> <i class="icon-facebook"></i></a>
+								</li>
+								<li class="twitter">
+									<a href="#"> <i class="icon-twitter"></i></a>
+								</li>
+								<li class="google">
+									<a href="#"> <i class="icon-google"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="list-pagination modified">
+						<li class="btn-prev">
+							<a href="#">
+								<i class="icon-btn-prev"></i>
+								{{ 'Предыдущая новость'|trans }}
+							</a>
+						</li>
+						<li class="btn-next">
+							<a href="#">
+								{{ 'Следующая новость'|trans }}
+								<i class="icon-btn-next"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		 </div>
+		 <aside class="sidebar">
+			<div class="inner">
+				<div class="block">
+					<div class="search-field">
+						<input type="search" id="search-field" name="name" placeholder="Поиск" class="input">
+						<button type="submit" class="submit">
+							<i class="icon-search"></i>
+						</button>
+					</div>
+				 </div>
+				 <div class="block">
+					<div class="heading">
+						<h2><b>{{ 'мы в социальных сетях'|trans }}</b></h2>
+					</div>
+					<ul class="social-networks modified">
+						<li class="facebook">
+							<a href="#"> <i class="icon-facebook"></i><span class="info">Facebook</span></a>
+						</li>
+						<li class="instagram">
+							<a href="#"> <i class="icon-instagram"></i><span class="info">Instagram</span></a>
+						</li>
+						<li class="twitter">
+							<a href="#"> <i class="icon-twitter"></i><span class="info">Twitter</span></a>
+						</li>
+					</ul>
+				 </div>
+				 <div class="block">
+					<div class="heading">
+						<h2><b>{{ 'Рекомендуемые новости'|trans }}</b></h2>
+					</div>
+					<ul class="news-list">
+						<li class="item">
+							<a href="#">
+								<div class="image">
+									<img src="{{ asset('images/news-item.png') }}" alt="Picture">
+								</div>
+								<div class="content">
+									<div class="title">тут  Возникнет совершенно другой заголовок</div>
+									<div class="date">4 августа 2017</div>
+								</div>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<div class="image">
+									<img src="{{ asset('images/news-item.png') }}" alt="Picture">
+								</div>
+								<div class="content">
+									<div class="title">тут  Возникнет совершенно другой заголовок</div>
+									<div class="date">4 августа 2017</div>
+								</div>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<div class="image">
+									<img src="{{ asset('images/news-item.png') }}" alt="Picture">
+								</div>
+								<div class="content">
+									<div class="title">тут  Возникнет совершенно другой заголовок</div>
+									<div class="date">4 августа 2017</div>
+								</div>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<div class="image">
+									<img src="{{ asset('images/news-item.png') }}" alt="Picture">
+								</div>
+								<div class="content">
+									<div class="title">тут  Возникнет совершенно другой заголовок</div>
+									<div class="date">4 августа 2017</div>
+								</div>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<div class="image">
+									<img src="{{ asset('images/news-item.png') }}" alt="Picture">
+								</div>
+								<div class="content">
+									<div class="title">тут  Возникнет совершенно другой заголовок</div>
+									<div class="date">4 августа 2017</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="block">
+					<div class="envato-widget">
+						<img src="{{ asset('images/envato.png')}}" alt="Picture">
+					</div>
+				</div>
+			 </div>
+		 </aside>
+	 </div>
+	 <aside class="client-aside bg-transparent">
+			<div class="container">
+				<div class="frame">
+					<div class="chat-holder">
+						<div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>
+							<div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>
+								<form action="#">
+									<label>Оставьте Ваш телефон и мы Вам перезвоним</label>
+									<input type="tel" placeholder="" value="+380">
+									<input class="button" type="submit" value="Перезвоните">
+								</form>
+							</div>
+						</div>
+						<div class="chat-block"><a class="chat-opener" href="#">{{ 'Связь с менеджером'|trans }}</a></div>
+					</div>
+				</div>
+			</div>
+		</aside>
+ </div> 
+{% endblock %}

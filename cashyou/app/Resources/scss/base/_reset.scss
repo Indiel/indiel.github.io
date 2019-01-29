@@ -1,0 +1,158 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+* {max-height: 1000000px;}
+
+body {
+	color: $base-text-color;
+	background: $base-background-color;
+	font: #{$font-size-base}/#{$line-height-base} $base-font-family;
+	min-width: $base-min-width;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	
+	@include media("<tablet") {
+		font-size: 14px;
+		line-height: 24px;
+	}
+}
+
+// adaptive images
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+video, iframe, object, embed {
+	max-width: 100%;
+	display: block;
+}
+
+#__bs_notify__ {
+	display: none;
+}
+
+// google map fix
+.gm-style img {max-width: none}
+
+blockquote, blockquote:before, blockquote:after, q, q:before, q:after {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';}
+
+// lists
+ul {
+	@extend %listreset;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+	padding-left:3em;
+	margin:0;
+}
+
+ul:not([class]) {
+	padding: 0;
+
+	li {
+		position: relative;
+		padding: 0 0 10px 15px;
+
+		&:before {
+			content: '';
+			background: $base-text-color;
+			width: 6px;
+			height: 6px;
+			position: absolute;
+			left: 0;
+			top: 9px;
+			border-radius: 50%;
+		}
+	}
+}
+
+.table-holder {
+	@include media("<desktop") {
+		padding: 7px 0 0;
+		margin: 0 -6px;
+	}
+	
+	@include media("<tablet") {
+		padding-top: 6px;
+		margin: 0 -15px;
+	}
+	
+	.jcf-scrollable-wrapper {
+		height: auto !important;
+	}
+	
+	.jcf-scrollable {
+		overflow-x: auto;
+		height: auto !important;
+	}
+	
+	.jcf-scrollbar-vertical {
+		display: none !important;
+	}
+	
+	.jcf-scrollbar-horizontal {
+		@include media("<tablet") {
+			left: 15px;
+			right: 15px;
+			width: auto !important;
+		}
+	}
+}
+
+table {
+	width: 902px;
+	margin: 0 0 25px;
+	font-size: 14px;
+	
+	@include media("<desktop") {
+		margin-bottom: 20px;
+	}
+	
+	tr {
+		&:nth-child(odd) {
+			td {
+				background: #eee;
+			}
+		}
+	}
+	
+	th {
+		font-weight: 900;
+		padding: 16px 3px 26px;
+		
+		@include media("<desktop") {
+			padding-top: 20px;
+		}
+		
+		@include media("<tablet") {
+			padding: 17px 3px 23px;
+		}
+	}
+	
+	td {
+		padding: 10px 3px;
+		
+		@include media("<tablet") {
+			padding-bottom: 11px;
+		}
+	}
+	
+	.link-download {
+		color: $base-text-color;
+		font-size: 23px;
+		
+		&:hover {
+			color: $base-link-hover-color;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{% form_theme form 'form/profile-fields.html.twig' %}
+
+<div class="form-holder">
+	{{ form_start(form, {'attr': {'class': 'js-ajax-form'}}) }}
+
+		<div class="download-row">
+			<div>{{ 'Фото 1й страницы Вашего паспорта'|trans }}</div>
+			{{ form_widget(form.docPassport1Json) }}
+		</div>
+		<div class="download-row">
+			<div>{{ 'Фото 2й страницы Вашего паспорта'|trans }}</div>
+			{{ form_widget(form.docPassport2Json) }}
+		</div>
+		<div class="download-row">
+			<div>{{ 'Фото страницы прописки'|trans }}</div>
+			{{ form_widget(form.docPassport3Json) }}
+		</div>
+		<div class="download-row">
+			<div>{{ 'Фото Вашего ИНН'|trans }}</div>
+			{{ form_widget(form.docIpnJson) }}
+		</div>
+		<div class="download-row">
+			<div>{{ 'Дополнительные документы'|trans }}</div>
+			{{ form_widget(form.docsJson) }}
+		</div>
+
+		<div class="button-block">
+			<button type="submit" class="button" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Актуализировать'|trans }}</button>
+		</div>
+	{{ form_end(form) }}
+</div>

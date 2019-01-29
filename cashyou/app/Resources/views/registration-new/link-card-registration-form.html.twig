@@ -1,0 +1,8 @@
+
+{{ render(controller('AppBundle:RegistrationNew:linkBankCard')) }}
+
+<script type="text/javascript">
+	var W4PConfig = {{ (W4PConfig ? W4PConfig : null)|json_encode|raw }};	
+</script>
+
+<script id="widget-wfp-script" language="javascript" type="text/javascript" src="https://secure.wayforpay.com/server/pay-widget.js"></script>	

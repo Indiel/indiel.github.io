@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="title">{{ field.vars.label|trans }}</div>
+	<div class="value">
+		<strong>
+			{% if field.vars.choices is defined and field.vars.choices is not empty %}
+				{% for choice in field.vars.choices %}
+					{% if choice.value == field.vars.value %}
+						{{ choice.label|trans({}, 'enum') }}
+					{% endif %}
+				{% endfor %}
+			{% else %}
+				{{ field.vars.value }}
+			{% endif %}
+		</strong>
+	</div>
+</div>

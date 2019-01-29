@@ -1,0 +1,195 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>{{ 'Кредит онлайн на карту по всей Украине. Быстрый займ на карту - Cashyou'|trans }}</title>{% endblock %}
+{% block meta %}<meta name="description" content="{{ 'Получить быстрый кредит на карту онлайн без поручителей и залогов. Займ на карту или деньги до зарплаты. Выплаты в течение 5 минут. Ускоренная форма получения кредита.'|trans }}">{% endblock %}
+
+{% block bodyAttributes %} class="home"{% endblock %}
+
+{% block mainContent %}
+	{# <section class="intro-section">
+		<div class="holder">
+			<div class="col-credit-form">
+				<div class="heading">
+					<h1>{{ '<b>Онлайн </b>Кредит <span>[ Быстрые кредиты наличными на вашу карту ]</span>'|trans|raw }}</h1>
+				</div>
+
+				{{ render(controller('AppBundle:Loan:loanApplication2ProductsForm')) }}
+			</div>
+			<div class="info-col">
+				<div class="info-block" style="background-image: url({{ asset('images/img-intro1.jpg') }});"><a class="btn-get-info" href="{{ path('app.deal-credit') }}"><span>{{ 'Первый кредит под' | trans }}<b>0,1%</b></span><span class="over-box">{{ 'Подробнее' | trans }}</span></a></div>
+				<div class="info-block" style="background-image: url({{ asset('images/article-fast-credit-online.jpg') }});"><a class="btn-get-info" href="{{ path('app.blog-article-fast-credit-online') }}"><span>{{ 'Быстрый кредит <br> <b>онлайн</b>' | trans | raw }}</span><span class="over-box">{{ 'Подробнее' | trans }}</span></a></div>
+			</div>
+		</div>
+	</section> #}
+	<section class="intro-section">
+		<div class="holder">
+			<div class="col-credit-form">
+				{{ render(controller('AppBundle:Loan:loanApplication2ProductsForm')) }}
+				<div class="credit-form-buttons">
+					<button class="boosters" type="submit">{{ 'Бустеры'|trans }}</button>
+					<div class="check-promo">
+						<label for="promo">
+							{{ 'Введите промокод   '|trans }}
+							<span class="jcf-checkbox jcf-unchecked"><input type="checkbox" id="promo" name="_remember_me"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="info-col">
+				<div class="heading">
+					<h1>{{ '<b>Первый<br> онлайн-займ<br> под 0% до 30 дней!</b>'|trans|raw }}</h1>
+					<a class="button" href="{{ path('app.getting') }}">{{ 'Узнать'|trans }}</a>
+				</div>
+				{# <div class="info-block" style="background-image: url({{ asset('images/img-intro1.jpg') }});"><a class="btn-get-info" href="{{ path('app.deal-credit') }}"><span>{{ 'Первый кредит под' | trans }}<b>0,1%</b></span><span class="over-box">{{ 'Подробнее' | trans }}</span></a></div> #}
+				{# <div class="info-block" style="background-image: url({{ asset('images/article-fast-credit-online.jpg') }});"><a class="btn-get-info" href="{{ path('app.blog-article-fast-credit-online') }}"><span>{{ 'Быстрый кредит <br> <b>онлайн</b>' | trans | raw }}</span><span class="over-box">{{ 'Подробнее' | trans }}</span></a></div> #}
+			</div>
+		</div>
+	</section>
+	<section class="content-section documents-section">
+		<div class="container">
+			<div class="heading">
+				<h2 class="h1">{% trans %}Что нужно для получения кредита{% endtrans %}</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+			</div>
+			<div class="documents-holder">
+				<ul class="documents-list">
+					<li>
+						<div class="image-block"><img src="{{ asset('images/ico-passport-new.png') }}" alt=""></div><span>{{ 'Паспортные данные и ИНН'|trans }}</span>
+					</li>
+					<li>
+						<div class="image-block"><img src="{{ asset('images/ico-bank-card-new.png') }}" alt=""></div><span>{{ 'Банковская карта'|trans }}</span>
+					</li>
+					<li>
+						<div class="image-block"><img src="{{ asset('images/ico-email-new.png') }}" alt=""></div><span>{{ 'Email<br>телефон'|trans|raw }}</span>
+					</li>
+					<li>
+						<div class="image-block"><img src="{{ asset('images/ico-calc.png') }}" alt=""></div><span>{{ 'Оценка кредитоспособности'|trans }}</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="content-section slider-section">
+		<div class="slide slide1">
+			<div class="container">
+				<div class="text-block">
+					<p>{{ 'Инвестиции'|trans }}</p>
+					<h3>{{ 'Самое выгодное <br>и надежное <br>капиталовложение <br>в 2019 году'|trans|raw }}</h3>
+					<p><b>{{ 'Рост рынка микрокредитования <br>более 120% в год'|trans|raw }}</b></p>
+					<button class="button" type="submit">Получить бонусы</button>
+				</div>
+				<div class="img-tel-block">
+					<img src="{{ asset('images/img-tel-block.png') }}" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="slide slide2">
+			<div class="container">
+				<div class="text-block">
+					<p>{{ 'Бонусная система'|trans }}</p>
+					<h3>{{ 'Получай бонусы <br>и выгодные <br>условия кредитования'|trans|raw }}</h3>
+					<p><b>{{ 'Только у нас бонусы можно <br>вывести на карту или в наличные.'|trans|raw }}</b></p>
+					<button class="button" type="submit">Получить бонусы</button>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<section class="content-section about-section">
+		<div class="container">
+			<div class="about-image">
+				<div class="about-block1"></div>
+				<div class="about-block2">
+					<img src="{{ asset('images/ico-team.png') }}" alt="">
+				</div>
+			</div>
+			<div class="about-text">
+				<div class="heading">
+					<h2 class="h1">{{ 'Несколько слов о <b>нас</b>'|trans|raw }}</h2>
+				</div>
+				<div class="text-block">
+					{{ 'about.fewwords.desc'|trans|raw }}
+				</div>
+				<ul class="about-list">
+					<li class="about-item">Lorem ipsum dolor sit amet, consectetur</li>
+					<li class="about-item">Lorem ipsum dolor sit amet, consectetur</li>
+					<li class="about-item">Lorem ipsum dolor sit amet, consectetur</li>
+					<li class="about-item">Lorem ipsum dolor sit amet, consectetur</li>
+				</ul>
+				{# <div class="button-block"><a class="button" href="{{ path('app.about') }}">{{ 'Узнать больше'|trans }}</a></div> #}
+			</div>
+		</div>
+	</section>
+	<section class="content-section form-section">
+		<div class="container">
+			<h2>{{ 'Будь на связи с нами'|trans }}</h2>
+			<form class="form" name="form" method="post" action="/contact-form-submission" novalidate="novalidate">
+				<div class="form-row">
+					<div class="label-block">
+						<label for="form_name" class="required">
+							Ваше имя
+						</label>
+					</div>
+					<input type="text" id="form_name" name="form[name]" required="required">
+				</div>
+				<div class="form-row">
+					<div class="label-block">
+						<label for="form_phone" class="required">
+							Email
+						</label>
+					</div>
+					<input type="email" id="form_email" name="form[email]" required="required" placeholder="" data-mask="+38 (099) 999-99-99" autocomplete="off">
+				</div>
+				<div class="form-row">
+					<div class="label-block">
+						<label for="form_phone" class="required">
+							Телефон
+						</label>
+					</div>
+					<input type="tel" id="form_phone" name="form[phone]" required="required" placeholder="" data-mask="+38 (099) 999-99-99" autocomplete="off" maxlength="19">
+				</div>
+				<div class="button-block">
+					<p>
+						<span class="req">*</span>
+						Обязательное поле
+					</p>
+					<button class="button" type="submit">Связаться со мной</button>
+				</div>
+			</form>
+			<div class="form-tel">
+				<p>Или позвони нам и получи скидку</p>
+				<a href="tel:+38054453452453">+38(054)453452453</a>
+			</div>
+		</div>
+	</section>
+	<section class="content-section credit-info">
+		<div class="container">
+			<div class="heading">
+				<h2 class="h1">{{ 'Где можно взять <b>деньги в кредит?</b>'|trans|raw }}</h2>
+			</div>
+			<div class="jcf-scrollable">
+				<div class="text-block">
+					{{ 'where_to_get_money.desc'|trans|nl2br|raw }}
+				</div>
+			</div>
+			<ul class="tags">
+				<li><a href="{{ path('app.credit-365') }}">{{ 'кредит-365'|trans }}</a></li>
+				<li><a href="{{ path('app.credit-bad-history') }}">{{ 'кредит с плохой историей'|trans }}</a></li>
+				<li><a href="{{ path('app.interest-rate') }}">{{ 'процентная ставка'|trans }}</a></li>
+				<li><a href="{{ path('app.loan-18') }}">{{ 'кредит с 18 лет'|trans }}</a></li>
+				<li><a href="{{ path('app.loan-two-documents') }}">{{ 'кредит по двум документам'|trans }}</a></li>
+				<li><a href="{{ path('app.credit-on-card') }}">{{ 'кредит на карту срочно'|trans }}</a></li>
+				<li><a href="{{ path('app.credit-unemployed') }}">{{ 'кредит безработным'|trans }}</a></li>
+				<li><a href="{{ path('app.credit-money') }}">{{ 'деньги в кредит'|trans }}</a></li>
+				<li><a href="{{ path('app.money-in-debt') }}">{{ 'деньги в долг на карту'|trans }}</a></li>
+				<li><a href="{{ path('app.credit-without-income-statement') }}">{{ 'взять кредит без справки о доходах'|trans }}</a></li>
+				<li><a href="{{ path('app.urgently-need-money') }}">{{ 'срочно нужны деньги'|trans }}</a></li>
+				<li><a href="{{ path('app.loan-express') }}">{{ 'экспресс займ'|trans }}</a></li>
+				<li><a href="{{ path('app.money-express') }}">{{ 'экспресс деньги'|trans }}</a></li>
+				<li><a href="{{ path('app.urgent-loan') }}">{{ 'срочный займ на карту?'|trans }}</a></li>
+				<li><a href="{{ path('app.credit-calculation') }}">{{ 'расчет кредита'|trans }}</a></li>
+				<li><a href="{{ path('app.credit-low-rate') }}">{{ 'взять кредит с низкой процентной ставкой'|trans }}</a></li>
+			</ul>
+		</div>
+	</section>
+{% endblock %}

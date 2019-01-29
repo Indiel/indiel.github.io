@@ -1,0 +1,155 @@
+{% extends 'base.html.twig' %}
+
+{% block bodyAttributes %} class="bg-gray"{% endblock %}
+
+{% block mainContent %}
+	<div class="container">
+		<div class="redemption">
+			<div class="holder">
+				<div class="column">
+					<div class="client-block client-content redemption-block">
+						<div class="heading-area">
+							<h2>{{ '<b>Погашение </b> кредита'|trans|raw }}</h2>
+						</div>
+						
+						{{ form_start(moneyForm) }}
+							<div class="data-holder">
+								<div class="row row-price"><span class="name">{{ 'Сумма к погашению'|trans }}</span>
+									<div class="data-block">
+										<b class="thisCreditAmount">{{ loan.totalToRepay|format_float }}</b> {{ 'грн'|trans }} 
+										<div class="popup-block"><a class="popup-opener" href="#"> <i class="icon-question"></i></a>
+											<div class="popup">
+												<p>{{'sum грн - сумма кредита +&nbsp;percent грн проценты'|trans({'sum': loan.amount, 'percent': (loan.totalToRepay - loan.amount)|format_float})|raw }}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<strong class="head-title">{{ 'Выберите сумму для погашения'|trans }}</strong>
+							<div class="intro-section">
+								<div class="line line-small">
+									<div class="line-holder">
+										<div class="line-slider"><span class="minus-slider minus-slider1"></span>
+											<div id="slider" data-input="#repayMoney_amount" data-step="1" data-default="{{ loan.totalToRepay }}" data-min="1" data-max="{{ slider_max(1, loan.totalToRepay) }}" data-values="{{ slider_values(1, loan.totalToRepay)|json_encode }}" class="slider amount"></div><span class="plus-slider plus-slider1"></span>
+										</div>
+									</div>
+								</div>
+								<div class="value-holder">
+									<span class="min-val"><b data-slide="minVal">1</b> {{ 'грн'|trans }}</span>
+									<span class="max-val"><b data-slide="maxVal">{{ loan.totalToRepay|format_float }}</b> {{ 'грн'|trans }}</span>
+								</div>
+							</div>
+							<div class="button-block">
+								<button class="button double-submit-protect" type="submit">{{ 'Оплатить'|trans }}</button>
+							</div>
+							{{ form_widget(moneyForm.amount) }}
+						{{ form_end(moneyForm) }}
+					</div>
+					{#<div class="client-block client-content redemption-block">#}
+						{#<div class="heading-area">#}
+							{#<h2>{{ '<b>Карта</b>'|trans|raw }}</h2>#}
+						{#</div>#}
+						{#<div class="heading-area">#}
+							{#<p>{{ 'Если Вы хотите оплатить другой картой, сначала выберите <b>Редактировать</b>'|trans|raw }}</p>#}
+						{#</div>#}
+                        {#{% include 'profile/edit/card.html.twig' with {'form': form.card, 'hasUnpaidLoans': hasUnpaidLoans} %}#}
+					{#</div>#}
+				</div>
+				<div class="column">
+					<div class="client-block client-content redemption-block">
+						<div class="heading-area">
+							<h2>{{ '<b>Погашение  </b>кредита бонусами'|trans|raw }}</h2>
+						</div>
+						
+						{% if repayBonusesMax %}
+							<div class="bonuses-status has-bonuses is-active">
+								<div class="total-bonuses">
+									<span class="tablet-hidden">{{ 'Текущее количество бонусов'|trans }}</span> <b>{{ customerBonuses.bonusesBalance }}</b> <span class="mobile-visible">{{  'Бонус|Бонуса|Бонусов'|transchoice(customerBonuses.bonusesBalance) }}</span>
+								</div>
+								<div class="button-block"><a class="button lightbox-opener" href="#payment">{{ 'Погасить кредит'|trans }}</a></div>
+							</div>
+						{% else %}
+							<div class="bonuses-status no-bonuses is-active">
+								<div class="total-bonuses">{{ 'На данный момент у Вас нет бонусов'|trans }}</div>
+								<div class="button-block"><button class="button" type="button" disabled>{{ 'Погасить кредит'|trans }}</button></div>
+							</div>                                          
+						{% endif %}
+					</div>
+				</div>
+			</div>
+{#
+			<aside class="client-aside">
+				<div class="container">
+					<div class="frame"><a class="button btn-gift" href="#"><i class="icon-gift"></i><span>{{ 'Тебя ждут <b>9000 </b>бонусов'|trans|raw }}</span></a>
+						<div class="chat-holder">
+							<div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>
+								<div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>
+									<form action="#">
+										<label>Оставьте Ваш телефон и мы Вам перезвоним</label>
+										<input type="tel" placeholder="" value="+380">
+										<input class="button" type="submit" value="Перезвоните">
+									</form>
+								</div>
+							</div>
+							<div class="chat-block"><a class="chat-opener" href="#">{{ 'Связь с менеджером'|trans }}</a></div>
+						</div>
+					</div>
+				</div>
+			</aside>
+#}
+		</div>
+	</div>
+	<div class="popup-holder">
+		<div class="lightbox lightbox-payment" id="payment">
+			<div class="heading-area">
+				<h2>{{ '<b>Оплата </b>бонусами'|trans|raw }}</h2>
+			</div>
+			<div class="description">
+				{{ 'Текущего количествр бонусов хватит для погашения <b>%amount% грн.</b> Вы можете погасить часть этой суммы.'|trans({'%amount%': repayBonusesMax})|raw }}
+			</div>
+			{{ form_start(bonusesForm) }}
+			<div class="intro-section">
+				<div class="line line-small">
+					<div class="line-holder">
+						<div class="line-slider"><span class="minus-slider minus-slider1"></span>
+							<div id="slider" data-input="#repayBonuses_bonuses" data-step="1" data-default="1" data-min="1" data-max="{{ repayBonusesMax }}" class="slider bonuses"></div><span class="plus-slider plus-slider1"></span>
+							{{ form_widget(bonusesForm.bonuses) }}
+						</div>
+					</div>
+				</div>
+				<div class="value-holder">
+					<span class="min-val"><b data-slide="minVal">1</b> {{ 'грн'|trans }}</span>
+					<span class="max-val"><b data-slide="maxVal">{{ repayBonusesMax }}</b> {{ 'грн'|trans }}</span>
+				</div>
+			</div>
+			<div class="button-block">
+				<a href="" class="button" data-fancybox-close>{{ 'Обратно'|trans }}</a>
+				<button type="submit" class="button double-submit-protect">{{ 'Погасить'|trans }}</button>
+			</div>
+			{{ form_end(bonusesForm) }}
+		</div>
+{#
+		<div class="lightbox lightbox-credit" id="credit">
+			<div class="heading">{{ 'Поздравляем! Вы успешно погасили кредит&nbsp;!'|trans|raw }}</div>
+			<div class="info">{{ 'За погашение кредита до окончания его срока Вы получаете <b>bonuses</b> бонусов'|trans({'bonuses': '5000'})|raw }}</div>
+			<img src="{{ asset('images/man-like.png')}}" alt="Man" class="image">
+			<div class="button-block">
+				<a href="#" class="button" data-fancybox-close>{{ 'Продолжить'|trans }}</a>
+			</div>
+		</div>
+#}
+	</div>
+{% endblock %}
+
+
+{% block javascripts %}
+	<script type="text/javascript">
+		var creditConfig = {
+			percent: {{ TKLenderApi.defaultProduct.InterestRate }}
+		}
+	</script>
+
+	{% set lang = (app.request.getLocale() == 'ru') ? 'ru-RU' : 'ua-UA' %}
+
+	{{ parent() }}
+{% endblock %}

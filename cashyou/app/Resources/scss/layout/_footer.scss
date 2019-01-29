@@ -1,0 +1,307 @@
+#footer {
+	background: $dark-gray;
+	color: #cccccc;
+	font-size: 14px;
+	line-height: 1.21;
+	padding: 61px 0 59px;
+
+	line-height: 30px;
+	
+	@include media("<desktop") {
+		padding-top: 40px;
+	}
+	
+	@include media("<tablet") {
+		padding: 29px 0 2px;
+		font-size: 12px;
+		line-height: 14px;
+	}
+	
+	.container {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+   		align-items: stretch;
+		
+		@include media("<desktop") {
+			display: block;
+		}
+		
+		&:after {
+			display: none;
+		}
+	}
+	
+	.logo {
+		float: none;
+		width: 165px;
+		margin: 0;
+		height: auto;
+
+		margin-bottom: 30px;
+		
+		@include media("<desktop") {
+			margin: 0 0 31px 1px;
+		}
+		
+		@include media("<tablet") {
+			width: 130px;
+			margin: 0 0 32px;
+		}
+	}
+
+	.footer-title {
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $white;
+	}
+}
+
+.footer-icons-payment {
+	text-align: center;
+	padding: 10px;
+	
+	img {
+		height: 25px;
+		margin: 0 5px
+	}
+	@include media("<phone") {
+
+		padding: 10px 5px;
+
+		img {
+			margin: 0;
+		}
+	}
+}
+
+.footer-holder {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	
+	@include media("<desktop") {
+		justify-content: space-between;
+	}
+	
+	@include media("<tablet") {
+		margin: 0;
+	}
+	
+	.col {
+		display: flex;
+		align-items: center;
+		
+		@include media("<tablet") {
+			justify-content: space-between;
+			width: 100%;
+			padding: 0 0 26px;
+		}
+	}
+	
+	.button {
+		font-size: 14px;
+		font-weight: 700;
+		border-width: 1px;
+		min-width: 165px;
+		padding: 9px 12px 8px;
+		margin: -1px 58px 0 27px;
+		
+		@include media("<desktop") {
+			margin: -1px 17px 0;
+			min-width: 158px;
+		}
+		
+		@include media("<tablet") {
+			font-size: 12px;
+			min-width: 145px;
+			padding: 9px 12px 10px;
+			margin: -2px 0 0;
+		}
+	}
+	
+	.phone {
+		font-size: 18px;
+		font-weight: 900;
+		margin: -2px 0 0 34px;
+		
+		@include media("<desktop") {
+			margin: 0 3px 0 43px;
+		}
+		
+		@include media("<tablet") {
+			font-size: 14px;
+			margin: 4px 0 0;
+		}
+		
+		a {
+			color: inherit;
+			
+			&:hover {
+				color: $base-link-color;
+			}
+		}
+	}
+}
+
+.conditions {
+	text-transform: uppercase;
+	margin-right: 30px;
+		
+	a {
+		color: $white;
+		
+		&:hover {
+			color: $base-link-color;
+		}
+	}
+}
+
+.social-networks {
+	// text-align: center;
+	text-align: left;
+	
+	@include media("<desktop") {
+		margin-top: 4px;
+	}
+	
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 9px;
+		
+		&.twitter {
+			a {
+				font-size: 18px; 
+			}
+		}
+		
+		@include media("<tablet") {
+			margin: 0 17px 0 0;
+			
+			&.twitter {
+				a {
+					font-size: 16px; 
+				}
+			}
+		}
+	}
+	
+	a {
+		color: $white;
+		display: block;
+		line-height: 1;
+		font-size: 23px;
+		
+		&:hover {
+			color: $base-link-color;
+		}
+		
+		@include media("<tablet") {
+			font-size: 20px;
+		}
+	}
+}
+
+.footer-left {
+	// display: flex;
+	// flex-direction: column;
+
+	.footer-social {
+		margin-top: auto;
+	}
+}
+
+.footer-center {
+	display: flex;
+
+	a {
+		color: #cccccc;
+	}
+
+	.footer-company {
+		margin-right: 30px;
+	}
+
+}
+
+.footer-right {
+	// display: flex;
+	// flex-direction: column;
+
+	text-align: right;
+
+	.phone {
+		font-size: 28px;
+		font-weight: 900;
+		margin: 0;
+
+		margin-bottom: 30px;
+		
+		a {
+			color: $white;
+			
+			&:hover {
+				color: $base-link-color;
+			}
+		}
+	}
+
+	.contact {
+		margin: 20px 0;
+	}
+}
+
+.btn-top {
+	position: absolute;
+	z-index: 90;
+	top: -81px;
+	right: 15px;
+	padding: 21px 7px 15px;
+	background: $orange;
+	color: $white;
+	font-size: 14px;
+	text-align: center;
+	width: 68px;
+	box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
+	transition: color 0.3s, background 0.3s;
+	display: none;
+	
+	.home & {
+		display: block;
+	}
+	
+	&:before {
+		content: '';
+		border: solid;
+		border-width: 0 34px 14px;
+		border-color: transparent transparent $orange;
+		width: 0;
+		height: 0;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: -14px;
+		transition: border 0.3s;
+	}
+	
+	&:hover {
+		color: $btn-color;
+		background: darken($btn-background, 7%);
+		
+		&:before {
+			border-color: transparent transparent darken($btn-background, 7%);
+		}
+	}
+	
+	@include media("<desktop") {
+		right: 26px;
+		top: -60px;
+	}
+	
+	@include media("<tablet") {
+		top: -48px;
+		right: 15px;
+		padding: 21px 7px 18px;
+	}
+}

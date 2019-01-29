@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>{{ 'Как получить кредит. Как взять кредит в Cashyou'|trans }}</title>{% endblock %}
+{% block meta %}<meta name="description" content="{{ 'Получить кредит онлайн на карту с минимальным набором документов. Для получения денег вам потребуются только ваш телефон, паспрот и ИНН. Выдача в течение 5 минут'|trans }}">{% endblock %}
+
+{% block bodyAttributes %} class="totop-page "{% endblock %}
+
+{% block mainContent %}
+	<div class="container getting">
+		<section class="getting-section">
+			<div class="heading">
+				<h1>{{ '<b>ЧТо </b>нужно что бы получить кредит ?'|trans|raw }}</h1>
+			</div>
+			<div class="holder">
+				<div class="item">
+					<div class="left">
+						<ul class="documents-list modified">
+							<li>
+								<div class="image-block"><img src="{{ asset('images/ico-passport.png') }}" alt=""></div><span>{{ 'Паспорт'|trans }}</span>
+							</li>
+							<li>
+								<div class="image-block"><img src="{{ asset('images/ico-inn.png') }}" alt=""></div><span>{{ 'ИНН'|trans }}</span>
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<h2 class="subtitle"><b>{{ 'getting.requirement1.title'|trans }}</b></h2>
+						<div class="holder-text">{{ 'getting.requirement1.desc'|trans }}</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="left">
+						<ul class="documents-list modified">
+							<li>
+								<div class="image-block"><img src="{{ asset('images/ico-phone.png') }}" alt=""></div><span>{{ 'Мобильный телефон'|trans }}</span>
+							</li>
+							<li>
+								<div class="image-block"><img src="{{ asset('images/ico-email.png') }}" alt=""></div><span>{{ 'Email'|trans }}</span>
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<h2 class="subtitle"><b>{{ 'getting.requirement2.title'|trans }}</b></h2>
+						<div class="holder-text">{{ 'getting.requirement2.desc'|trans }}</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="left">
+						<ul class="documents-list modified">
+							<li>
+								<div class="image-block"><img src="{{ asset('images/ico-bank-card.png') }}" alt=""></div><span>{{ 'Карта банка'|trans }}</span>
+							</li>
+						</ul>
+					</div>
+					<div class="right">
+						<h2 class="subtitle"><b>{{ 'getting.requirement3.title'|trans }}</b></h2>
+						<div class="holder-text">{{ 'getting.requirement3.desc'|trans }}</div>
+					</div>
+				</div>
+			</div>
+			<div class="note-block"><span>{{ 'Все операции доступны <mark>Строго с 18 лет !</mark>'|trans|raw }}</span>
+			</div>
+		</section>
+		<section class="getting-section">
+			<div class="heading">
+				<h1>{{ '<b>КАК </b>Получить Кредит'|trans|raw }}&nbsp;?</h1>
+			</div>
+			<div class="holder modified">
+				<div class="item">
+					<div class="left">
+						<div class="steps-list modified">
+							<div class="icon-block"><img src="{{ asset('images/ico-choice-orange.png') }}" alt=""></div>
+						</div>
+					</div>
+					<div class="right">
+						<h2 class="subtitle">{{ 'Выберите<b> сумму и срок</b>'|trans|raw }}</h2>
+						<div class="holder-text">{{ 'getting.howto1.desc'|trans }}</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="left">
+						<div class="steps-list modified">
+							<div class="icon-block"><img src="{{ asset('images/ico-questionnaire-orange.png') }}" alt=""></div>
+						</div>
+					</div>
+					<div class="right">
+						<h2 class="subtitle">{{ 'заполните<b> Анкету</b>'|trans|raw }}</h2>
+						<div class="holder-text">{{ 'getting.howto2.desc'|trans }}</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="left">
+						<div class="steps-list modified">
+							<div class="icon-block"><img src="{{ asset('images/ico-manager-orange.png') }}" alt=""></div>
+						</div>
+					</div>
+					<div class="right">
+						<h2 class="subtitle">{{ 'Наш <b>Менеджер</b> с <b>вами</b> свяжется'|trans|raw }}</h2>
+						<div class="holder-text">{{ 'getting.howto3.desc'|trans }}</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="left">
+						<div class="steps-list modified">
+							<div class="icon-block"><img src="{{ asset('images/ico-card-orange.png') }}" alt=""></div>
+						</div>
+					</div>
+					<div class="right">
+						<h2 class="subtitle">{{ 'В течении нескольких минут <b>Деньги на карте без комисии</b>'|trans|raw }}</h2>
+						<div class="holder-text">{{ 'getting.howto4.desc'|trans }}</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock %}

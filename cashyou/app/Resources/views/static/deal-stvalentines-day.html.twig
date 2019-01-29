@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>{{ 'Кредит по акции. Быстрый кердит под 0%. Кредиты по выгодным условиям'|trans }}</title>{% endblock %}
+{% block meta %}<meta name="description" content="{{ 'Лучшие предложения на финансовом рынке. Первый кредит под 0.1 % Расширяемая бонусная линецка и скидки на последующий кредиты. Пользуйся кредитами по самым выгодным предложеням.'|trans }}">{% endblock %}
+
+{% block bodyAttributes %} class="deal-page"{% endblock %}
+
+{% block mainContent %}
+	<div class="content-holder global-wrap">
+		<div class="container">
+			<div class="main ">
+				<div class="heading">
+					<h1><b>{{ 'Акция'|trans }}</b></h1>
+				</div>
+				<div class="general-section">
+					<div class="client-block deal-block">
+						<div class="image-block">
+							<a href="#">
+								<img src="{{ asset('images/deal-4-750x400.jpg') }}" alt="image description">
+							</a>
+						</div>
+						<h2>{{ 'app.deal_stvalentines_day.title'|trans|raw }}</h2>
+						<time class="date" datetime="2018-14-02">14 февраля 2018</time>
+						<p>{{ 'app.deal_stvalentines_day.content' | trans | raw | nl2br}}</p>
+					</div>
+					<div class="wrap-btn">
+						<ul class="list-deals">
+							<li>
+								<a href="{{ path('app.deal-credit') }}" class="button btn-prev"><span>{{ 'Предыдущая акция'|trans }}</span></a>
+							</li>
+							<li>
+								<a href="{{ path('app.deal-credit') }}" class="button btn-next"><span>{{ 'Следующая акция'|trans }}</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<aside class="sidebar sidebar-holder">
+				<div class="inner">
+					{% include 'static/deal-sidebar.html.twig' %}
+				</div>
+			</aside>
+		</div>
+		{#<aside class="client-aside">
+			<div class="container">
+				<div class="frame">
+					<div class="chat-holder">
+					<div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>
+						<div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>
+							<form action="#">
+								<label>Оставьте Ваш телефон и мы Вам перезвоним</label>
+								<input type="tel" placeholder="" value="+380">
+								<input class="button" type="submit" value="Перезвоните">
+							</form>
+						</div>
+					</div>
+					<div class="chat-block"><a class="chat-opener" href="#">{{ 'Связь с менеджером'|trans }}</a></div>
+				</div>
+				</div>
+			</div>
+		</aside>#}
+	</div>
+{% endblock %}

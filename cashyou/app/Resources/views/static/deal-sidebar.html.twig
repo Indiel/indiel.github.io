@@ -1,0 +1,29 @@
+<div class="block">
+    <div class="heading">
+        <h2>{{ '<b>Наши</b> акции'|trans|raw }}</h2>
+    </div>
+</div>
+<ul class="news-list">
+    <li class="item active">
+        <a href="{{ path('app.deal-stvalentines-day') }}">
+            {#<div class="image">
+                <img src="{{ asset('images/news-item-2.png') }}" alt="Picture">
+            </div>#}
+            <div class="content">
+                <div class="title">{{'app.deal_stvalentines_day.title'|trans|raw }}</div>
+                <div class="date">14 февраля 2018</div>
+            </div>
+        </a>
+    </li>
+    <li class="item">
+        <a href="{{ path('app.deal-credit') }}">
+            {#<div class="image">
+                <img src="{{ asset('images/news-item-2.png') }}" alt="Picture">
+            </div>#}
+            <div class="content">
+                <div class="title">{{'Кредит под 0,1%'|trans }}</div>
+                <div class="date">24 ноября 2017</div>
+            </div>
+        </a>
+    </li>
+</ul>

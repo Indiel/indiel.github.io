@@ -1,0 +1,24 @@
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+	{{ form_row(form.name, {
+		
+	}) }}
+	{{ form_row(form.phone) }}
+	{{ form_row(form.message) }}
+
+	<div class="button-block">
+		<button class="button" type="submit">{{ 'отправить'|trans }}</button>
+	</div>
+
+	{% if successMessage %}
+		<div class="flash flash-success">
+			{{ successMessage }}
+		</div>
+	{% endif %}
+
+	{% if errorMessage %}
+		<div class="flash flash-error">
+			{{ errorMessage }}
+		</div>
+	{% endif %}
+{{ form_end(form) }}

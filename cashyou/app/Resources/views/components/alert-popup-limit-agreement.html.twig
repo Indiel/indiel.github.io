@@ -1,0 +1,27 @@
+<a class="click-on-dom-ready lightbox-opener" href="#alert"></a>
+<div class="lightbox lightbox-alert-limit-agreement" id="alert"><a class="lightbox-close" href="#" data-fancybox-close><i class="icon-close"></i></a>
+    <div class="lightbox-block">
+        <div class="left">
+            <h6>{{ 'С максимальной вероятностью Вам будет одобрена сумма:'|trans }}</h6>
+            <div class="center">
+                <b>{{ limitAmount }} грн</b>
+                <a href="{{ path('app.loan.setAmount') }}">
+                    <button type="submit" class="button btn-get"> {{ 'Получить деньги'|trans }}</button>
+                </a>
+
+            </div>
+
+        </div>
+        <div class="gif-img col"><img src="{{ asset('images/man-money.png') }}" alt=""></div>
+        <div class="right">
+            <h6>{{ 'Почему сумма в'|trans }} {{ rejectedAmount }} {{ 'грн не может быть одобрена'|trans }}</h6>
+            <div class="center">
+                <ul>
+                    <li><i class="fas fa-frown"></i>{{ 'Много непогашенных кредитов'|trans }}</li>
+                    <li><i class="fas fa-credit-card"></i>{{ 'Мало кредитов в нашем сервисе'|trans }}</li>
+                    <li><i class="fas fa-star"></i>{{ 'Низкий кредитный рейтинг'|trans }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+{% form_theme form 'form/profile-fields.html.twig' %}
+
+<div class="form-holder">
+	{{ form_start(form, {'attr': {'class': 'data-info js-ajax-form'}}) }}
+	<div class="columns">
+		<div class="col">
+			{{ form_row(form.address.state, {
+				'attr': {
+					'disabled': 'disabled',
+					'data-rule-onlyLetter': 1,
+                    'data-rule-notSpaces': 1,
+				}|merge(profile.address is empty or profile.address.state is empty ? {'class': 'has-error'} : {})
+			}) }}
+			{{ form_row(form.address.city, {
+				'attr': {
+					'disabled': 'disabled',
+					'data-rule-onlyLetter': 1,
+                    'data-rule-notSpaces': 1,
+				}|merge(profile.address is empty or profile.address.city is empty ? {'class': 'has-error'} : {})
+			}) }}
+			{{ form_row(form.address.house, {
+				'attr': {
+					'disabled': 'disabled',
+				}|merge(profile.address is empty or profile.address.house is empty ? {'class': 'has-error'} : {})
+			}) }}
+			{{ form_row(form.address.apartment, {'disabled': 'disabled'}) }}
+		</div>
+		<div class="col">
+			{{ form_row(form.address.typeOfSettlement, {'disabled': 'disabled', attr: {}|merge(profile.address is empty or profile.address.typeOfSettlement is empty ? {'class': 'has-error'} : {})}) }}
+			{{ form_row(form.address.street, {
+				'attr': {
+					'disabled': 'disabled',
+				}|merge(profile.address is empty or profile.address.street is empty ? {'class': 'has-error'} : {})
+			}) }}
+			{{ form_row(form.address.building, {'disabled': 'disabled'}) }}
+			{{ form_row(form.address.zipCode, {
+				'attr': {
+					'disabled': 'disabled',
+					'data-rule-digits': 1,
+				}|merge(profile.address is empty or profile.address.zipCode is empty ? {'class': 'has-error'} : {})
+			}) }}
+		</div>
+	</div>
+
+	{{ form_row(form.address.residentialMatchesRegistration, {'disabled': 'disabled', attr: {}|merge(profile.address is empty or profile.address.residentialMatchesRegistration is empty ? {'class': 'has-error'} : {})}) }}
+	<div class="column-hidden">
+	{{ form_row(form.address.realEstate, {'disabled': 'disabled', attr: {}|merge(profile.address is empty or profile.address.realEstate is empty ? {'class': 'has-error'} : {})}) }}
+	</div>
+
+	<div class="registration-address" data-show-if-field="#profile_address_address_residentialMatchesRegistration" data-show-if-value="2">
+		<div class="heading-area">
+			<h2>{{ '<b>Адрес</b> регистрации'|trans|raw }}</h2>
+		</div>
+	
+		<div class="columns">
+			<div class="col">
+				{{ form_row(form.secondAddress.state, {
+					'attr': {
+						'disabled': 'disabled',
+						'data-rule-onlyLetter': 1,
+                        'data-rule-notSpaces': 1,
+					}
+				}) }}
+				{{ form_row(form.secondAddress.city, {
+					'attr': {
+						'disabled': 'disabled',
+						'data-rule-onlyLetter': 1,
+                        'data-rule-notSpaces': 1,
+					}
+				}) }}
+				{{ form_row(form.secondAddress.house, {
+					'attr': {
+						'disabled': 'disabled',
+					}
+				}) }}
+				{{ form_row(form.secondAddress.apartment, {'disabled': 'disabled'}) }}
+			</div>
+			<div class="col">
+				{{ form_row(form.secondAddress.typeOfSettlement, {'disabled': 'disabled'}) }}
+				{{ form_row(form.secondAddress.street, {
+					'attr': {
+						'disabled': 'disabled',
+					}
+				}) }}
+				{{ form_row(form.secondAddress.building, {'disabled': 'disabled'}) }}
+				{{ form_row(form.secondAddress.zipCode, {
+					'attr': {
+						'disabled': 'disabled',
+						'data-rule-digits': 1,
+                        'data-rule-notSpaces': 1,
+					}
+				}) }}
+			</div>
+		</div>
+		<div class="column-hidden">
+		{{ form_row(form.secondAddress.realEstate, {'disabled': 'disabled'}) }}
+		</div>
+	</div>
+	
+	{% if not hasUnpaidLoans %}
+	<div class="button-block">
+		<a href="#" class="button btn-edit open-editing">{{ 'Редактировать'|trans }}</a>
+		<a href="#" class="button back-btn">{{ 'Назад'|trans }}</a>
+		<button type="submit" class="button submit-profile" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Сохранить'|trans }}</button>
+	</div>
+	{% endif %}
+	
+	{{ form_end(form) }}
+</div>

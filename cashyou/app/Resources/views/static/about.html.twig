@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>{{ 'Компания Cashyou. Что такое Cashyou. Сервис Cashyou'|trans }}</title>{% endblock %}
+{% block meta %}<meta name="description" content="{{ 'Что такое сервис Cashyou. Какая у сервиса филососфия и история. Вся необходимая финансовая информация для обращения или погашения кредита.'|trans }}">{% endblock %}
+
+{% block bodyAttributes %} class="totop-page"{% endblock %}
+
+{% block mainContent %}
+	<div class="container aboutus-page">
+		<section class="aboutus-section">
+			<div class="heading">
+				<h1>{{' <b>Что </b>такое Cashyou ?'|trans|raw }}</h1>
+			</div>
+			{{ 'about.what_is_cashyou.desc'|trans|raw }}
+		</section>
+{#
+		<section class="aboutus-section">
+			<div class="heading">
+				<h1>{{' <b>Команда  </b>Cashyou'|trans|raw }}</h1>
+			</div>
+			<p class="float-block"> <img src="{{ asset('images/command-cashyou.png') }}" alt="">{{ 'about.team.desc'|trans|raw }}</p>
+		</section>
+#}
+		<section class="aboutus-section">
+			<div class="heading">
+				<h1>{{' <b>Необходимая </b>Юридическая информация'|trans|raw }}</h1>
+			</div>
+			{{ 'about.required_legal_info.desc'|trans|raw }}
+		</section>
+	</div>
+{% endblock %}

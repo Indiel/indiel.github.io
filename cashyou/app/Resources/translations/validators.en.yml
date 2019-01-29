@@ -1,0 +1,11 @@
+'Неправильный номер карты':
+    '': 'Invalid card number.'
+
+'Пароли не совпадают':
+    '': 'Passwords don''t match.'
+
+'Поля E-mail не совпадают':
+    '': 'Margins of E-mail don''t match.'
+'Пожалуйста загрузите фото 1й страницы Вашего паспорта': 'Please upload a photo of 1st page of your passport'    
+'Пожалуйста загрузите фото 2й страницы Вашего паспорта': 'Please upload a photo of 2nd page of your passport'    
+'Пожалуйста загрузите фото страницы прописки': 'Please upload a photo of egistration page of your passport'

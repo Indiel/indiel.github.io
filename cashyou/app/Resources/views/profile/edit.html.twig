@@ -1,0 +1,42 @@
+<div class="client-columns">
+	<div class="column">
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Личные</b> данные'|trans|raw }}</h2>
+			</div>
+			{% include 'profile/edit/personal.html.twig' with {'form': form.personal, 'hasUnpaidLoans': hasUnpaidLoans} %}
+		</div>
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Адрес</b> проживания'|trans|raw }}</h2>
+			</div>
+			{% include 'profile/edit/address.html.twig' with {'form': form.address, 'hasUnpaidLoans': hasUnpaidLoans} %}
+		</div>
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Карта</b>'|trans|raw }}</h2>
+			</div>
+			{% include 'profile/edit/card.html.twig' with {'form': form.card, 'hasUnpaidLoans': hasUnpaidLoans} %}
+		</div>
+	</div>
+	<div class="column">
+		<!--<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Социальная</b> информация'|trans|raw }}</h2>
+			</div>
+			{% include 'profile/edit/social.html.twig' with {'form': form.social, 'hasUnpaidLoans': hasUnpaidLoans} %}
+		</div>-->
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Паспортные</b> данные'|trans|raw }}</h2>
+			</div>
+			{% include 'profile/edit/passport.html.twig' with {'form': form.passport, 'hasUnpaidLoans': hasUnpaidLoans} %}
+		</div>
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Заработок</b>'|trans|raw }}</h2>
+			</div>
+			{% include 'profile/edit/business.html.twig' with {'form': form.business, 'hasUnpaidLoans': hasUnpaidLoans} %}
+		</div>
+	</div>
+</div>

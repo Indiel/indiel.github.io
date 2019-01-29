@@ -1,0 +1,29 @@
+security:
+    encoders:
+        AppBundle\Security\User\ApiUser: plaintext
+
+    providers:
+        api_users:
+            id: app.security.user.provider
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            api_login:
+                login_path: app.login
+                check_path: app.login
+                success_handler: app.security.authentication.handler
+
+            logout:
+                path:   app.logout
+                target: /
+                success_handler: app.security.authentication.handler
+            remember_me:
+                secret:   '%secret%'
+                lifetime: 31536000 # 1 year in seconds
+                path:     /

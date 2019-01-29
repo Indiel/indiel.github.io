@@ -1,0 +1,67 @@
+{{ form_start(form, {'attr': {'class': 'step-form js-step-form','novalidate': 'novalidate'}}) }}
+
+{{ form_errors(form) }}
+
+<div class="step-block active" data-step="1" data-percent="20">
+	<div class="form-columns">
+		<div class="column">
+			{# TODO : Need to remove dummy example #}
+			{% set dummy_help = 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis' %}
+			{{ form_row(form.lastName, {'attr': {'data-rule-onlyLetter': 1, 'data-rule-notSpaces': 1, 'minlength': 2, 'placeholder': 'Фамилия'}}) }}
+			{{ form_row(form.firstName, {'attr': {'data-rule-onlyLetter': 1, 'data-rule-notSpaces': 1, 'minlength': 2 , 'placeholder': 'Имя'}}) }}
+			{{ form_row(form.middleName, {'attr': {'data-rule-onlyLetter': 1, 'data-rule-notSpaces': 1, 'minlength': 2 , 'placeholder': 'Отчество'}}) }}
+			{{ form_row(form.gender) }}
+		</div>
+		<div class="column">
+            {{ form_row(form.birthDate, {
+                'attr': {
+                    'placeholder': 'дд.мм.гггг'|trans,
+                    'data-rule-dateValidate': 1,
+                    'data-mask': '99.99.9999',
+                    'minlength': 10,
+                    'maxlength': 10
+                }
+            }) }}
+			<div class="form-row">
+                {{ form_label(form.phone, null, {
+                	'help': 'registration.help.phone'|trans
+                    }) }}
+				<div class="input-holder">
+					<a href="#check-phone" class="button check-button js-check-phone disabled" data-verified="{{ phoneVerifyStorage.verifiedPhones|json_encode }}" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}" data-text-verified="{{ 'Подтвержден'|trans }}" data-send-url="{{ path('app.phone_verify.send') }}">{{ 'Подтвердить'|trans }}</a>
+                    {{ form_widget(form.phone, {
+                        'attr': {
+                            'data-rule-phoneValidate': 1,
+                            'data-rule-phoneVerified': 1,
+                            'placeholder': '+38 (___) ___-__-__'|trans,
+                            'data-mask': '+38 (099) 999-99-99',
+                            'minlength': 19,
+                            'maxlength': 19
+                        }, 'help': 'registration.help.phone'|trans
+                    }) }}
+				</div>
+                {{ form_errors(form.phone) }}
+			</div>
+            {{ form_row(form.email.first, {'help': 'registration.help.email'|trans}
+            ) }}
+            {{ form_row(form.email.second, {'attr': {'data-rule-equalTo': '#registration_create_an_account_form_email_first', 'onpaste': 'return false;'}, 'help': 'registration.help.emailSecond'|trans}) }}
+		</div>
+		<div class="column">
+			{{ form_row(form.secretQuestion, {'help': 'registration.help.secretQuestion'|trans}) }}
+			{{ form_row(form.secretAnswer, {'attr': {'data-rule-notSpaces': '1'}, 'help': 'registration.help.secretAnswer'|trans}) }}
+			{{ form_row(form.password.first, {'attr': {'data-rule-notSpaces': '1', 'minlength': 6}, 'help': 'registration.help.password'|trans}) }}
+			{{ form_row(form.password.second, {'attr': {'data-rule-notSpaces': '1', 'data-rule-equalTo': '#registration_create_an_account_form_password_first'}, 'help': 'registration.help.passwordSecond'|trans }) }}
+		</div>
+	</div>
+	<div class="agree-checkbox-holder">
+		<label for="remember">
+			<input type="checkbox" id="remember" name="_remember_me" class="agree-checkbox" data-rule-required="1">
+            {{ 'C <a target="_blank" href="%rules_url%">правилами</a> и условиями выдачи займа ознакомлен, и подтверждаю <a target="_blank" href="%agreement_url%">согласие</a> на обработку своих персональных данных, а также на передачу данных у бюро кредитных историй.'|trans({
+				'%rules_url%': path('app.creditrules'),
+				'%agreement_url%': path('app.agreementpersonaldata'),
+			})|raw }}
+		</label>
+	</div>
+	<div class="button-block"><a class="button btn-validate" href="#" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Далее'|trans }}</a></div>
+</div>
+
+{{ form_end(form) }}

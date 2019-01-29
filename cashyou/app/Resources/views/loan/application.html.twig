@@ -1,0 +1,72 @@
+{{ form_start(form, {'attr': {'class': 'online-credit'}}) }}
+	<h3 class="credit-title">{{ 'Сервис онлайн-займов'|trans }}</h3>
+	<p class="credit-info">{{ 'Экспресс займ'|trans }}</p>
+	<div class="row row-summ">
+		<div class="row-block">
+			{# <strong class="title">{{ 'Сумма'|trans }}</strong> #}
+			<strong class="title">{{ 'нужная сумма'|trans }}</strong>
+			<div class="result amount-result">
+				<div class="count"></div>
+			</div>
+		</div>
+		<div class="line">
+			<div class="line-holder">
+				<div class="line-slider"><span class="minus-slider minus-slider1"></span>
+					<div id="slider" data-input="#{{ form.amount.vars.id }}" data-step="{{ amountStep }}" data-default="{{ amountDefault }}" data-min="{{ amountMin }}" data-max="{{ amountMax }}" data-max-wiht-discount="{{ amountMaxWithDiscount }}" class="slider amount"></div>
+					<span class="plus-slider plus-slider1"></span>
+				</div>
+			</div>
+		</div>
+		<div class="min-max">
+			<p class="min">50</p>
+			<p class="max">4000</p>
+		</div>
+	</div>
+	<div class="row row-period">
+		<div class="row-block">
+			<strong class="title term">
+				{# <span>{{ 'Cрок'|trans }}</span> #}
+				<span>{{ 'на какой срок'|trans }}</span>
+				<span class="date-holder"><span class="icon-calendar"></span><input type="text" class="datepicker" data-mindays="{{ termMin }}" data-maxdays="{{ termMax }}"></span>
+			</strong>
+			<div class="result period-result">
+				<div class="count"></div>
+			</div>
+		</div>
+		<div class="line">
+			<div class="line-holder">
+				<div class="line-slider"><span class="minus-slider minus-slider2"></span>
+					<div id="slider3" data-input="#{{ form.term.vars.id }}" data-step="{{ termStep }}" data-default="{{ termDefault }}" data-min="{{ termMin }}" data-max="{{ termMax }}" data-max-wiht-discount="{{ termMaxWithDiscount }}" class="slider period"></div><span class="plus-slider plus-slider2"></span>
+				</div>
+			</div>
+		</div>
+		<div class="min-max">
+			<p class="min">2</p>
+			<p class="max">7</p>
+		</div>
+	</div>
+	<div class="total-line">
+		<div class="total-info">
+			<div class="col">
+				<span>{{ 'Срок возврата'|trans }}</span>
+				<div class="l-wrap"><b class="expired-date"></b></div>
+			</div>
+			<div class="col">
+				<b>{{ 'Сумма к возврату'|trans }}</b>
+				<div class="l-wrap"><b class="total-value"></b><span class="currency">{{ 'грн'|trans }}</span></div>
+			</div>
+			<div class="col">
+				<span>{{ 'Проценты'|trans }}</span>
+				<div class="l-wrap"><b class="percent"></b><span class="percent-s">%</span></div>
+			</div>
+		</div>
+		{% if not comingSoonMode %}
+			<button class="button btn-get lightbox-opener" type="submit">{{ 'Получить'|trans }}</button>
+		{% else %}
+			<button class="button btn-get" type="button" disabled>{{ 'comming_soon_message'|trans|raw }}</button>
+		{% endif %}
+	</div>
+	{{ form_widget(form.amount) }}
+	{{ form_widget(form.term) }}
+	{{ form_widget(form.product, {'attr': {'class': 'product-name', 'data-discount-value': TKLenderApi.defaultProduct.Name, 'data-normal-value': TKLenderApi.normalProduct.Name }}) }}
+{{ form_end(form) }}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% set headingText = block('headingText')|trim %}
+{% set imageUrl = block('imageUrl')|trim %}
+{% set buttonLink = block('buttonLink')|trim %}
+{% set buttonText = block('buttonText')|trim %}
+
+{% block mainContent %}
+	<div class="container">
+		<div class="thank-you-holder">
+			{% if headingText is not empty %}
+			<div class="heading">{{ headingText|raw }}</div>
+			{% endif %}
+			
+			{% block content %}{% endblock %}
+			
+			{% if imageUrl is not empty %}
+				<img src="{{ imageUrl }}" alt="" class="image">
+			{% endif %}
+			
+			{% if buttonLink and buttonText %}
+			<div class="button-block">
+				<a href="{{ buttonLink }}" class="button">{{ buttonText }}</a>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+{% endblock %}

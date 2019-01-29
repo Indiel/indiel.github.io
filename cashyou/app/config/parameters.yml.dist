@@ -1,0 +1,64 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host: 127.0.0.1
+    database_port: ~
+    database_name: cashyou
+    database_user: root
+    database_password: ~
+    # You should uncomment this if you want to use pdo_sqlite
+    #database_path: '%kernel.project_dir%/var/data/data.sqlite'
+
+    mailer_transport: gmail
+    mailer_host: 'smtp.gmail.com'
+    mailer_user: 'info@cashyou.ua'
+    mailer_password: 'C%=9rhRd'
+
+    user_provider_cache_path: '%kernel.project_dir%/var/sessions/%kernel.environment%/user_provider'
+
+    turnkey_lender_cache_enabled: true
+    turnkey_lender_cache_lifetime: 300
+    turnkey_lender_cache_path: '%kernel.cache_dir%/tklender'
+    turnkey_lender_api_url: 'https://cashyou.turnkey-lender.com'
+    turnkey_lender_api_key: '25cac1c8-1828-4c16-8635-014d06f8d379'
+    turnkey_lender_api_http_errors: false
+    turnkey_lender_api_ssl_verify: true
+    turnkey_lender_api_timeout: 10
+    turnkey_lender_api_logging: false
+    turnkey_lender_initial_special_product: 'Initial credit product in 0.01%'
+    turnkey_lender_initial_product: 'Initial credit product in 1.8%'
+    turnkey_lender_base_product: 'base credit product'
+    turnkey_lender_default_amount_step: 50
+    turnkey_lender_default_term_step: 1
+    turnkey_lender_default_amount_value: 400
+    turnkey_lender_default_term_value: 4
+
+    coming_soon_mode: 0
+    
+    contact_form_email: info@example.com
+    contact_to_email: info@example.com
+    
+    loan_since_rejected_limit_days: 14
+    
+    google_tag_manager_id: 'GTM-MVRBQ84'
+    
+    keitaro_url: 'http://127.0.0.1'
+
+    aws_cloudwatch_accesskey: ''
+    aws_cloudwatch_secretkey: ''
+    aws_cloudwatch_region: 'eu-west-2'
+    aws_cloudwatch_group: ''
+    aws_cloudwatch_stream_prefix: ''
+    token_salesdoubler: 'Y2FzaHlvdS51YUBzYWxlc2RvdWJsZXIuY29tLnVh'
+    salesdoubler_url: 'http://rdr.salesdoubler.com.ua/in/postback/2280/'
+    # A secret key that's used to generate certain security-related tokens
+    secret: ThisTokenIsNotSoSecretChangeIt
+
+    max_term_days: 30
+
+    risktools_url: 'http://127.0.0.1'
+    risktools_key: ''
+
+    cashyou_tracker_url: 'http://new.cashyou.ua/public/api/webhook'
+    cashyou_tracker_token: vCdsF9GZ9zuIzx55

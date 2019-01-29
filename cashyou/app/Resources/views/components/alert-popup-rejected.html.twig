@@ -1,0 +1,18 @@
+<a class="click-on-dom-ready lightbox-opener" href="#alert"></a>
+<div class="lightbox lightbox-alert alert-rejected" id="alert"><a class="lightbox-close" href="#" data-fancybox-close></a>
+    <div class="lightbox-block">
+        <div class="left">
+            <div class="rejected-img"><img src="{{ asset('images/rejected-badge.png') }}" alt=""></div>
+            <span class="unfortunately">{{ 'К сожалению'|trans }}</span>
+            <div class="description dynamic-message">{{ 'Cегодня мы не можем выдать Вам кредит. Это решение может быть пересмотрено через несколько дней, мы будем рады видеть Вас снова.'|trans }}</div>
+            <a class="button alert-rejected-close" data-fancybox-close>{{ 'Назад'|trans }}</a>
+            <a class="button alert-close" data-fancybox-close>{{ 'Закрыть'|trans }}</a>
+        </div>
+        <div class="right">
+            <div class="bonus-img"><img src="{{ asset('images/bonus-badge.png') }}" alt=""></div>
+            <span class="bonus">{{ 'Бонус'|trans }}</span>
+            <div class="description rejected-message">{{ 'Вы можете воспользоватся выгодыми услугами нашего партнёра, чтобы получить кредит в необходимом размере:' | trans }}</div>
+            <a class="button redirect-button" href="http://creditgarant.online">{{ 'Получить кредит'|trans }}</a>
+        </div>
+    </div>
+</div>

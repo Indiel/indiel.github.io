@@ -1,0 +1,559 @@
+app.home:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/index.html.twig
+
+app.login:
+    path: /login/
+    defaults: { _controller: AppBundle:Security:login }
+
+app.logout:
+    path: /logout/
+
+app.register:
+    path: /registration/
+    defaults:
+        _controller: AppBundle:Registration:registration
+    condition: '%coming_soon_mode% != 1'
+
+app.registration-new:
+    path: /registration-new/{step}
+    defaults:
+        _controller: AppBundle:RegistrationNew:index
+    condition: '%coming_soon_mode% != 1'
+
+app.phone_verify.send:
+    path: /verify-phone/send-code/
+    defaults:
+        _controller: AppBundle:CheckPhone:sendCode
+
+app.phone_verify.check:
+    path: /verify-phone/check-code/
+    defaults:
+        _controller: AppBundle:CheckPhone:checkCode
+
+app.link.card:
+    path: /link-card/
+    defaults:
+        _controller: AppBundle:Registration:linkBankCard
+    methods: ['POST']
+    condition: '%coming_soon_mode% != 1'
+
+app.link.card.new:
+    path: /link-card-new/
+    defaults:
+        _controller: AppBundle:RegistrationNew:linkBankCard
+    methods: ['POST']
+    condition: '%coming_soon_mode% != 1'
+
+app.pending.approval:
+    path: /pending-approval/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    security/pending-approval.html.twig
+    condition: '%coming_soon_mode% != 1'
+
+app.loan.application.submit:
+    path: /loan-application-submit/
+    defaults:
+        _controller: AppBundle:Loan:loanApplicationFormSubmit
+    methods: ['POST']
+    condition: '%coming_soon_mode% != 1'
+    
+app.contact.form.submit:
+    path: /contact-form-submission
+    defaults:
+        _controller: AppBundle:Contact:formSubmit
+    methods: ['POST']
+
+
+app.profile.info:
+    path: /profile-info/
+    defaults:
+        _controller: AppBundle:Registration:profileInfo
+
+#app.user.api.token:
+#    path: /api-token/
+#    defaults:
+#        _controller: AppBundle:Registration:apiToken
+
+app.upload_file:
+    path: /upload-file/
+    defaults:
+        _controller: AppBundle:Registration:uploadFile
+    methods: ['POST']
+    condition: '%coming_soon_mode% != 1'
+
+app.profile:
+    path: /profile/
+    defaults:
+        _controller: AppBundle:Profile:profile
+    condition: '%coming_soon_mode% != 1'
+
+app.profile.edit:
+    path: /profile/edit/
+    defaults:
+        _controller: AppBundle:Profile:editProfile
+    methods: ['POST']
+    condition: '%coming_soon_mode% != 1'
+
+app.profile.edit.section:
+    path: /profile/edit/{viewForm}
+    defaults:
+        _controller: AppBundle:Profile:editProfile
+    condition: '%coming_soon_mode% != 1'
+
+app.profile.change_password.submit:
+    path: /profile/change-password/submit
+    defaults:
+        _controller: AppBundle:Profile:changePassword
+    methods: ['POST']
+    condition: '%coming_soon_mode% != 1'
+
+app.password.reset:
+    path: /password-reset/
+    defaults:
+        _controller: AppBundle:Security:forgotPassword
+
+app.password.reset.change:
+    path: /password-reset/change/
+    defaults:
+        _controller: AppBundle:Security:resetPassword
+
+app.improve.loyality.program.submit:
+    path: /improve-loyality-program-submit/
+    defaults:
+        _controller: AppBundle:Profile:improveLoyalityProgramButtonSubmit
+
+app.loan.setAmount:
+    path: /loan/applyAmount
+    defaults:
+        _controller: AppBundle:Loan:applyAmount
+
+app.loan.rollover.repay:
+    path: /loan/{loanId}/rollover/repay
+    defaults:
+        _controller: AppBundle:Loan:rolloverRepay
+
+app.loan.rollover.sign:
+    path: /loan/{loanId}/rollover/sign
+    defaults:
+        _controller: AppBundle:Loan:rolloverSign
+
+app.loan.rollover.agreement:
+    path: /loan/{loanId}/rollover/agreement
+    defaults:
+        _controller: AppBundle:Loan:rolloverAgreement
+
+app.loan.rollover.sign.sms:
+    path: /loan/{loanId}/rollover/sign/sms
+    defaults:
+        _controller: AppBundle:Loan:rolloverSmsSign
+
+app.loan.rollover.document:
+    path: /loan/{loanId}/rollover/{documentId}/document
+    defaults:
+        _controller: AppBundle:Loan:rolloverDocument
+
+
+app.loan.rollover.sign.success:
+    path: /loan/rollover/sign/success/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    loan/rollover/sign-success.html.twig
+
+app.loan.rollover.sign.error:
+    path: /loan/rollover/sign/error/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    loan/rollover/error.html.twig
+
+app.loan.rollover.submit:
+    path: /loan-rollover-submit/
+    defaults:
+        _controller: AppBundle:Loan:loanRolloverSubmit
+    methods: ['POST']
+
+app.loan.repay.thankyou:
+    path: /repay/success/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    loan/repay/success.html.twig
+
+app.loan.repay.error:
+    path: /repay/error/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    loan/repay/error.html.twig
+
+app.loan.repay:
+    path: /repay/{loanId}
+    defaults:
+        _controller: AppBundle:Loan:repay
+
+app.loan.agreement:
+    path: /loan/{loanId}/agreement/
+    defaults:
+        _controller: AppBundle:Loan:agreement
+
+app.loan.agreement.download:
+    path: /loan/{loanId}/agreement/download/
+    defaults:
+        _controller: AppBundle:Loan:agreement
+        download: true
+
+app.loan.sign:
+    path: /loan/{loanId}/sign/
+    defaults:
+        _controller: AppBundle:Loan:sign
+
+app.loan.sign.form:
+    path: /loan/{loanId}/sign/{signatureId}
+    defaults:
+        _controller: AppBundle:Loan:smsSign
+
+app.loan.sign.success:
+    path: /loan/sign/success/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    loan/sign-success.html.twig
+        
+app.blog:
+    path: /blog/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog.html.twig
+
+app.investors:
+    path: /investors/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/investors.html.twig
+
+app.about:
+    path: /about/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/about.html.twig
+
+app.getting:
+    path: /getting/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/getting.html.twig
+
+app.faq:
+    path: /faq/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/faq.html.twig
+
+app.contacts:
+    path: /contacts/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/contacts.html.twig
+
+app.deal:
+    path: /deal/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/deal.html.twig
+
+app.deal-inner:
+    path: /deal-inner/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/deal-inner.html.twig
+
+app.deal-credit:
+    path: /deal/credit-0.01
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/deal-credit.html.twig
+
+#app.deal-newyear:
+#    path: /deal/new-year
+#    defaults:
+#        _controller: FrameworkBundle:Template:template
+#        template:    static/deal-newyear.html.twig
+
+app.deal-stvalentines-day:
+    path: /deal/stvalentines-day
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/deal-stvalentines-day.html.twig
+
+#app.deal-friend:
+#    path: /deal/friends
+#    defaults:
+#        _controller: FrameworkBundle:Template:template
+#        template:    static/deal-friend.html.twig
+
+app.blog-inner:
+    path: /blog-inner/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-inner.html.twig
+
+app.blog-article-bitcoin:
+    path: /blog/exchange-bitcoin
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-bitcoin.html.twig
+
+app.blog-article-blockchain:
+    path: /blog/blockchain
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-blockchain.html.twig
+
+app.blog-article-dollars:
+    path: /blog/dollars
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-dollars.html.twig
+
+app.blog-article-digital:
+    path: /blog/digital
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-digital.html.twig
+
+app.blog-article-credit-low-rate:
+    path: /blog/credit-low-rate
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-credit-low-rate.html.twig
+
+app.blog-article-crypto-growing:
+    path: /blog/crypto-growing
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-crypto-growing.html.twig
+
+app.blog-article-dollar-growing:
+    path: /blog/dollar-growing
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-dollar-growing.html.twig
+
+app.blog-article-money-for-wedding:
+    path: /blog/money-for-wedding
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-money-for-wedding.html.twig
+
+app.blog-article-rejected-credit:
+    path: /blog/rejected-credit
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-rejected-credit.html.twig
+
+app.blog-article-urgent-money:
+    path: /blog/urgent-money
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-urgent-money.html.twig
+
+app.blog-article-write-off-credit:
+    path: /blog/write-off-credit
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-write-off-credit.html.twig
+
+app.blog-article-fast-credit-online:
+    path: /blog/fast-credit-online
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-fast-credit-online.html.twig
+
+app.blog-article-money-for-cafe-opening:
+    path: /blog/money-for-cafe-opening
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-money-for-cafe-opening.html.twig
+
+app.blog-article-money-for-fall-rest:
+    path: /blog/money-for-fall-rest
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-money-for-fall-rest.html.twig
+
+app.blog-article-tax-sanctions:
+    path: /blog/tax-sanctions
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/blog-tax-sanctions.html.twig
+
+app.return:
+    path: /return/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/return.html.twig
+
+app.new-password:
+    path: /new-password/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    security/new-password.html.twig
+    condition: '%coming_soon_mode% != 1'
+
+app.creditrules:
+    path: /creditrules/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/creditrules.html.twig
+
+app.bonuses:
+    path: /bonus-system-rools/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/bonuses.html.twig
+
+app.security:
+    path: /security/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/security.html.twig
+
+app.confidentiality:
+    path: /confidentiality/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/confidentiality.html.twig
+
+app.agreementpersonaldata:
+    path: /agreementpersonaldata/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/agreementpersonaldata.html.twig
+
+app.registrationcertificate:
+    path: /registrationcertificate/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/registrationcertificate.html.twig
+
+app.public:
+    path: /public/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/public.html.twig
+
+app.bet:
+    path: /bet/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/bet.html.twig
+
+app.loan-calculator:
+    path: /loan-calculator/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/loan-calculator.html.twig
+
+app.urgent-loan:
+    path: /urgent-loan/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/urgent-loan.html.twig
+
+app.credit-calculation:
+    path: /credit-calculation/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/credit-calculation.html.twig
+
+app.interest-rate:
+    path: /interest-rate/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/interest-rate.html.twig
+
+app.credit-bad-history:
+    path: /credit-bad-history/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/credit-bad-history.html.twig
+
+app.loan-18:
+    path: /loan-18/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/loan-18.html.twig
+
+app.loan-two-documents:
+    path: /loan-two-documents/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/loan-two-documents.html.twig
+
+app.credit-on-card:
+    path: /credit-on-card/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/credit-on-card.html.twig
+
+app.credit-unemployed:
+    path: /credit-unemployed/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/credit-unemployed.html.twig
+
+app.credit-money:
+    path: /credit-money/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/credit-money.html.twig
+
+app.money-in-debt:
+    path: /money-in-debt/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/money-in-debt.html.twig
+
+app.credit-without-income-statement:
+    path: /credit-without-income-statement/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/credit-without-income-statement.html.twig
+
+app.urgently-need-money:
+    path: /urgently-need-money/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/urgently-need-money.html.twig
+
+app.loan-express:
+    path: /loan-express/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/loan-express.html.twig
+
+app.money-express:
+    path: /money-express/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/money-express.html.twig
+
+app.credit-365:
+    path: /credit-365/
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template:    static/credit-365.html.twig
+
+app.credit-low-rate:
+  path: /credit-low-rate/
+  defaults:
+          _controller: FrameworkBundle:Template:template
+          template:    static/credit-low-rate.html.twig
+
+app.api.proxy:
+    path: /api/{path}
+    defaults:
+        _controller: AppBundle:ApiProxy:proxy
+    requirements:
+        path: '.+'
+

@@ -1,0 +1,17 @@
+{% extends 'static/error.html.twig' %}
+
+{% block errorCode %}
+	{{ status_code }}
+{% endblock %}
+
+{% block imageUrl %}
+	{{ asset('images/man-notfound.png') }}
+{% endblock %}
+
+{% block headingText %}
+	{{ 'Упс! Ошибочка'|trans }}&#8230;
+{% endblock %}
+
+{% block descriptionText %}
+	{{ 'Произошла ошибка, свяжитесь с менеджером или попробуйте позже'|trans|raw }}
+{% endblock %}

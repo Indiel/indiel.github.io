@@ -1,0 +1,166 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>{{ 'Финансовые статьи и актуальные новости от Cashyou'|trans }}</title>{% endblock %}
+{% block meta %}<meta name="description" content="{{ 'Громкие новости финансового мира и  акутальные известия о системе. Все последние изменения и события в Cashyou и финансовом мире.'|trans }}">{% endblock %}
+
+{% block bodyAttributes %} class="bg-gray"{% endblock %}
+
+{% block mainContent %}
+    <div class="content-holder bg-gray">
+        <div class="container">
+            <div class="main">
+                <div class="heading">
+                    <h1><b>{{ 'Блог'|trans }}</b></h1>
+                </div>
+                <div class="deal-wrapper">
+                    <div class="deal-row">
+                        <div class="client-block deal-block large modified">
+                            <div class="image-block">
+                                <a href="#">
+                                    <img src="{{ asset('images/article-crypto-coins.jpg') }}" alt="">
+                                </a>
+                            </div>
+                            <h2><a href="#">Стрімке зростання ринку криптовалют у 2018 році виключений</a></h2>
+                            <time class="date" datetime="2018-08-30">30 серпня 2018</time>
+                            <div class="description">
+                                <p><span style="font-weight: 400;">Як вважає засновник криптовалюти Ethereum В. Бутерін, на криптовалютному ринку ми не будемо спостерігати періоди стрімкого зростання, який був раніше. Для цього не залишилося жодних передумов.</span></p>
+                                <h1>&nbsp;</h1>
+                                <p><span style="font-weight: 400;">У минулому криптовалюти демонстрували зростання в 1 000 разів за рахунок застосування інструментів маркетингу. Але зараз, як стверджує Бутерін, товариство криптоінвесторів перейшло на новий рівень свого розвитку &mdash; замість методів, які активно використовували початківці &mdash; власники криптовалют, поширюються реалістичні стратегії застосування криптотехнологій.</span></p>
+                                <h1>&nbsp;</h1>
+                                <p><span style="font-weight: 400;">Разом з тим, засновник Ethereum вважає, що в нинішньому періоді стратегія маркетингу минулих років перестала діяти. Нове завдання, яке стоїть перед спільнотою криптоінвесторів &mdash; розвивати систему, застосовуючи інструменти реальної економіки.</span></p>
+                            </div>
+                            {#<div class="social-block">
+                                <span class="info">{{ 'Поделиться новостью'|trans }}</span>
+                                <ul class="social-networks modified small">
+                                    <li class="facebook">
+                                        <a href="#"> <i class="icon-facebook"></i></a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a href="#"> <i class="icon-twitter"></i></a>
+                                    </li>
+                                    <li class="google">
+                                        <a href="#"> <i class="icon-google"></i></a>
+                                    </li>
+                                </ul>
+                            </div>#}
+                        </div>
+                        <ul class="list-pagination modified">
+                            <li class="btn-prev">
+                                <a href="{{ path('app.blog-article-credit-low-rate') }}">
+                                    <i class="icon-btn-prev"></i>
+                                    {{ 'Предыдущая новость'|trans }}
+                                </a>
+                            </li>
+                            <li class="btn-next">
+                                <a href="{{ path('app.blog-article-dollar-growing') }}">
+                                    {{ 'Следующая новость'|trans }}
+                                    <i class="icon-btn-next"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <aside class="sidebar">
+                <div class="inner">
+                    {#<div class="block">
+                        <div class="search-field">
+                            <input type="search" id="search-field" name="name" placeholder="Поиск" class="input">
+                            <button type="submit" class="submit">
+                                <i class="icon-search"></i>
+                            </button>
+                        </div>
+                     </div>#}
+                    <div class="block">
+                        <div class="heading">
+                            <h2><b>{{ 'мы в социальных сетях'|trans }}</b></h2>
+                        </div>
+                        <ul class="social-networks modified">
+                            <li class="facebook">
+                                <a href="https://www.facebook.com/CashYou.Ukraine/"> <i class="icon-facebook"></i><span class="info">Facebook</span></a>
+                            </li>
+                            <li class="instagram">
+                                <a href="https://www.instagram.com/cashyou_official/"> <i class="icon-instagram"></i><span class="info">Instagram</span></a>
+                            </li>
+                            <li class="twitter">
+                                <a href="https://twitter.com/CashYou_Ukraine"> <i class="icon-twitter"></i><span class="info">Twitter</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <div class="heading">
+                            <h2><b>{{ 'Рекомендуемые новости'|trans }}</b></h2>
+                        </div>
+                        <ul class="news-list">
+                            <li class="item">
+                                <a href="{{ path('app.blog-article-bitcoin') }}">
+                                    {#<div class="image">
+                                        <img src="{{ asset('images/news-item.png') }}" alt="Picture">
+                                    </div>#}
+                                    <div class="content">
+                                        <div class="title">Курс BitCoin достиг максимальной отметки</div>
+                                        <div class="date">24 ноября 2017</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="{{ path('app.blog-article-blockchain') }}">
+                                    {#<div class="image">
+                                        <img src="{{ asset('images/news-item.png') }}" alt="Picture">
+                                    </div>#}
+                                    <div class="content">
+                                        <div class="title">Посещение конференции Blockchain Conference 2017 в Киеве сотрудниками CashYou</div>
+                                        <div class="date">20 ноября 2017</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="{{ path('app.blog-article-dollars') }}">
+                                    {#<div class="image">
+                                        <img src="{{ asset('images/news-item.png') }}" alt="Picture">
+                                    </div>#}
+                                    <div class="content">
+                                        <div class="title">Фальшивые доллары, которые не отличить от оригинала</div>
+                                        <div class="date">17 ноября 2017</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="item">
+                                <a href="{{ path('app.blog-article-digital') }}">
+                                    {#<div class="image">
+                                        <img src="{{ asset('images/news-item.png') }}" alt="Picture">
+                                    </div>#}
+                                    <div class="content">
+                                        <div class="title">Посещение конференции Ukrainian Digital Conference 2017 сотрудниками CashYou</div>
+                                        <div class="date">13 ноября 2017</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCashyou-371352639870774%2F&tabs=timeline&width=225&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=397540247262670" width="298" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        {#<aside class="client-aside bg-transparent">
+               <div class="container">
+                   <div class="frame">
+                       <div class="chat-holder">
+                           <div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>
+                               <div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>
+                                   <form action="#">
+                                       <label>Оставьте Ваш телефон и мы Вам перезвоним</label>
+                                       <input type="tel" placeholder="" value="+380">
+                                       <input class="button" type="submit" value="Перезвоните">
+                                   </form>
+                               </div>
+                           </div>
+                           <div class="chat-block"><a class="chat-opener" href="#">{{ 'Связь с менеджером'|trans }}</a></div>
+                       </div>
+                   </div>
+               </div>
+           </aside>#}
+    </div>
+{% endblock %}

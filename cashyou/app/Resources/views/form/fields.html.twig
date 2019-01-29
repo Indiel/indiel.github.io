@@ -1,0 +1,150 @@
+{%- block form_errors -%}
+	{%- if errors|length > 0 -%}
+		{%- for error in errors -%}
+			<div class="error">{{ error.message }}</div>
+		{%- endfor -%}
+	{%- endif -%}
+{%- endblock form_errors -%}
+
+{%- block form_label -%}
+	{% if label is not same as(false) -%}
+		{% if not compound -%}
+			{% set label_attr = label_attr|merge({'for': id}) %}
+		{%- endif -%}
+		{% if required -%}
+			{% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %}
+		{%- endif -%}
+		{% if label is empty -%}
+			{%- if label_format is not empty -%}
+				{% set label = label_format|replace({
+				'%name%': name,
+				'%id%': id,
+				}) %}
+			{%- else -%}
+				{% set label = name|humanize %}
+			{%- endif -%}
+		{%- endif -%}
+		<div class="label-block">
+			<label{% if label_attr %}{% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}{% endif %}>
+				{{ translation_domain is same as(false) ? label : label|trans({}, translation_domain) }}
+				{% if required %}
+					<span class="req">*</span>
+				{% endif %}
+			</label>
+			{% if help is defined %}
+				<div class="popup-block"><span class="popup-opener" href="#"> <i class="icon-question"></i></span>
+					<div class="popup">
+						<p>{{ help }}</p>
+					</div>
+				</div>
+			{% endif %}
+		</div>
+	{%- endif -%}
+{%- endblock form_label -%}
+
+{%- block choice_widget_expanded -%}
+	<div {{ block('choice_container_attributes') }}>
+		<div class="row">
+			<div class="frame">
+				{%- for child in form %}
+					{% set option_vars = choice_attr is defined ? {'attr': choice_attr} : {} %}
+
+					{%- with child.vars -%}
+						{% if label is not same as(false) -%}
+							{% if not compound -%}
+								{% set label_attr = label_attr|merge({'for': id}) %}
+							{%- endif -%}
+							{% if required -%}
+								{% set label_attr = label_attr|merge({'class': (label_attr.class|default('') ~ ' required')|trim}) %}
+							{%- endif -%}
+							{% if label is empty -%}
+								{%- if label_format is not empty -%}
+									{% set label = label_format|replace({
+									'%name%': name,
+									'%id%': id,
+									}) %}
+								{%- else -%}
+									{% set label = name|humanize %}
+								{%- endif -%}
+							{%- endif -%}
+							<label{% if label_attr %}{% with { attr: label_attr } %}{{ block('attributes') }}{% endwith %}{% endif %}>
+								{{ form_widget(child, option_vars) }}
+								{{ choice_translation_domain is same as(false) ? label : label|trans({}, choice_translation_domain) }}
+							</label>
+						{%- endif -%}
+					{%- endwith -%}
+				{% endfor -%}
+			</div>
+		</div>
+	</div>
+{%- endblock choice_widget_expanded -%}
+
+{%- block choice_container_attributes -%}
+	{%- if id is not empty %}id="{{ id }}"{% endif -%}
+	{%- set half_width = (form.children|length == 2) ? 'half-width ' : '' -%}
+	{%- if attr.class is defined %}
+		{% set attr = attr|merge({'class': ('radio-list ' ~ half_width ~ attr.class)|trim}) %}
+	{% else %}
+		{% set attr = attr|merge({'class': ('radio-list ' ~ half_width)|trim}) %}
+	{% endif -%}
+	{{ block('attributes') }}
+{%- endblock choice_container_attributes -%}
+
+{%- block password_widget -%}
+	<div class="password-block">
+		{%- set type = type|default('password') -%}
+		{{ block('form_widget_simple') }}
+		<span class="show-password"><i class="icon-eye"></i></span>
+	</div>
+{%- endblock password_widget -%}
+
+{%- block form_widget_simple -%}
+	{%- if form.vars.errors|length > 0 -%}
+		{%- set class = attr.class is defined ? attr.class ~ ' has-error' : 'has-error' -%}
+		{%- set attr = attr|merge({'class': class}) -%}
+	{%- endif -%}
+	{%- set type = type|default('text') -%}
+	<input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+{%- endblock form_widget_simple -%}
+
+{%- block textarea_widget -%}
+	{%- if form.vars.errors|length > 0 -%}
+		{%- set class = attr.class is defined ? attr.class ~ ' has-error' : 'has-error' -%}
+		{%- set attr = attr|merge({'class': class}) -%}
+	{%- endif -%}
+	<textarea {{ block('widget_attributes') }}>{{ value }}</textarea>
+{%- endblock textarea_widget -%}
+
+{%- block upload_document_widget -%}
+	<input
+			type="file"
+			name="file"
+			class="document-uploader"
+			data-id="#{{ id }}"
+			data-url="{{ path('app.upload_file') }}"
+			data-text-loadind="{{ 'Загружается...'|trans }}"
+			data-text-loaded="{{ 'Загружено'|trans }}"
+			data-text-error="{{ 'Ошибка'|trans }}"
+			data-jcf="{&quot;buttonText&quot;: &quot;{{ 'Загружено'|trans }}&quot;, &quot;placeholderText&quot;: &quot;{{ 'Загрузить'|trans }}&quot;}"
+			accept=".png, .jpg, .jpeg, gif, tiff, application/pdf"
+	>
+	{%- if attr.class is defined %}
+		{% set attr = attr|merge({'class': ('document-uploader-input ' ~ attr.class)|trim}) %}
+	{% else %}
+		{% set attr = attr|merge({'class': 'document-uploader-input'}) %}
+	{% endif -%}
+	{{ block('hidden_widget') }}
+{%- endblock upload_document_widget -%}
+
+{%- block form_row -%}
+	<div class="form-row">
+		{{- form_label(form) -}}
+		{{- form_widget(form) -}}
+		{{- form_errors(form) -}}
+	</div>
+{%- endblock form_row -%}
+
+{%- block tel_widget -%}
+	{%- set type = 'tel' -%}
+	{{ block('form_widget_simple') }}
+{%- endblock tel_widget -%}

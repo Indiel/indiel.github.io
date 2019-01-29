@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block mainContent %}
+	<div class="container">
+		<div class="terms-hodler">
+            {% include 'components/breadcrumbs.html.twig' %}
+
+			<div class="heading">
+				<h1>{{' ПРОПОЗИЦІЯ <b>(ОФЕРТА)</b> '|trans|raw }}</h1>
+			</div>
+			<div class="static-content">
+				<div class="block">
+					{{ 'creditrules.content'|trans|raw }}
+				</div>
+			</div>
+			<section class="aboutus-section">
+				<div class="heading">
+					<h1>{{' <b>Документы</b>'|trans|raw }}</h1>
+				</div>
+				<div class="document-table">
+					<ul class="document-list">
+						<li>{{ 'Название документа' | trans }}</li>
+						<li>{{ 'Дата обновления' | trans }}</li>
+						<li>{{ 'Скачать документ' | trans }}</li>
+					</ul>
+					<ul class="document-list">
+						<li>{{ 'Кредитный договор' | trans }}</li>
+						<li>20.12.2018</li>
+						<li><a href="{{ asset('docs/kreditniy_dogovor.pdf') }}" download=""><i class="icon-download"></i></a></li>
+					</ul>
+					<ul class="document-list">
+						<li>{{ 'Правила предоставления кредитов' | trans }}</li>
+						<li>20.12.2018</li>
+						<li><a href="{{ asset('docs/pravila_predostavleniya_kreditov.pdf') }}" download=""><i class="icon-download"></i></a></li>
+					</ul>
+				</div>	
+			</section>
+		</div>
+		<aside class="client-aside bg-transparent">
+			<div class="container">
+				<div class="frame">
+					<div class="chat-holder">
+						<div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>
+							<div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>
+								<form action="#">
+									<label>Оставьте Ваш телефон и мы Вам перезвоним</label>
+									<input type="tel" placeholder="" value="+380">
+									<input class="button" type="submit" value="Перезвоните">
+								</form>
+							</div>
+						</div>
+						<div class="chat-block"><a class="chat-opener" href="#">{{ 'Связь с менеджером'|trans }}</a></div>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</div> 
+{% endblock %}

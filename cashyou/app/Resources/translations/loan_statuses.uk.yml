@@ -1,0 +1,20 @@
+Active: 'Видано (поточний кредит)'
+Approved: 'В обробці'
+AutoProcessing: 'В обробці'
+Closed_AgreementDeclined: Відмовлено
+Closed_AgreementExpired: Відмовлено
+Closed_Rejected: Відмовлено
+Closed_Repaid: Сплачений
+Closed_Restructured: Відмовлено
+Closed_WrittenOff: Сплачений
+Collateral: '-'
+DisbursementFailed: 'В обробці'
+DisbursementInProgress: 'В обробці'
+Origination: 'В обробці'
+P2P_GatheringInvestments: '-'
+PastDue: Прострочений
+PreOrigination: 'В обробці'
+Reprocessing: 'В обробці'
+RolloverRequested: 'Надано (поточний кредит)'
+WaitingForApproval: 'В обробці'
+WaitingForCustomerSignature: 'В обробці'

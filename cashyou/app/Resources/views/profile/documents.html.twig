@@ -1,0 +1,9 @@
+<div class="client-block">
+	<div class="download-holder">
+		<div class="heading-area">
+			<h2>{{ '<b>Фото </b>загруженных документов'|trans|raw }}</h2>
+		</div>
+		<span class="note-text">{{ 'За добавление всех фото Вы получаете бонусы'|trans }}</span>
+		{{ render(controller('AppBundle:Profile:editProfile', {viewForm: 'documents'})) }}
+	</div>
+</div>

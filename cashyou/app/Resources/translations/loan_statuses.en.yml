@@ -1,0 +1,20 @@
+Active: 'Granted (current loan)'
+Approved: 'In processing'
+AutoProcessing: 'In processing'
+Closed_AgreementDeclined: Rejected
+Closed_AgreementExpired: Rejected
+Closed_Rejected: Rejected
+Closed_Repaid: 'Paid off'
+Closed_Restructured: Rejected
+Closed_WrittenOff: 'Paid off'
+Collateral: '-'
+DisbursementFailed: 'In processing'
+DisbursementInProgress: 'In processing'
+Origination: 'In processing'
+P2P_GatheringInvestments: '-'
+PastDue: Expired
+PreOrigination: 'In processing'
+Reprocessing: 'In processing'
+RolloverRequested: 'Granted (current loan)'
+WaitingForApproval: 'In processing'
+WaitingForCustomerSignature: 'In processing'

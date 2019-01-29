@@ -1,0 +1,103 @@
+<div class="client-columns">
+	<div class="column">
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Личные</b> данные'|trans|raw }}</h2>
+			</div>
+			<div class="data-info">
+				{% include 'security/registration-preview-row.html.twig' with {field: form.gender} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.firstName} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.lastName} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.middleName} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.birthDate} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.email.first} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.phone} %}
+			</div>
+		</div>
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Адрес</b> проживания'|trans|raw }}</h2>
+			</div>
+			<div class="data-info">
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.state} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.typeOfSettlement} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.city} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.street} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.house} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.building} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.apartment} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.zipCode} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.residentialMatchesRegistration} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.address.realEstate} %}
+			</div>
+		</div>
+		
+		{% if form.address.residentialMatchesRegistration.vars.value == 2 %}
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Адрес</b> регистрации'|trans|raw }}</h2>
+			</div>
+			<div class="data-info">
+				{% include 'security/registration-preview-row.html.twig' with {field: form.secondAddress.state} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.secondAddress.typeOfSettlement} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.secondAddress.city} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.secondAddress.street} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.secondAddress.house} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.secondAddress.building} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.secondAddress.apartment} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.secondAddress.zipCode} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.secondAddress.realEstate} %}
+			</div>
+		</div>
+		{% endif %}
+	</div>
+	<div class="column">
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Социальная</b> информация'|trans|raw }}</h2>
+			</div>
+			<div class="data-info">
+				{% include 'security/registration-preview-row.html.twig' with {field: form.maritalStatus} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.numberOfDependents} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.education} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.citizenship} %}
+			</div>
+		</div>
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Паспортные</b> данные'|trans|raw }}</h2>
+			</div>
+			<div class="data-info">
+				{% include 'security/registration-preview-row.html.twig' with {field: form.isPassportNewType} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.passport} %}
+				
+				{% if form.isPassportNewType.vars.value == 1  %}
+					{% include 'security/registration-preview-row.html.twig' with {field: form.passportValidDate} %}
+					{% include 'security/registration-preview-row.html.twig' with {field: form.passportRecordNumber} %}
+				{% else %}
+					{% include 'security/registration-preview-row.html.twig' with {field: form.passportRegistration} %}
+					{% include 'security/registration-preview-row.html.twig' with {field: form.passportIssuedBy} %}
+				{% endif %}
+				
+				{% include 'security/registration-preview-row.html.twig' with {field: form.socialSecurityNumber} %}
+			</div>
+		</div>
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Заработок</b>'|trans|raw }}</h2>
+			</div>
+			<div class="data-info">
+				{% include 'security/registration-preview-row.html.twig' with {field: form.incomeType} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.monthlyIncome} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.companyName} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.position} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.businessType} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.lastExperience} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.totalExperience} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.workPhone} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.carOwner} %}
+				{% include 'security/registration-preview-row.html.twig' with {field: form.realEstateOwner} %}
+			</div>
+		</div>
+	</div>
+</div>

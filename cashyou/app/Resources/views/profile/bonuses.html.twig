@@ -1,0 +1,278 @@
+<div class="client-columns alt-columns">
+	<div class="column">
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Текущее</b> количество бонусов'|trans|raw }}</h2>
+			</div>
+			<span class="bonuses-number">
+				<mark>{{ customerBonuses.bonusesBalance }}</mark> {{  'Бонус|Бонуса|Бонусов'|transchoice(customerBonuses.bonusesBalance) }}
+			</span>
+		</div>
+	</div>
+	<div class="column">
+		<div class="client-block">
+			<div class="heading-area">
+				<h2>{{ '<b>Ваши </b>текущие бонусы'|trans|raw }}</h2>
+			</div>
+			<ul class="bonuses-list">
+				<li>
+					<div class="gif-block"><img src="{{ asset('images/badge-money.gif') }}" alt=""></div><strong>{{ loyalityMapping.maxAmount[customerBonuses.maxAmountDegree.value] }} {{ 'грн'|trans }}</strong>
+				</li>
+				<li>
+					<div class="gif-block"><img src="{{ asset('images/badge-discount.gif') }}" alt=""></div><strong>{{ loyalityMapping.interestRate[customerBonuses.interestRateDegree.value] * 100 }}%</strong>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="client-block">
+	<div class="heading-area">
+		<h2>{{ '<b>Бонусная </b>линейка'|trans|raw }}</h2>
+	</div>
+	
+	<div class="ruler-block">
+		<strong class="head-title">{{ 'Увеличение максимальной суммы кредита'|trans }}</strong>
+		<div class="current-bonus">
+			<div class="block">
+				<span class="title">{{ 'Ваш текущий бонус'|trans }}</span>
+				<span class="amount"><mark>{{ loyalityMapping.maxAmount[customerBonuses.maxAmountDegree.value] }}</mark> {{ 'грн'|trans }}</span>
+			</div>
+			{% if customerBonuses.maxAmountDegree.value %}
+			<div class="icon-block">
+				<img src="{{ asset('images/badge-money-level-' ~ customerBonuses.maxAmountDegree.value ~ '.png') }}" alt="">
+			</div>
+			{% endif %}
+		</div>
+		
+		<ul class="bonuses-range">
+			{% for i in 1..5 %}
+				{% set currentValue = customerBonuses.maxAmountDegree.value %}
+				<li class="{{ currentValue|class_by_comparison(i, 'purchased', 'current', 'available', 'unavailable') }}">
+					<span>{{ loyalityMapping.maxAmount[i] }} {{ 'грн'|trans }}</span>
+					<div class="icon-block">
+						<img src="{{ asset('images/badge-money-level-' ~ i ~ '.png') }}" alt="">
+					</div>
+					<div class="hover-block">
+						{% if i < currentValue %}
+							<div class="icon-block">
+								<img src="{{ asset('images/badge-money-level-' ~ i ~ '.png') }}" alt="">
+							</div>
+							<div class="text">{{ 'Уже приобретено <b>%bonus% грн</b>'|trans({'%bonus%': loyalityMapping.maxAmount[i]})|raw }}</div>
+						{% elseif i == currentValue %}
+							<div class="icon-block">
+								<img src="{{ asset('images/badge-money-level-' ~ i ~ '.png') }}" alt="">
+							</div>
+							<div class="text">{{ 'Ваш текущий бонус <b>%bonus% грн</b>'|trans({'%bonus%': loyalityMapping.maxAmount[i]})|raw }}</div>
+						{% elseif i == (currentValue+1) %}
+							{% if customerBonuses.bonusesBalance < loyalityParameters.maxAmount[i-1] %}
+								<div class="text">{{ 'Необходимо %bonus% бонусов для покупки'|trans({'%bonus%': loyalityParameters.maxAmount[i-1]})|raw }}</div>
+							{% else %}
+								<div class="text">{{ 'Увеличение в <b>%bonus%</b> грн<br>за <b>%cost%</b>'|trans({'%bonus%': loyalityMapping.maxAmount[i], '%cost%': loyalityParameters.maxAmount[i-1]})|raw }} {{ 'Бонус|Бонуса|Бонусов'|transchoice(loyalityParameters.maxAmount[i-1]) }}</div>
+								<div class="button-block">
+									{{ render(controller('AppBundle:Profile:improveLoyalityProgramButton', {
+										'maxAmountDegree': currentValue+1,
+										'maxTermDegree': customerBonuses.maxTermDegree.value,
+										'interestRateDegree': customerBonuses.interestRateDegree.value,
+									})) }}
+								</div>
+							{% endif %}
+						{% else %}
+							<div class="text">{{ 'Это увеличение будет доступным для приобретения при наличии предыдущего'|trans }}</div>
+						{% endif %}
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+		<div class="bonuses-range-tabs">
+			<ul class="bonuses-range js-tabs">
+				{% for i in 1..5 %}
+					{% set currentValue = customerBonuses.maxAmountDegree.value %}
+					<li class="tab-link {{ currentValue|class_by_comparison(i, 'purchased', 'current', 'available active', 'unavailable') }}">
+						<a class="icon-block" class="icon-block" href="#bonuses-range-money-tab-{{ i }}">
+							<img src="{{ asset('images/badge-money-level-' ~ i ~ '.png') }}" alt="">
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<div class="tab-content">
+				{% for i in 1..5 %}
+					{% set currentValue = customerBonuses.maxAmountDegree.value %}
+					<div data-id="bonuses-range-money-tab-{{ i }}" class="tab hover-block {{ currentValue|class_by_comparison(i, 'purchased', 'current', 'available', 'unavailable') }}">
+						<span>{{ loyalityMapping.maxAmount[i] }} {{ 'грн'|trans }}</span>
+						{% if i < currentValue %}
+							<div class="icon-block">
+								<img src="{{ asset('images/badge-money-level-' ~ i ~ '.png') }}" alt="">
+							</div>
+							<div class="text">{{ 'Уже приобретено <b>%bonus% грн</b>'|trans({'%bonus%': loyalityMapping.maxAmount[i]})|raw }}</div>
+						{% elseif i == currentValue %}
+							<div class="icon-block">
+								<img src="{{ asset('images/badge-money-level-' ~ i ~ '.png') }}" alt="">
+							</div>
+							<div class="text">{{ 'Ваш текущий бонус <b>%bonus% грн</b>'|trans({'%bonus%': loyalityMapping.maxAmount[i]})|raw }}</div>
+						{% elseif i == (currentValue+1) %}
+							{% if customerBonuses.bonusesBalance < loyalityParameters.maxAmount[i-1] %}
+								<div class="text">{{ 'У вас не достаточно бонусов для приобретения'|trans }}</div>
+							{% else %}
+								<div class="text">{{ 'Увеличение в <b>%bonus%</b> грн<br>за <b>%cost%</b>'|trans({'%bonus%': loyalityMapping.maxAmount[i], '%cost%': loyalityParameters.maxAmount[i-1]})|raw }} {{ 'Бонус|Бонуса|Бонусов'|transchoice(loyalityParameters.maxAmount[i-1]) }}</div>
+								<div class="button-block">
+									{{ render(controller('AppBundle:Profile:improveLoyalityProgramButton', {
+										'maxAmountDegree': currentValue+1,
+										'maxTermDegree': customerBonuses.maxTermDegree.value,
+										'interestRateDegree': customerBonuses.interestRateDegree.value,
+									})) }}
+								</div>
+							{% endif %}
+						{% else %}
+							<div class="text">{{ 'Это увеличение будет доступным для приобретения при наличии предыдущего'|trans }}</div>
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+	
+	<div class="ruler-block">
+		<strong class="head-title">{{ 'Уменьшение процентной ставки кредита'|trans }}</strong>
+		<div class="current-bonus">
+			<div class="block">
+				<span class="title">{{ 'Ваш текущий бонус'|trans }}</span>
+				<span class="amount"><mark>{{ loyalityMapping.interestRate[customerBonuses.interestRateDegree.value] * 100 }}</mark>%</span>
+			</div>
+			{% if customerBonuses.interestRateDegree.value %}
+			<div class="icon-block">
+				<img src="{{ asset('images/badge-discount-level-' ~ customerBonuses.interestRateDegree.value ~ '.png') }}" alt="">
+			</div>
+			{% endif %}
+		</div>
+		<ul class="bonuses-range">
+			{% for i in 1..5 %}
+				{% set currentValue = customerBonuses.interestRateDegree.value %}
+				<li class="{{ currentValue|class_by_comparison(i, 'purchased', 'current', 'available', 'unavailable') }}">
+					<span>{{ loyalityMapping.interestRate[i] * 100 }}%</span>
+					<div class="icon-block">
+						<img src="{{ asset('images/badge-discount-level-' ~ i ~ '.png') }}" alt="">
+					</div>
+					<div class="hover-block">
+						{% if i < currentValue %}
+							<div class="icon-block">
+								<img src="{{ asset('images/badge-discount-level-' ~ i ~ '.png') }}" alt="">
+							</div>
+							<div class="text">{{ 'Уже приобретено'|trans }} <b>{{ loyalityMapping.interestRate[i] * 100 }}</b>%</div>
+						{% elseif i == currentValue %}
+							<div class="icon-block">
+								<img src="{{ asset('images/badge-discount-level-' ~ i ~ '.png') }}" alt="">
+							</div>
+							<div class="text">{{ 'Ваш текущий бонус'|trans }} <b>{{ loyalityMapping.interestRate[i] * 100 }}</b>%</div>
+						{% elseif i == (currentValue+1) %}
+							{% if customerBonuses.bonusesBalance < loyalityParameters.interestRate[i-1] %}
+								<div class="text">{{ 'Необходимо %bonus% бонусов для покупки'|trans({'%bonus%': loyalityParameters.interestRate[i-1]})|raw }}</div>
+							{% else %}
+								<div class="text">{{ 'Увеличение в'|trans }} <b>{{ loyalityMapping.interestRate[i] * 100 }}</b>% за <b>{{ loyalityParameters.interestRate[i-1] }}</b> {{ 'Бонус|Бонуса|Бонусов'|transchoice(loyalityParameters.interestRate[i-1]) }}</div>
+								<div class="button-block">
+									{{ render(controller('AppBundle:Profile:improveLoyalityProgramButton', {
+										'maxAmountDegree': customerBonuses.maxAmountDegree.value,
+										'maxTermDegree': customerBonuses.maxTermDegree.value,
+										'interestRateDegree': currentValue+1,
+									})) }}
+								</div>
+							{% endif %}
+						{% else %}
+							<div class="text">{{ 'Это увеличение будет доступным для приобретения при наличии предыдущего'|trans }}</div>
+						{% endif %}
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+		<div class="bonuses-range-tabs">
+			<ul class="bonuses-range js-tabs">
+				{% for i in 1..5 %}
+					{% set currentValue = customerBonuses.interestRateDegree.value %}
+					<li class="tab-link {{ currentValue|class_by_comparison(i, 'purchased', 'current', 'available active', 'unavailable') }}">
+						<a class="icon-block" href="#bonuses-range-discount-tab-{{ i }}">
+							<img src="{{ asset('images/badge-discount-level-' ~ i ~ '.png') }}" alt="">
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<div class="tab-content">
+				{% for i in 1..5 %}
+					{% set currentValue = customerBonuses.interestRateDegree.value %}
+					<div data-id="bonuses-range-discount-tab-{{ i }}"  class="tab hover-block {{ currentValue|class_by_comparison(i, 'purchased', 'current', 'available', 'unavailable') }}">
+						<span>{{ loyalityMapping.interestRate[i] * 100 }}%</span>
+						{% if i < currentValue %}
+							<div class="icon-block">
+								<img src="{{ asset('images/badge-discount-level-' ~ i ~ '.png') }}" alt="">
+							</div>
+							<div class="text">{{ 'Уже приобретено'|trans }} <b>{{ loyalityMapping.interestRate[i] * 100 }}</b>%</div>
+						{% elseif i == currentValue %}
+							<div class="icon-block">
+								<img src="{{ asset('images/badge-discount-level-' ~ i ~ '.png') }}" alt="">
+							</div>
+							<div class="text">{{ 'Ваш текущий бонус'|trans }} <b>{{ loyalityMapping.interestRate[i] * 100 }}</b>%</div>
+						{% elseif i == (currentValue+1) %}
+							{% if customerBonuses.bonusesBalance < loyalityParameters.interestRate[i-1] %}
+								<div class="text">{{ 'У вас не достаточно бонусов для приобретения'|trans }}</div>
+							{% else %}
+								<div class="text">{{ 'Увеличение в'|trans }} <b>{{ loyalityMapping.interestRate[i] * 100 }}</b>% за <b>{{ loyalityParameters.interestRate[i-1] }}</b> {{ 'Бонус|Бонуса|Бонусов'|transchoice(loyalityParameters.interestRate[i-1]) }}</div>
+								<div class="button-block">
+									{{ render(controller('AppBundle:Profile:improveLoyalityProgramButton', {
+										'maxAmountDegree': customerBonuses.maxAmountDegree.value,
+										'maxTermDegree': customerBonuses.maxTermDegree.value,
+										'interestRateDegree': currentValue+1,
+									})) }}
+								</div>
+							{% endif %}
+						{% else %}
+							<div class="text">{{ 'Это увеличение будет доступным для приобретения при наличии предыдущего'|trans }}</div>
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+{#
+<div class="client-block">
+	<div class="heading-area">
+		<h2> <b>Как  </b>еще получить бонусы?</h2>
+	</div>
+	<strong class="head-title">1. Пригласите друга и получайте баллы за его пользование нашей системой</strong>
+	<ul class="extra-bonuses">
+		<li>
+			Друзей приглашено
+			<span>3</span>
+		</li>
+		<li>
+			Баллы за друзей
+			<span>3000</span>
+		</li>
+		<li>
+			Кредиты друзей
+			<span>5</span>
+		</li>
+		<li>
+			Баллы за кредиты
+			<span>1750</span>
+		</li>
+	</ul>
+	<strong class="head-title">2. Оставьте отзыв о нашей системе в социальных сетях</strong>
+	<ul class="extra-bonuses">
+		<li>
+			Вконтакте
+			<span>ОК + 500 Б</span>
+		</li>
+		<li>
+			Однокласники
+			<span>ОК + 500 Б</span>
+		</li>
+		<li>
+			Facebook
+			<span>500 Баллов за отзыв</span>
+		</li>
+		<li>
+			Twitter
+			<span>500 Баллов за отзыв</span>
+		</li>
+	</ul>
+</div>
+#}

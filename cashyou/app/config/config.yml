@@ -1,0 +1,164 @@
+imports:
+    - { resource: parameters.yml }
+    - { resource: security.yml }
+    - { resource: services.yml }
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    locale: uk
+
+framework:
+    #esi: ~
+    translator: { fallbacks: ['%locale%'] }
+    secret: '%secret%'
+    router:
+        resource: '%kernel.project_dir%/app/config/routing.yml'
+        strict_requirements: ~
+    form: ~
+    csrf_protection: ~
+    validation: { enable_annotations: true }
+    serializer: { enable_annotations: true }
+    templating:
+        engines: ['twig']
+    default_locale: '%locale%'
+    trusted_hosts: ~
+    session:
+        # https://symfony.com/doc/current/reference/configuration/framework.html#handler-id
+        handler_id: session.handler.native_file
+        save_path: '%kernel.project_dir%/var/sessions/%kernel.environment%'
+        cookie_lifetime: 3600
+        cookie_httponly: false
+    fragments: ~
+    http_method_override: true
+    assets: ~
+    php_errors:
+        log: true
+
+# Twig Configuration
+twig:
+    debug: '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    form_themes:
+        - 'form/fields.html.twig'
+    globals:
+        comingSoonMode: '%coming_soon_mode%'
+        TKLenderConfig:
+            defaultAmountStep: '%turnkey_lender_default_amount_step%'
+            defaultTermStep: '%turnkey_lender_default_term_step%'
+            defaultAmountValue: '%turnkey_lender_default_amount_value%'
+            defaultTermValue: '%turnkey_lender_default_term_value%'
+        googleTagManagerId: '%google_tag_manager_id%'
+    date:
+        timezone: Europe/Kiev
+
+# Doctrine Configuration
+doctrine:
+    dbal:
+        driver: pdo_mysql
+        host: '%database_host%'
+        port: '%database_port%'
+        dbname: '%database_name%'
+        user: '%database_user%'
+        password: '%database_password%'
+        charset: "utf8mb4"
+        default_table_options:
+            charset: "utf8mb4"
+            collate: "utf8mb4_unicode_ci"
+        types:
+            tracking_status: AppBundle\Doctrine\Type\TrackingStatus
+            gender: AppBundle\Doctrine\Type\Gender
+            secret_question: AppBundle\Doctrine\Type\SecretQuestion
+            marital_status: AppBundle\Doctrine\Type\MaritalStatus
+            number_of_dependents: AppBundle\Doctrine\Type\NumberOfDependents
+            education: AppBundle\Doctrine\Type\Education
+            yesno: AppBundle\Doctrine\Type\YesNo
+            real_estate: AppBundle\Doctrine\Type\RealEstate
+            income_type: AppBundle\Doctrine\Type\IncomeType
+            monthly_income: AppBundle\Doctrine\Type\MonthlyIncome
+            position: AppBundle\Doctrine\Type\Position
+            business_type: AppBundle\Doctrine\Type\BusinessType
+            working_experience: AppBundle\Doctrine\Type\WorkingExperience
+            type_of_settlement: AppBundle\Doctrine\Type\TypeOfSettlement
+            rollover_unit: AppBundle\Doctrine\Type\RolloverUnit
+
+    orm:
+        auto_generate_proxy_classes: '%kernel.debug%'
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+
+# Monolog
+monolog:
+    channels: ['api']
+    handlers:
+        api:
+            channels: [api]
+            type: service
+            id: 'app.cloudwatch.handler'
+
+# Swiftmailer Configuration
+swiftmailer:
+    transport: '%mailer_transport%'
+    host: '%mailer_host%'
+    username: '%mailer_user%'
+    password: '%mailer_password%'
+
+jms_i18n_routing:
+    default_locale: '%locale%'
+    locales: [uk, ru, en]
+    strategy: prefix_except_default
+
+jms_translation:
+    configs:
+        app:
+            dirs: ["%kernel.root_dir%", "%kernel.root_dir%/../src"]
+            output_dir: "%kernel.root_dir%/Resources/translations"
+            ignored_domains: [routes]
+            excluded_names: ["*TestCase.php", "*Test.php"]
+            excluded_dirs: [var]
+            extractors: [jms_i18n_routing]
+            keep: true
+avator_turbosms:
+    login: 'cashyou'
+    password: 'cashyou123'
+    sender: 'CashYou'
+    debug: false
+    save_to_db: false
+    
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations
+    organize_migrations: false
+    
+    
+stof_doctrine_extensions:
+    default_locale: "%locale%"
+    orm:
+        default:
+            timestampable: true
+
+sonata_seo:
+    encoding: UTF-8
+    page:
+        title: CashYou
+        metas:
+            name:
+#                description: CashYou
+#                keywords: CashYou
+                robots: index, follow
+                #theme-color: "#ff6200"
+                #robots: noarchive
+            # Open Graph information
+#            property:
+#                'og:site_name': CashYou
+#                'og:title': CashYou
+#                'og:description': CashYou
+#                'og:image': https://cashyou.ua/images/favicon-196x196.png
+#                'og:url': https://cashyou.ua
+#            http-equiv:
+#                'Content-Type': text/html; charset=utf-8
+        head:
+            'xmlns': http://www.w3.org/1999/xhtml
+            'prefix': "og: http://ogp.me/ns#"

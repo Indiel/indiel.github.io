@@ -1,0 +1,22 @@
+{% extends 'loan/repay/result.html.twig' %}
+
+{% block headingText %}{% endblock %}
+
+{% block content %}
+	<div class="message-holder">
+		<h1>{{ 'Ваша заявка на рассмотрении !'|trans|raw }}</h1>
+		<p>{{ 'Ожидайте решения системы'|trans|raw }}</p>
+	</div>
+{% endblock %}
+
+{% block imageUrl %}
+	{{ asset('images/man-clock.gif')}}
+{% endblock %}
+
+{% block buttonLink %}
+	{{ path('app.profile') }}
+{% endblock %}
+
+{% block buttonText %}
+	{{ 'В личный кабинет'|trans|raw }}
+{% endblock %}

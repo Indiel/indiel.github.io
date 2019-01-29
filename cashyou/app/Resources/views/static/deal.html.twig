@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>{{ 'Кредит по акции. Быстрый кердит под 0%. Кредиты по выгодным условиям'|trans }}</title>{% endblock %}
+{% block meta %}<meta name="description" content="{{ 'Лучшие предложения на финансовом рынке. Первый кредит под 0.1 % Расширяемая бонусная линецка и скидки на последующий кредиты. Пользуйся кредитами по самым выгодным предложеням.'|trans }}">{% endblock %}
+
+{% block bodyAttributes %} class="deal-page"{% endblock %}
+
+{% block mainContent %}
+	<div class="container">
+		<div class="deal-section">
+			<div class="heading">
+				<h1><b>{{ 'Акции'|trans }}</b></h1>
+			</div>
+			<div class="deal-columns">
+				<div class="client-block deal-block">
+					<div class="image-block">
+						<a href="{{ path('app.deal-credit') }}">
+							<img src="{{ asset('images/img-intro1.jpg') }}" alt="">
+						</a>
+					</div>
+					<h2><a href="{{ path('app.deal-credit') }}">{{ 'Кредит под 0,01%'|trans }}</a></h2>
+					<time class="date" datetime="2017-11-24">24 ноября 2017</time>
+					<p>{{ 'app.deal_credit.short_description' | trans | raw }}</p>
+					<div class="button-block">
+						<a class="button" href="{{ path('app.deal-credit') }}">{{ 'Подробнее'|trans }}</a>
+					</div>
+				</div>
+				<div class="client-block deal-block">
+					<div class="image-block">
+						<a href="{{ path('app.deal-stvalentines-day') }}">
+							<img src="{{ asset('images/deal-4-505x280.jpg') }}" alt="">
+						</a>
+					</div>
+					<h2><a href="{{ path('app.deal-stvalentines-day') }}">{{'app.deal_stvalentines_day.title'|trans|raw}}</a></h2>
+					<time class="date" datetime="2018-14-02">14 февраля 2018</time>
+					<p>{{ 'app.deal_stvalentines_day.short_description' | trans | raw }}</p>
+					<div class="button-block">
+						<a class="button" href="{{ path('app.deal-stvalentines-day') }}">{{ 'Подробнее'|trans }}</a>
+					</div>
+				</div>
+			</div>
+			{#<ul class="list-pagination">
+				<li><a href="#" class="prev"></a></li>
+				<li><span class="active">1</span></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#" class="next"></a></li>
+			</ul>
+			<div class="chat-holder">
+				<div class="callback-block"><a class="callback-opener" href="#"><span><i class="icon-phone"></i></span></a>
+					<div class="callback-popup"><a class="callback-close" href="#"><i class="icon-close"></i></a>
+						<form action="#">
+							<label>Оставьте Ваш телефон и мы Вам перезвоним</label>
+							<input type="tel" placeholder="" value="+380">
+							<input class="button" type="submit" value="Перезвоните">
+						</form>
+					</div>
+				</div>
+				<div class="chat-block"><a class="chat-opener" href="#">{{ 'Связь с менеджером'|trans }}</a></div>
+			</div>#}
+		</div>
+	</div>
+	</div>
+{% endblock %}

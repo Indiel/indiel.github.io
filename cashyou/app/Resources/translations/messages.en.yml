@@ -1,0 +1,1268 @@
+'': ''
+' <b>Гроші в кредит</b>': ' <b>Lending</b>'
+' <b>Деньги в долг на карту</b>': ' <b>A loan on the bank card</b>'
+' <b>Документы</b>': ' <b>Documents</b>'
+' <b>Как </b>вернуть кредит?': '<b>How to</b> pay off the loan?'
+' <b>Кредит </b>365': ' <b>Loan</b>365'
+' <b>Кредит </b>с плохой историей': ' <b>Loan </b>with bad story'
+' <b>Кредит безработным </b>': ' <b>Loan for unemployed individuals</b>'
+' <b>Кредит кафе</b>': ' <b>Credit cafe</b>'
+' <b>Кредит на карту срочно</b>': ' <b>A loan on the bank card urgently</b>'
+' <b>Кредит с 18 лет</b>': ' <b>Credit is granted from 18 years old</b>'
+' <b>Кредитный </b>калькулятор?': ' <b>Loan </b>calculator?'
+' <b>Необходимая </b>Юридическая информация': "<b>Necessary</b> legal information\n"
+' <b>ПУБЛІЧНА </b>ІНФОРМАЦІЯ': ' <b>Public</b>information'
+' <b>Процентная ставка </b> по кредиту': ' <b>Interest rate </b> credit'
+' <b>Расчет </b>кредита': ' <b>Calculation </b>credit'
+' <b>Срочно </b>нужны деньги': ' <b>Money is needed urgently</b>'
+' <b>Срочный </b>займ на карту?': ' <b>Urgent </b>loan on the bank card?'
+' <b>Ставки </b>по кредитам?': ' <b>Credit rates</b>?'
+' <b>Что </b>такое Cashyou ?': "<b>What</b> is Сashyou?\n"
+' <b>Экспресс </b>деньги': ' <b>Express </b>money'
+' <b>Экспресс </b>займ': ' <b>Express </b>loan'
+' Взять кредит<b> без справки о доходах</b>': 'Take out a loan<b> without an income certificate</b>'
+' Кредит <b>по двум документам</b>': 'Loan <b>based on two documents</b>'
+' ПОЛІТИКА <b>КОНФІДЕНЦІЙНОСТІ</b> ТА ЗАХИСТУ ПЕРСОНАЛЬНИХ ДАНИХ ДЛЯ КОРИСТУВАЧІВ САЙТУ CASHYOU ?': 'Policy <b>of privacy </b> and protection of personal data for users of the CASHYOU website?'
+' ПРОПОЗИЦІЯ <b>(ОФЕРТА)</b> ': 'Offer <b>'
+'+38 (___) ___-__-__': '+38 (___) ___-__-__'
+
+1:
+    ' Как получить бонусы?': '1. How to get bonuses?'
+
+'<b>Адрес</b> проживания': '<b>Address</b> of residence'
+'<b>Адрес</b> регистрации': '<b>Address</b> of registration'
+'<b>Безопасность</b> ': '<b>Security</b> '
+'<b>Бонусная </b>линейка': '<b>Bonus </b>program'
+'<b>Бонусная </b>система': '<b>Bonus </b>system'
+'<b>Ваша </b>история': '<b>Your </b>story'
+'<b>Ваши </b>текущие бонусы': '<b>Your </b>current bonuses'
+'<b>Внимание!</b>': '<b>Attention!</b>'
+'<b>Возможность </b>оплаты бонусами': '<b>Bonus </b> payment'
+'<b>Восстановление</b> пароля': '<b>Password</b> recovery'
+'<b>Вход</b> в кабинет': '<b>Personal</b> account'
+'<b>Заработок</b>': '<b>Earnings</b>'
+'<b>Изменение</b> E-mail': '<b>Change</b> the E-mail'
+'<b>Изменение</b> номера телефона': '<b>Change</b> the phone number'
+'<b>Изменение</b> пароля': '<b>Change</b> the password'
+'<b>КАК </b>Получить Кредит': '<b>How to </b> get a loan'
+'<b>КАК </b>Получить? <span>[ Несколько шагов и деньги у вас на карте ]</span>': '<b>How to </b> apply? <span>[ take a few steps to get the money ]</span>'
+'<b>Как </b>вернуть? <span>[ Несколько способов погасить кредит]</span>': '<b>How to</b> pay off the loan? <span>[ Several ways to repay the loan]</span>'
+'<b>Карта</b>': '<b>Card</b>'
+'<b>Кредитная </b>история': '<b>Credit </b>story'
+'<b>Кредитный</b> договор': '<b>Loan</b> agreement'
+'<b>Личные</b> данные': '<b>Personal</b> data'
+'<b>Наши</b> акции': '<b>Our</b> promotions'
+'<b>Необходимые </b>Документы <span>[ Все что необходимо для получения кредита ]</span>': '<b>Documents </b> required <span>[ all the documents required ]</span>'
+'<b>Новый </b>Пароль': '<b>New </b>Password'
+'<b>Онлайн </b>Кредит <span>[ Быстрые кредиты наличными на вашу карту ]</span>': '<b>Online</b>Loan <span>[ Fast money to your credit card ]</span>'
+'<b>Первый<br> онлайн-займ<br> под 0% до 30 дней!</b>': '<b>The first<br> online loan<br> at 0% up to 30 days!</b>'
+'<b>Оплата </b>бонусами': '<b>Bonus</b>payment'
+'<b>Паспортные</b> данные': '<b>Personal</b> data'
+'<b>Погашение  </b>кредита бонусами': '<b>Loan repayment </b>by bonuses'
+'<b>Погашение </b> кредита': '<b>Loan</b> repayment'
+'<b>Программа </b>Лояльности <span>[ Бонусная система ]</span>': "<b> Loyalty </b> program<span> [ bonus system ] </span>\n "
+'<b>Регистрация</b> аккаунта <span>[<span class="step-count">%step%</span> этап ]</span>': '<b>Account</b> registration <span>[<span class="step-count">%step%</span> step ]</span>'
+'<b>Социальная</b> информация': '<b>Social</b> information'
+'<b>Текущее </b>количество бонусов': '<b>Current </b>number of bonuses'
+'<b>Текущее</b> количество бонусов': '<b>You</b> have'
+'<b>Текущий </b>кредит': '<b>Current </b>loan'
+'<b>Фото </b>загруженных документов': '<b>Picture </b>of uploaded documents'
+'<b>ЧТо </b>нужно что бы получить кредит ?': '<b> What</b>is required to receive a loan?'
+'<b>Часто задаваемые</b> вопросы': '<b>Frequently asked</b> questions'
+
+'<ol class="step-instruction"><li>После того, как Вы нажмете кнопку "Продлить", программа укажет сумму, необходимую для погашения процентов':
+    '</li><li>Вам необходимо оплатить проценты в открывшемся окне деньгами либо бонусами':
+        '</li><li>Далее, Вам необходимо подписать дополнительное соглашение к договору о увеличении срока кредита':
+            ' Если вы случайно вышли на главную страницу личного кабинета, вам необходимо снова выбрать  срок пролонгации и нажать на кнопку "Продлить" и вы попадёте на страницу подписания договора':
+                '</li><li>Поздравяем, вы пролонгировали кредит':
+                    '</li></ol>': '<ol class="step-instruction"><li> After you click the "Extend" button, the program will indicate the amount necessary to pay interest. </ li> <li> You need to pay interest in the window that opens by money or bonuses. </ li> <li> Next, you need to sign an additional agreement to the contract to increase the loan term. If you accidentally went to the main page of your personal cabinet, you need to select the extend term again and click on the "Extend" button and you will go to the page of signing the contract. </ li> <li> Congratulations, you prolonged the loan. </li></ol>'
+
+'<p>Если после подписания Договора в Личном Кабинете Вы видите следующее сообщение - «Деньги по Вашей заявке не перечислены», как правило, это может значить следующее:</p><ul><li>срок действия Вашей банковской карты истек;</li><li>проблемы процессинга на стороне банка;</ul>': '<p>If after signing of the Agreement you see the following message in your Personal Account - «Money upon Your application was not transferred»,it usually means the following:</p><ul><li> validity period of Your bank card is expired;</li><li>Processing problems of the bank;</ul>'
+
+'<p>Если у Вас возникли проблемы при первой оплате картой через Личный кабинет, мы рекомендуем обратиться на горячую линию банка, которым была выдана карта, для уточнения информации касательно:</p><ul><li>установленных банком лимитов на денежные переводы в интернете по карте, с помощью которой Вы пытались осуществить платеж;</li><li>установленных банком лимитов по карте, с помощью которой Вы пытались осуществить платеж, на количество транзакций в день':
+    '</li></ul><p>Если такие лимиты были установлены, необходимо временно снять их с помощью сотрудника банка, в котором была выдана карта':
+        ' После снятия банком вышеуказанных ограничений, Вы можете повторно осуществить платеж через Личный кабинет':
+            '</p>': '<p>If any problems occured during your first  payment by card in your Personal Account , we recommend you to contact hotline of the bank that issued the card to clarify the following information :</p><ul><li>transaction limits in internet established by the bank for the card that you tried to pay with;</li><li>limits regarding number of transactions per day established by the bank for the card that you tried to pay with.</li></ul><p>In case of presence of such limits it is needed to temporarily remove them with the help of an employee of the bank that issued your card. After the limits will be removed by the bank, you can repeat transaction thruogh your Personal account.</p>'
+
+"<p>За любое действие в системе Вы получаете\n\t\t\t\t\t\t<mark>бонусные баллы</mark>":
+    "\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>За эти бонусные баллы Вы можете\n\t\t\t\t\t\t<mark>прокачивать </mark>свой профиль":
+        "\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>Прокачивать его можно на 5 уровней в 2 направлениях":
+            '</p>': "\t\t\t\t\t<p>For any action in the system\n\t\t\t\t\t\t<mark>you get bonus points.</mark>.\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>For these bonus points you can\n\t\t\t\t\t\t<mark>upgrade </mark>your profile.\n\t\t\t\t\t</p>\n\t\t\t\t\t<p>There 5 levels of the profile and it can go into 2 different directions.</p>\n\t\t\t\t\t"
+
+'<p>Их можно получить за:</p><ul><li>Регистрацию;</li><li>Получение каждого нового кредита;</li><li>Участие в акциях;</li><li>Приведение нового клиента и процент от каждого его кредита;</li></ul>': '<p>You can receive them for:</p><ul><li>Registration;</li><li>Getting a new loan;</li><li>Participation in promotions;</li><li>Engagement of a new client and percent from each of his loans;</li></ul>'
+
+'<p>На данный момент у Вас нет кредитов':
+    "</p>\n\t\t\t\t<p>Вы можете оформить кредит прямо сейчас, не выходя из личного кабинета":
+        '</p>': "<p>You have no loans at the moment.</p>\n\t\t\t\t<p>You can take the loan right now without logging out from the Personal account.</p>"
+
+"<p>Чаще всего это происходит в случае если:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li>остаток на вашем карточном счёту составляет менее 5 гривен":
+    ' Пополните счёт либо же повторите попытку с другой Вашей картой, остаток средств на которой удовлетворяет требованиям':
+        "</li>\n\t\t\t\t\t\t<li>ваша карта заблокирована банком либо установлен лимит на проведение определенных операций":
+            ' Свяжитесь с банком и снимите ограничения по карте':
+                "</li>\n\t\t\t\t\t\t<li>срок действия Вашей банковской карты истек</li>": "<p>It usually happens in the following cases:</p>\n\t\t\t\t\t\t<ul>\n\t\t\t\t\t\t<li>the balance at your bank account is less than 5 UAH.  Put money on your bank account or try to pay with another card that contains needed amount of funds.</li>\n\t\t\t\t\t\t<li>your card is blocked by the bank or there is a limit established for certain transactions. Contact the bank and remove the card limits.</li>\n\t\t\t\t\t\t<li>validity term of your bank card is expired.</li>"
+
+'<ul><li>Наша компания предоставляет займы только гражданам Украины;</li><li>Вы не подходите по возрастным категориям (от 18 до 65 лет);</li><li>У Вас нет личной банковской карты;</li><li>Наличие просроченного долга по кредиту;</li><li>При регистрации Вы указали ложные или неверные данные;</li></ul>': '<ul><li>Our company grants loans only to Ukrainian citizens;</li><li>You don''t meet the age requirements (from 18 to 65 years old);</li><li>You don''t have a personal bank card;</li><li>Presence of an overdue loan;</li><li>You indicated false or incorrect data during the registration process;</li></ul>'
+
+'C <a href="%rules_url%">правилами</a> и условиями предоставления займа ознакомлен, и подтверждаю <a href="%agreement_url%">согласие</a> на обработку своих персональных данных, в том числе на передачу данных в бюро кредитных историй':
+    '': 'C <a href="%rules_url%">правилами</a> и условиями предоставления займа ознакомлен, и подтверждаю <a href="%agreement_url%">согласие</a> на обработку своих персональных данных, в том числе на передачу данных в бюро кредитных историй.'
+
+'C <a target="_blank" href="%rules_url%">правилами</a> и условиями предоставления займа ознакомлен, и подтверждаю <a target="_blank" href="%agreement_url%">согласие</a> на обработку своих персональных данных, в том числе на передачу данных в бюро кредитных историй':
+    '': 'C <a target="_blank" href="%rules_url%">правилами</a> и условиями предоставления займа ознакомлен, и подтверждаю <a target="_blank" href="%agreement_url%">согласие</a> на обработку своих персональных данных, в том числе на передачу данных в бюро кредитных историй.'
+
+'CASHYOU – это сервис по микрокредитованию, построенный благодаря новейшим технологиям, который позволяет получить заем на Вашу персональную банковскую карточку в удобное для Вас время':
+    '  Время приема заявок  24/7, работа сервиса каждый день до 18:00':
+        '': 'CASHYOU – it is a micro-crediting service created using the latest technologies that allows to receive a loan on your personal bank card at the time convenient for you. Applications are accepted 24/7, the service works everyday till18:00.'
+
+'CVV карты': 'CVV of the card'
+
+'Cегодня мы не можем выдать Вам кредит':
+    ' Это решение может быть пересмотрено через несколько дней, мы будем рады видеть Вас снова':
+        '': 'We can not give you a credit today. The decision may be revised for couple days, we will glad to see you again.'
+
+Cрок: Period
+E-mail: E-mail
+Email: E-mail
+
+'Proin gravida nibh vel velit auctor aliquet':
+    ' Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis': 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis'
+
+'Vash kod perevirky mobilnogo telefonu: %code%':
+    ' Cashyou':
+        'ua kredyt online':
+            ' Tel:08002122300': 'Your code of verification of your mobile phone: %code%. Cashyou.ua credit online. Tel:08002122300'
+
+'Vash kod perevirky: %code%':
+    ' Cashyou':
+        'ua kredyt online':
+            ' Tel:08002122300': 'Vash kod perevirky: %code%. Cashyou.ua kredyt online. Tel:08002122300'
+
+about:
+    fewwords:
+        desc: "CashYou is a modern service that gives an opportunity to receive a loan right to your bank card anytime and anywhere. Our service is fully automated and the process of obtaining a loan does not take more than 5 minutes. The process of verification is simple and very efficient. Our main task is to provide financial convenience to any of our customers in daily live!\n"
+
+    required_legal_info:
+        desc: "Credits are granted by the LIMITED LIABILITY COMPANY \"Casyou\". Code under the USREOU 40885016. Certificate of entering a financial institution in the State Register of Financial Institutions: FC No. 916 from \"06\" July 2017. Payer of income tax on a general basis.\n\nInformation about the founder (information about the owners of substantial participation)\nLIMITED LIABILITY COMPANY \"YUSTAS INVEST\", identification code of legal entity 40833654, location: 61058, Kharkiv, Danilevsky street, 16. The share in the authorized capital is 100%.\n\nLegal address of the LLC \"Cashyou\".\n61058, city Kharkiv, Chychybabina street 7-A, office 42\n\nInformation about the executive body\nDirector - Tkachenko Andrii Viktorovych (operates on the basis of Statute, has no share in the LLC \"Cashyou\")\n\nBank details of the company\np / p 26506052200111 in PJSC CB \"PRYVATBANK\", MFO 351533\n\nThe cost of the loan and terms of obtainment\nAn example of calculating the annual interest rate: With a loan amount of 1000 UAH fee for using the funds will be 18 UAH per day, which corresponds to an interest rate equal to 1.8% per day. APR - 657%. The company issues loans to customers based on an agreement that is valid until the parties fulfill all obligations under the contract.\nCredits are granted to adult, capable citizens of Ukraine on their card account in the Ukrainian bank."
+
+    what_is_cashyou:
+        desc: 'CASHYOU is a service based on the latest technology, which allows you to get a fast loan to your personal credit card at the time that is convenient for you. You can easily have a loan anyday - at weekends and holidays. The service works round the clock, 24/7. It gives you an opportunity to ask for help in any situation and rely on us. Our task is to facilitate your life and make it easier. We strive to reduce the time to receive money when it is so necessary. You can rely at any time.'
+
+agreementpersonaldata:
+    content: "<p>I, (hereinafter referred to as the \"Client\"), in accordance with the Law of Ukraine \"On Protection of Personal Data\", hereby provide my consent to the LLC \"CASHYOU\" (\"the Company\") to the processing of my personal data in the manner and on the terms and conditions set forth in this agreement ..</p>\n<ol>\n\t<li>The Client agrees to the processing of his/her personal data by the Company that constitutes commission of the following actions: collection, systematization, accumulation, storage, refinement (renewal, modification), use, distribution (including transfer), depersonalization, blocking, destruction of personal data for the following purposes:\n\t\t<ul>\n\t\t\t<li>performance of the Loan Agreement;</li>\n\t\t\t<li>offer of prducts and services of the Company;</li>\n\t\t\t<li>provision of discounts and preferential terms for loans;</li>\n\t\t\t<li>servicing borrowers and individuals applying for loans (borrowers / clients) of the Company;</li>\n\t\t\t<li>promotion of services of the Company.</li>\n\t\t</ul>\n\t</li>\n\t<li>Consent for processing is given regarding the following personal data:\n\t\t<ul>\n\t\t\t<li>autobiographical data;</li>\n\t\t\t<li>surname, name and patronymic;</li>\n\t\t\t<li>address of registration and actual residence;</li>\n\t\t\t<li>place of birth;</li>\n\t\t\t<li>personal information (age, sex, family status, family composition, etc.);</li>\n\t\t\t<li>citizenship;</li>\n\t\t\t<li>photo of the ID (hereinafter referred to as the \"Passport\");</li>\n\t\t\t<li>tax ID;</li>\n\t\t\t<li>information about work activity, name and details of the employer or the educational institution;</li>\n\t\t\t<li>data concerning health status within the limits defined by the legislation;</li>\n\t\t\t<li>mobile phone number;</li>\n\t\t\t<li>e-mail address;</li>\n\t\t\t<li>another information contained in documents provided to the Company by the Borrower (hereinafter referred to as the \"Personal data\")</li>\n\t\t</ul>\n\t</li>\n\t<li>Processing of Personal Data by the Company will be carried out with the purpose of performance of the Loan Agreement.</li>\n\t<li>The scope and content of personal data to be processed by the Company is determined by the Company in accordance with the requirements of the current legislation of Ukraine. The Company collects personal data for the purposes mentioned above.</li>\n\t<li>By using the site of the Company a Borrower / Client confirms that he/she as a subject of personal data provides LLC \"CASHYOU\" the consent to the processing and use of his/her personal data unconditionally and without limitations for the purpose of statistical analysis. During processing the Company has the right to transfer Personal Data to the third parties (including, but not limited to legal advisers and collectors), if it is necessary to achieve the processing objectives and under terms of adhering by such third parties to confidentiality and security of Personal Data.</li>\n\t<li>The Company will process personal data using automation tools, as well as without using such tools.</li>\n\t<li>True consent for the processing of personal data is not limited by the term of validity.</li>\n\t<li>By providing consent for the processing of my personal data, I undertake, in case of my personal data being changed, to provide the updated, reliable information and original documents for updating my personal data as soon as possible. I confirm that I am informed about my rights as of a subject of personal data, defined by the Law of Ukraine \"On Protection of Personal Data\", the purpose of data processing and the persons whom such data is transmitted to, as well as the fact that my personal data is included in the personal data base \"Clients\" owned by LLC \"CASHYOU\" and, in this regard, I do not require further written notifications concerning the circumstances mentioned above.</li>\n</ol>"
+
+app:
+    deal_credit:
+        content: 'При возникновении острой необходимости в небольшом количестве денежных средств прежде чем идти в банк стоит обратить свое внимание на такую микрофинансовую организации как CashYou. Получить деньги на карту в срочном порядке теперь можно за считанные минуты с предоставлением минимума документов. Заявка на получение кредита рассматривается в течение 15 минут. Компания CashYou предоставляет всем своим клиентам заем на очень выгодных условиях. Первый кредит клиент может взять под 0.1 и 1.5 прцента. Сумма первого кредита достигает 4000 грн. Система работает 24/7, что позволяет любому клиенту получить нужные средства в любое удобное для него время. Взяв кредит у CashYou Вы не будете переплачивать лишние проценты и получите необходимую сумму на наиболее выгодных для Вас условиях.'
+        short_description: 'При возникновении острой необходимости в небольшом количестве денежных средств прежде чем идти в банк стоит...'
+
+    deal_stvalentines_day:
+        content: "We always want to improve the service and make it more convenient for you. Therefore, we increased the amount of payments for bonus points.\n\nThe new one looks like this:\n\n1 level - 4000 UAH\n2 level - 6000 UAH\n3 level - 8000 UAH\n4 level - 10000 UAH\n5 level - 12000 UAH\n\nWith respect, the team CashYou."
+        short_description: 'We always want to improve the service and make it more convenient for you. Therefore, we increased the amount of payments for bonus points.'
+        title: 'We <b>increased</b> payments'
+
+bonuses_page:
+    content: "<div class=\"bonus-blocks\">\n    <div class=\"bonus-block\">\n        <h2><b>Why</b> you need bonuses?</h2>\n        <div class=\"bonus-text-container\">\n            <p><strong>If you accumulate bonuses, you can:</strong></p>\n            <ul>\n                <li>Carry out full or partial repay <br>of the operating loan</li>\n                <li>\n                    Secure yourself from the risk of <br>accrual of interest for payment delay\n                    <span>If the loan is not repaid, the system automatically uses your Bonus account to repay the debt or extend the loan period</span>\n                </li>\n                <li>Reduce interest for the next loans <br>and to receive maximum<br>period and sum.</li>\n            </ul>\n        </div>\n    </div>\n    <div class=\"bonus-block\">\n        <h2><b>How</b> to get them?</h2>\n        <div class=\"bonus-text-container\">\n            <p><strong>You get bonuses for:</strong></p>\n            <ul>\n                <li>Filling in the very first loan application <span>from 2000 to 3000 bonuses</span></li>\n                <li>Repaying a loan<span> After full repayment you will get the number of bonuses<br>equal to the sum of the loan taken</span></li>\n                <li>Posting feedback in social networks<span>500 bonuses for 1 feedback <br>in a social network</span></li>\n                <li>Inviting friends<span>500 bonuses for every friend,who took<br>and paid off a loan</span></li>\n            </ul>\n        </div>\n    </div>\n</div>\n<div class=\"advantages-credit\">\n    <h2><b>YOUR</b> BENEFITS<br>FROM THE FIRST LOAN OF 1000 UAH</h2><br>\n    <strong>1000 bonuses — is10 UAH</strong>\n</div>\n<div class=\"advantages-blocks\">\n    <div class=\"advantages-block advantages-block-balance\">\n        <h5><b>5500 bonuses</b><br>to your balance</h5>\n        <ul>\n            <li>Receive and repay<br>a 1000 UAH loan</li>\n            <li>Add needed photos in the personal account</li>\n            <li>Leave feedback<br>in 3 social networks</li>\n        </ul>\n    </div>\n    <div class=\"advantages-block advantages-block-nopercent\">\n        <h5><b>Repayment</b><br>without interest</h5>\n        <ul>\n            <li>Out of 5500 bonuses<br>you will waste just<br>700 bonuses to<br>rapay a 7 UAH fee.</li>\n            <li>The bonuses left —<br>it is up to you.</li>\n        </ul>\n    </div>\n    <div class=\"advantages-block advantages-block-bleed\">\n        <h5><b>Upgrade</b><br>of the agreement terms</h5>\n        <ul>\n            <li>Increase sum and period of the loan or reduce the interest.<br>Our flexible benefit system will upgrade your credit profile.</li>\n        </ul>\n    </div>\n</div>"
+
+comming_soon_message: 'will be available<br> after December 18'
+
+confidentiallity:
+    content: "<ol>\n\t<li>Confidential information about the individuals visiting the Internet site www.cashyou.ua (hereafter referred to as the Internet site) as well as their personal data shall be protected in accordance with the provisions of the current legislation of Ukraine, in particular the Laws of Ukraine \"On Protection of Personal Data\" and \"On Information\". </li>\n\t<li>The personal data of individuals who visit the Internet site is owned by the LIMITED LIABILITY COMPANY \"CASHYOU\" (hereinafter - the Company) registered at 61058, city Kharkiv, Chychybabina street 7-A, office 42</li>\n\t<li>The Internet site can be used exclusively by adults in accordance with the legislation of Ukraine. </li>\n\t<li>During the process of registration, which is conducted using the form posted on the Internet site, individuals who visit the Internet site indicate their personal data exclusively to the extent that it is necessary to provide the needed services (conclusion of the agreement). The Company carries out processing of personal data of the User for the purpose of proper provision of services to the User (identification, authentication, authorization, password recovery, sending of informational materials under the User's subscription, answering to inquiries and letters of the User, as well as for other actions needed for proper provision of services). <br>\n\t\tThe company also uses impersonal data for targeting promotional and / or informational materials by age, gender, other data; for statistical research; by any other means.<br>\n\t\tThe Company has the right to transfer personal data, personal data base which includes personal data of the User, in whole or in part to the third parties without notifying the User in the following cases:\n\t\t<ul>\n\t\t\t<li>to the persons, whom administration, possession or ownership of the Site is transferred to; persons who are affiliated with the Company; </li>\n\t\t\t<li> to the new owner of the Company for processing with the purpose provided for by this Agreement;; </li>\n\t\t\t<li>to other users of the Site (both physical and legal persons), if the corresponding personality is provided by the Site.</li>\n\t\t</ul>\n\t\tWhen using the Website, the third-party internet resources codes may be present on its web pages, resulting in such the third parties receiving data, cookies; IP addresses; options and settings for Internet browsers. <br>\n\t\tSuch third-party internet resources are:\n\t\t<ul>\n\t\t\t<li>systems collecting statistics regarding visiting of Services;</li>\n\t\t\t<li>social-plugins (blocks) of social networks (e.g. Facebook, etc.);</li>\n\t\t\t<li>systems of banner ads;</li>\n\t\t\t<li>other resources.</li>\n\t\t</ul>\n\t</li>\n\t<li>Personal data indicated by visitors of the Internet site are not subject to disclosure, except for the circumstances specified in Art. 14 and Art. 16 of the Law of Ukraine \"On Protection of Personal Data\".</li>\n\t<li>The personal data specified in the registration process will not be kept longer than it is necessary for provision of services of the Company (fulfillment of the terms of the agreement), and not longer than allowed by the norms of the current legislation of Ukraine.</li>\n\t<li>The subject of personal data has the right to receive information on the purpose of the use of the data, as well as to demand its removal in cases stipulated by the Law mentioned above. The subject of personal data also has other rights specified in Art. 8 of the Law of Ukraine \"On Protection of Personal Data\".</li>\n\t<li>Information regarding the processing of personal data by the Company (including access to them, the requirements for their renewal or deletion) can be obtained by contacting the customer service department at 0 800 21 23 00 or by e-mail address of the Company: info@cashyou.ua.</li>\n\t<li>Сookie-files are used for the following purposes:\n\t\t<ol>\n\t\t\t<li>adapting the content of the pages of Internet sites to the advantages of the user, as well as for optimizing the use of the Internet page; in particular, these files allow to recognize the user's computer device and, accordingly, show the web site according to its individual needs;</li>\n\t\t\t<li>collecting statistics that helps to understand how website users use Internet sites, which allows to improve their structure and content;</li>\n\t\t\t<li>maintaining a session of the user of the Internet site (after logging in), due to which the user does not have to enter a username and password on each page;</li>\n\t\t\t<li>showing users the content of advertisement, taking into account their interests. In many cases, the software for browsing the web pages (the browser) by default allows the storage of cookies on a user's computer device. Users of the website can change their cookie settings at any time. These settings can, in particular, be modified to block the automatic launch of the Cookie files in the browser settings or to inform each time of their location on the computer of the user of any Internet site. Detailed information about the features and use of cookie files can be accessed through software installations (browser). Without changing the settings of the Cookie files, they will be placed on the user's computer device, and in this way, the company will store information on the user's computer and access this information. Disabling Cookie files may restrict the use of some services on the website, including those requiring logging on. At the same time, disabling the acceptance of cookie files does not preclude the ability to read or view the content of Internet pages of the website, except those that require logging in.</li>\n\t\t</ol>\n\t</li>\n\t<li>The company reserves the right to implement changes to the Privacy Policy for Site users at any time, which will come into force immediately after placing it on the Site. The Company recommends the users to regularly review the Privacy Statement for Users of the Site. Users have the right, in accordance with applicable law, to have access to personal data being processed, the right to correct, erase or block such personal data, as well as the right to prohibit certain actions concerning the processing of this data. In order to exercise such rights, a written request must be sent using the contact information of the LLC \"CASHYOU\" which are indicated on the Web-site.</li>\n</ol>"
+
+creditrules:
+    content: "<h2>Conclusion of the Loan Agreement</h2>\n<p>LLC «CASHYOU» (hereinafter - the Creditor) officially offers under the terms of this Offer in the meaning of Art. Art. 641, 644 of the Civil Code of Ukraine (hereinafter - the Offer), to conclude an agreement on the provision of funds in a loan, including the provisions on a financial loan (hereinafter referred to as the Agreement), to fully civilian capable individuals - Ukrainian citizens residing on the territory of Ukraine (each of them separately hereinafter - the Borrower) on the terms and in accordance with the procedure established by this Offer, the current Rules on the provision of funds in the loan, as well as taking into account the requirements of the current legislation: the Law of Ukraine \"On Financial Services and State Regulation of Financial Services Markets\", the Law of Ukraine \"On Protection of Personal Data\", the Law of Ukraine \"On the organization of the formation and circulation of credit histories\", the Law of Ukraine \"On e-commerce\", the Law of Ukraine \"On electronic document and electronic document circulation\", the Civil Code of Ukraine and other normative acts regulating the relationships between the parties to the agreement.</p>\n\n<p>The public offer of the Company shall take effect from the date of its official publication on the Company's Internet page at the following address: https://cashyou.ua, and is valid until the date of its publication in a new edition. </p>\n<p>The termination of the offer does not terminate the Agreement concluded with the Borrower at the time of its validity.</p>"
+
+deal:
+    newyear: "Receive a repeated loan with a 1.5% interest during the New Year celebrations\nWe understand that New Year celebrations can create a difficult financial situation, that is why we offer to our clients the best terms on the market: «Repeated loan with a 1.5% interest»\nUse your money wisely:\n1000 UAH for 6 days from us = 1090 UAH to be returned.\nThe average sum to be returned on the market — 1150 UAH.\nWe want you to always have an opportunity to make your close people happy.\n"
+
+getting:
+    howto1:
+        desc: "When you receive your first loan, you need to select the term and the amount of credit on the main page in the section \"Credit Calculator\". Then you need to click the \"Get Credit\" button. When revisiting our service, you have an opportunity to apply for credit in the \"Credit Calculator\" and in the Personal account. Each subsequent loan has a higher limit of available cash. The loan period is from 2 to 30 days. The maximum loan amount is 15,000 UAH.\n"
+
+    howto2:
+        desc: "To receive a loan, you need to complete a questionnaire with your personal data. You need to provide social information, passport details (choose old or new pattern), a bank card, and also the tax ID (Taxpayer Identification Number). The decision regarding the application for a loan is taken within a few minutes.\n"
+
+    howto3:
+        desc: "In order to ensure the full security of your financial operations, our client manager will contact you.The manager will ask you some clarifying questions about personal data to confirm your identity.\n"
+
+    howto4:
+        desc: "After bank card verification and processing of the application for a loan, you will receive a message about the decision on the loan by phone and by email. Once the application has been approved, you need to carefully examine the loan agreement which you can find at the Personal Account. The transfer of money to the card will be made only if you agree to the terms of the contract. Money appears at your account in a matter of minutes. In some cases, funds can be transferred later (the bank's operating regulations, in which the card was issued, may affect the speed of the money transfer).\n"
+
+    requirement1:
+        desc: 'Ukrainian citizen is obliged to provide a passport to confirm maturity. If you are not able to provide a passport of a citizen of Ukraine, then you either have not reached the age of 16, or you are being a foreign citizen or lost the passport. To register at our website a person requires a passport. Taxpayer Identification Number (TAX ID) is the next important document for obtaining a loan from our company. Besides that, it is also a document which confirms your age.'
+        title: "PASSPORT AND TAX ID\n"
+
+    requirement2:
+        desc: "Our company requires your personal phone number, as well as an email for registration in our system. Due to confirmation of this data, you will be receiving notifications about the expiration of the loan term for its timely repayment. In the case of loss of a password or access to your personal account, you will need this information to obtain the access to your personal account back or if you would like to change the password.\n"
+        title: 'Telephone and email'
+
+    requirement3:
+        desc: "In order to make sure that you are the owner of the registered bank card, we execute its verification. We can verify whether it is your credit card due to the blocking of a random amount up to 5 UAH. You can receive information about the blocked funds in your personal account on the bank's website, using SMS alert, or by calling the hotline number of the bank where the card was issued. The blocked money is not withdrawn and is not transferred from the account. In the future, the blocked amount will be unlocked automatically.\n"
+        title: 'Bank card'
+
+loan:
+    rollover:
+        repay:
+            description: loan.rollover.repay.description
+            title: loan.rollover.repay.title
+
+public_information_content: "public_information_content\ndiv class=\"block\">\n\t<h2>Full and short name of the financial institution</h2>\n\t<h3>Full name of the Company:</h3>\n\t<p><b>in Ukrainian language:</b> ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ “КЕШЬЮ”;</p>\n\t<p><b>in Russian language:</b> ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ “КЕШЬЮ”;</p>\n\t<p><b>in English language:</b> LIMITED LIABILITY COMPANY “CASHYOU”.</p>\n\t<h3>Short name of the Company:</h3>\n\t<p><b>in Ukrainian language:</b> ТОВ “КЕШЬЮ”;</p>\n\t<p><b>in Russian language:</b> ООО “КЕШЬЮ”;</p>\n\t<p><b>in English language:</b> LLC “CASHYOU”.</p>\n</div>\n<div class=\"block\">\n\t<h2>Code</h2>\n\t<p><b>USREOU of Ukraine code:</b> 40885016</p>\n</div>\n<div class=\"block\">\n\t<h2>Contacts</h2>\n\t<p><b>LLC «Cashyou»</b> 61058, city Kharkiv , Chychybabina street 7-А, office 42.</p>\n\t<p><b>E-mail address: </b><a href=\"mailto:&#105;&#110;&#102;&#111;&#64;&#99;&#97;&#115;&#104;&#121;&#111;&#117;&#46;&#117;&#97;\">&#105;&#110;&#102;&#111;&#64;&#99;&#97;&#115;&#104;&#121;&#111;&#117;&#46;&#117;&#97;</a></p>\n\t<p><b>Phone numbers: </b> <a href=\"tel:0443642300\">(044)-364-2300</a></p>\n</div>\n<div class=\"block\">\n\t<h2>Financial services provided:</h2>\n\t<p><b>Information about the main type of the economic activity: </b>64.92 Other lending options</p>\n</div>\n<div class=\"block\">\n\t<h2>Infornation about the director</h2>\n\t<p><b>Director –</b> Tkachenko Andrii Viktorovych</p>\n</div>\n<div class=\"block\">\n\t<h2>Working hours (break hours)</h2>\n\t<h3>Working hours of the technical support service:</h3>\n\t<p><b>09:00 - 20:00</b></p>\n</div>\n<div class=\"block\">\n\t<h2>Information about owners of substantial participation</h2>\n\t<p>LIMITED LIABILITY COMPANY \"USTAS INVEST\", identification number of the legal entity 40833654, location: 61058, city Kharkiv, Danylevskoho street 16.</p>\n</div>\n<div class=\"block\">\n\t<h2>Information about members of the executive body of the financial institution</h2>\n\t<p><b>Management body of the Company is:</b> general meeting of members;</p>\n\t<p><b>Executive body of the Company - </b>Director of the Company.</p>\n\t<p><b>Supervisory body of the Company is:</b> auditory comission of the Company.</p>\n\t<p><b>Bank details: </b>р/р 26506052200111 MFO 351533 PUBLIC JOINT-STOCK COMPANY COMMERCIAL BANK «PRYVATBANK»</p>\n</div>"
+
+registration:
+    help:
+        apartment: 'Indicate an apartment that you are registered in'
+        building: 'Indicate your house block'
+        businessType: 'Indicate type of your activity'
+        carOwner: 'Do you own a car?'
+        citizenship: 'Are you a Ukrainian citizen?'
+        city: 'Indicate locality that you registered in'
+        companyName: 'Indicate name of the organization where you are employed'
+        education: 'Which education do you have?'
+        email: 'Enter your e-mail to receive the loan details'
+        emailSecond: 'Repeat your e-mail by typing'
+        house: 'Indicate house that you are registered in'
+        incomeType: 'Indicate current type of your employment'
+        isPassportNewType: 'Do you have a new model passport (ID card)?'
+        lastExperience: 'Indicate your work experience at the last place of employment'
+        maritalStatus: 'Indicate your family status'
+        monthlyIncome: 'Indicate your income per month'
+        numberOfDependents: 'How many individuals are on your maintenance?'
+        passport: 'Indicate series and number of your passport'
+        passportIssuedBy: 'Indicate whom your passport is issued by'
+        passportRecordNumber: 'Indicate your personal number'
+        passportRegistration: 'Indicate date of issuance'
+        passportValidDate: 'When validity term of your passport will be expired?'
+        password: registration.help.password
+        passwordSecond: registration.help.passwordSecond
+        phone: 'Confirm you phone number to go to next step. Indicate your phone number. Click on the "Confirm" button after that in appeared window enter code from CMC'
+        position: 'Indicate your current position'
+        realEstate: 'Do you own this immovables?'
+        realEstateOwner: 'Do you own immovables?'
+        residentialMatchesRegistration: 'Does your registration address meet the actual place of inhabitance?'
+
+        secondAddress:
+            apartment: 'Indicate your card number'
+            building: 'Indicate your house block'
+            city: 'Indicate your actual locality'
+            house: 'Indicate your house number'
+            realEstate: 'Do you own this immovables?'
+            state: 'Indicate region of your actual inhabitance'
+            street: 'Indicate your actual address'
+            typeOfSettlement: 'Indicate type of your locaity where you are registered'
+            zipCode: 'Indicate your factual postal code'
+
+        secretAnswer: 'Indicate an answer to a secret question'
+        secretQuestion: 'Indicate a secret question'
+        socialSecurityNumber: 'Indicate your Tax ID'
+        state: 'Indicate region of your registration'
+        street: 'Indicate your registration address'
+        totalExperience: 'Indicate your overall work experience'
+        typeOfSettlement: 'Indicate type of locality where you are registered in'
+        workPhone: 'Indicate your work/official phone number'
+        zipCode: 'Indicate postal code that meets your registration address'
+
+registrationcertificate:
+    content: 'Certificate of registration of financial institution'
+
+return:
+    bonuspay:
+        desc: "You can earn in our system. Bonuses are given to you for mostly any action in the system. Also, if you wish, you have an opportunity to repay the loan with bonuses.\nYou can earn them for:\nRegistration;\nGetting a new loan;\nParticipation in promotions;\nAttracting new customers and getting bonuses for every loan of the attracted customer;\nPerforming assignments in your personal account;\n"
+
+    how:
+        item1:
+            desc: "Users of our service have an opportunity to pay a loan from their bank card in their personal account on our website. To do this, you need to enter your personal account, specify the amount for payment and click on the \"Pay\" button. The credit will be automatically redeemed from the card that was attached to your profile if it has the necessary funds. In addition, you have the opportunity to pay a loan with any other bank card. To do this, you need to select the \"Another Bank Card\" section, enter the requested data and confirm the payment.\n"
+            title: 'Bank card'
+
+        item2:
+            desc: "One of the most convenient modern payment methods is the payment terminal. It works around the clock, which gives you an opportunity to take advantage of it at any time convenient for you. Payment is made by cash. An easy-to-understand practical interface allows anyone to make a payment. To perform a payment transaction you need to enter the details and enter a precise amount of money.\n"
+            title: 'Terminal payment'
+
+        item3:
+            desc: "The client has the opportunity to pay a loan at any bank of Ukraine. PrivatBank offices have the most convenient and fast way of payment. Money goes to Cashyou account within 10-15 minutes. You need to provide the cashier our enterprise code 40885016 and the phone number, which you indicated on our website when filling out an application. If you want to pay a loan at any other bank branch, you must provide the cashier with your full name and personal identification number, otherwise the identification may not be correct. You can receive payment details in your personal account and download them in PDF.\nC/a : 26506052200111 in PJSC CB \"PRYVATBANK\"\nMFO: 351533"
+            title: 'Wire transfer'
+
+        item4:
+            desc: "Every customer has the ability to pay off with any of the provided methods. There are three options of payment. It includes:\n1) Payment in the payment terminal (for this type of payment the client must enter the necessary details and amount, then enter the required amount in cash);\n2) Wire transfer (to execute the wire transfer, the client must give the bank employee all the necessary details and money, which in the future will be credited to the account as repayment of the loan);\n3) Payment with bonuses (this kind of payment allows each customer to pay off the debt or a part using bonuses earned on the company's website);\n"
+            title: 'Pay from the personal account'
+
+'sum грн - сумма кредита +&nbsp;percent грн проценты': 'sum UAH - credit sum +&nbsp;percent UAH percents'
+
+verified:
+    otherbank: '<p>How to find out a code of a blocked sum:</p><ul><li>Wait for PUSH or SMS notification about money being blocked.</li><li>Check an account statement in your personal account of the Bank, or in mobile banking.</li><li>Call the hotline of your Bank and specify the amount by contacting the operator.</li></ul>'
+    privatbank: '<p>How to find out a code of a blocked sum:</p><ul><li>Call 3700 and specify the amount by contacting the operator of the call centre of PryvatBank.</li><li>Check a statement in Pryvat24 service where the blocking sum will be indicated.</li><li>Open «Transactions by accounts» in the message menu in Pryvat24 service.</li><li>Wait for the message from PryvatBank where the blocking sum is indicated.</li></ul>'
+    text: '<p>Now you need to attach your card to the CashYou service. To do this, pay attention to 2 simple, but important rules:</p><ol><li>There must be no limits on conducting transactions in the Internet established on your card.</li><li>A random amount of 0.01 to 5 UAH is blocked to confirm that you own a card. After a certain time the blocked amount will be unblocked..</li></ol><p>The data that you enter will be accepted and processed by Way4Pay. This company has the necessary security certificates such as SSL and PCI DSS. The CashYou service does not store or process your card data. You can be absolutely calm when filling in the data.</p>'
+
+where_to_get_money:
+    desc: "ONLINE CREDIT FROM CASHYOU\n\nWith the help of the World Wide Web, the society can do many things. It transformed into a place to purchasing and selling of household items and clothing through the Internet. Credit online is a relatively new form of service through the World Wide Web, it has become increasingly popular only recently.\n\nPositive factors:\n\nspeed and reliability\nwe do not need a lot of paperwork, and you don't have to collect a long list of documents\nno need to make an income statement \nIn case of a positive response from the bank, the registration takes a few minutes\n\nThe bank issues a credit card and the money from the credit organization will be sent to the credit card, it is also possible to take the cash at the nearest banking facility.\n\nMoney on the card is no worse than cash money. It is possible to send them to any person or company, or you can use them to pay for services and purchases in stores.\n\nAn advantage of online lending in a wide range of services and their flexibility: different duration of a loan, amount, interest and payment procedure.\n\nONLINE BANKING\n\nIn the field of online credit, there is also a growing popularity of such thing as web banking. In this case, the customer receives an electronic wallet of the bank, where all operations of the card are performed. At any time you can go to your account and see the transactions or the rest of the money. This tool significantly allows you to activate the turnover.\n\nONLINE MONEYLENDING\n\nOnline lending makes it possible to borrow a small amount for a short period of time. Such loans are appropriate when making a purchase through the World Wide Web. We don't require documents as well as the income certificate to confirm a loan, but you will have to disclose information about the purpose of spending the money, in other words, we need to know what you need the money for.\n\nIt is also required to fill out the form provided by the system, add personal details to the document.\n\nThe disadvantage of this form of service is a high commission, it is not recommended to overdue payment.\n\nStandard list of online loans\n\nMicrocredit up to 2000 UAH. Our company imposes the highest percentage for such amount of money;\nExpress loan up to 20,000 UAH. It is greatly popular among beginning businessmen who make first steps in internet trading.\nIt is provided via middleman structures with a signature of all necessary documents. Please, don't forget that the borrower has to pay not only interest for borrowed money, but also a commission for transfer through the electronic system. It is very important in our case.\n\nWhen making a loan to your credit card, you may be sometimes asked for documents that prove your identity. In this case, the documents are being scanned, and after that they are sent by e-mail.\n\nCREDIT ONLINE - RESOLUTION OF YOUR FINANCIAL PROBLEMS\n\nYou need urgent money, but the salary is coming not yet soon? An excellent way to get out of this situation is to receive a loan to a credit card of any bank. A few years ago, the credit was alarming venture for many people, besides that, money could only be obtained at the office of the bank concerned. Today, there is a huge number of private lending companies that issue money without any credit history, certificates of income and a backer, and you do not need to leave home at all.\n\nWhat do you need to apply for?\n\nTo apply and get money quickly, you need to provide the following information:\n\npassport and Tax ID;\nbank card details;\ntelephone number;\nemail.\nThe application is carried out online, and processing of the application takes up to 15 minutes.\n\nPROS AND CONS OF ONLINE CREDITS\n\nNowadays, it is easy to lend money online, but as anything else in life there are some disadvantages of this operation. First off, the amount will not be as large as in the bank, the maximum amount of money that you can lend is up to UAH 15,000. Another disadvantage of such venture is too high interest - as a rule, it is 2 - 2.5% per day. But despite these shortcomings, most people prefer this kind of lending.\n\nREVIEW DURATION\n\nIt takes a week, or even 10 days, to consider an application in the bank, online companies are doing this work in a matter of minutes. In addition, you can get money even on weekends or holidays.\n\nYou can submit an online application to several companies at once, but you should choose the one that offers the most favorable conditions of repayment. You can return a debt by a wire transfer, or by contacting the office of the creditor company.\n\nMONEY TO SALARY\n\nIf you require some money before salary and no one of your friends or relatives gives you a hand, you may ask some private company that will be glad to help you to solve any financial difficulties that appeared in your life. They are not interested in your credit history, they do not require a huge bunch of documents. But, please, note that if you do not return the amount on time, you will have to pay a fair amount of fine. But at the same time, the borrower can extend the loan term by paying a commission.\n\nMFO ADVANTAGE\n\nMFO will also help you to improve your credit history, which will allow you to get more money in any bank. To do it, you need to take at least a few small loans and pay them in advance. Of course, negative reviews from previous lenders will not disappear, but there will be several positive entries in the record. As a result, the risk that you will be denied a large amount in a bank is greatly reduced.\n"
+
+Адрес: Street
+'Адрес проживания': 'Registration address'
+'Адрес проживания соответствует адресу регистрации?': 'Does the residence address meet the registration address?'
+'Адрес регистрации': 'Registration address'
+Актуализировать: Upgrade
+Акции: Promotions
+Акция: Promotion
+'Акция «Приведи друга»': 'Promotion «Bring a friend»'
+'Баллы для погашения %': 'Points to pay off %'
+'Баллы для погашения тела': 'Points to pay off the primary loan'
+'Банковская карта': 'Bank card'
+'Банковский перевод': 'Wire transfer'
+Безопасно: Secure
+Блог: Blog
+Бонус: Bonus
+Бонус|Бонуса|Бонусов: Bonus|Bonus|Bonuses
+'Бонусная программа': 'Bonus program'
+'Бонусная система': 'Bonus system'
+'Бонусная система ': 'Bonus system'
+Бонусов: Bonuses
+'Бонусов за кредит': 'Bonuses for the loan'
+'Бонусов накоплено': 'Accumulated bonuses'
+'Бонусов осталось': 'Bonuses left'
+
+'Бонусы Cashyou':
+    ' Как пользоваться бонусами в Cashyou': 'Бонусы Cashyou. Как пользоваться бонусами в Cashyou'
+
+'Бонусы дают возможность усовершенствовать свой профиль по трем линиям: повысить срок кредита, снизить процентную ставку или увеличить доступную сумму':
+    ' Также благодаря бонусам возможно оплатить проценты или тело кредита':
+        ' ': "Bonuses give you an opportunity to improve your profile in three lines:\n- Increase period of the loan;\n- Reduce the interest rate or increase available sum;\n- To pay interest or body loan;"
+
+'Бывают нередко такие обстоятельства, когда срочно нужны деньги':
+    '': 'Бывают нередко такие обстоятельства, когда срочно нужны деньги.'
+
+Быстро: Fast
+
+'Быстрый кредит <br> <b>онлайн</b>': 'Fast credit <br> <b>online</b>'
+
+'Быть совершеннолетним гражданином Украины, а также иметь в наличии паспорт, ИНН и карту украинского банка':
+    '': 'To be an adult citizen of Ukraine and possess passport, Tax ID and Ukrainian bank card.'
+
+'Ваша гарантированная сумма на выдачу': 'Your guaranteed amount on the issuance'
+
+'В кабинет': 'Profile'
+'В какой момент договор между клиентом и финансовой компанией вступает в действие?': 'At which moment the agreement between client and financial institution enters into force?'
+'В каком городе можно взять кредит?': 'In which city the credit can be granted?'
+
+'В кризисное время стоит помнить о существовании микрокредитов':
+    '': 'В кризисное время стоит помнить о существовании микрокредитов.'
+
+'В личный кабинет': 'Into personal account'
+
+'В момент оформления каждого отдельного кредита, перед получением средств Вам будет предложено ознакомиться с Договором займа с указанием параметров конкретной операции и Правилами договора займа (Правила)':
+    ' Также в течение всего срока кредита, договор займа будет доступен в Личном кабинете':
+        '': 'At the time of receiving each loan, before getting the funds, you will be asked to review the Loan Agreement specifying the characteristics of the particular transaction and the Loan Agreement Rules (Rules). Also, during the entire loan period, the loan agreement will be available in the Personal Account.'
+
+'В обработке': 'In processing'
+
+'В последнее время условия по выдаче кредитов стали намного жестче':
+    '': 'В последнее время условия по выдаче кредитов стали намного жестче.'
+
+'В течении нескольких минут <b>Деньги на карте без комисии</b>': "The money will be at your credit card <b> in several minutes without any fees</b>\n"
+'ВВЕСТИ КОД': 'Enter the code'
+'Ваш текущий бонус': 'Your current bonus'
+'Ваш текущий бонус <b>%bonus% грн</b>': 'Your current bonus<b>%bonus% UAH</b>'
+'Ваша заявка на рассмотрении !': 'Your application is pending!'
+'Ваши текущие бонусы': 'Conditions of the credit'
+
+'Введите имя пользователя и пароль от Turbosms':
+    '': 'Enter login name and password from Turbosms.'
+
+'Введите код из SMS': 'Enter code from SMS'
+'Введите код полученный в СМС<br> для подписания договора': 'Enter code from SMS<br> to sign the agreement'
+
+'Вернуть деньги вы сможете любым удобным для вас способом':
+    ' Через Ваш личный кабинет, бонусами или переводом на наши банковские реквизиты':
+        '': 'Вернуть деньги вы сможете любым удобным для вас способом. Через Ваш личный кабинет, бонусами или переводом на наши банковские реквизиты.'
+
+'Вернуться в<br> профиль': 'Go back to<br> profile'
+'Вероятность получения кредита': 'Probability of getting the loan'
+'Вид деятельности': 'Type of activity'
+'Владеете ли вы машиной?': 'Do you own a car?'
+'Владеете ли вы недвижимостью?': 'Do you own immovables?'
+
+'Во время изменения пароля произошла ошибка':
+    '': 'An error occured while changing password.'
+
+'Во время сохранения данных профиля произошла ошибка':
+    '': 'An error occured while saving data of the profile.'
+
+Войти: Enter
+
+'Возьмите эту сумму и верните в срок, таким образом Вы повысите свой кредитный рейтинг для одобрения следующего займа в любой организации.': 'Take this amount and return it on time, so you will increase your credit rating for approval of the next loan in any organization.'
+
+'Восстановление пароля': 'Restore the password'
+
+'Все данные вы можете изменить в специальной вкладке «Мои данные», если по какой-либо причине это сделать не удалось, то обратитесь в поддержку по телефону или в онлайн-чате':
+    '': 'All data can be changed in the special tab "My data", if it could not be done for any reason, contact support service by phone or in online chat.'
+
+'Все данные предоставлены клиентом в сервисе при регистрации шифруются и передаются с использованием специализированного криптографической SSL ключа сертификата, сгенерированного компанией COMODO CA limited, что является признаком высокого уровня конфиденциальности информационного потока, и исключает любые риски перехвата или использования информации третьими сторонами': "All data provided by the client during registration process in the service is encrypted and transmitted using a specialized cryptographic SSL certificate key generated by the company COMODO CA limited that is a sign of the high level of confidentiality of the information flow and which excludes any risks of interception or use of the information by the third parties\n"
+"Все операции доступны\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mark>Строго с 18 лет !</mark>": "All operations are available\n\t\t\t\t\t\t\t\t\t\t\t\t\t<mark>FROM 18+ years</mark>"
+'Все операции доступны <mark>Строго с 18 лет !</mark>': 'All operations are available <mark>only from 18 years! </mark>'
+'Все финансовые операции и данные клиента надежно защищены': "All financial transactions and client data are securely protected\n"
+'Вход в кабинет': 'Personal account'
+'Вход': 'Login'
+
+'Вы можете взять эту сумму': 'You can take this amount'
+
+'Вы можете воспользоватся выгодыми услугами нашего партнёра, чтобы получить кредит в необходимом размере:': 'You can use profitable service of our partner for getting a loan in the required amount:'
+
+'Вы можете воспользоваться услугой пролонгации одного и того же кредита несколько раз':
+    ' Максимальный срок, на который можно продлить период пользования займом, составляет 30 дней, начиная с момента оформления услуги':
+        ' ': 'You can use the service of extension of the same loan several times. The maximum period which the period of using the loan can be extended for is 30 days, starting from the moment of issuance of the service.'
+
+'Вы можете получить от 50 до 1000 грн':
+    '': 'You can get from 50 to 1000 UAH.'
+
+'Вы сможете взять следующий кредит через %count% %days%': 'You can take the next loan in %count% %days%'
+'Выберите <b>сумму </b>и <b>срок</b>': 'Choose <b>the amount</b> and <b>credit duration</b>'
+'Выберите вариант': 'Choose an option'
+'Выберите срок, на который Вы хотите продлить кредит': 'Select a term for which you want to extend the loan'
+'Выберите сумму для погашения': 'Choose a sum to pay off'
+'Выберите<b> сумму и срок</b>': 'Choose <b> amount and period of the loan </b>'
+Выход: Exit
+'Где можно взять <b>деньги в кредит?</b>': 'Where it is possible to <b>take out a loan?</b>'
+Главная: Main
+'График работы:': 'Schedule:'
+
+'гривен': 'hryvnias'
+
+'Громкие новости финансового мира и  акутальные известия о системе':
+    ' Все последние изменения и события в Cashyou и финансовом мире':
+        '': 'Громкие новости финансового мира и  акутальные известия о системе. Все последние изменения и события в Cashyou и финансовом мире.'
+
+'Да, важно чтоб предыдущий кредит был закрыт':
+    '': 'Yes, but only after a full repayment of the previous loan. '
+
+'Да, вместо Клиента, по его согласию, оплатить кредит может другой человек':
+    '': Yes.
+
+'Да, для нас не важен стаж работы':
+    '': 'Yes, work experience is not important for us.'
+
+'Да, если вы – физическое лицо – предприниматель, Вы предоставили подтверждение о предпринимательской деятельности и карта выдана на ваше имя':
+    '': "Yes, if you:\n- Are an individual entrepreneur\n- Provided confirmation of entrepreneurial activity\n- Registered card in your name."
+
+'Да, можете':
+    ' ': 'Yes, you can.'
+
+'Даем деньги в кредит <strong>без % !</strong>': 'We lend money <strong>without % !</strong>'
+Далее: Next
+'Данные карты для пополнения': 'Card details for replenishment'
+'Данный номер уже подтвержден': 'The number is already confirmed'
+'данный шаг': 'this step'
+'Дата выдачи': 'Date of issue'
+'Дата обновления': 'Date of update'
+'Дата погашения': 'Date of repayment'
+'Дата рождения': 'Date of birth'
+'Действительна до': 'Valid till'
+'Деньги в долг на карту': 'Деньги в долг на карту'
+'Деньги в кредит': 'Деньги в кредит'
+
+'Деньги выдают на любые цели':
+    '': 'Money is given for any purposes. '
+
+'Для восстановления пароля пройдите по ссылке «Забыли пароль?», в меню «вход в кабинет»':
+    ' Далее следуйте инструкции, отправленной сервисом на ваш электронный адрес, указанный при регистрации':
+        '': 'To recover your password, click on the link "Forgot your password?", in the "Login to the Account" menu. Then follow the instructions sent by the service to your e-mail address indicated during registration.'
+
+'Для оплаты кредита в отделении возьмите с собой паспорт':
+    ' Если оплачиваете по безналичному расчету - понадобятся только банковские реквизиты':
+        ' На сайте компании можно оплачивать кредит без каких-либо документов':
+            '': "- Only passport in case of paying off a loan in the department ;\n- Only bank details, if you pay by bank transfer ;\n- Documents are not required when you pay through the \"Personal Account\" ."
+
+'Для оформления кредита онлайн вам необходимо прикрепить в личном кабинете сканированную или сфотографированную на мобильное устройство копию паспорта и кода':
+    ' Серия,Номер, фотография и данные документов должны быть читабельны':
+        '': 'To receive a loan online, you need to attach a copy of your passport and code scanned or photographed on your mobile device in your personal account. The image should have an appropriate quality for easy identification of the Series and Passport number and other details, including your photo.'
+
+'Для получения кредита Вы должны заполнить все поля персональной информации!': "To get the loan you need to fill in all fields of personal data!\n"
+'Для получения кредита заполните все недостающие поля': 'To get a loan fill in all missing fields'
+'Для продления кредита выполните пошагово следующие действия': 'For rollover the loan carry out next actions step by step'
+
+'Для того, чтобы привязать банковскую карту, на которую мы переведем вам деньги, необходимо пройти верификацию карты и на ней должно быть не менее 5 грн':
+    ' Это нужно для подтверждения работоспособности вашей карты: временно на ней будет заблокирована сумма, которая будет разблокирована после подтверждения':
+        ' Для второго и далее кредита — можно':
+            '': 'For the second and each subsequent loan - is possible, but if you sign up for the system for the first time - you have to go through the verification process of the card. In order to attach a bank card where the funds will be transfered to, you must pass verification of the card and its account must contain not less than 5 UAH. This is necessary to confirm your card''s ability to work: temporarily it will block the amount that will be unblocked after confirmation.'
+
+'Для того, чтобы удостовериться, что непосредственно Вы являетесь владельцем зарегистрированной в анкете банковской карты и исключить возможность использования Ваших данных мошенниками ':
+    ' Верификация происходит благодаря блокированию случайной суммы до 5 гривны':
+        ' Получить информацию о заблокированных средствах Вы можете в Личном кабинете на сайте банка, при помощи СМС оповещения либо же позвонив на номер горячей линии банка, в котором Вы открыли данную карту':
+            ' Заблокированные деньги не снимаются и не переводятся со счета':
+                'Вам необходимо указать точную сумму блокировки до копейки, когда Вы подтверждаете данные платежной карты в заявке или добавляете новую карту в Личном кабинете':
+                    ' В дальнейшем заблокированная сумма будет разблокирована автоматически':
+                        '': 'In order to make sure that you are the owner of the bank card registered in the form and exclude the possibility of using your data by scammers. Verification occurs by blocking of a random amount of up to 5 UAH. You can receive information about blocked funds in your Personal Account on the bank''s website, via SMS notification or by calling the hotline number of the bank where you opened the card. Blocked money is not withdrawn or transferred from the account. You need to specify the exact amount of the blockage to a kopeika, when you confirm the payment card data in the application or add a new card in the Personal Account. Later the blocked amount will be unblocked automatically.'
+
+'Дней до погашения': 'Days till repayment'
+'Дней осталось': 'Days left'
+'Договор лонгации № %count%': 'Договор лонгации № %count%'
+Должность: Position
+Дом: House
+'Дополнительные документы': 'Additional documents'
+'Другие банки': 'Other banks'
+'Ежемесячный доход': 'Income per month'
+
+'Если Вы забыли пароль - восстановите пароль, нажав «Забыли пароль»':
+    '': 'If you forgot your password, please restore the password by clicking on "Forgot Password."'
+
+'Если Вы получили отказ, зайдите в Личный кабинет и проверьте корректность заполненных данных – не перепутаны ли местами такие параметры, как фамилия, имя, отчество, дата рождения и дата выдачи паспорта, нет ли ошибки в цифрах ИНН':
+    ' Кроме того, следует проверить, всю ли информацию Вы указали в своем профиле – место работы, доходы/расходы и прочее':
+        ' Обратитесь в Бюро кредитных историй – возможно у Вас есть кредиты, которые уже закрыты, но информация в Бюро не успела обновиться':
+            ' Если Вы получили несколько отказов подряд, не спешите подавать заявки снова':
+                ' Подождите несколько дней, возможно, за это время система успеет обновиться и не откажет в следующем кредите':
+                    '': 'If you received a refusal, go to your Personal Account and check correctness of the completed data - whether the characteristics such as surname, first name, patronymic, date of birth and date of issuing the passport are not interchanged, whether there is no error in the Tax ID numbers. In addition, you should check whether you indicated all the information needed in your profile - work place, income / expenses and so on. Contact the Credit History Bureau - perhaps you have loans that are already repaid, but the information has not been updated yet. If you received several refusals in a row, do not rush to apply again. Wait a few days, perhaps during this time the system will update and not refuse the next loan.'
+
+'Если в установленный срок нет возможности полностью погасить кредит, Вы можете продлить срок пользования займом при этом оплатив сумму начисленных процентов':
+    ' Мы проинформируем Вас, об успешном продлении срока возврата кредита в виде смс-сообщения и продублируем информацию в Вашем Личном кабинете':
+        '': 'If there is no possibility to repay the loan in full within the established period, you can extend the period of using the loan while paying the accrued interest. We will inform you about the successful extension of the loan repayment term in the form of an SMS  and will duplicate the information in your Personal Account as well.'
+
+'Если вы уверены, что больше не хотите использовать возможность оформлять быстрые онлайн-кредиты в сервисе CashYou, вы можете полностью удалить свою учетную запись':
+    ' Для этого Вам потребуется составить письменное заявление (от руки), отсканировать его и отправить на электронную почту нашей поддержки: service@cashyou':
+        ua:
+            ' Такая сложная на первый взгляд процедура позволит защитить вашу страницу от мошенников, в случае несанкционированного доступа к вашим личным данным':
+                ' Важно: удалить свою учетную запись вы сможете только когда у вас нет активных (непогашенных) кредитов, а также каких-либо других задолженностей':
+                    '': 'If you are sure that you no longer want to use the ability to make quick online loans in CashYou service, you can completely delete your account. In order to do this, you will need to compose a written statement (by hand), scan it and send it to our support service email: service@cashyou.ua. Such a complicated procedure at first glance will protect your page from scammers in case of unauthorized access to your personal data. Important: you can delete your account only when you have no active (outstanding) loans, as well as any other debts.'
+
+'Если на банковской карте 0 грн':
+    ' возможно ли подать заявку на кредит?': 'Is it possible to apply for a loan, if there is 0 UAH on the bank card?'
+
+'Если по предыдущему кредиту была просрочка, можно повторно открыть кредит?': 'If the previous loan repayment was delayed, is it possible to get a loan again?'
+'ЗГОДА НА ОБРОБКУ <b>ПЕРСОНАЛЬНИХ ДАНИХ</b>': ' <b>Consent to personal data processing</b>'
+
+'За бонусы в системе Cashyou вы можете увеличивать сумму взятого кредита или уменьшить проценты по следующему кредиту':
+    ' Также за бонусы вы моежете гасить кредит':
+        '': 'За бонусы в системе Cashyou вы можете увеличивать сумму взятого кредита или уменьшить проценты по следующему кредиту. Также за бонусы вы моежете гасить кредит.'
+
+'За добавление всех фото Вы получаете бонусы': 'You get bonuses when you add all photos'
+'За заполнение всех полей на странице Вы получате <mark>бонусы!</mark>': 'You get <mark>bonuses!</mark> when you fill in all fields on the page'
+'Забыли пароль ?': 'Forgot the password ?'
+'Завантажити інформацію': 'Завантажити інформацію'
+
+Загружается:
+    '':
+        '':
+            '': Loading...
+
+Загружено: Uploaded
+'Загрузите фото 1й страницы Вашего паспорта': "Upload a photo of the first page of your passport\n"
+'Загрузите фото 2й страницы Вашего паспорта': "Upload a photo of the second page of your passport\n"
+'Загрузите фото Вашего ИНН': 'Upload photo of your Tax ID'
+'Загрузите фото страницы прописки': "Upload photo of the page with registration data\n"
+Загрузить: Upload
+'Зазгрузите фото': 'Upload photo'
+
+'Зайдите в Личный кабинет и перейдите на вкладку «Мои данные»':
+    ' В поле, где указан текущий адрес электронной почты, введите новый адрес и нажмите на кнопку «Сохранить»':
+        ' После этого, нажмите на «Подтвердить эл':
+            ' почту» и введите код подтверждения, который придет на новый почтовый ящик':
+                '': "1) Log into the \"Private Account\" and go to the \"My Information\" tab, then click the \"Change\" button.\n2) Enter a new address in the field where the current e-mail address is indicated and click on the \"Save\" button.\n3) Then click on \"Confirm E-mail\" and enter the confirmation code that will be sent at the new e-mail address."
+
+Закрыть: Close
+Занятость: Employment
+'Заполните <b>Анкету</b>': "Fill in <b> a form</b>\n"
+Запомнить: Memorize
+'Запросить код повторно': 'Request the code one more time'
+'Зачем блокируется случайная сумма денег до 5 грн на карте?': "Why a random sum of up to 5 UAH on the card is blocked?\n"
+'Зачем мне нужны бонусы?': 'Why do I need bonuses?'
+'Заявка на продление кредита принята': 'Заявка на продление кредита принята'
+
+'Заявка получила статус "В обработке"':
+    ' Что это значит?': "An application received \"In processing\" status. What does it mean?\n"
+
+ИНН: "Tax ID\n"
+
+'Измените данные в личном кабинете на вкладке «личные данные»':
+    '': "Change data in your personal account on the \"Personal Data\" tab.\n"
+
+Имя: "Name\n"
+'Имя и фамилия держателя карты': 'Name and surname of the card holder'
+Итого: Total
+'К сожалению': Unfortunately
+'Каждый день с 9:00 до 20:00': 'Everyday from 9:00 till 20:00'
+'Как быстро я могу получить деньги на карту?': 'How fast is it possible to get money on the card?'
+'Как быть если забыл пароль на вход в личный кабинет?': "What to do if you forgot your password from the personal account?\n"
+
+'Как вернуть кердит':
+    ' Как вернуть кредит в Cashyou': 'Как вернуть кердит. Как вернуть кредит в Cashyou'
+
+'Как вернуть?': "How to return?\n"
+
+'Как взять кредит или вернуть деньги':
+    ' Пользование бонусами и правила оформления пролонгации':
+        ' Крупнейшая база знаний сервиса Cashyou':
+            '': 'Как взять кредит или вернуть деньги. Пользование бонусами и правила оформления пролонгации. Крупнейшая база знаний сервиса Cashyou.'
+
+'Как взять кредит с низкой процентной ставкой': 'How to take a credit whith low percent rate'
+
+'Как выбрать пароль для личного кабинета пользователя?': 'How to choose a password for a personal account?'
+'Как защищаются данные клиентов?': 'How client''s data is secured?'
+'Как мне изменить данные в личном кабинете?': 'How to change data in the personal account?'
+'Как ознакомиться с условиями кредитного договора? ': 'How to review terms of the loan agreement? '
+'Как погасить кредит банковским переводом?': 'How to pay off by a bank transfer?'
+'Как погасить кредит карточкой?': 'How to pay off by a card?'
+
+'Как получить кредит':
+    ' Как взять кредит в Cashyou': 'Как получить кредит. Как взять кредит в Cashyou'
+
+'Как получить?': "How to get?\n"
+
+'Как пользоваться системой Cashyou':
+    ' Ответы на часто задаваемые вопросы': 'Как пользоваться системой Cashyou. Ответы на часто задаваемые вопросы'
+
+'Как сменить электронную почту? ': 'How to change an E-mail? '
+'Как увеличить шансы на получение кредита если пришел отказ по заявке?': "How to increase chances to get a loan if the application was rejected?\n"
+'Как удалить данные о себе?': 'How to delete personal data?'
+'Как узнать результат моей заявки?': 'How to find out the outcomes of my application?'
+'Какие документы необходимы для оформления кредита?': 'Which documents are required to get a loan?'
+'Какие документы нужно с собой иметь для оплаты кредита?': 'Which documents are required to pay off a loan?'
+'Какие есть дополнительные комиссии по кредиту?': 'What are the additional loan fees?'
+'Какие последствия невыплаты?': 'What are the consequences in case of non-payment?'
+'Какие сроки и размеры займа?': 'What are the terms and sum of the loan?'
+'Какие требования к пользователям сервиса?': 'What are the requirements for users of the service?'
+'Какие условия действуют во время пролонгации?': 'Which terms are in force during the extension?'
+'Каким образом подписывается кредитный договор в CashYou?': 'How the loan agreement is signed in CashYou?'
+'Какую сумму можно получить в кредит при первом обращении?': 'Which loan sum it is possible to get when applying for the first time?'
+'Какую сумму можно получить при повторном оформлении кредита?': 'Which loan sum it is possible to get when applying the next time?'
+'Карта банка': "Bank card\n"
+Квартира: Appartment
+'Кем выдан?': 'Whom was issued by?'
+
+'Клиент имеет возможность оплатить кредит в отделении любого банка Украины':
+    ' Отделения ПриватБанка имеют наиболее удобный и быстрый способ оплаты':
+        ' Деньги поступают на счет Cashyou в течение 10-15 минут':
+            ' Вам необходимо предоставить кассиру наш код ЕГРПОУ 40885016 и номер кредитного договора, который Вы указали на нашем сайте при заполнении заявки':
+                ' Если Вы желаете оплатить кредит в отделении любого другого банка Вам необходимо предоставить кассиру свои ФИО и ИНН иначе идентификация может пройти неверно':
+                    ' Реквизиты для оплаты Вы можете получить в Вашем личном кабинете, а также скачать их в формате PDF':
+                        '': 'The client has the opportunity to repay a loan in the department of any Ukrainian bank. PryvatBank departments have the most convenient and fastest way of payment. Money is credited to Cashyou account within 10-15 minutes. You need to provide the cashier with our USREOU code 40885016 and the number of the loan agreement that you indicated on our website when completing the application. If you wish to pay a loan in the department of any other bank, you need to provide the cashier with your name and Tax ID, otherwise the identification can go wrong. You can get details for payment  in your personal account, as well as download them in PDF format.'
+
+'Когда выдан?': 'When was issued?'
+'Когда можно будет оформить заявку на получение повторного кредита?': "When it will be possible to make a request for the next credit?\n"
+'Код не верный': 'The code is invalid'
+'Количество людей на содержании': 'Number of individuals on maintenance'
+
+'Компания Cashyou':
+    ' Что такое Cashyou':
+        ' Сервис Cashyou': 'Компания Cashyou. Что такое Cashyou. Сервис Cashyou'
+
+'Компьютер или мобильный телефон с доступом в интернет, банковская карта любого банка Украины, оформленная на ваше имя, паспорт и идентификационный код':
+    '': 'A computer or mobile phone with an Internet access, a bank card of any Ukrainian bank issued in your name, passport and Tax ID.'
+
+Контакты: 'Contact information'
+
+'Контакты Cashyou':
+    ' Телефоны компании Cashyou': 'Контакты Cashyou. Телефоны компании Cashyou'
+
+Конфиденциальность: Confidentiality
+Корпус: Shell
+
+'Кредит - экономические отношения по поводу временного использования свободных денежных средств с обязательным пополнением в установленные сроки':
+    '': 'Кредит - экономические отношения по поводу временного использования свободных денежных средств с обязательным пополнением в установленные сроки.'
+
+'Кредит 365': 'Кредит 365'
+'Кредит без справки о доходах': 'Кредит без справки о доходах'
+'Кредит безработным': 'Кредит безработным'
+
+'Кредит в микрокредитной организации можно получить с восемнадцати лет':
+    '': 'Кредит в микрокредитной организации можно получить с восемнадцати лет.'
+
+'Кредит карту срочно': 'Кредит карту срочно'
+
+'Кредит можно погашать досрочно, при этом Вы оплачиваете проценты только за фактические дни пользования деньгами':
+    '': 'The loan can be repaid in advance, in this case you pay interest only for the actual days of using the money.'
+
+'Кредит онлайн на карту по всей Украине':
+    ' Быстрый займ на карту - Cashyou': 'Кредит онлайн на карту по всей Украине. Быстрый займ на карту - Cashyou'
+
+'Кредит по акции':
+    ' Быстрый кердит под 0%':
+        ' Кредиты по выгодным условиям': 'Кредит по акции. Быстрый кердит под 0%. Кредиты по выгодным условиям'
+
+'Кредит по двум документам': 'Кредит по двум документам'
+'Кредит под 0,01%': 'Loan with 0,1% interest'
+'Кредит под 0,1%': 'Loan with 0,1% interest'
+'Кредит просрочен на': 'Loan repayment is delayed for'
+'Кредит с 18 лет': 'Кредит с 18 лет'
+'Кредит с плохой историей': 'Кредит с плохой историей'
+'Кредитная история': 'Credit story'
+'Кредитный договор': 'Loan agreement'
+
+'Кредитный договор подписывается  электронной подписью, путем  нажатия кнопки "Согласен с договором" и вводом кода, пришедшего на номер мобильного телефона':
+    '': 'The loan agreement is signed by an electronic signature by clicking "I agree with the contract" button and entering the code sent to your mobile phone number.'
+
+'Кредитов оформлено': 'Loans issued'
+
+'Кредитование – популярная на сегодняшний день услуга, к которой прибегают многие':
+    '': 'Кредитование – популярная на сегодняшний день услуга, к которой прибегают многие.'
+
+'Курс BitCoin достиг максимальной отметки': 'BitCoin exchange rate achieved the maximum level'
+Легко: Easy
+'Личный кабинет': 'Personal account'
+
+'Личный кабинет - это Ваша персональная страница на сайте CashYou':
+    ' В личном кабинете Вы можете изменить свои персональные данные, оформить заявку, погасить кредит, получить скидку на следующий кредит':
+        ' Также там отображается актуальная информация о текущем кредита и всех предварительно оформленных кредитов':
+            '': 'Personal account - it is your personal page on the CashYou website. In your personal account you can change your personal data, issue an application, pay off a loan, get a discount for the next loan. Up-to-date information about the current loan and all pre-issued loans can also be found there.'
+
+Логин: 'Login / Email'
+Лонгация: Longation
+
+'Лучшие предложения на финансовом рынке':
+    ' Первый кредит под 0':
+        '1 % Расширяемая бонусная линецка и скидки на последующий кредиты':
+            ' Пользуйся кредитами по самым выгодным предложеням':
+                '': 'Лучшие предложения на финансовом рынке. Первый кредит под 0.1 % Расширяемая бонусная линецка и скидки на последующий кредиты. Пользуйся кредитами по самым выгодным предложеням.'
+
+'Максимальная сумма': 'Maximum sum'
+
+'Максимальную сумму кредита наш клиент может самостоятельно увеличить с помощью бонусной системі в личном кабинете':
+    '': 'Our client can independently increase the maximum amount of the loan with the help of a bonus system in the personal account.'
+
+'Максимальный срок, дни': 'Maximum term, days'
+'Мало кредитов в нашем сервисе': 'Not much credits in our service'
+
+'Менее 5 минут':
+    '': 'Less than 5 minutes. '
+
+'Многие микрокредитные компании предусмотрели факт отсутствия официального трудоустройства, и готовы предложить кредит безработным':
+    '': 'Многие микрокредитные компании предусмотрели факт отсутствия официального трудоустройства, и готовы предложить кредит безработным.'
+
+'Много непогашенных кредитов': 'Many outstanding loans'
+'Мобильный телефон': "Telephone\n"
+'Могу ли я досрочно погасить кредит?': 'Can I pay off a loan in advance?'
+'Могу ли я отказаться от полученного кредита?': 'Can I refuse the given loan?'
+'Могу ли я получить в CashYou несколько кредитов одновременно?': 'Can I get several loans in CashYou at the same time?'
+'Могу ли я получить кредит в CashYou если у меня уже есть на данный момент кредит в другой организации?': 'Can I get a loan in CashYou even if I already have a loan from another organization?'
+'Могу ли я получить кредит на корпоративную карту?': 'Can I get a loan on a corporate card?'
+'Может ли вместо клиента оплачивать кредит другой человек?': 'Can the loan be repayed by another individual instead of me?'
+'Можно ли получить кредит, если я только устроился на работу?': 'Can I get the loan, if I have just got employed?'
+'Мои фото': 'My photos'
+'Моя информация': 'My information'
+
+'Мы всегда переводим на Ваш счет точную сумму':
+    ' Если Вы получили сумму меньше, чем указывали в заявке, рекомендуем обратиться в Ваш банк и уточнить тарифы обслуживания':
+        ' Возможно, он берет комиссию за пополнение карточного счета':
+            ' ': 'We always transfer an exact sum to your account. If a received sum is less than the one indicated in the application, we recommend you to contact your bank and specify the service rates. Perhaps your bank takes a fee for replenishment of the card account'
+
+'Мы выдаем кредит без залога и поручителей':
+    '': 'We grant ;loans without pledge and guarantors.'
+
+'Мы стараемся максимально сократить время принятия решения':
+    ' Если Вы новый клиент компании, то в течение 15 минут после оформления заявки на займ Вы получите решение, и в течении нескольких минут средства могут быть зачислены на Вашу карту':
+        ' Срок зачисления денежных средств на карту также зависит от банка, в котором была выпущена Ваша карта':
+            ' Если Вы являетесь повторным клиентом компании, то процесс получения займа займет у Вас всего несколько минут':
+                '': 'We try to minimize the decision making time. If you are a new customer of the company, you will receive a decision within 15 minutes after the registration of the application for a loan, and within a few minutes the funds can be credited to your card. The term for crediting funds to the card also depends on the bank that your card was issued by. If you are a repeated customer of the company,  the process of getting a loan will take only a few minutes.'
+
+'На данный момент у Вас нет бонусов': 'You have no bonuses at the current moment'
+'На какие цели дают кредит?': 'For which goals the loan is issued?'
+'На какую карту можно получить кредит?': 'On which card is it possible to get a loan?'
+
+'На карту любого украинского банка':
+    ' Карта должна быть активной и оформлена на ваше имя':
+        '': 'To any card issued by a Ukrainian bank. The card must be active and registered in your name.'
+
+'На решение системы влияет Ваш кредитный рейтинг, история предыдущих кредитных операций, сумма и срок кредитования и финансовое состояние заемщика':
+    '': 'The decision of the system is influenced by your credit rating, the history of previous lending operations, the amount and period of the loan and the financial condition of the borrower.'
+
+'На сегодняшний день востребованными являются услуги микрофинансовых организаций, благодаря которым каждый желающий может оформить срочный займ на карту':
+    '': 'На сегодняшний день востребованными являются услуги микрофинансовых организаций, благодаря которым каждый желающий может оформить срочный займ на карту.'
+
+'На следующий день после даты выплаты кредита, указанной в договоре Вам будет начисляться штрафная процентная ставка за каждый день просрочки, до момента погашения или пролонгации':
+    '': 'You will be charged with a penalty interest rate for each day of a delay, starting from he next day after the date of repayment of the loan specified in the contract, until maturity or renewal.'
+
+Назад: Back
+'Название документа': 'Name of the document'
+'Название организации': 'Name of the organization'
+'Населенный пункт': Locality
+Настройки: Settings
+'Наш <b>Менеджер </b>с <b>Вами </b>свяжется': "Our<b>manager</b> will <b>contact you</b>\n"
+'Наш <b>Менеджер</b> с <b>вами</b> свяжется': "Our <b>manager</b> will <b>contact you</b>\n"
+
+'Наша система и эксперты анализируют предоставленную в заявке информацию на их достоверность':
+    ' Для минимизации отказа необходимо указывать только те данные, которые принадлежат именно Вам':
+        ' В случае предоставления неправдивой информации, решение о выдаче займа будет аннулировано без пересмотра решения, при этом сервис не дает пояснение по причине отказа':
+            '': 'Our system and experts analyze reliability of the information provided in the application. To minimize risk of rejection, you need to specify the data that belongs only to you. If false information is provided, the decision to grant the loan will be canceled without the decision being reviewed, and the service does not provide an explanation concerning the reason for the refusal.'
+
+'Наши <b>преимущества</b>': "Our <b> advantages</b>\n"
+'Наши сертефикаты': 'Our certificates'
+
+'Не могу войти в личный кабинет так как не подходит пароль':
+    '': 'I cannot login into my personal account as the password does not match. '
+
+'Не получается оплатить платежной картой?': 'Can not pay with a bank card?'
+'Не получили код?': 'Didn''t receive a code?'
+'Не указан номер телефона': 'The phone number is not indicated'
+Недвижимость: Immovables
+'Необходимо %bonus% бонусов для покупки': 'Необходимо %bonus% бонусов для покупки'
+'Необходимо ли предоставление справки о доходах?': 'Is submission of an income certificate needed?'
+
+'Неправильный код':
+    '': 'Password is invalid. '
+
+'Несколько слов о <b>нас</b>': 'About <b>us</b>'
+
+'Нет, но может повысить вероятность получения кредит':
+    '': 'No, but it can increase probability of receiving a loan. '
+
+'Нет, при повторном оформлении нужно будет только указать сумму и срок нового кредита, а также подписать новый кредитный договор':
+    '': "No, for all next credits only sum and period must be indicated and new loan agreement must be signed.\n\n"
+
+Нет:
+    ' Новый кредит вы можете получить только, погасив предыдущий':
+        '': 'No. You can get a new loan only after paying off the previous one. '
+
+'Низкий кредитный рейтинг': 'Low credit rating'
+'Новое обращение через форму обратной связи': 'New application through the feedback form '
+'Новый пароль': 'New password'
+Номер: Number
+'Номер документа': 'Document number'
+'Номер записи': 'Record number'
+'Номер карты': 'Card number'
+'Номер телефона': 'Phone number'
+'Нужен ли залог или поручитель для получения кредита?': 'Is a pledge or a guarantee is needed to get a loan?'
+'О нас': 'About us'
+Область: Region
+Образование: Education
+
+'Обратите внимание, что при оплате через терминал, Приват24 или банковским переводом обновление информации о проведенной операции в Личном Кабинете происходит только в рабочее время - с 9':
+    '00 до 18':
+        '00 в будние дни после зачисления средств на счет компании':
+            ' При оплате картой – зачисление средств происходит моментально':
+                '': 'Please, notice that when paying through a terminal, Privat24 or by a bank transfer, the update information about the performed transaction appears in the Personal account only during the working hours - from 9.00 to 18.00 on weekdays - after the funds will be credited to the company account. When paying by card, transfer of funds is carried out instantly.'
+
+Обратно: Back
+'Общая сумма': 'General sum'
+'Общие вопросы': 'General questions'
+'Общий стаж работы': 'General work experience'
+'Ожидает подписи': 'Waiting for signature'
+'Ожидайте решения системы': 'Waiting for decision of the system'
+Оплатить: Pay
+'Ответ на секретный вопрос': 'Answer to the secret question'
+'Отказ в кредите': 'Loan rejection'
+
+'Отказ от кредита возможен до согласия с условиями Договора':
+    ' Если пользователь уже согласился с условиями Договора, то он автоматически вступает в силу и кредитные средства будут перечислены на банковскую карту':
+        ' Каждый клиент нашего сервиса в любой момент может погасить кредит, оплатив полученную сумму и проценты за период фактического пользования':
+            '': 'Refusal of a loan is possible before agreement with the terms of the Agreement. If the user has already agreed with the terms of the Agreement, it automatically enters into force and credit funds will be transferred to the bank card. Each client of our service can repay the loan at any time, paying the received amount and interest for the period of actual use.'
+
+'Отправить еще раз': 'Submit one more time'
+'Отправить запрос': 'Submit a request'
+Отчество: 'Paternal name'
+Ошибка: Mistake
+'Ошибка отправки СМС': 'Mistake during SMS sending'
+ПРИОБРЕСТИ: Obtain
+Пароль: Password
+
+'Пароль должен содержать не менее 6 символов с буквами верхнего и нижнего регистра и цифрами':
+    '': 'The password must contain at least 6 characters including uppercase and lowercase letters and numbers.'
+
+'Пароль изменен':
+    '': 'The password is changed. '
+
+Паспорт: "Passport\n"
+'Паспорт нового образца': 'A new sample passport '
+'Паспортные данные': 'Personal data'
+'Первый кредит под': 'First credit with interest of'
+'Перейти в личный кабинет': 'Go to personal account'
+'Перейти на главную страницу': 'Go to the main page'
+
+'Письмо с инструкциями по восстановлению пароля было отправлено на вашу почту':
+    '': "The letter containing instructions for restoration of the password was sent to your email. \n"
+
+'Платежная система': 'Payment system'
+'Платежный терминал': "Payment terminal\n"
+'Повторите E-mail': 'Repeat an E-mail'
+'Повторите новый пароль': 'Repeat a new password'
+'Повторите пароль': 'Repeat the password'
+
+'Повторный кредит Вы можете взять сразу после полного погашения предыдущего':
+    ' ': 'You can take the next loan right after the previous loan will be paid off.'
+
+'Повторный кредит под 1,5%': 'Repeated loan with interest of 1,5%'
+Погасить: 'To pay off'
+'Погасить кредит': 'To pay off a loan'
+'Погашение кредита': 'Repayment of loan'
+'Поделиться новостью': 'Share news'
+
+Подождите:
+    '':
+        '':
+            '': 'Please, wait...'
+
+Подписать: Sign
+Подробнее: 'More information'
+Подтвердить: Confirm
+'Подтвердить<br> СМС': 'Confirm by<br> SMS'
+Подтвержден: Confirmed
+'Пожалуйста, сделайте и загрузите фото с документом как показано на картинке': 'Please, make and upload a photo with document as shown on a picture'
+Пол: Sex
+
+'Получить': 'Get'
+'Получения кредита': 'Obtainment of a loan'
+'Получено меньше денег чем подавали в заявке на кредит?': "What to do if you got less money than you applied for?\n"
+'Получите %bonuses% бонусов за все предоставленные фото': 'Get %bonuses% bonuses for all photos provided'
+'Получить Кредит': 'Get a loan'
+
+'Получить быстрый кредит на карту онлайн без поручителей и залогов':
+    ' Займ на карту или деньги до зарплаты':
+        ' Выплаты в течение 5 минут':
+            ' Ускоренная форма получения кредита':
+                '': 'Получить быстрый кредит на карту онлайн без поручителей и залогов. Займ на карту или деньги до зарплаты. Выплаты в течение 5 минут. Ускоренная форма получения кредита.'
+
+'Получить деньги': 'Receive money'
+'Получить кредит': 'Get a loan'
+
+'Получить кредит онлайн на карту с минимальным набором документов':
+    ' Для получения денег вам потребуются только ваш телефон, паспрот и ИНН':
+        ' Выдача в течение 5 минут': 'Получить кредит онлайн на карту с минимальным набором документов. Для получения денег вам потребуются только ваш телефон, паспрот и ИНН. Выдача в течение 5 минут'
+
+'Пользователи нашего сервиса имеют возможность оплатить кредит со своей банковской карты в личном кабинете на нашем сайте':
+    ' Для этого Вам необходимо войти в Ваш личный кабинет, указать сумму к оплате и нажать кнопку «Оплатить»':
+        ' Кредит будет автоматически погашен с той карты, которая была привязана к Вашему профилю, если на ней имеются необходимые средства':
+            ' Помимо этого, Вы имеете возможность оплатить кредит любой другой Вашей банковской картой':
+                ' Для этого Вам необходимо выбрать поле «Другая банковская карта» и внести запрашиваемые данные и подтвердить оплату':
+                    '': 'Users of our service can repay a loan using their bank card in their personal account on our website. To do this you need to login into your personal account, specify the amount to be paid and click the "Pay" button. If the card attached to your profile has necessary funds, the loan will be automatically redeemed from it. In addition, you have an opportunity to pay a loan with any other credit card. To do this, you need to select the "Other bank card" field and enter the requested data and confirm the payment.'
+
+'Пользователь с таким email не найден':
+    '': 'The user with such email  is not found. '
+
+'Пользователь с таким email уже зарегистрирован':
+    '': 'The user with such email is already registered.'
+
+'После вашего согласия с условиями сервиса CashYou путем электронного подписания Договора, договор автоматически вступает в законную силу и обязательное исполнение обоими сторонами':
+    '': 'After your consent to the terms of the CashYou service by electronic signing of the Agreement, the contract automatically enters into legal force and binding execution by both parties.'
+
+'Последние несколько лет экономическая ситуация в стране ухудшается':
+    '': 'Последние несколько лет экономическая ситуация в стране ухудшается.'
+
+'Похоже, мы не можем найти нужную Вам страницу':
+    '': 'It seems that we cannot find the page needed. '
+
+'Почему кредитные средства не приходят на карту? ': 'Why credit sum was not received on the card? '
+'Почему моя заявка на кредит не была одобрена?': 'Why my loan application was not confirmed?'
+'Почему при оплате информация не обновляется в Личном Кабинете?': 'Why the information in the personal account was not upgraded after payment?'
+'Почему сумма в': 'Why sum'
+'Почему я не могу верифицировать свою банковскую платёжную карту?': 'Why I can not verify my bank paymnet card?'
+'Почему я не могу дозвониться на горячую линию в нерабочее время?': 'Why I can not reach the hot line beyond the working hours?'
+'Почтовый индекс': 'Postal code'
+'Правила предоставления кредитов': 'Loan granting rules'
+
+'Практически у каждого человека бывают ситуации, когда срочно нужны деньги, но одолжить их не у кого':
+    '': 'Практически у каждого человека бывают ситуации, когда срочно нужны деньги, но одолжить их не у кого.'
+
+'Предыдущая акция': 'Previous promotion'
+'Предыдущая новость': 'Previous news'
+'При отправке сообщения возникла ошибка': 'An error occured while sending the message'
+
+'При оформлении любого кредита клиент обязуется вернуть микрофинансовой компании всю сумму с начисленными процентами':
+    '': 'При оформлении любого кредита клиент обязуется вернуть микрофинансовой компании всю сумму с начисленными процентами.'
+
+'При повторном оформлении кредита нужно будет опять подавать анкету и ожидать решения?': "Is it required to submit an application and wait for a desicion once again during a repeated obtainment of a loan?\n"
+
+'При пролонгации действуют стандартные условия кредитования в сервисе – то есть Ваша базовая ставка max 1,8% в день':
+    ' В отличие от попадания в просрочку, в пролонгации Вам не начисляется повышенный процент':
+        '': 'Standard lending conditions in the service are applied during extension - it means that your base rate is maximum 1.8% per day. You do not accrue an increased percentage in case of extension in contrast to case of delay.'
+
+'Принять участие': 'To participate'
+Продлить: Extend
+'Продлить срок выплаты': 'Extend the repayment period'
+Продолжить: 'To continue'
+'Произошла ошибка, свяжитесь с менеджером или попробуйте позже': 'An error occured, contact a manager or try again later'
+
+'Произошла ошибка':
+    '': 'An error occured. '
+
+Прокачать: 'To improve'
+'Пролонгация кредита': 'Extension of a loan'
+Процент: Interest
+'Процентная ставка': "Interest rate\n"
+'Процентная ставка по кредиту': 'Процентная ставка по кредиту'
+'Публичная информация': 'Public information'
+'Работа и финансовое состояние': 'Employment and financial state'
+'Расчет кредита': 'Расчет кредита'
+Редактировать: Edit
+'Рекомендуемые новости': 'Recommended news'
+
+'Решение по кредиту принимается нашей системой автоматически в течение нескольких минут':
+    ' Вы получите результат в СМС на указанный Вами контактный номер и на email':
+        ' Также статус заявки на кредит можно увидеть в Личном кабинете':
+            '': 'Decision on the loan is taken automatically by our system within several minutes. You will be notified about the results by SMS sent to the provided contact number and by email. The status of your loan apllication can also be observed in your Personal account. '
+
+'Річна звітність': 'Річна звітність'
+'С инструкцией ознакомлен': 'I understood the order'
+'С максимальной вероятностью Вам будет одобрена сумма:': 'С максимальной вероятностью Вам будет одобрена сумма:'
+
+'С развитием рынка в кредитно-финансовой сфере украинские банки стали более требовательными к своим клиентам':
+    '': 'С развитием рынка в кредитно-финансовой сфере украинские банки стали более требовательными к своим клиентам.'
+
+'СМС было повторно отправлено': 'SMS was sent one more time'
+'Связь с менеджером': 'Connection with manager'
+
+'Сегодня не самые простые времена в стране, поэтому населению часто приходится брать микрокредиты':
+    '': 'Сегодня не самые простые времена в стране, поэтому населению часто приходится брать микрокредиты.'
+
+'Секретный вопрос': 'A secret question'
+'Семейное положение': 'Family status'
+
+'Сервис CashYou осуществляет деятельность по всей Украине':
+    ' В любом населенном пункте, где есть интернет вы можете подать через наш сайт онлайн заявку на кредит ':
+        '': 'CashYou service operates throughout Ukraine. You can submit an online loan application through our website in any locality where there is Internet connection.'
+
+'Сервис CashYou принимает заявки круглосуточно и без выходных':
+    ' При этом операторы службы поддержки работают с 9':
+        '00 до 18':
+            '00 в рабочие дни':
+                ' Если у Вас возникли вопросы в нерабочее время - отправляйте их, пожалуйста, на почту: service@cashyou':
+                    ua:
+                        ' Оператор ответит Вам в начале рабочего дня':
+                            ' Либо же воспользуйтесь нашей круглосуточной поддержкой в Telegram':
+                                ' В меню поиска   введите «CashYouBot» и он ответит Вам на самые распространенные вопросы':
+                                    '': 'CashYou service accepts applications 24 hours a day and 7 days a week. Operators of the support service work from 9.00 to 18.00 on working days. If you have any questions during off hours - please send them to the mail: service@cashyou.ua. Our operator will answer your question at the beginning of the business day. Or use our 24-hour support in Telegram. Enter "CashYouBot" in the search menu and it will answer the most common questions.'
+
+'Серия и номер': 'Series and number'
+Сертификаты: Certificates
+'Скачать документ': 'Download a document'
+'Скачать<br> договор': 'Download<br> an agreement'
+'Сколько времени займет повторное оформление кредита?': 'How long it will take to issue a new credit?'
+'Сколько раз можно оформить услугу пролонгации займа?': 'How many times is it possible to use a loan extension service?'
+'Следующая акция': 'Next promotion'
+'Следующая новость': 'Next news'
+'Служебный/дополнительный телефон': 'Official/additional phone number'
+'Согласие на обработку данных': 'Consent to data processing'
+
+'Согласно Кредитному Договору, в случае просрочки платежа, процентная ставка за пользование Кредитом пересчитывается':
+    ' Со следующего дня после даты выплаты кредита, указанной в договоре Вам будет начисляться штрафная процентная ставка за каждый день просрочки, до момента погашения или пролонгации':
+        '': 'According to the Loan Agreement, the interest rate for using the Loan is recalculated in case of a delay in payment. You will be charged with a penalty interest rate for each day of delay, starting from the next day after the date of repayment specified in the contract, until maturity or renewal.'
+
+'Согласно ст':
+    ' 12 ЗУ «Об электронной коммерции» - это алфавитно-цифровая последовательность символов, которая идентифицирует Вас в системе':
+        ' Примером одноразового идентификатора может быть код, который отправляется пользователю с помощью sms или e-mail-сообщения, при регистрации, что в дальнейшем используется для входа в систему':
+            '': 'According to Art. 12 of the law of Ukraine "On e-commerce" - it is an alphanumeric sequence of symbols that identifies you in the system. An example of a one-time identifier can be a code that is sent to a user through an sms or an e-mail message, upon registration, which is then used to login to the system.'
+
+Сообщение: "Message\n"
+Сотрудничество: "Cooperation\n"
+Сохранить: Save
+'Социальная информация': 'Social information'
+'Социальные сети:': 'Social networks:'
+'Спасибо! Ваш платеж успешно принят в обработку': 'Thank you! Your payment is successfully accepted for processing'
+'Спасибо! Договор успешно подписан': 'Thank you! The treatment is successfully signed'
+'Спасибо, ваше сообщение отправлено': 'Thank you, your message is sent'
+'Спасибо за Вашу заявку! </br> Она будет обработана менеджером в ближайшее время. Если возникнут вопросы - менеджер с Вами свяжется.': "Thank you for your request! </ br> It will be processed by the manager shortly. If we'll have any questions, the manager will contact you."
+Срок: Term
+'Срок действия': Validity
+
+'Срок кредита составляет от 2 до 7 дней':
+    ' Максимальная сумма кредита,  при первом обращении составляет до 1000 грн':
+        ' При последующих обращениях сумма кредита увеличится в зависимости от своевременности погашения предыдущего кредита и суммы предыдущих кредитов':
+            ' Также сумма и срок кредита могут быть увеличены клиентом посредством бонусной системы':
+                '': 'The loan period is from 1 to 30 calendar days. The maximum loan amount in case it is your first application is up to 1000 UAH. During next applications the loan amount will increase depending on the timely repayment of the previous loan and the amount of previous loans. Amount and term of the loan can be also increased by the client using a bonus system.'
+
+'Срок погашения': 'Credit payment period'
+'Срок, дни': 'Term, days'
+'Срочно нужны деньги': 'Срочно нужны деньги'
+'Срочный займ на карту?': 'Срочный займ на карту?'
+'Стаж работы на последнем месте': 'Work experience at the previous employment place'
+Статус: Status
+
+'Статус "В обработке" означает, что заявка находится на этапе рассмотрения':
+    ' Заявка рассматривается до 15 минут':
+        '': 'The status "In processing" means that the application is under consideration. The application can be under consideration during up to 15 minutes.'
+
+Сумма: Amount
+'Сумма к погашению': 'Sum to be repaid'
+'Сумма к погашению, грн': 'Sum to be repaid, UAH'
+
+'Сумма накопленных бонусов': 'Amount of accumulated bonuses'
+'Сумма к возврату с учетом бонусов': 'The refund amount given bonuses'
+
+'Сумма, грн':
+    '': 'Sum, UAH.'
+
+"Так же вы можете\n\t\t\t\t<mark>погасить Тело кредита </mark>и\n\t\t\t\t<mark>проценты </mark>при помощи\n\t\t\t\t<mark>бонусных баллов !</mark>": "\t\t\t\tYou also can\n\t\t\t\t<mark>pay the principal of credit </mark>and\n\t\t\t\t<mark>interest </mark>with the\n\t\t\t\t<mark>bonus points!</mark>\n\t\t\t\t"
+
+'Текущего количествр бонусов хватит для погашения <b>%amount% грн':
+    '</b> Вы можете погасить часть этой суммы':
+        '': 'The current amount of bonuses is enough to repay <b>%amount% UAH.</b> You can repay a part of this sum.'
+
+'Текущее количество бонусов': 'Current number of bonuses'
+'Текущий кредит': 'Operating loan'
+'Текущий пароль': 'Operating password'
+Телефон: Telephone
+'Телефоны:': 'Telephone:'
+'Технический отдел': 'Technical department'
+'Тип населенного пункта': 'Type of locality'
+'У вас не достаточно бонусов для приобретения': 'You lack bonuses to obtain'
+
+'У нас отсутствуют скрытые комиссии, дополнительные платежи, страховки, первые взносы и прочее':
+    ' Вы оплачиваете только проценты за пользование кредитом':
+        '': 'There are no hidden fees, extra payments, insurance, first installments, etc. in the CashYou service. You pay only interest for using the loan'
+
+'Уважаемый клиент, в связи с новогодними праздниками Ваша заявка будет обработана <b>02.01.2019</b> <br> С Новым Годом!': 'Dear customer, in connection with the New Year holidays, your request will be processed <b> 02.01.2019</b> <br> Happy New Year!'
+"Увеличение\n\t\t\t\t\t<mark>срока </mark>выплаты": "Increasing  \n\t\t\t\t\t<mark>expiration </mark> of payment"
+"Увеличение\n\t\t\t\t\t<mark>суммы </mark>займа": "Increasing  \n\n\t\t\t\t\t<mark> amount </mark> of a loan"
+'Увеличение в': 'Increase in'
+'Увеличение в <b>%bonus%</b> грн<br>за <b>%cost%</b>': 'Increase in <b>%bonus%</b> UAH<br>за <b>%cost%</b>'
+'Увеличение максимального  срока кредита': 'Maximum period'
+'Увеличение максимального срока кредита': Interest
+'Увеличение максимальной суммы кредита': Sum
+'Уже приобретено': 'Already obtained'
+'Уже приобретено <b>%bonus% грн</b>': 'Already obtained <b>%bonus% UAH</b>'
+'Узнать больше': 'More information'
+'Указать карту': 'Indicate a card'
+'Украинское гражданство': 'Ukrainian citizenship'
+Улица: Street
+"Уменьшение\n\t\t\t\t\t<mark>процентов </mark> займа": "Reducing\n\t\t\t\t\t<mark> interest </mark> of a loan"
+'Уменьшение процентной ставки кредита': 'Reduction of a loan interest rate'
+'Упс! Ошибочка': 'Oops! Error'
+'Условия договора': 'Terms of the agreement'
+'Условия пользования': 'Terms of use'
+
+'Услуга быстрого кредитования с помощью кредит кафе стала очень востребованной в последнее время':
+    '': 'Услуга быстрого кредитования с помощью кредит кафе стала очень востребованной в последнее время.'
+
+'Услуга продления кредита позволяет перенести дату оплаты без начисления пени и изменений в кредитной истории':
+    ' Оплатив продление, вы можете пользоваться кредитом дольше на до 30 дней, в зависимости от выбранного срока':
+        '': 'The loan extension service allows you to postpone the payment date without accruing interest and changes in credit history. After paying for the extension, you can use the loan longer for up to 30 days, depending on the chosen term.'
+
+Фамилия: Surname
+'Финансовые статьи и актуальные новости от Cashyou': 'Финансовые статьи и актуальные новости от Cashyou'
+'Финансовый отдел': 'Finance department'
+'Форма обратной связи:': "Feedback form:\n"
+'Фото 1й страницы Вашего паспорта': 'Photo of the first page of Your passport'
+'Фото 2й страницы Вашего паспорта': 'Photo of the second page of Your passport'
+'Фото Вашего ИНН': 'Photo of Your Tax ID'
+'Фото страницы прописки': 'Photo of the page with registration information'
+
+'Часто случаются ситуации, когда деньги нужны очень срочно, а времени, на то чтобы посещать учреждения банка и подбирать выгодные условия для сотрудничества, просто нет':
+    '': 'Часто случаются ситуации, когда деньги нужны очень срочно, а времени, на то чтобы посещать учреждения банка и подбирать выгодные условия для сотрудничества, просто нет.'
+
+'Что будет если я не погашу кредит вовремя? ': 'What happens if I delay a loan repayment? '
+'Что влияет на решение по кредитной заявке?': 'What influences a decision on the loan apllication?'
+'Что делать если у меня недостаточно средств чтобы полностью погасить заем вовремя?': 'What to do if I lack money needed to repay a loan?'
+'Что делать если я указал(а) неверные данные в заявке?': 'What to do if I indicated incorrect data in the application?'
+'Что нужно для получения кредита?': 'What is needed to get a loan?'
+'Что проверяется при принятии решения?': 'What is checked while making a decision?'
+'Что такое CVV/CVC-код и зачем мне его вводить при оформлении заявки?': 'What is CVV/CVC-code and why I need to enter it while submitting an application?'
+'Что такое CashYou?': 'What is CashYou?'
+'Что такое личный кабинет и зачем он мне нужен?': 'What is personal account and why I need it?'
+'Что такое пролонгация кредита?': 'What is extension of a loan?'
+
+'Что такое сервис Cashyou':
+    ' Какая у сервиса филососфия и история':
+        ' Вся необходимая финансовая информация для обращения или погашения кредита':
+            '': 'Что такое сервис Cashyou. Какая у сервиса филососфия и история. Вся необходимая финансовая информация для обращения или погашения кредита.'
+
+'Что такое электронная подпись одноразовым идентификатором?': 'What is an electronic signature by a one-time identifier?'
+'Чтобы взять новый кредит, погасите, пожалуйста, предыдущий': 'Чтобы взять новый кредит, погасите, пожалуйста, предыдущий'
+'Чтобы получить заем, Вам нужен только интернет и банковская карточка': "To get a loan, you only need internet connection and a bank card\n"
+'Чтобы получить заем, Вам нужен только интернет, телефон и банковская карточка': "To get a loan, you only need internet connection, telephone and a bank card\n"
+'Экспресс деньги': 'Экспресс деньги'
+'Экспресс займ': 'Экспресс займ'
+'Электронная почта:': 'E-mail:'
+
+'Это трехзначный код на обратной стороне Вашей карты':
+    ' Используется для проверки подлинности карты, при любых операциях в интернете':
+        ' Мы не храним этот код у себя и используется только через проверенную платежную систему':
+            '': 'This is a three-digit code on the back of your card. Used to verify the authenticity of the card during any transactions in the Internet. We do not preserve this code and it is used only through a proven payment system.'
+
+'Это увеличение будет доступным для приобретения при наличии предыдущего': 'This increase will be available for obtainment only in case of presence of a previous'
+'Я не получил код': 'I did not receive a code'
+'взять кредит без справки о доходах': 'take credit without income statement'
+грн: "UAH\n"
+'грн не может быть одобрена': 'UAH can not to be approved'
+
+дд:
+    мм:
+        гггг: dd.mm.yyyy
+
+день|дня|дней: day|day|days
+'деньги в долг на карту': 'money in debth on card'
+'деньги в кредит': 'credit money'
+до: before
+еще: 'once more'
+'заполните<b> Анкету</b>': "Fill in<b> a form</b>\n"
+'изменить пароль': 'change password'
+'или вы можете ': 'or you can '
+'кредит безработным': 'credit for unemployed'
+'кредит кафе': 'credit cafe'
+'кредит на карту срочно': 'credit on card urgently'
+'кредит по двум документам': 'two documents loan'
+'кредит с 18 лет': 'loan from 18'
+'кредит с плохой историей': 'bad history credit'
+кредит-365: credit-365
+'мы в социальных сетях': 'we are in social networks'
+отправить: Send
+'процентная ставка': 'interest rate'
+'Пропустить': 'Skip'
+'расчет кредита': credit-calculation
+'срочно нужны деньги': 'urgently need money'
+'срочный займ на карту?': 'urgent loan to card?'
+'экспресс деньги': 'express money'
+'экспресс займ': 'express loan'
+'взять кредит с низкой процентной ставкой': 'take a loan with low percent rate'
+'ШАГ': 'STEP'
+'Кредит': 'Credit'
+'Процент кредита': 'Percent'
+'Шанс выдачи': 'Chance of issue'
+'К возврату': 'To return'
+'С учетом бонусов': 'With bonuses'
+'Создайте личный кабинет': 'Create an account'
+'Паспортные данные': 'Passport details'
+'Адрес проживания': 'Address'
+'Финансовое состояние': 'Financial situation'
+'Фото документов': 'Photo of documents'
+'Привязка карты': 'Link card'
+'Бонусы': 'Bonuses'
+'бонусов': 'bonuses'
+'дней': 'days'
+'C <a target="_blank" href="%rules_url%">правилами</a> и условиями выдачи займа ознакомлен, и подтверждаю <a target="_blank" href="%agreement_url%">согласие</a> на обработку своих персональных данных, а также на передачу данных у бюро кредитных историй.': 'I have read the <a target="_blank" href="%rules_url%">terms</a> and conditions of the loan, and <a target="_blank" href="%agreement_url%">agree</a> to the processing of my personal data, including the transfer of data to the credit bureau.'
+'Вы уже зарегистрированы в системе.': 'You have already registered in system.'
+'Вы прервали регистрацию раннее на этом шаге.': 'You have already finished registration on this step.'
+'Вы не окончили регистрацию в нашей системе. Для того чтобы продолжить работу Вам необходимо пройти регистрацию с того шага, на котором вы остановились': 'You have not finished registration in our system. You must finish registration from your last step to continue work'
+download:
+    error:
+        type: 'Wrong type'
+        other: 'Upload error'
+'<b>Программа </b> </br> <strong>льготного</strong> погашения': '<b> Program </ b> </ br> <strong> preferential </ strong> repayment'
+'Сегодня вы должны:': 'Today you owed:'
+'Тело кредита:': 'Credit body:'
+'% по кредиту:': '% of credit:'
+'Общая сумма:': 'Total amount:'
+'Мы спишем ваши долги за:': 'We write off debt for:'
+'Ваша Экономия:': 'Your savings:'
+'Мы отправляем отчет о Вас как о благонадежном заемщике и Ваш рейтинг растет.': 'We send a report about you as a trustworthy borrower and your rating grows.'
+'Так же мы готовы  сразу выдать Вам новый кредит!': 'We are also ready to immediately issue you a new loan!'
+'Сashyou - с нами просто!': "Сashyou - it's easy with us!"
+'Спасибо': 'Thank you'
+'Согласиться': 'Agree'
+'Наш мендеджер свяжется с Вами в ближайшее время!': 'Our manager will contact you soon!'
+'Служебный телефон': 'Службовий телефон'
+'Вы так же можете получить детальную информацию позвонив нам по телефонам:': 'You can also get detailed information by calling us:' 
+'Если Вы согласны, введите телефон по которому можно с Вами связатся и нажмите <b>согласится</b> ниже': 'If you agree enter, a phone number where you can be contacted and click <b> agree </ b> below'         
+'день': 'days'
+'дня': 'days'        
+'дней': 'days'        
+
+'Про нас': 'About us'
+'Социальные сети': 'Social networks'
+'Компания': 'Company'
+'Займы': 'Loans'
+'Написать в службу поддержки': 'Email support'
+
+'Для инвесторов Cashyou': 'For investors Cashyou'
+'Для инвесторов:': 'For investors'
+
+'Сервис онлайн-займов': 'Online loan service'
+'Экспресс займ': 'Express loan'
+'нужная сумма': 'required amount'
+'на какой срок': 'on what period'
+'Срок возврата': 'Period of repayment'
+'Сумма к возврату': 'Refund amount'
+'Проценты': 'Percent'
+'Получить': 'Receive'
+'Введите промокод   ': 'Enter promo code   '
+'Бустеры': 'Boosters'
+'Узнать': 'Get to know'
+'Что нужно для получения кредита': 'What you need to get a loan'
+'Паспортные данные и ИНН': 'Passport details and TIN'
+'Банковская карта': 'Bank card'
+'Email<br>телефон': 'Email<br>phone'
+'Оценка кредитоспособности': 'Credit rating'
+'Будь на связи с нами': 'Stay in touch with us'
+'Инвестиции': 'Investments'
+'Самое выгодное <br>и надежное <br>капиталовложение <br>в 2019 году': 'The most profitable <br>and reliable <br>investment in <br>in 2019'
+'Рост рынка микрокредитования <br>более 120% в год': 'Microcredit market growth <br>over 120% year'

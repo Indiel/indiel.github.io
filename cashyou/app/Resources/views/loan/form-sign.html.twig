@@ -1,0 +1,17 @@
+{{ form_start(verifyForm, {'attr': {'class': 'js-ajax-form', 'novalidate': 'novalidate'}}) }}
+<div class="form-row one-column">
+	{{ form_widget(verifyForm.code) }}
+	{{ form_errors(verifyForm.code) }}
+</div>
+
+<button type="submit" class="button" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'ВВЕСТИ КОД'|trans }}</button>
+{{ form_end(verifyForm) }}
+
+{{ form_start(resendForm, {'attr': {'class': 'js-ajax-form', 'novalidate': 'novalidate'}}) }}
+<div class="form-row">
+	<div class="check-holder">
+		<span>{{ 'Не получили код?'|trans }}</span>
+	</div>
+	<a class="js-submit-link" href="" data-text-sending="{{ 'Подождите...'|trans }}" data-text-error="{{ 'Ошибка'|trans }}">{{ 'Отправить еще раз'|trans }}</a>
+</div>
+{{ form_end(resendForm) }}

@@ -1,0 +1,20 @@
+Active: 'Выдано (текущий кредит)'
+Approved: 'В обработке'
+AutoProcessing: 'В обработке'
+Closed_AgreementDeclined: Отказано
+Closed_AgreementExpired: Отказано
+Closed_Rejected: Отказано
+Closed_Repaid: Погашенный
+Closed_Restructured: Отказано
+Closed_WrittenOff: Погашенный
+Collateral: '-'
+DisbursementFailed: 'В обработке'
+DisbursementInProgress: 'В обработке'
+Origination: 'В обработке'
+P2P_GatheringInvestments: '-'
+PastDue: Просроченный
+PreOrigination: 'В обработке'
+Reprocessing: 'В обработке'
+RolloverRequested: 'Выдано (текущий кредит)'
+WaitingForApproval: 'В обработке'
+WaitingForCustomerSignature: 'В обработке'

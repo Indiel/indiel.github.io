@@ -1,0 +1,32 @@
+
+{% extends 'base.html.twig' %}
+
+{% block mainContent %}
+<div class="step-block active">
+	<div class="max-amount-holder container">
+		<div class="heading-block"><h2>{{ 'Ваша гарантированная сумма на выдачу'|trans }}</h2></div>
+		<div class="max-amount-row">
+			<ul>
+				<li><span class="descr">{{ 'Вы можете взять эту сумму'|trans }}</span><b>{{ limitAmount }}</b> {{ 'гривен'|trans }}</li>
+				<li class="plus"><span></span></li>
+				<li><span class="descr">{{ 'Сумма накопленных бонусов'|trans }}</span><b>2000</b> {{ 'бонусов'|trans }}</li>
+				<li class="equal"><span></span></li>
+				<li><span class="descr">{{ 'Сумма к возврату с учетом бонусов'|trans }}</span><b>{{ returnAmount }}</b> {{ 'гривен'|trans }}</li>
+			</ul>
+		</div>
+		<div class="button-block">
+			<a href="{{ path('app.loan.setAmount') }}" class="button btn-get">{{ 'Получить'|trans }}</a>
+			<a href="{{ path('app.profile') }}" class="button btn-profile btn-gray">{{ 'В кабинет'|trans }}</a>
+		</div>
+		<div class="info">
+			<h6>{{ 'Почему сумма в'|trans }} {{ rejectedAmount }} {{ 'грн не может быть одобрена'|trans }}</h6>
+			<ul>
+				<li><i class="fas fa-frown"></i>{{ 'Много непогашенных кредитов'|trans }}</li>
+				<li><i class="fas fa-credit-card"></i>{{ 'Мало кредитов в нашем сервисе'|trans }}</li>
+				<li><i class="fas fa-star"></i>{{ 'Низкий кредитный рейтинг'|trans }}</li>
+			</ul>
+			<p><span class="star">*</span>{{ 'Возьмите эту сумму и верните в срок, таким образом Вы повысите свой кредитный рейтинг для одобрения следующего займа в любой организации.'|trans }}</p>
+		</div>
+	</div>
+</div>
+{% endblock %}

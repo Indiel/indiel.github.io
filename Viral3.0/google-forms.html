@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<!-- set the viewport width and initial-scale on mobile devices -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<title>VIRAL</title>
+	<!-- include the site animate stylesheet -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- include the site bootstrap stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- include the font awesome stylesheet -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- include the site stylesheet -->
+	<link rel="stylesheet" href="style.css">
+	<!-- include the site fonts stylesheet -->
+	<link rel="stylesheet" href="css/fonts.css">
+	<!-- include the site responsive stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- include the site color stylesheet -->
+	<link rel="stylesheet" href="css/color/color.css">
+</head>
+<body>
+	<!-- Page Loader -->
+	<div id="pre-loader" class="loader-container">
+		<div class="loader">
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<!-- main container of all the page elements -->
+	<div id="wrapper">
+		<div id="shadow-bg"></div>
+		<div class="order-form-wrapper f1">
+			<div class="wpcf7">
+				<form id='order-form' class="wpcf7-form f-contact-form" enctype="multipart/form-data">
+					<h3>Мы будем рады услышать Вас</h3>
+					<div class="rows">
+						<span class="wpcf7-form-control-wrap text-field-required">
+							<input type="text" name="orderName" id="orderName" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text-field-class wpcf7-use-title-as-watermark" size="12" placeholder="Имя">
+						</span>
+					</div>
+					<div class="rows">
+						<span class="wpcf7-form-control-wrap text-field-required">
+							<input type="text" name="orderPhone" id="orderPhone" value="" class="masked-phone wpcf7-form-control wpcf7-text wpcf7-validates-as-required text-field-class wpcf7-use-title-as-watermark" size="12" data-rule-phonevalidate="1" data-rule-phoneverified="1" placeholder="Телефон" data-mask="+38 (099) 999-99-99" minlength="19" maxlength="19" autocomplete="off">
+						</span>
+					</div>
+					<div class="rows">
+						<span class="wpcf7-form-control-wrap Emailfield">
+							<input type="email" name="orderEmail" id="orderEmail"  value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email email-class wpcf7-use-title-as-watermark" size="12" placeholder="Email" />
+						</span>
+					</div>
+					<div class="rows">
+						<span class="wpcf7-form-control-wrap textarea">
+							<textarea name="orderMessage" id="orderMessage"  class="wpcf7-form-control wpcf7-textarea textarea-class wpcf7-use-title-as-watermark" rows="9" cols="39" placeholder="Расскажите о своей идее"></textarea>
+						</span>
+					</div>
+					<input id="submit" class="btn-submit-order" type="submit" value="ОТПРАВИТЬ">
+				</form>
+				<div class="done-massage">
+					<strong>Спасибо!</strong> Мы получили Ваше письмо.
+				</div>
+			</div>
+		</div>
+		<!-- header of the page -->
+		<header id="header" class="sticky-header">
+			<div class="max-container">
+				<!-- main site logo -->
+				<strong class="logo">
+					<a href="#">
+						<span class="img">
+							<img src="images/logo.svg" alt="Viral">
+						</span>
+					</a>
+				</strong>
+				<!-- align-right -->
+				<div class="align-right">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li class="dropdown">
+										<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">Главная <!--<span class="caret"></span>--></a>
+									</li>
+									<li class="dropdown">
+										<a href="portfolio.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Портфолио <span class="caret"></span></a>
+										 <ul class="dropdown-menu">
+											<li><a href="portfolio.html">Portfolio Free Style</a></li>
+											<li><a href="portfolio-grid.html">Portfolio 1 Column</a></li>
+											<li><a href="portfolio-2grid.html">Portfolio 2 Column</a></li>
+											<li><a href="portfolio-3grid.html">Portfolio 3 Column</a></li>
+											<li><a href="portfolio-detail.html">Portfolio Detail</a></li>
+										 </ul>
+									</li>
+									<li class="dropdown">
+										<a href="blog.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Блог <span class="caret"></span></a>
+										 <ul class="dropdown-menu">
+											<li>
+												<a href="blog.html">Blog Style1</a>
+												<ul class="drop">
+													<li><a href="blog.html">Blog Sidebar</a></li>
+													<li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+													<li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="blog2.html">Blog Style2</a>
+												<ul class="drop">
+													<li><a href="blog2.html">Blog Sidebar</a></li>
+													<li><a href="blog2-left-sidebar.html">Blog Left Sidebar</a></li>
+													<li><a href="blog2-right-sidebar.html">Blog Right Sidebar</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="blog3.html">Blog Style3</a>
+												<ul class="drop">
+													<li><a href="blog3-left-sidebar.html">Blog Sidebar</a></li>
+													<li><a href="blog3-left-sidebar.html">Blog Left Sidebar</a></li>
+													<li><a href="blog3-right-sidebar.html">Blog Right Sidebar</a></li>
+												</ul>
+											</li>
+											<li>
+												<a href="blog-detail.html">Blog Detail</a>
+												<ul class="drop">
+													<li><a href="blog-detail.html">Blog Detail</a></li>
+													<li><a href="blog3-left-sidebar.html">Blog Left Sidebar</a></li>
+													<li><a href="blog3-right-sidebar.html">Blog Right Sidebar</a></li>
+												</ul>
+											</li>
+											<li><a href="blog.html">Blog Link 3</a></li>
+											<li><a href="blog.html">Blog Link 4</a></li>
+										 </ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Page <span class="caret"></span></a>
+										 <ul class="dropdown-menu">
+											<li><a href="aboutus.html">About Me</a></li>
+											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="contact2.html">Contact Us 2</a></li>
+											<li><a href="shortcodes.html">Short Codes</a></li>
+											<li><a href="shortcodes2.html">Short Codes 2</a></li>
+											<li><a href="shortcodes3.html">Short Codes 3</a></li>
+											<li><a href="shortcodes4.html">Short Codes 4</a></li>
+										 </ul>
+									</li>
+									<li><a href="shortcodes.html">elements</a></li>
+									<li><a href="contact.html">Контакты</a></li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+						</div><!-- /.container-fluid -->
+					</nav>
+					<div class="search-area">
+						<div class="search-box">
+							<a class="search" href="#"><i class="icon-search"><span>search</span></i></a>
+							<input type="search" placeholder="Search">
+						</div>
+						<a href="#" class="mail"><i class="icon-mail"><span>mail</span></i></a>
+						<a href="#" class="btn-contact">Связаться с нами</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- contain main informative part of the site -->
+		<main id="main">
+			<div class="max-container">
+				<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf2MsguZdPTMmgSB5BHirL017Dr3kwr7gvQHxHTCOxwLqTDpw/viewform?embedded=true" width="100%" height="1741" frameborder="0" marginheight="0" marginwidth="0">Загрузка...</iframe>
+			</div>
+		</main>
+		<!-- footer of the page -->
+		<footer id="footer">
+			<div class="max-container">
+				<div class="f1">
+					<div class="holder">
+						<strong class="logo-footer">
+							<a href="#">
+								<i class="icon"></i>
+								<span class="img">
+									<img alt="Viral" src="images/logo-footer.svg">
+								</span>
+							</a>
+						</strong>
+						<!-- footer-txt -->
+						<div class="footer-txt">
+							<div class="text">
+								<p>
+Вы собственник, маркетолог, креативный директор или дизайнер, который любит качественный контент? Вы любите качественный продукт... продукт, который будет работать. Продукт оправывающий инвестиции.
+
+Ваша цель, принести победу своей команде. Вы усердно работаете над лицом бренда. 
+
+Вам нужен надеждный партнер, который будет работать так же усердно, как и вы. Еще лучше, если Вы найдете партнера, который может закрыть все вопросы по маркетингу и брендингу, каждый раз предлагая выигрышную стратегию.
+
+Самое важное, что нужно знать о нас, это то, что мы созданы для вас. 
+
+С самого первого дня, более 5 лет назад, мы создали это агентство, чтобы помогать таким же людям, как вы.</p>
+								<div class="contact">
+									<address><span class="yellow">A :</span> No 40 Baria Sreet 133/2 NewYork City, <br>NY,  United States</address>
+									<span class="email"><span class="yellow">E: </span><a href="mailto:&#105;&#110;&#102;&#111;&#046;&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">&#105;&#110;&#102;&#111;&#046;&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a></span>
+									<span class="tel"><span class="yellow">P: </span><a href="tel:00123456789">(00) 123 456 789</a></span>
+								</div>
+							</div>
+							<ul class="testimonial">
+								<li>
+									<p><a href="#"><i class="icon-twitter"></i><span>@Leonard design</span></a> I am so happy because I found this EAGLEEYES, and it just made EAGLEEYES easier. Thanks so much for sharing</p>
+								</li>
+								<li>
+									<p><a href="#"><i class="icon-twitter"></i><span>@Leonard design</span></a> I am so happy because I found this EAGLEEYES, and it just made EAGLEEYES easier. Thanks so much for sharing</p>
+								</li>
+								<li>
+									<p><a href="#"><i class="icon-twitter"></i><span>@Leonard design</span></a> I am so happy because I found this EAGLEEYES, and it just made EAGLEEYES easier. Thanks so much for sharing</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="frame">
+						<div class="wpcf7">
+							<form action="inc/process.php" class="wpcf7-form f-contact-form" enctype="multipart/form-data">
+								<h3>Мы будем рады услышать Вас</h3>
+								<div class="rows">
+									<span class="wpcf7-form-control-wrap text-field-required">
+										<input type="text" name="text-field-required" value="" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required text-field-class wpcf7-use-title-as-watermark" size="12" placeholder="Имя">
+									</span>
+								</div>
+								<div class="rows">
+									<span class="wpcf7-form-control-wrap Emailfield">
+										<input type="email" name="Emailfield" value="" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email email-class wpcf7-use-title-as-watermark" size="12" placeholder="Email" />
+									</span>
+								</div>
+								<div class="rows">
+									<span class="wpcf7-form-control-wrap textarea">
+										<textarea name="textarea" class="wpcf7-form-control wpcf7-textarea textarea-class wpcf7-use-title-as-watermark" rows="9" cols="39" placeholder="Комментарий"></textarea>
+									</span>
+								</div>
+								<input id="submit" type="submit" value="ОТПРАВИТЬ">
+							</form>
+	                        <div class="done-massage">
+	                            <strong>Спасибо!</strong> Мы получили Ваше письмо.
+	                        </div>
+						</div>
+					</div>
+				</div>
+				<div class="f2">
+					<!-- sub-nav -->
+					<ul class="sub-nav">
+						<li><a href="#">About</a></li>
+						<li><a href="#">Customer Service</a></li>
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+						<li><a href="#">Site Map</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<span class="copyright">Copyright <a href="#">#VIRAL</a> &copy; 2014. All rights reserved.</span>
+				</div>
+			</div>
+		</footer>
+		<span id="back-top" class="fa fa-arrow-up"></span>
+	</div>
+	<script src="js/jquery.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script> -->
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+
+			// main-slider init
+			jQuery('#main-slider').slick({
+				adaptiveHeight: true,
+				autoplay: true,
+				arrows: false,
+				speed: 800,
+				dots: true,
+				fade: true
+			});
+			
+		});
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement('style')
+			msViewportStyle.appendChild(
+			document.createTextNode(
+			'@-ms-viewport{width:auto!important}'
+			)
+		)
+			document.querySelector('head').appendChild(msViewportStyle)
+		}
+	</script>
+</body>
+</html>

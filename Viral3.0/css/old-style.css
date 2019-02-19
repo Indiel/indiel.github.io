@@ -546,3 +546,7 @@ a {
     color: #fff;
     border-color: #fff;
 }
+
+.f1 .footer-txt .text {
+    min-width: auto;
+}

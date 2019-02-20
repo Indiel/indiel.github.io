@@ -523,6 +523,7 @@ a {
 
 .working-item__watch-projects {
     margin-top: 30px;
+    margin-bottom: 30px;
     padding: 9px 20px;
     width: 170px;
 
@@ -555,6 +556,22 @@ a {
 .f1 .footer-txt .text {
     min-width: auto;
 }
+
+
+
+.ui-tabs-active .services-more__title {
+    color: #cc0000;
+}
+
+.ui-tabs-active .services-more__arrow1 {
+    width: 215px;
+}
+
+.ui-tabs-active .services-more__arrow2 {
+    left: 210px;
+}
+
+
 
 @media screen and (max-width: 1024px) {
     .main {

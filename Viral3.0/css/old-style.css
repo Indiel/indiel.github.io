@@ -283,7 +283,7 @@ a.button {
 
     width: 100px;
     height: 1px;
-    background-color: #cc0000;
+    background-color: #000;
 
     transition: 0.8s;
 }
@@ -293,15 +293,28 @@ a.button {
     left: 95px;
 
     width: 6px;
-    transform: rotate(-45deg);
+    /* transform: rotate(-45deg); */
 }
+
+.arrow2 {
+    /* top: -7px; */
+    right: -25px;
+    border: 40px solid transparent;
+    border-right: 0;
+    border-left-color: #000;
+    border-width: 3px 0 3px 12px;;
+    background-color: transparent;
+}
+
 
 .services-more__item:hover .services-more__arrow1 {
     width: 160px;
+    background-color: #cc0000;
 }
 
 .services-more__item:hover .services-more__arrow2 {
     left: 155px;
+    border-left-color: #cc0000;
 }
 
 /* .service-description {
@@ -352,11 +365,19 @@ a.button {
 
 .learn-more:hover + .learn-more__arrow1 {
     width: 160px;
+    background-color: #cc0000;
+
 }
 
 .learn-more:hover + .learn-more__arrow1 + .learn-more__arrow2 {
     left: 155px;
+    border-left-color: #cc0000;
 }
+
+/* .learn-more:hover + .learn-more__arrow2 {
+    border-left-color: #cc0000;
+    background-color: transparent;
+} */
 
 
 

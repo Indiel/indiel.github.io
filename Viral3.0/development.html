@@ -744,6 +744,19 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/jcf.js"></script>
 	<script type="text/javascript" src="js/jcf.scrollable.js"></script>
+
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript">
+		if ($(window).width() <= 550) {
+			const sliderOffers = $(".ui-tabs-panel[aria-hidden='false'] .working-page-list");
+			sliderOffers.slick({
+				dots: true,
+				speed: 300,
+				infinite: false
+			});
+		}
+	</script>
+	
 	<!-- Library - Google Map API -->
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 	<script type="text/javascript">

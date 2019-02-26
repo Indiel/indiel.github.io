@@ -793,25 +793,11 @@
 
 	<script src="//code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
 
 	<script type="text/javascript">
 		$( "#tabs" ).tabs({
 			beforeActivate : function (event, ui) {
 				window.location.hash = ui.newPanel[0].id;
-
-				// if ($(window).width() <= 550) {
-				// 	const sliderOffers = $(".working-page-list");
-				// 	sliderOffers.slick({
-				// 		dots: false,
-				// 		speed: 300,
-				// 		slidesToShow: 1,
-				// 		slidesToScroll: 1,
-				// 		centerMode: true,
-				// 		variableWidth: true,
-				// 		infinite: true
-				// 	});
-				// }
 			}
 		});
 	</script>
@@ -829,12 +815,7 @@
 			sliderOffers.slick({
 				dots: true,
 				speed: 300,
-				// slidesToShow: 1,
-				// slidesToScroll: 1,
-				// centerMode: true,
-				// variableWidth: true,
 				infinite: false
-				// slidesToShow: 2
 			});
 		}
 	</script>

@@ -13,5 +13,6 @@
 * [Barbershop](https://indiel.github.io/Barbershop)
 * [Gllacy](https://indiel.github.io/Gllacy)
 * [CreditGarant](https://indiel.github.io/CreditGarant)
+* [CreditGarant на WordPress](https://indiel.github.io/CreditGarant-WP)
 
 ---

@@ -2,16 +2,23 @@
 
 # Проекты
 
-Проекты по JS:
-* [Kekstagram](https://indiel.github.io/Kekstagram)
-* [Keksobooking](https://indiel.github.io/Keksobooking)
-* [Code and Magick](https://indiel.github.io/Code-and-Magick)
+Проекты:
+
+    Проекты, выполненные самостоятельно по макету.
+
+* [Barbershop](https://indiel.github.io/Barbershop)
+* [Gllacy](https://indiel.github.io/Gllacy)
 
 ---
 
-Другие проекты:
-* [Barbershop](https://indiel.github.io/Barbershop)
-* [Gllacy](https://indiel.github.io/Gllacy)
+Проекты по JS:
+
+    Проекты, выполненные на интенсиве по JavaScript.
+    Работа заключалась в создании скриптов для уже сверстанных страниц.
+
+* [Kekstagram](https://indiel.github.io/Kekstagram)
+* [Keksobooking](https://indiel.github.io/Keksobooking)
+* [Code and Magick](https://indiel.github.io/Code-and-Magick)
 
 ---
 

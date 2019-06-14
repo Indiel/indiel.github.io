@@ -25,7 +25,6 @@
 Рабочие проекты:
 * [CreditGarant](https://indiel.github.io/CreditGarant)
 * [Viral](https://indiel.github.io/Viral)
-* [Viral 1.0](https://indiel.github.io/Viral1.0)
 * [Viral 2.0](https://indiel.github.io/Viral2.0)
 * [Viral 2.1](https://indiel.github.io/Viral2.1)
 * [Viral 3.0](https://indiel.github.io/Viral3.0)

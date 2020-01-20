@@ -2,16 +2,18 @@
 
 # Проекты
 
+    Работы, выполненные самостоятельно.
+
 Проекты:
-
-    Проекты, выполненные самостоятельно.
-
 * [Barbershop](https://indiel.github.io/Barbershop)
 * [Gllacy](https://indiel.github.io/Gllacy)
+* [Arkanoid](https://indiel.github.io/Arkanoid/)
+
+Выполненные задания с курса RSSchool:
+
 * [Mini-Portfolio](https://indiel.github.io/Portfolio/) - в проектах есть еще 2 примера сверстанных сайтов: [Repair design project](https://indiel.github.io/repair-design-project/) и TheYalow.
 * [Fancy Weather](https://indiel.github.io/fancy-weather/)
 * [Virtual Keyboard](https://indiel.github.io/codejam-virtual-keyboard/)
-* [Arkanoid](https://indiel.github.io/Arkanoid/)
 
 ---
 

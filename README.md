@@ -11,9 +11,15 @@
 
 Выполненные задания с курса RSSchool:
 
-* [Mini-Portfolio](https://indiel.github.io/Portfolio/) - в проектах есть еще 2 примера сверстанных сайтов: [Repair design project](https://indiel.github.io/repair-design-project/) и TheYalow.
+JS
 * [Fancy Weather](https://indiel.github.io/fancy-weather/)
+* [Palette](https://indiel.github.io/palette/)
 * [Virtual Keyboard](https://indiel.github.io/codejam-virtual-keyboard/)
+
+Верстка
+* [Repair design project](https://indiel.github.io/repair-design-project/)
+* [TheYalow](https://indiel.github.io/theyalow/)
+* [Mini-Portfolio](https://indiel.github.io/Portfolio/)
 
 ---
 

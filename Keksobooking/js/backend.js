@@ -2,8 +2,8 @@
 
 (function () {
 
-  var URL_DOWNLOAD = 'https://js.dump.academy/keksobooking/data';
-  var URL_UPLOAD = 'https://js.dump.academy/keksobooking';
+  var URL_DOWNLOAD = 'https://javascript.pages.academy/keksobooking/data';
+  var URL_UPLOAD = 'https://javascript.pages.academy/keksobooking';
 
   var getResponseStatus = function (xhr, onLoad, onError) {
     xhr.addEventListener('load', function () {

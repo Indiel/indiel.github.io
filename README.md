@@ -1,36 +1,41 @@
 # indiel.github.io
 
-# Проекты
+## Проекты
 
-    Работы, выполненные самостоятельно.
-
-Проекты:
-* [Barbershop](https://indiel.github.io/Barbershop)
-* [Gllacy](https://indiel.github.io/Gllacy)
-* [Arkanoid](https://indiel.github.io/Arkanoid/)
-
-Выполненные задания с курса RSSchool:
-
-JS
-* [Fancy Weather](https://indiel.github.io/fancy-weather/)
-* [Palette](https://indiel.github.io/palette/)
-* [Virtual Keyboard](https://indiel.github.io/codejam-virtual-keyboard/)
-
-Верстка
-* [Repair design project](https://indiel.github.io/repair-design-project/)
-* [TheYalow](https://indiel.github.io/theyalow/)
-* [Mini-Portfolio](https://indiel.github.io/Portfolio/)
+React:
+* [React JS Test Task](https://indiel.github.io/test-react-artjoker/) - [Код проекта и подробное описание](https://github.com/Indiel/test-react-artjoker)
+* [Star DB](https://github.com/Indiel/Star-DB)
+* [React weather](https://indiel.github.io/react-weather/) - [Код проекта](https://github.com/Indiel/react-weather)
+* [Todo List](https://indiel.github.io/todo-react/) - [Код проекта](https://github.com/Indiel/todo-react)
 
 ---
 
-Проекты по JS:
+Верстка и JS:
+* [Barbershop](https://indiel.github.io/Barbershop) - [Описание и код проекта](https://github.com/Indiel/indiel.github.io/tree/master/Barbershop)
+* [Gllacy](https://indiel.github.io/Gllacy) - [Описание и код проекта](https://github.com/Indiel/indiel.github.io/tree/master/Gllacy)
+* [Arkanoid](https://indiel.github.io/Arkanoid/) - [Описание и код проекта](https://github.com/Indiel/Arkanoid)
 
-    Проекты, выполненные на интенсиве по JavaScript.
-    Работа заключалась в создании скриптов для уже сверстанных страниц.
+---
 
-* [Kekstagram](https://indiel.github.io/Kekstagram)
-* [Keksobooking](https://indiel.github.io/Keksobooking)
-* [Code and Magick](https://indiel.github.io/Code-and-Magick)
+Выполненные задания с бесплатного курса RSSchool:
+
+JS
+* [Fancy Weather](https://indiel.github.io/fancy-weather/) - [Код проекта](https://github.com/Indiel/fancy-weather)
+* [Palette](https://indiel.github.io/palette/) - [Код проекта](https://github.com/Indiel/palette)
+* [Virtual Keyboard](https://indiel.github.io/codejam-virtual-keyboard/) - [Код проекта](https://github.com/Indiel/codejam-virtual-keyboard)
+
+Верстка
+* [Repair design project](https://indiel.github.io/repair-design-project/) - [Код проекта](https://github.com/Indiel/repair-design-project)
+* [TheYalow](https://indiel.github.io/theyalow/) - [Код проекта](https://github.com/Indiel/theyalow)
+* [Mini-Portfolio](https://indiel.github.io/Portfolio/) - [Код проекта](https://github.com/Indiel/Portfolio)
+
+---
+
+Проекты, выполненные на интенсиве по JavaScript:
+
+* [Kekstagram](https://indiel.github.io/Kekstagram) - [Описание и код проекта](https://github.com/Indiel/indiel.github.io/tree/master/Kekstagram)
+* [Keksobooking](https://indiel.github.io/Keksobooking) - [Описание и код проекта](https://github.com/Indiel/indiel.github.io/tree/master/Keksobooking)
+* [Code and Magick](https://indiel.github.io/Code-and-Magick) - [Описание и код проекта](https://github.com/Indiel/indiel.github.io/tree/master/Code-and-Magick)
 
 ---
 
